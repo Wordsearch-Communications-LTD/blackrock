@@ -13,6 +13,7 @@ require 'classes/class.admin.php'; // includes post types & taxonomies
 require 'classes/functions/acf-blocks.php';
 require 'classes/functions/navigation.php';
 require 'classes/functions/login.php';
+require 'classes/functions/return-acf-link.php';
 
 
 // Run the Set up

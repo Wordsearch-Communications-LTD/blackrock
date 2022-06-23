@@ -1,14 +1,12 @@
 <?php 
-    $images = ''; //get_sub_field();
+    $images = get_sub_field('images');
 ?>
 <section class="two-col-image">
-<h1>Two Column Copy Image</h1>
 
-    <?php 
-        //https://www.advancedcustomfields.com/resources/working-with-nested-repeaters/
-        // foreach($images as $image):
-        //     $image['image']['url'];
-        //     $image['caption']    
-        // endforeach; 
-    ?>
+    <?php foreach($images as $image): ?>
+        <div>
+            <?php echo wp_get_attachment_image( $image['image']['id'], 'full' ); ?>
+            <?php echo $image['caption'] ?>
+        </div>
+    <?php endforeach; ?>
 </section>

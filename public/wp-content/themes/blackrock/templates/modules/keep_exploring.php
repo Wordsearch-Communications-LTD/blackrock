@@ -1,13 +1,23 @@
 <?php 
-    $title = ''; //get_sub_field();
-    $posts = ''; //get_sub_field();
+    $title = get_sub_field('title');
+    $posts = get_sub_field('posts');
 ?>
 <section class="keep-exploring">
-    <h1>Keep exploring</h1>
-    <?php
-    //https://www.advancedcustomfields.com/resources/working-with-nested-repeaters/
-    // foreach($posts as $post):
-    //     $post   
-    // endforeach; 
-    ?>
+    <div class="title">
+        <?php echo $title ?>
+    </div>
+    <?php if($posts): ?>
+        <div class="blocks">
+        <?php foreach($posts as $post): ?>
+            <?php setup_postdata($post); ?>
+            <div class="explore-block">
+                <a href="<?php the_permalink(); ?>">
+                    <?php echo get_the_post_thumbnail() ?>
+                </a>
+                <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+            </div>
+        <?php endforeach; ?>
+        </div>
+        <?php wp_reset_postdata(); ?> 
+    <?php endif; ?>
 </section>

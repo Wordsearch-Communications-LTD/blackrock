@@ -1,0 +1,11 @@
+@mixin grid(){
+    @media #{$mq-mobile}{
+        display: grid;
+        margin: 0 40px;
+        column-gap: 20px;
+    }
+}
+
+.grid {
+    @include grid;
+}

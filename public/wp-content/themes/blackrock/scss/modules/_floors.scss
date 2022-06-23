@@ -1,0 +1,54 @@
+.floors {
+    grid-template-columns: repeat(12, 1fr);
+    
+    @media #{$mq-desk-small}{
+        grid-template-areas:  "floor-toggle floor-toggle . floor-list floor-list floor-list floor-list floor-list floor-list floor-list floor-list .";
+    }
+
+    @media #{$mq-desk-large}{
+        grid-template-areas:  "floor-toggle floor-toggle . floor-list floor-list floor-list floor-list floor-list floor-list . . .";
+    }
+    
+    .occupied { background-color: var(--occupiedColor); }
+    .available { background-color: var(--availableColor); }
+
+    .floor-toggle {
+        grid-area: floor-toggle;
+
+        .legend {
+            display: block;
+            height: 35px;
+            color: $br-white;
+            line-height: 35px;
+            padding-left: 10px;
+        }
+    }   
+
+    .floor-list {
+        grid-area: floor-list;
+        width: 75%;
+
+        .floor {
+            width: 100%;
+            display: flex;
+            margin-bottom: 5px;
+            gap: 5px;
+
+            .floor-number {
+                position: absolute;
+                z-index: 2;
+                color: $br-white;
+            }
+
+            .unit {
+                flex: 1;
+                height: 35px;
+                color: $br-white;
+
+                .hidden {
+                    display: none;
+                }
+            }
+        }
+    }
+}

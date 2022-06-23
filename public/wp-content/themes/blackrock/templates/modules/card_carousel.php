@@ -1,14 +1,11 @@
 <?php 
-    $images = ''; //get_sub_field();
+    $images = get_sub_field('cards_carousel');
 ?>
 <section class="card-carousel">
-<h1>Card carousel</h1>
 
-    <?php 
-        //https://www.advancedcustomfields.com/resources/working-with-nested-repeaters/
-        // foreach($images as $image):
-        //     $image['image']['url'];
-        //     $image['caption']    
-        // endforeach; 
-    ?>
+    <?php foreach($images as $image): ?>
+        <?php echo wp_get_attachment_image( $image['image']['id'], 'full' ); ?>
+           <?php echo $image['caption'] ?>
+    <?php endforeach; ?>
+
 </section>

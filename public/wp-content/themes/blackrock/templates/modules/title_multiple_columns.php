@@ -1,20 +1,23 @@
 <?php 
-    $title = ''; //get_sub_field();
-    $items = ''; //get_sub_field();
-    $ctas = ''; //get_sub_field();
+    $title = get_sub_field('title');
+    $items = get_sub_field('copy_blocks');
+    $ctas = get_sub_field('downloads');
 ?>
 <section class="title-multiple-columns">
-    <h1>Keep exploring</h1>
-    <?php
-    //https://www.advancedcustomfields.com/resources/working-with-nested-repeaters/
-    // foreach($items as $item):
-    //     $item   
-    // endforeach; 
-    ?>
-    <?php
-    //https://www.advancedcustomfields.com/resources/working-with-nested-repeaters/
-    // foreach($ctas as $cta):
-    //     $cta   
-    // endforeach; 
-    ?>
+    <div class="title">
+        <?php echo $title ?>
+    </div>
+
+    <div class="copy-blocks">
+        <?php foreach($items as $item): ?>
+            <div class="copy-block"> 
+                <?php echo $item['copy'] ?>
+            </div>
+        <?php endforeach; ?>
+    </div>
+
+    <?php foreach($ctas as $cta): ?>
+        <?php $cta['file']['url'] ?>
+    <?php endforeach; ?>
+
 </section>

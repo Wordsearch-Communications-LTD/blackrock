@@ -1,17 +1,15 @@
-<div class="container-fluid bg-black footer" id="bottom">
-	<div class="row flex-center">
-		<div class="col-sm-5 text-left mob-border-bottom">
-			<p class="ft-white">© <?php echo date('Y'); ?> <?php echo get_bloginfo( 'name' ); ?></p>
-		</div>
-		<div class="col-sm-5 text-right">
-			<ul class="footer">
-				
-				<li><a href="<?php echo site_url(); ?>/terms-and-conditions/">T's & C's</a></li>
-
-			</ul>
-		</div>
-		
+<footer id="footer">
+	<div>
+		<p>© <?php echo date('Y'); ?> <?php echo get_bloginfo( 'name' ); ?></p>
 	</div>
-</div>
 
-<div class="backto"></div>
+	<nav>
+	<?php 
+		wp_nav_menu( array(
+			'menu'           => 'Main Menu',
+			'theme_location' => 'main-menu',
+			'fallback_cb'    => false // Do not fall back to wp_page_menu()
+		) );
+		?>
+	</nav>
+</footer>

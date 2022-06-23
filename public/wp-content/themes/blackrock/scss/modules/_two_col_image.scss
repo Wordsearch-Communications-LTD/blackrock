@@ -1,0 +1,7 @@
+.two-col-image {
+    @include grid;
+
+    @media #{$mq-mobile}{
+        grid-template-columns: 1fr 1fr;
+    }  
+}

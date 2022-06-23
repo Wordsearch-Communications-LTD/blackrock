@@ -1,22 +1,19 @@
 <?php 
-    $leftCopy = ''; //get_sub_field();
-    $rightItems = ''; //get_sub_field();
-    $cta = ''; //get_sub_field();
+    $leftCopy = get_sub_field('left_copy');
+    $rightItems = get_sub_field('right_copy_blocks');
+    $cta = get_sub_field('download');
 ?>
 <section class="two-col-sticky">
-<h1>Two Column Sticky</h1>
-    <div class="left">
 
+    <div class="left">
+        <?php echo $leftCopy ?>
     </div>
     <div class="right">
-
+        <?php foreach($rightItems as $index => $item): ?>
+            <?php echo $index++ ?>
+            <?php echo $item['copy'] ?>
+        <?php endforeach; ?>
     </div>
-    <?php 
-        //https://www.advancedcustomfields.com/resources/working-with-nested-repeaters/
-        // foreach($rightItems as $item):
-        //     $item['number'];
-        //     $item['copy']    
-        // endforeach; 
-    ?>
+    <a class="button dark" href="<?php echo $cta['url']?>"><?php echo $cta['title'] ?></a>
     
 </section>

@@ -1,7 +1,12 @@
 <?php 
-    $image = ''; //get_sub_field();
-    $copy = ''; //get_sub_field();
+    $image = get_sub_field('image');
+    $copy = get_sub_field('copy');
 ?>
 <section class="one-col-copy-image">
-<h1>One Column Copy Image</h1>
+    
+    <div class="copy">
+        <?php echo $copy ?>
+    </div>
+    
+    <?php echo wp_get_attachment_image( $image['id'], 'full', "", ["class" => "image"] ); ?>
 </section>
