@@ -1,0 +1,13 @@
+.copy-two-images {
+    .copy {
+        @include grid;
+    }
+    
+    .images-container {
+        @include grid;
+
+        @media #{$mq-tablet-desk}{
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}

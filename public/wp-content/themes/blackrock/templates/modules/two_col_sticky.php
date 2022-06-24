@@ -6,14 +6,16 @@
 <section class="two-col-sticky">
 
     <div class="left">
-        <?php echo $leftCopy ?>
+        <div class="stick">
+            <?= $leftCopy ?>
+        </div>
     </div>
     <div class="right">
         <?php foreach($rightItems as $index => $item): ?>
-            <?php echo $index++ ?>
-            <?php echo $item['copy'] ?>
+            <?= $index++ ?>
+            <?= $item['copy'] ?>
         <?php endforeach; ?>
+        
+        <a class="button light" href="<?= $cta['url']?>"><?= $cta['title'] ?></a>
     </div>
-    <a class="button dark" href="<?php echo $cta['url']?>"><?php echo $cta['title'] ?></a>
-    
 </section>

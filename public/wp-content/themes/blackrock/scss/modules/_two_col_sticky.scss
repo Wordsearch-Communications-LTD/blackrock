@@ -1,0 +1,23 @@
+.two-col-sticky {
+    @include grid;
+
+    @media #{$mq-mobile}{
+        grid-template-columns: 1fr 1fr;
+    }  
+
+    .left {
+        position: relative;
+        
+        .stick {
+            position: sticky;
+            top: 0;
+        }
+    }
+
+    .right {
+
+        .button {
+            float: right;
+        }
+    }
+}

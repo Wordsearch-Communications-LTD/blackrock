@@ -7,3 +7,14 @@
         color: $br-white;
     }
 }
+
+.contact-open {
+    position: fixed;
+}
+
+.contact-open #footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+}

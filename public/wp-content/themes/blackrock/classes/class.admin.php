@@ -106,7 +106,7 @@ class WordsearchAdmin {
           
 
          
-
+        wp_enqueue_script( 'curtain-reveal', get_stylesheet_directory_uri() . '/js/curtain-reveal.js', array( 'jquery' ), null, true);
           // Main theme script
           wp_enqueue_script( 'custom-js', get_stylesheet_directory_uri() . '/js/custom.js', array( 'jquery' ), null, true);
           wp_localize_script( 'custom-js', 'ajax_object',

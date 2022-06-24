@@ -1,0 +1,43 @@
+.map {
+    @include grid;
+    grid-template-columns: repeat(12, 1fr);
+
+    @media #{$mq-desk-small}{
+        grid-template-areas:  "navi navi . maps maps maps maps maps maps maps maps maps";
+    }
+
+    .map-layers-nav {
+        grid-area: navi;
+    }
+    
+    .maps {
+        position: relative;
+        grid-area: maps;
+        
+        #main-map {
+            position: relative;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+
+        .map-layer {
+            position: absolute;
+            top: 0;
+            left: 0;
+                
+            &:nth-child(2) {
+                z-index: 2;
+            }
+            
+            &:nth-child(3) {
+                z-index: 3
+            }
+            
+            &:nth-child(4) {
+                z-index: 4
+            }
+        
+        }
+    }
+}

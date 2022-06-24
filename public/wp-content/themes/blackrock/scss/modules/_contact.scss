@@ -1,0 +1,49 @@
+.contact-module-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #000000;
+    width: 100vw;
+    height: calc(100vh - 60px);
+    transform: translateX(100vw);
+    z-index: 1000;
+    color: #FFFFFF;
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+    .contacts-container {
+        @include grid;
+        grid-template-columns: repeat(12, 1fr);
+        
+        @media #{$mq-desk-small}{
+            grid-template-areas: "contacts contacts contacts contacts contacts contacts . img img img img img";
+        }
+
+        .left {
+            @include grid;
+            grid-area: contacts;
+            margin: 0 !important;
+        }
+
+        .contacts {
+            @include grid;
+            
+            margin: 0 !important;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .image-container {
+            grid-area: img;
+            position: sticky;
+            top: 0;
+        }
+    }
+
+    .contact-logo {
+        width: calc((100vw - 80px) / 12);
+    }       
+}
+
+.contact-open .contact-module-container {
+    transform: translateX(0);
+}

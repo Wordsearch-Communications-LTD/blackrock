@@ -8,8 +8,8 @@
     }
 
     .blocks {
+        @include grid;
         
-            @include grid;
         @media #{$mq-mobile}{
             grid-template-columns: 1fr 1fr;
         }

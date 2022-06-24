@@ -2,9 +2,12 @@
     $images = get_sub_field('images');
 ?>
 <section class="image-carousel">
-    <h1>image carousel</h1>
+    <div class="carousel">
     <?php foreach($images as $image): ?>
-        <?php echo wp_get_attachment_image( $image['image']['id'], 'full' ); ?>
-        <?php echo $image['caption'] ?>
+        <div class="slide">
+            <?= wp_get_attachment_image( $image['image']['id'], 'full' ); ?>
+            <?= $image['caption'] ?>
+        </div>
     <?php endforeach; ?>
+    </div>
 </section>

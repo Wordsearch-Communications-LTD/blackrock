@@ -30,6 +30,19 @@ img {
   color: #FFFFFF;
 }
 
+/* line 11, ../scss/layout/_footer.scss */
+.contact-open {
+  position: fixed;
+}
+
+/* line 15, ../scss/layout/_footer.scss */
+.contact-open #footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+}
+
 @media (min-width: 375px) {
   /* line 9, ../scss/layout/_grid.scss */
   .grid {
@@ -66,6 +79,35 @@ img {
 .button.dark:hover {
   background-color: #FFFFFF;
   color: #000000;
+}
+
+/* line 2, ../scss/modules/_card_carousel.scss */
+.card-carousel .slide {
+  width: 25%;
+  float: left;
+}
+
+@media (min-width: 375px) {
+  /* line 2, ../scss/modules/_copy_two_images.scss */
+  .copy-two-images .copy {
+    display: grid;
+    margin: 0 40px;
+    column-gap: 20px;
+  }
+}
+@media (min-width: 375px) {
+  /* line 6, ../scss/modules/_copy_two_images.scss */
+  .copy-two-images .images-container {
+    display: grid;
+    margin: 0 40px;
+    column-gap: 20px;
+  }
+}
+@media (min-width: 1024px) {
+  /* line 6, ../scss/modules/_copy_two_images.scss */
+  .copy-two-images .images-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* line 1, ../scss/modules/_floors.scss */
@@ -133,6 +175,321 @@ img {
   display: none;
 }
 
+/* line 1, ../scss/modules/_contact.scss */
+.contact-module-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #000000;
+  width: 100vw;
+  height: calc(100vh - 60px);
+  transform: translateX(100vw);
+  z-index: 1000;
+  color: #FFFFFF;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+/* line 14, ../scss/modules/_contact.scss */
+.contact-module-container .contacts-container {
+  grid-template-columns: repeat(12, 1fr);
+}
+@media (min-width: 375px) {
+  /* line 14, ../scss/modules/_contact.scss */
+  .contact-module-container .contacts-container {
+    display: grid;
+    margin: 0 40px;
+    column-gap: 20px;
+  }
+}
+@media (min-width: 1280px) {
+  /* line 14, ../scss/modules/_contact.scss */
+  .contact-module-container .contacts-container {
+    grid-template-areas: "contacts contacts contacts contacts contacts contacts . img img img img img";
+  }
+}
+/* line 22, ../scss/modules/_contact.scss */
+.contact-module-container .contacts-container .left {
+  grid-area: contacts;
+  margin: 0 !important;
+}
+@media (min-width: 375px) {
+  /* line 22, ../scss/modules/_contact.scss */
+  .contact-module-container .contacts-container .left {
+    display: grid;
+    margin: 0 40px;
+    column-gap: 20px;
+  }
+}
+/* line 28, ../scss/modules/_contact.scss */
+.contact-module-container .contacts-container .contacts {
+  margin: 0 !important;
+  grid-template-columns: repeat(3, 1fr);
+}
+@media (min-width: 375px) {
+  /* line 28, ../scss/modules/_contact.scss */
+  .contact-module-container .contacts-container .contacts {
+    display: grid;
+    margin: 0 40px;
+    column-gap: 20px;
+  }
+}
+/* line 35, ../scss/modules/_contact.scss */
+.contact-module-container .contacts-container .image-container {
+  grid-area: img;
+  position: sticky;
+  top: 0;
+}
+/* line 42, ../scss/modules/_contact.scss */
+.contact-module-container .contact-logo {
+  width: calc((100vw - 80px) / 12);
+}
+
+/* line 47, ../scss/modules/_contact.scss */
+.contact-open .contact-module-container {
+  transform: translateX(0);
+}
+
+/* line 1, ../scss/modules/_home_hero.scss */
+.column-reveal {
+  width: 100vw;
+  max-width: 100%;
+  height: auto;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  overflow-x: clip;
+}
+/* line 11, ../scss/modules/_home_hero.scss */
+.column-reveal .column-reveal_slices,
+.column-reveal .column-reveal_container {
+  position: sticky;
+  width: 100vw;
+  max-width: 100%;
+  z-index: 1;
+}
+/* line 19, ../scss/modules/_home_hero.scss */
+.column-reveal .column-reveal_slices h1 {
+  position: absolute;
+  font-size: 64px;
+  width: 100%;
+  top: 200px;
+  text-align: center;
+  z-index: 10;
+  color: #987758;
+  letter-spacing: 1em;
+  opacity: 1;
+}
+/* line 31, ../scss/modules/_home_hero.scss */
+.column-reveal .column-reveal_container {
+  position: sticky;
+  top: 0;
+  background-color: #E7E7E7;
+  width: 100vw;
+  height: 185vh;
+  padding-top: 0;
+}
+/* line 39, ../scss/modules/_home_hero.scss */
+.column-reveal .column-reveal_container img {
+  width: 100vw;
+  z-index: 1;
+  position: sticky;
+  top: 0;
+}
+/* line 46, ../scss/modules/_home_hero.scss */
+.column-reveal .column-reveal_container h2 {
+  position: absolute;
+  top: 150vh;
+  left: 200px;
+  z-index: 2;
+  color: white;
+  font-size: 64px;
+  opacity: 0;
+}
+/* line 57, ../scss/modules/_home_hero.scss */
+.column-reveal .column-reveal_slices {
+  display: block;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+/* line 63, ../scss/modules/_home_hero.scss */
+.column-reveal .column-reveal_slices div.slice_contain {
+  display: block;
+  width: 100%;
+  height: 100vh;
+  z-index: 2;
+  position: relative;
+  top: 0;
+  overflow: hidden;
+}
+/* line 73, ../scss/modules/_home_hero.scss */
+.column-reveal .column-reveal_slices div.slice {
+  display: block;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-size: 100vw 100vh;
+  background-repeat: no-repeat;
+  transition: all 0s ease 0s;
+  transform-origin: center;
+}
+/* line 87, ../scss/modules/_home_hero.scss */
+.column-reveal.revealed h1 {
+  opacity: 0;
+  transition: all 0.3s ease 0s;
+}
+/* line 92, ../scss/modules/_home_hero.scss */
+.column-reveal.revealed h2 {
+  opacity: 1;
+  transition: all 0.3s ease 0s;
+}
+/* line 97, ../scss/modules/_home_hero.scss */
+.column-reveal .column-reveal_slices .slice_contain:nth-child(1) .slice {
+  background-position: 0 0;
+}
+/* line 98, ../scss/modules/_home_hero.scss */
+.column-reveal .column-reveal_slices .slice_contain:nth-child(2) .slice {
+  background-position: calc((100vw / 12) * -1);
+}
+/* line 99, ../scss/modules/_home_hero.scss */
+.column-reveal .column-reveal_slices .slice_contain:nth-child(3) .slice {
+  background-position: calc((100vw / 12)* -2) 0;
+}
+/* line 100, ../scss/modules/_home_hero.scss */
+.column-reveal .column-reveal_slices .slice_contain:nth-child(4) .slice {
+  background-position: calc((100vw / 12)* -3) 0;
+}
+/* line 101, ../scss/modules/_home_hero.scss */
+.column-reveal .column-reveal_slices .slice_contain:nth-child(5) .slice {
+  background-position: calc((100vw / 12)* -4) 0;
+}
+/* line 102, ../scss/modules/_home_hero.scss */
+.column-reveal .column-reveal_slices .slice_contain:nth-child(6) .slice {
+  background-position: calc((100vw / 12)* -5) 0;
+}
+/* line 103, ../scss/modules/_home_hero.scss */
+.column-reveal .column-reveal_slices .slice_contain:nth-child(7) .slice {
+  background-position: calc((100vw / 12)* -6) 0;
+}
+/* line 104, ../scss/modules/_home_hero.scss */
+.column-reveal .column-reveal_slices .slice_contain:nth-child(8) .slice {
+  background-position: calc((100vw / 12)* -7) 0;
+}
+/* line 105, ../scss/modules/_home_hero.scss */
+.column-reveal .column-reveal_slices .slice_contain:nth-child(9) .slice {
+  background-position: calc((100vw / 12)* -8) 0;
+}
+/* line 106, ../scss/modules/_home_hero.scss */
+.column-reveal .column-reveal_slices .slice_contain:nth-child(10) .slice {
+  background-position: calc((100vw / 12)* -9) 0;
+}
+/* line 107, ../scss/modules/_home_hero.scss */
+.column-reveal .column-reveal_slices .slice_contain:nth-child(11) .slice {
+  background-position: calc((100vw / 12)* -10) 0;
+}
+/* line 108, ../scss/modules/_home_hero.scss */
+.column-reveal .column-reveal_slices .slice_contain:nth-child(12) .slice {
+  background-position: calc((100vw / 12)* -11) 0;
+}
+
+/* line 2, ../scss/modules/_home_section.scss */
+.column-reveal.solid-bg {
+  background-size: calc(100vw / 12) 100vh;
+}
+/* line 6, ../scss/modules/_home_section.scss */
+.column-reveal .copy.split {
+  z-index: 100;
+}
+/* line 10, ../scss/modules/_home_section.scss */
+.column-reveal .sticky-expander {
+  display: block;
+  width: 10px;
+  height: 150vh;
+}
+/* line 16, ../scss/modules/_home_section.scss */
+.column-reveal .slice-grid {
+  display: grid;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  grid-template-columns: repeat(12, 1fr);
+}
+/* line 26, ../scss/modules/_home_section.scss */
+.column-reveal .original {
+  display: none !important;
+}
+/* line 30, ../scss/modules/_home_section.scss */
+.column-reveal .copy {
+  overflow: hidden;
+  display: block;
+  height: auto;
+  width: calc((100vw / 12) * 4);
+  height: 100vh;
+  position: absolute;
+  z-index: 10;
+}
+/* line 40, ../scss/modules/_home_section.scss */
+.column-reveal .copy .container {
+  display: block;
+  width: calc((100vw / 12) * 4);
+  margin-left: calc(100vw / 12);
+  margin-top: calc(100vw / 12);
+  padding: 20px;
+}
+/* line 49, ../scss/modules/_home_section.scss */
+.column-reveal.revealed .copy.split, .column-reveal.revealed .copy.split h1, .column-reveal.revealed .copy.split h2 {
+  opacity: 1;
+}
+/* line 55, ../scss/modules/_home_section.scss */
+.column-reveal .js-col-0, .column-reveal .js-col-1, .column-reveal .js-col-2, .column-reveal .js-col-3 {
+  z-index: 100;
+  width: calc(100vw / 12);
+}
+/* line 60, ../scss/modules/_home_section.scss */
+.column-reveal .js-col-0, .column-reveal .js-col-1, .column-reveal .js-col-2, .column-reveal .js-col-3 {
+  overflow: hidden;
+}
+/* line 65, ../scss/modules/_home_section.scss */
+.column-reveal .js-col-0 .container, .column-reveal .js-col-1 .container, .column-reveal .js-col-2 .container, .column-reveal .js-col-3 .container {
+  display: block;
+  margin-left: 0;
+  margin-top: calc(100vw / 12);
+  overflow: hidden;
+  width: calc((100vw / 12) * 4);
+}
+/* line 73, ../scss/modules/_home_section.scss */
+.column-reveal .js-col-0 {
+  margin-left: calc(100vw / 12);
+}
+/* line 77, ../scss/modules/_home_section.scss */
+.column-reveal .js-col-1 {
+  margin-left: calc((100vw / 12) * 2);
+}
+/* line 81, ../scss/modules/_home_section.scss */
+.column-reveal .js-col-2 {
+  margin-left: calc((100vw / 12) * 3);
+}
+/* line 85, ../scss/modules/_home_section.scss */
+.column-reveal .js-col-3 {
+  margin-left: calc((100vw / 12) * 4);
+}
+/* line 89, ../scss/modules/_home_section.scss */
+.column-reveal .js-col-1 .container {
+  margin-left: calc((100vw /12 * -1));
+}
+/* line 93, ../scss/modules/_home_section.scss */
+.column-reveal .js-col-2 .container {
+  margin-left: calc((100vw /12 * -2));
+}
+/* line 97, ../scss/modules/_home_section.scss */
+.column-reveal .js-col-3 .container {
+  margin-left: calc((100vw /12 * -3));
+}
+
 @media (min-width: 375px) {
   /* line 3, ../scss/modules/_keep_exploring.scss */
   .keep-exploring .title {
@@ -154,6 +511,59 @@ img {
   .keep-exploring .blocks {
     grid-template-columns: 1fr 1fr;
   }
+}
+
+/* line 1, ../scss/modules/_map.scss */
+.map {
+  grid-template-columns: repeat(12, 1fr);
+}
+@media (min-width: 375px) {
+  /* line 1, ../scss/modules/_map.scss */
+  .map {
+    display: grid;
+    margin: 0 40px;
+    column-gap: 20px;
+  }
+}
+@media (min-width: 1280px) {
+  /* line 1, ../scss/modules/_map.scss */
+  .map {
+    grid-template-areas: "navi navi . maps maps maps maps maps maps maps maps maps";
+  }
+}
+/* line 9, ../scss/modules/_map.scss */
+.map .map-layers-nav {
+  grid-area: navi;
+}
+/* line 13, ../scss/modules/_map.scss */
+.map .maps {
+  position: relative;
+  grid-area: maps;
+}
+/* line 17, ../scss/modules/_map.scss */
+.map .maps #main-map {
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+/* line 24, ../scss/modules/_map.scss */
+.map .maps .map-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* line 29, ../scss/modules/_map.scss */
+.map .maps .map-layer:nth-child(2) {
+  z-index: 2;
+}
+/* line 33, ../scss/modules/_map.scss */
+.map .maps .map-layer:nth-child(3) {
+  z-index: 3;
+}
+/* line 37, ../scss/modules/_map.scss */
+.map .maps .map-layer:nth-child(4) {
+  z-index: 4;
 }
 
 @media (min-width: 375px) {
@@ -186,11 +596,6 @@ img {
   .title-multiple-columns .copy-blocks {
     grid-template-columns: repeat(4, 1fr);
   }
-}
-
-/* line 18, ../scss/modules/_title_multiple_columns.scss */
-div {
-  border: 1px solid green;
 }
 
 @media (min-width: 375px) {
@@ -244,6 +649,34 @@ div {
   .two-col-image {
     grid-template-columns: 1fr 1fr;
   }
+}
+
+@media (min-width: 375px) {
+  /* line 1, ../scss/modules/_two_col_sticky.scss */
+  .two-col-sticky {
+    display: grid;
+    margin: 0 40px;
+    column-gap: 20px;
+  }
+}
+@media (min-width: 375px) {
+  /* line 1, ../scss/modules/_two_col_sticky.scss */
+  .two-col-sticky {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+/* line 8, ../scss/modules/_two_col_sticky.scss */
+.two-col-sticky .left {
+  position: relative;
+}
+/* line 11, ../scss/modules/_two_col_sticky.scss */
+.two-col-sticky .left .stick {
+  position: sticky;
+  top: 0;
+}
+/* line 19, ../scss/modules/_two_col_sticky.scss */
+.two-col-sticky .right .button {
+  float: right;
 }
 
 /*# sourceMappingURL=style.css.map */

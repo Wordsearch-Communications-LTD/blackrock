@@ -1,0 +1,100 @@
+.column-reveal {
+    &.solid-bg {
+        background-size: calc(100vw / 12) 100vh;
+    }
+    
+    .copy.split {
+        z-index: 100;
+    }
+    
+    .sticky-expander {
+        display: block;
+        width: 10px;
+        height: 150vh;
+    }
+    
+    .slice-grid {
+        display: grid;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        grid-template-columns: repeat(12, 1fr);
+    }
+
+    .original {
+        display: none !important;
+    }
+    
+    .copy {
+        overflow: hidden;
+        display: block;
+        height: auto;
+        width: calc((100vw / 12) * 4);
+        height: 100vh;
+        position: absolute;
+        z-index: 10;
+    }
+    
+    .copy .container {
+        display: block;
+        width: calc((100vw / 12) * 4);
+        margin-left: calc(100vw / 12); 
+        margin-top: calc(100vw / 12);
+        
+        padding: 20px;
+    }
+    
+    &.revealed .copy.split,
+    &.revealed .copy.split h1,
+    &.revealed .copy.split h2 {
+        opacity: 1;
+    }
+
+    .js-col-0, .js-col-1, .js-col-2, .js-col-3 {
+        z-index: 100;
+        width: calc(100vw / 12);
+    }
+    
+    .js-col-0, .js-col-1, .js-col-2, .js-col-3 {
+        
+        overflow: hidden;
+    }
+    
+    .js-col-0 .container, .js-col-1 .container, .js-col-2 .container, .js-col-3 .container {
+        display: block;
+        margin-left: 0;
+        margin-top: calc(100vw / 12);
+        overflow: hidden;
+        width: calc((100vw / 12) * 4);
+    }
+    
+    .js-col-0 {
+        margin-left: calc(100vw / 12); 
+    }
+    
+    .js-col-1 {
+        margin-left: calc((100vw / 12) * 2); 
+    }
+    
+    .js-col-2 {
+        margin-left: calc((100vw / 12) * 3); 
+    }
+    
+    .js-col-3 {
+        margin-left: calc((100vw / 12) * 4); 
+    }
+    
+    .js-col-1 .container {
+        margin-left: calc((100vw /12 * -1));
+    }
+    
+    .js-col-2 .container {
+        margin-left: calc((100vw /12 * -2));
+    }
+    
+    .js-col-3 .container {
+        margin-left: calc((100vw /12 * -3));
+    }
+}
