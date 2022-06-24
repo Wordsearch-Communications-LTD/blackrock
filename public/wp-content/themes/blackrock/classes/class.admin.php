@@ -104,9 +104,11 @@ class WordsearchAdmin {
 
           //wp_enqueue_script( 'waypoint-js', get_stylesheet_directory_uri() . '/js/waypoint.js', array( 'jquery' ), null, true);
           
-
-         
-        wp_enqueue_script( 'curtain-reveal', get_stylesheet_directory_uri() . '/js/curtain-reveal.js', array( 'jquery' ), null, true);
+          wp_enqueue_script( 'sliders', get_stylesheet_directory_uri() . '/js/sliders.js', array( 'jquery' ), null, true);
+          wp_enqueue_script( 'floors', get_stylesheet_directory_uri() . '/js/floors.js', array( 'jquery' ), null, true);
+          wp_enqueue_script( 'maps', get_stylesheet_directory_uri() . '/js/maps.js', array( 'jquery' ), null, true);
+          wp_enqueue_script( 'contact', get_stylesheet_directory_uri() . '/js/contact.js', array( 'jquery' ), null, true);
+          wp_enqueue_script( 'curtain-reveal', get_stylesheet_directory_uri() . '/js/curtain-reveal.js', array( 'jquery' ), null, true);
           // Main theme script
           wp_enqueue_script( 'custom-js', get_stylesheet_directory_uri() . '/js/custom.js', array( 'jquery' ), null, true);
           wp_localize_script( 'custom-js', 'ajax_object',

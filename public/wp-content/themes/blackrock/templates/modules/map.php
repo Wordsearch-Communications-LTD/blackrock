@@ -16,7 +16,7 @@
             <?php /*<img src="<?= $titleImage['url'] ?>" class="style-svg"> */?>
         </div>
         <?php foreach($layers as $index => $layer): ?>
-            <div class="map-layer" data-layer-index="<?php $index ?>">
+            <div class="map-layer" data-layer-index="<?= $index ?>">
                 <?= wp_get_attachment_image( $layer['layer_image']['id'], 'full' ); ?>
                 <?php /*<img src="<?= $layer['layer_image']['url'] ?>" class="style-svg"> */?>
             </div>    

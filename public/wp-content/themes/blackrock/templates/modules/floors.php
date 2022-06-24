@@ -21,7 +21,16 @@
     </div>    
     <div class="floor-list">
         <?php foreach($floors as $floor): ?>
-            <div class="floor">
+            <?php $hasActiveUnit = false ?>
+            <?php foreach($floor['units'] as $unit): ?>
+                <?php
+                    $hasActiveUnit = ($unit['availiable']) ? 'floor-available' : 'floor-occupied';
+                    if($hasActiveUnit === 'floor-available') {
+                        break;
+                    }
+                ?>
+            <?php endforeach; ?>
+            <div class="floor <?= $hasActiveUnit ?>">
                 <div class="floor-number"><?php echo $floor['floor_number']; ?></div>
                                 
                 <?php foreach($floor['units'] as $unit): ?>

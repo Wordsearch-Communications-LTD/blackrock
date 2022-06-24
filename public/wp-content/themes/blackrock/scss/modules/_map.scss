@@ -25,6 +25,7 @@
             position: absolute;
             top: 0;
             left: 0;
+            opacity: 0;
                 
             &:nth-child(2) {
                 z-index: 2;
@@ -38,6 +39,9 @@
                 z-index: 4
             }
         
+            &.show {
+                opacity: 1;
+            }
         }
     }
 }

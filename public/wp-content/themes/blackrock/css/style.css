@@ -24,18 +24,19 @@ img {
   background-color: #0627CA;
   color: #FFFFFF;
   height: 80px;
+  z-index: 1000;
 }
-/* line 6, ../scss/layout/_footer.scss */
+/* line 7, ../scss/layout/_footer.scss */
 #footer a {
   color: #FFFFFF;
 }
 
-/* line 11, ../scss/layout/_footer.scss */
+/* line 12, ../scss/layout/_footer.scss */
 .contact-open {
   position: fixed;
 }
 
-/* line 15, ../scss/layout/_footer.scss */
+/* line 16, ../scss/layout/_footer.scss */
 .contact-open #footer {
   position: fixed;
   bottom: 0;
@@ -552,18 +553,23 @@ img {
   position: absolute;
   top: 0;
   left: 0;
+  opacity: 0;
 }
-/* line 29, ../scss/modules/_map.scss */
+/* line 30, ../scss/modules/_map.scss */
 .map .maps .map-layer:nth-child(2) {
   z-index: 2;
 }
-/* line 33, ../scss/modules/_map.scss */
+/* line 34, ../scss/modules/_map.scss */
 .map .maps .map-layer:nth-child(3) {
   z-index: 3;
 }
-/* line 37, ../scss/modules/_map.scss */
+/* line 38, ../scss/modules/_map.scss */
 .map .maps .map-layer:nth-child(4) {
   z-index: 4;
+}
+/* line 42, ../scss/modules/_map.scss */
+.map .maps .map-layer.show {
+  opacity: 1;
 }
 
 @media (min-width: 375px) {
