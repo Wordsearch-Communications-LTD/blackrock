@@ -3,9 +3,62 @@
     color: $br-white;
     height: 80px;
     z-index: 1000;
+    font-size: 16px;
 
     a {
         color: $br-white;
+    }
+
+    p {
+        margin: 0;
+        padding: 0 0 0 40px;
+        float: left;
+        line-height: 80px;
+    }
+
+    ul {
+        float: left;
+    }
+    
+    .menu {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        padding-top: 32px;
+        padding-left: calc((100vw / 12) + 40px);
+
+        li {
+            display: inline-block;
+            font-size: 16px;
+
+            &:after {
+                font-weight: bold;
+                content: '/';
+                padding-left: 10px;
+                padding-right: 5px;
+            }
+
+            &:last-child:after {
+                display: none;
+            }
+
+            a {
+                text-decoration: none;
+                color: white;
+            }
+
+            &:hover,
+            &.current_page_item {
+                a {
+                    color: white;
+                }
+            }
+
+            &.current_page_item a {
+                padding-bottom: 3px;
+                border-bottom: 2px solid white;
+            }
+        }
     }
 }
 

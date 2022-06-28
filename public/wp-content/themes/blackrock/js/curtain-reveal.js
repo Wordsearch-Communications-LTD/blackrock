@@ -42,8 +42,7 @@ class HeroCurtain {
     createCopySlices(){
         let classes =  this.copyContainer;
         let cols = 4;
-        console.log(classes);
-
+        
         for(let i = 0; i < cols; i++){
             let clonedCopyContainer = this.copyContainer.cloneNode(true);
             clonedCopyContainer.classList.add('js-col-' + i, 'appended');
@@ -140,11 +139,9 @@ class HeroCurtain {
 let curtainReveals = document.querySelectorAll('.column-reveal');
 
 curtainReveals.forEach(element => {
-    console.log(element.id);
     if(element.id !== 'home-hero'){
         element = new HeroCurtain(element.id, '.column-reveal_slices div.slice_contain', '.copy.split');
     }
 });
 
-let curtain = new HeroCurtain('home-hero', '.column-reveal_slices div.slice_contain');
-//let another = new HeroCurtain('next-one', '.column-reveal_slices div.slice_contain', '.copy.split');
+let heroCurtain = new HeroCurtain('home-hero', '.column-reveal_slices div.slice_contain');

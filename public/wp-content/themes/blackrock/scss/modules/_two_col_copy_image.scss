@@ -28,3 +28,34 @@
         }
     }
 }
+
+.image-expand .image {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    line-height: 0;
+
+    img {
+        position: relative;
+        z-index: 1;
+    }
+
+    &:after {
+        display: block;
+        content:'';
+        pointer-events: none;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        background-color: rgba($br-blue, 0.9);
+        opacity: 0;
+    }
+
+    &:hover:after {
+        opacity: 1;
+    }
+}

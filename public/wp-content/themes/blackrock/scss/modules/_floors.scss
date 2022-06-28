@@ -28,11 +28,25 @@
         grid-area: floor-list;
         width: 75%;
 
+        &.hide-occupied .floor-occupied {
+            display: none;
+        }
+
         .floor {
             width: 100%;
             display: flex;
             margin-bottom: 5px;
             gap: 5px;
+            position: relative;
+
+            &.expanded {
+                height: 400px;
+                background-color: var(--availableColor);
+            
+                .unit {
+                    display: none;
+                }
+            }
 
             .floor-number {
                 position: absolute;
@@ -45,8 +59,51 @@
                 height: 35px;
                 color: $br-white;
 
-                .hidden {
+                .close-unit {
                     display: none;
+                }
+
+                .content {
+                    display: none;
+                    grid-template-columns: 2fr 3fr;
+
+                    .data {
+                        display: block;
+                        list-style-type: none;
+                        margin: 0;
+                        padding: 0;
+                        overflow: hidden;
+
+                        li {
+                            display: grid;
+                            padding: 10px 0;
+                            border-top: 2px solid white;
+                            grid-template-columns: 1fr 1fr;
+                        }
+                    }
+
+                    .image {
+                        display: block;
+                        overflow: hidden;
+                    }
+                }
+
+                &.selected {
+                    width: 100%;
+                    display: block;
+                    position: relative;
+
+                    .close-unit {
+                        display: block;
+                        position: absolute;
+                        top: 10px;
+                        right: 10px
+                    }
+
+                    .content {
+                        display: grid;
+                        padding: 20px;
+                    }
                 }
             }
         }

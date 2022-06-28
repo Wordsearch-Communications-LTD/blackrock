@@ -8,5 +8,5 @@
         <?php echo $copy ?>
     </div>
     
-    <?php echo wp_get_attachment_image( $image['id'], 'full', "", ["class" => "image"] ); ?>
+    <?php echo wp_get_attachment_image( $image['id'], 'full', false, ["class" => "image"] ); ?>
 </section>

@@ -13,8 +13,8 @@
             <?php echo $copy ?>
         </div>
     </div>
-    <div class="image-container">
-        <?php echo wp_get_attachment_image( $image['id'], 'full', "", ["class" => 'image'] ); ?>
+    <div class="image-container image-expand">
+        <div class="image"><?php echo wp_get_attachment_image( $image['id'], 'full', "", ["data-original" => $image['url']] ); ?></div>
         <div class="caption"><?php echo $caption ?></div>
     </div>
 </section>

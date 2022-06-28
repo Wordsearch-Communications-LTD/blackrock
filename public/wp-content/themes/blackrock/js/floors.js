@@ -1,25 +1,53 @@
 class Floors {
     constructor() {
-        this.floorToggle = document.querySelectorAll('.floor-toggle button')[0];
-        this.floorList = document.querySelectorAll('.floor-list');
-        this.floorToggle = false;
+        this.floorToggle = document.getElementById('floor-toggle');
+        this.floorList = document.querySelector('.floor-list');
+        this.units = document.querySelectorAll('.floor-available .unit.available');
+        this.expandedFloors = document.querySelectorAll('.floor-available.expanded');
+        this.closeUnit = document.querySelectorAll('.floor-available .close-unit');
+
+        this.setEventListeners();
     }
 
-    setEventListener() {
+    setEventListeners() {
         this.floorToggle.addEventListener('click', e => {
             e.preventDefault();
+            this.floorList.classList.toggle('hide-occupied');
+        });
 
-            console.log(this.floorList.querySelectorAll('.floor-occupied'));
+        this.units.forEach(unit => {
+            unit.addEventListener('click', e => {
+                e.preventDefault();
+                this.minimiseFloors();
+                unit.parentNode.classList.add('expanded');
+                unit.classList.add('selected');
+            });
+        });
 
-            for(let floor of this.floorList.querySelectorAll('.floor-occupied')){
-                floor.classList.add('hidden');
-            }
+        this.closeUnit.forEach(close => {
+            close.addEventListener('click', e => {
+                e.preventDefault();
+                e.stopPropagation();
+                this.minimiseFloors();
+                console.log('close');
+            });
         });
     }
 
-    toggleFloors(){
-
+    minimiseFloors(){
+        this.expandedFloors = document.querySelectorAll('.floor-available.expanded');
+        
+        this.units.forEach(unit => {
+            unit.classList.remove('selected');
+        });
+        
+        this.expandedFloors.forEach(floor => {
+            console.log(floor);
+            floor.classList.remove('expanded');
+        });
     }
 }
+
+
 
 let floors = new Floors();

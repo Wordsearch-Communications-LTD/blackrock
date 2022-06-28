@@ -5,7 +5,6 @@
     $occupiedCopy = get_sub_field('occupied_copy');
     $toggleCopy = get_sub_field('toggle_copy');
     $floors = get_sub_field('floors');
-
 ?>
 <section class="floors grid">
     <style>
@@ -17,7 +16,7 @@
     <div class="floor-toggle">
         <div class="legend available"><?php echo $availableCopy ?></div>
         <div class="legend occupied"><?php echo $occupiedCopy ?></div>
-        <button><?php echo $toggleCopy ?></button>
+        <button id="floor-toggle"><?php echo $toggleCopy ?></button>
     </div>    
     <div class="floor-list">
         <?php foreach($floors as $floor): ?>
@@ -37,21 +36,39 @@
                     <?php $availability = ($unit['availiable']) ? 'available' : 'occupied'; ?>
                     
                     <div class="unit <?php echo $availability ?>">
-                        <?php echo $unit['unit_number']; ?>
-                        <?php echo $unit['unit_square_footage']; ?>
-                        
-                        <div class="hidden">
-                            <?php echo $unit['name']; ?>
-                            <?php echo $unit['sqft_label']; ?>
-                            <?php echo $unit['sqft_value']; ?>
-                            <?php echo $unit['ceiling_height_label']; ?>
-                            <?php echo $unit['ceiling_height_value']; ?>
-                            <?php echo $unit['download_plans_label']; ?>
-                            <?php echo $unit['download_plans_link']['url']; ?>
-                            <?php echo $unit['test_fits_label']; ?>
-                            <?php echo $unit['test_fits_link']['url']; ?>
-                            <?php echo wp_get_attachment_image( $unit['image']['id'], 'full' ); ?>
-                        </div>
+                        <button class="close-unit">Close</button>
+                        <header>
+                            <?php echo $unit['unit_number']; ?>
+                            <?php echo $unit['unit_square_footage']; ?>
+                        </header>
+
+                        <article class="content">
+                            
+                            <ul class="data">
+                                <li>
+                                    <h3><?php echo $unit['name']; ?></h3>
+                                </li>
+                                <li>
+                                    <span><?php echo $unit['sqft_label']; ?></span>
+                                    <span><?php echo $unit['sqft_value']; ?></span>
+                                </li>
+                                <li>
+                                    <span><?php echo $unit['ceiling_height_label']; ?></span>
+                                    <span><?php echo $unit['ceiling_height_value']; ?></span>
+                                </li>
+                                <li>
+                                    <span><?php echo $unit['download_plans_label']; ?></span>
+                                    <span><?php echo $unit['download_plans_link']['url']; ?></span>
+                                </li>
+                                <li>
+                                    <span><?php echo $unit['test_fits_label']; ?></span>
+                                    <span><?php echo $unit['test_fits_link']['url']; ?></span>
+                                </li>
+                            </ul>
+                            <div class="image">
+                                <?php echo wp_get_attachment_image( $unit['image']['id'], 'full' ); ?>
+                            </div>
+                        </article>
                     </div>
                 <?php endforeach; //units ?>
             </div>

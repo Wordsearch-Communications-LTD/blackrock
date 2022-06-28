@@ -25,18 +25,68 @@ img {
   color: #FFFFFF;
   height: 80px;
   z-index: 1000;
+  font-size: 16px;
 }
-/* line 7, ../scss/layout/_footer.scss */
+/* line 8, ../scss/layout/_footer.scss */
 #footer a {
   color: #FFFFFF;
 }
-
 /* line 12, ../scss/layout/_footer.scss */
+#footer p {
+  margin: 0;
+  padding: 0 0 0 40px;
+  float: left;
+  line-height: 80px;
+}
+/* line 19, ../scss/layout/_footer.scss */
+#footer ul {
+  float: left;
+}
+/* line 23, ../scss/layout/_footer.scss */
+#footer .menu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  padding-top: 32px;
+  padding-left: calc((100vw / 12) + 40px);
+}
+/* line 30, ../scss/layout/_footer.scss */
+#footer .menu li {
+  display: inline-block;
+  font-size: 16px;
+}
+/* line 34, ../scss/layout/_footer.scss */
+#footer .menu li:after {
+  font-weight: bold;
+  content: '/';
+  padding-left: 10px;
+  padding-right: 5px;
+}
+/* line 41, ../scss/layout/_footer.scss */
+#footer .menu li:last-child:after {
+  display: none;
+}
+/* line 45, ../scss/layout/_footer.scss */
+#footer .menu li a {
+  text-decoration: none;
+  color: white;
+}
+/* line 52, ../scss/layout/_footer.scss */
+#footer .menu li:hover a, #footer .menu li.current_page_item a {
+  color: white;
+}
+/* line 57, ../scss/layout/_footer.scss */
+#footer .menu li.current_page_item a {
+  padding-bottom: 3px;
+  border-bottom: 2px solid white;
+}
+
+/* line 65, ../scss/layout/_footer.scss */
 .contact-open {
   position: fixed;
 }
 
-/* line 16, ../scss/layout/_footer.scss */
+/* line 69, ../scss/layout/_footer.scss */
 .contact-open #footer {
   position: fixed;
   bottom: 0;
@@ -51,6 +101,65 @@ img {
     margin: 0 40px;
     column-gap: 20px;
   }
+}
+
+/* line 1, ../scss/layout/_header.scss */
+.header-menu {
+  position: fixed;
+  z-index: 100000;
+  top: 0;
+  left: 0;
+  height: 100px;
+  width: 100vw;
+  background-color: white;
+}
+/* line 12, ../scss/layout/_header.scss */
+.header-menu .logo {
+  display: block;
+  margin-top: 38px;
+  margin-left: 40px;
+  height: 26px;
+  float: left;
+}
+/* line 20, ../scss/layout/_header.scss */
+.header-menu .menu-main-menu-container {
+  float: right;
+  margin-top: 30px;
+  margin-right: 40px;
+}
+/* line 25, ../scss/layout/_header.scss */
+.header-menu .menu-main-menu-container .menu {
+  list-style-type: none;
+}
+/* line 28, ../scss/layout/_header.scss */
+.header-menu .menu-main-menu-container .menu li {
+  display: inline-block;
+  font-size: 20px;
+}
+/* line 32, ../scss/layout/_header.scss */
+.header-menu .menu-main-menu-container .menu li:after {
+  font-weight: bold;
+  content: '/';
+  padding-left: 10px;
+  padding-right: 5px;
+}
+/* line 39, ../scss/layout/_header.scss */
+.header-menu .menu-main-menu-container .menu li:last-child:after {
+  display: none;
+}
+/* line 43, ../scss/layout/_header.scss */
+.header-menu .menu-main-menu-container .menu li a {
+  text-decoration: none;
+  color: black;
+}
+/* line 50, ../scss/layout/_header.scss */
+.header-menu .menu-main-menu-container .menu li:hover a, .header-menu .menu-main-menu-container .menu li.current_page_item a {
+  color: #0627CA;
+}
+/* line 55, ../scss/layout/_header.scss */
+.header-menu .menu-main-menu-container .menu li.current_page_item a {
+  padding-bottom: 3px;
+  border-bottom: 2px solid #0627CA;
 }
 
 /* line 7, ../scss/elements/_buttons.scss */
@@ -153,27 +262,84 @@ img {
   width: 75%;
 }
 /* line 31, ../scss/modules/_floors.scss */
+.floors .floor-list.hide-occupied .floor-occupied {
+  display: none;
+}
+/* line 35, ../scss/modules/_floors.scss */
 .floors .floor-list .floor {
   width: 100%;
   display: flex;
   margin-bottom: 5px;
   gap: 5px;
+  position: relative;
 }
-/* line 37, ../scss/modules/_floors.scss */
+/* line 42, ../scss/modules/_floors.scss */
+.floors .floor-list .floor.expanded {
+  height: 400px;
+  background-color: var(--availableColor);
+}
+/* line 46, ../scss/modules/_floors.scss */
+.floors .floor-list .floor.expanded .unit {
+  display: none;
+}
+/* line 51, ../scss/modules/_floors.scss */
 .floors .floor-list .floor .floor-number {
   position: absolute;
   z-index: 2;
   color: #FFFFFF;
 }
-/* line 43, ../scss/modules/_floors.scss */
+/* line 57, ../scss/modules/_floors.scss */
 .floors .floor-list .floor .unit {
   flex: 1;
   height: 35px;
   color: #FFFFFF;
 }
-/* line 48, ../scss/modules/_floors.scss */
-.floors .floor-list .floor .unit .hidden {
+/* line 62, ../scss/modules/_floors.scss */
+.floors .floor-list .floor .unit .close-unit {
   display: none;
+}
+/* line 66, ../scss/modules/_floors.scss */
+.floors .floor-list .floor .unit .content {
+  display: none;
+  grid-template-columns: 2fr 3fr;
+}
+/* line 70, ../scss/modules/_floors.scss */
+.floors .floor-list .floor .unit .content .data {
+  display: block;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+/* line 77, ../scss/modules/_floors.scss */
+.floors .floor-list .floor .unit .content .data li {
+  display: grid;
+  padding: 10px 0;
+  border-top: 2px solid white;
+  grid-template-columns: 1fr 1fr;
+}
+/* line 85, ../scss/modules/_floors.scss */
+.floors .floor-list .floor .unit .content .image {
+  display: block;
+  overflow: hidden;
+}
+/* line 91, ../scss/modules/_floors.scss */
+.floors .floor-list .floor .unit.selected {
+  width: 100%;
+  display: block;
+  position: relative;
+}
+/* line 96, ../scss/modules/_floors.scss */
+.floors .floor-list .floor .unit.selected .close-unit {
+  display: block;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+/* line 103, ../scss/modules/_floors.scss */
+.floors .floor-list .floor .unit.selected .content {
+  display: grid;
+  padding: 20px;
 }
 
 /* line 1, ../scss/modules/_contact.scss */
@@ -572,6 +738,28 @@ img {
   opacity: 1;
 }
 
+/* line 1, ../scss/modules/_modal_popup.scss */
+#modal-popup {
+  display: none;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+  background-color: white;
+}
+/* line 11, ../scss/modules/_modal_popup.scss */
+#modal-popup.visible {
+  display: block;
+}
+/* line 15, ../scss/modules/_modal_popup.scss */
+#modal-popup .close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
 @media (min-width: 375px) {
   /* line 2, ../scss/modules/_one_col_copy_image.scss */
   .one-col-copy-image .copy {
@@ -640,6 +828,38 @@ img {
 /* line 26, ../scss/modules/_two_col_copy_image.scss */
 .two-col-copy-image .image-container .caption {
   grid-area: cap;
+}
+
+/* line 32, ../scss/modules/_two_col_copy_image.scss */
+.image-expand .image {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  line-height: 0;
+}
+/* line 39, ../scss/modules/_two_col_copy_image.scss */
+.image-expand .image img {
+  position: relative;
+  z-index: 1;
+}
+/* line 44, ../scss/modules/_two_col_copy_image.scss */
+.image-expand .image:after {
+  display: block;
+  content: '';
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  background-color: rgba(6, 39, 202, 0.9);
+  opacity: 0;
+}
+/* line 58, ../scss/modules/_two_col_copy_image.scss */
+.image-expand .image:hover:after {
+  opacity: 1;
 }
 
 @media (min-width: 375px) {
