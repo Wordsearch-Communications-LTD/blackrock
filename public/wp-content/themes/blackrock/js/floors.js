@@ -49,5 +49,6 @@ class Floors {
 }
 
 
-
-let floors = new Floors();
+if(document.getElementById('floor-toggle')){
+    let floors = new Floors();
+}

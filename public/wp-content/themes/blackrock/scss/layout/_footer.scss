@@ -1,15 +1,17 @@
 #footer {
+    overflow: hidden;
     background-color: $br-blue;
     color: $br-white;
     height: 80px;
     z-index: 1000;
-    font-size: 16px;
+    @include body-16;
+    margin-bottom: 0;
 
     a {
         color: $br-white;
     }
 
-    p {
+    p.copyright {
         margin: 0;
         padding: 0 0 0 40px;
         float: left;
@@ -30,6 +32,7 @@
         li {
             display: inline-block;
             font-size: 16px;
+            
 
             &:after {
                 font-weight: bold;
@@ -61,14 +64,9 @@
         }
     }
 }
-
-.contact-open {
-    position: fixed;
-}
-
 .contact-open #footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100vw;
+    background-color: transparent;
+    .footer-content-main {
+        opacity: 0;
+    }
 }

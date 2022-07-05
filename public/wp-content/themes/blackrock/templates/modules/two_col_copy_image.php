@@ -6,15 +6,17 @@
 ?>
 <section class="two-col-copy-image">
     <div class="copy">
-        <div>
+        <div class="left">
             <?php echo $title ?>
         </div>
-        <div>
+        <div class="right">
             <?php echo $copy ?>
         </div>
     </div>
+    <?php if($image): ?>
     <div class="image-container image-expand">
         <div class="image"><?php echo wp_get_attachment_image( $image['id'], 'full', "", ["data-original" => $image['url']] ); ?></div>
         <div class="caption"><?php echo $caption ?></div>
     </div>
+    <?php endif; ?>
 </section>

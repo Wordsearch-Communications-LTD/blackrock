@@ -10,7 +10,7 @@
                 
                 <div class="swiper-slide">
                     <?= wp_get_attachment_image( $image['image']['id'], 'full'); ?>
-                    <?= $image['caption'] ?>
+                    <div class="caption"><?= $image['caption'] ?></div>
                 </div>
             
             <?php endforeach; ?>

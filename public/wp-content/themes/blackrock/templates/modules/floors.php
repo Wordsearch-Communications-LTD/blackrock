@@ -30,7 +30,7 @@
                 ?>
             <?php endforeach; ?>
             <div class="floor <?= $hasActiveUnit ?>">
-                <div class="floor-number"><?php echo $floor['floor_number']; ?></div>
+                <!-- <div class="floor-number"><?php echo $floor['floor_number']; ?></div> -->
                                 
                 <?php foreach($floor['units'] as $unit): ?>
                     <?php $availability = ($unit['availiable']) ? 'available' : 'occupied'; ?>
@@ -38,8 +38,8 @@
                     <div class="unit <?php echo $availability ?>">
                         <button class="close-unit">Close</button>
                         <header>
-                            <?php echo $unit['unit_number']; ?>
-                            <?php echo $unit['unit_square_footage']; ?>
+                            <span class="floor-header_floor-number"><?php echo $unit['unit_number']; ?></span>
+                            <span class="floor-header_name-sqft"><?php echo $unit['unit_square_footage']; ?></span>
                         </header>
 
                         <article class="content">

@@ -1,3 +1,7 @@
-.image_carousel {
+.image-carousel {
+    margin-bottom: calc(100vw / 12);
     
+    .caption {
+        padding-left: 40px;
+    }
 }

@@ -1,11 +1,25 @@
+.home .header-menu {
+    opacity: 0;
+}
+
+.home .header-menu.show-menu {
+    opacity: 1;
+}
+
+
+
+
 .header-menu {
     position: fixed;
-    z-index: 100000;
     top:0;
     left: 0;
     height: 100px;
     width: 100vw;
-    background-color: white;
+    z-index: 3;
+
+    a {
+        @include body-20;
+    }
 
     &:after {}
 
@@ -19,7 +33,7 @@
     
     .menu-main-menu-container {
         float: right;
-        margin-top: 30px;
+        margin-top: 20px;
         margin-right: 40px;
 
         .menu {
@@ -68,3 +82,38 @@
     }
 }
 
+.page-white {
+    .header-menu {
+        background-color: $br-white;
+    }
+}
+
+.page-cream {
+    .header-menu {
+        background-color: $br-cream;
+    }
+
+    &.home {
+        .header-menu {
+            background-color: $br-white;
+        }
+    }
+}
+
+.page-black {
+    .header-menu {
+        background-color: $br-black;
+
+        svg path {
+            fill: white;
+        }
+
+        .menu-main-menu-container .menu li a {
+            color: white;
+        }
+        .menu-main-menu-container .menu li.current_page_item a {
+            border-color: $br-white;
+        }
+    }
+    
+}

@@ -1,12 +1,14 @@
 .floors {
-    grid-template-columns: repeat(12, 1fr);
+    margin-bottom: calc(100vw / 12);
     
-    @media #{$mq-desk-small}{
-        grid-template-areas:  "floor-toggle floor-toggle . floor-list floor-list floor-list floor-list floor-list floor-list floor-list floor-list .";
+    @media #{$mq-mobile}{
+        grid-template-columns: 2fr 1fr 8fr 1fr;
+        grid-template-areas:  "floor-toggle . floor-list .";
     }
 
     @media #{$mq-desk-large}{
-        grid-template-areas:  "floor-toggle floor-toggle . floor-list floor-list floor-list floor-list floor-list floor-list . . .";
+        grid-template-columns: 2fr 1fr 6fr 3fr;
+        grid-template-areas:  "floor-toggle . floor-list .";
     }
     
     .occupied { background-color: var(--occupiedColor); }
@@ -19,8 +21,12 @@
             display: block;
             height: 35px;
             color: $br-white;
+            @include body-20;
+            font-size: 14px;
+            margin: 0;
+            padding: 0;      
             line-height: 35px;
-            padding-left: 10px;
+            padding-left: 10px;  
         }
     }   
 
@@ -38,6 +44,29 @@
             margin-bottom: 5px;
             gap: 5px;
             position: relative;
+
+            header {
+                position: relative;
+                z-index: 1;
+                .floor-header_floor-number, 
+                .floor-header_name-sqft {
+                    display: inline-block;
+                    @include body-20;
+                    font-size: 14px;
+                    line-height: 35px;
+                    padding: 0;
+                    margin: 0;
+                }
+
+                .floor-header_name-sqft {
+                    position: absolute;
+                    left: calc((100vw / 24) + 10px);
+                }
+
+                .floor-header_floor-number {
+                    margin-left: 10px;
+                }
+            }
 
             &.expanded {
                 height: 400px;
@@ -65,26 +94,50 @@
 
                 .content {
                     display: none;
-                    grid-template-columns: 2fr 3fr;
+                    grid-template-columns: repeat(12, 1fr);
+                    grid-template-areas:  ". data data data data . img img img img img . .";
 
                     .data {
+                        grid-area: data;
                         display: block;
                         list-style-type: none;
                         margin: 0;
                         padding: 0;
                         overflow: hidden;
-
+                        
                         li {
                             display: grid;
-                            padding: 10px 0;
+                            padding: 15px 0;
                             border-top: 2px solid white;
                             grid-template-columns: 1fr 1fr;
+                            gap: 0px 10px;
+
+                            &:first-of-type {
+                                border-style:none;
+                                display: block;
+                                padding-top: 0;
+                            }
+                            
+                            span {
+                                display: block;
+                                overflow: hidden;                            
+                                
+                                &:last-of-type {
+                                    justify-self: end;
+                                }
+                            }
+
+                            h3 {
+                                padding-top: 0;
+                                margin-top: 0;
+                            }
                         }
                     }
 
                     .image {
                         display: block;
                         overflow: hidden;
+                        grid-area: img;
                     }
                 }
 
@@ -97,7 +150,8 @@
                         display: block;
                         position: absolute;
                         top: 10px;
-                        right: 10px
+                        right: 10px;
+                        z-index: 2;
                     }
 
                     .content {

@@ -1,22 +1,37 @@
 .two-col-copy-image {
     
+    margin-bottom: calc(100vw / 12);
+
     .copy {
         @include grid;
-
-    
+        grid-area: copy;
+            
         @media #{$mq-mobile}{
-            grid-template-columns: 1fr 1fr;
-        }    
+            grid-template-columns: 5fr 1fr 6fr;
+            margin: 0 40px calc(100vw / 12) 40px;
+            grid-template-areas: "left . right";
+        }
+
+        .left { grid-area: left;}
+        .right { grid-area: right;}
+
+        h2 {
+            @include headline-50;
+        }
+
+        p {
+            @include body-35;
+        }
     }
     
     .image-container {
         @include grid;
 
         @media #{$mq-tablet-desk}{
-            grid-template-columns: repeat(12, 1fr);
+            grid-template-columns: 8fr 4fr;
             grid-template-areas:  
-                "img img img img img img img img ...."
-                "cap cap cap cap cap cap cap cap ....";
+                "img ."
+                "cap .";
         }
 
         .image {

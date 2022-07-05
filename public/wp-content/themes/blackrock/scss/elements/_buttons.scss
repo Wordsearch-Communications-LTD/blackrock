@@ -4,7 +4,7 @@ $button_Padding_Arrow: 58px;
 $button_FontSize: 20px;
 $button_LetterSpacing: calc($button_FontSize * 0.05);
 
-.button {
+a.button {
     display: inline-block;
     font-size: $button_FontSize;
     padding: $button_Padding;
@@ -12,19 +12,36 @@ $button_LetterSpacing: calc($button_FontSize * 0.05);
     letter-spacing: $button_LetterSpacing;
     padding-right: $button_Padding_Arrow;
     text-decoration: none;
+    font-family: $regularFont;
+}
 
-    &.light {
-        border: 1px solid $br-blue;
+.page-cream, 
+.page-white {
+    
+    a.button {
+        border: 1px solid $br-white;
+        color: $br-black;
 
+        &:active, 
+        &:visited {
+            color: $br-black;
+        }
         &:hover {
-            background-color: $br-blue;
-            color: $br-white;
+            background-color: $br-white;
+            color: $br-black;
         }
     }
+}
 
-    &.dark {
+.page-black {
+    a.button {
         border: 1px solid $br-white;
+        color: $br-white;
 
+        &:active, 
+        &:visited {
+            color: $br-white;
+        }
         &:hover {
             background-color: $br-white;
             color: $br-black;

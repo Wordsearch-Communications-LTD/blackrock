@@ -2,6 +2,7 @@
     $copy = get_sub_field('copy');
     $cta = get_sub_field('cta');
     $image = get_sub_field('image');
+    $largeCaption = get_sub_field('large_caption');
     $randClass = 'hs' . substr(md5(microtime()),rand(0,26), 8);
 ?>
 
@@ -23,6 +24,7 @@
   </div>  
   <div class="column-reveal_container">
     <?= wp_get_attachment_image( $image['id'], 'full' ); ?>
+    <?= $largeCaption ?>
   </div>
   
   

@@ -1,6 +1,11 @@
 .card-carousel {
-    .slide {
-        width: 25%;
-        float: left;
+    margin-bottom: calc(100vw / 12);
+
+    h3 {
+        @include headline-20;
+    }
+
+    p {
+        @include body-20;
     }
 }

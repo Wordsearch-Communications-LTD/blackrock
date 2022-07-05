@@ -1,5 +1,43 @@
 .one-col-copy-image {
-    .copy {
+    .copy-container {
         @include grid;
+        
+        @media #{$mq-tablet-desk}{
+            grid-template-columns: 5fr 7fr;
+            grid-template-areas: "copy .";
+        }
+
+        .copy {
+            grid-area: copy;
+            
+            span {
+                color: $br-blue;
+            } 
+        }
+
+        h1 {
+            @include headline-50;
+        }
+    }
+}
+
+.one-col-copy-image.page-hero {
+    margin-top: calc((100vw / 12));
+    margin-bottom: calc(100vw / 12);
+    
+    .copy {
+        margin-bottom: calc(100vw / 12);
+    }
+
+    .copy blockquote p {
+        @include headline-50;
+        
+        &:last-of-type {
+            margin-top: 0;
+        }
+
+        span {
+            @include body-20;
+        }
     }
 }

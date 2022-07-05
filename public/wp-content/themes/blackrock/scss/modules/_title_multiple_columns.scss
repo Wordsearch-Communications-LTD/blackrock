@@ -1,16 +1,41 @@
 .title-multiple-columns {
-    
+    margin-bottom: calc(100vw / 12);
     
     .title {
         @include grid;
+        
+        @media #{$mq-mobile}{
+            grid-template-columns: 5fr 7fr;
+        }
+
+
+        h2 {
+            @include headline-50;
+            
+            @media #{$mq-mobile}{
+                margin-bottom: calc(100vw / 24);
+            }
+        }
     }
 
 
     .copy-blocks {
         @include grid;
         
-        @media #{$mq-desk-small}{
+        @media #{$mq-mobile}{
             grid-template-columns: repeat(4, 1fr);
         }  
+
+        .copy-block {
+            border-top: 2px solid $br-black;
+
+            h3 {
+                @include headline-20;
+            }
+
+            p {
+                @include body-20;
+            }
+        }
     }
 }

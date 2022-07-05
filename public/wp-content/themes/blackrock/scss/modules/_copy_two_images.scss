@@ -1,13 +1,65 @@
 .copy-two-images {
-    .copy {
-        @include grid;
+    @include grid;
+
+    @media #{$mq-mobile}{
+        margin: 0 40px calc(100vw / 12) 40px;
+        grid-template-columns: 6fr 2fr 4fr;
+        grid-template-areas: "copy-image . image-container";
+    }
+
+    .copy-image {
+        grid-area: copy-image;
+        
+        .copy {
+            padding-bottom: calc(100vw / 12);
+           
+            p {
+                @include body-35;
+
+                &:last-of-type {
+                    margin-top: 0;
+                }
+
+                span {
+                    color: $br-blue;
+                    @include body-20;
+                }
+            } 
+        }
     }
     
-    .images-container {
-        @include grid;
+    .image-container {
+        grid-area: image-container;
+        padding-top: calc(100vw / 12);
+    }
 
-        @media #{$mq-tablet-desk}{
-            grid-template-columns: repeat(2, 1fr);
+    &.mirrored {
+        @media #{$mq-mobile}{
+            grid-template-columns: 6fr 1fr 5fr;
+            grid-template-areas: "image-container . copy-image";
+        }
+        .image-container {
+            padding-top: 0;
+        }
+        
+        .copy-image .image-container {
+            display: grid;
+            grid-template-columns: 1fr 4fr;
+            grid-template-areas: 
+                ". img"
+                ". cap";
+
+            .image {
+                grid-area: img;
+            }
+            .caption {
+                grid-area: cap;
+            }
+
+        }
+
+        .copy {
+            padding-top: calc(100vw / 12);
         }
     }
 }

@@ -1,7 +1,61 @@
 .two-col-image {
     @include grid;
-
+    
     @media #{$mq-mobile}{
-        grid-template-columns: 1fr 1fr;
-    }  
+        margin: 0 40px calc(100vw /12) 40px;
+    }
+
+    &.equal {
+        @media #{$mq-mobile}{
+            grid-template-columns: 1fr 1fr;
+        }  
+    }
+
+    &.small-big {
+        @media #{$mq-mobile}{
+            grid-template-columns: 3fr 3fr 6fr;
+            grid-template-areas: "left . right";
+        }
+
+        div {
+            &:first-of-type {
+                grid-area: left;
+                align-self: center;
+            }
+
+            grid-area: right;
+        }
+    }
+
+    &.big-small {
+        @media #{$mq-mobile}{
+            grid-template-columns: 6fr 3fr 3fr;
+            grid-template-areas: "left . right";
+        }
+
+        div {
+            grid-area: left;
+            
+            &:last-of-type {
+                grid-area: right;
+                align-self: center;
+            }
+        }
+    }
+
+    &.offset-top {
+        div {
+            .image {
+                margin-top: calc(100vw / 12);
+            }
+        }
+
+        div:first-of-type {
+            align-self: start;
+
+            .image {
+                margin-top: 0;
+            }
+        }
+    }
 }

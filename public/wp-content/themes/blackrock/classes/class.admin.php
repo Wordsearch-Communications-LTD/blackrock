@@ -1,6 +1,6 @@
 <?php
 require_once  'class.load.php';
-
+require_once 'functions/custom.php';
 
 if ( ! class_exists( 'WordsearchAdmin', false ) ) {
 
@@ -107,6 +107,7 @@ class WordsearchAdmin {
           
           wp_enqueue_script('glide-js', '//unpkg.com/swiper@8/swiper-bundle.min.js');
           wp_enqueue_script( 'modals', get_stylesheet_directory_uri() . '/js/modals.js', array( 'jquery' ), null, true);
+          wp_enqueue_script( 'timeline', get_stylesheet_directory_uri() . '/js/timeline.js', array( 'jquery' ), null, true);
           wp_enqueue_script( 'sliders', get_stylesheet_directory_uri() . '/js/sliders.js', array( 'jquery' ), null, true);
           wp_enqueue_script( 'floors', get_stylesheet_directory_uri() . '/js/floors.js', array( 'jquery' ), null, true);
           wp_enqueue_script( 'maps', get_stylesheet_directory_uri() . '/js/maps.js', array( 'jquery' ), null, true);

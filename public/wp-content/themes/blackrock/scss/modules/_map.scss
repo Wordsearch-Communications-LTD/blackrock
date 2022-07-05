@@ -1,46 +1,81 @@
 .map {
     @include grid;
-    grid-template-columns: repeat(12, 1fr);
-
-    @media #{$mq-desk-small}{
-        grid-template-areas:  "navi navi . maps maps maps maps maps maps maps maps maps";
-    }
-
-    .map-layers-nav {
-        grid-area: navi;
-    }
     
-    .maps {
-        position: relative;
-        grid-area: maps;
-        
-        #main-map {
-            position: relative;
-            top: 0;
-            left: 0;
-            z-index: 1;
+    @media #{$mq-mobile}{
+        margin: 0 40px calc(100vw / 12) 40px;
+    }
+
+    .map-title {
+        display: grid;
+        grid-template-columns: 5fr 7fr;
+        margin-bottom: calc(100vw / 24);
+
+        h2 {
+            @include headline-50;
+            margin-top: 0;
+        }
+    }
+
+    .map-container {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        background-color: $br-cream;
+
+        @media #{$mq-desk-small}{
+            grid-template-areas:  "navi navi . maps maps maps maps maps maps maps maps maps";
         }
 
-        .map-layer {
-            position: absolute;
-            top: 0;
-            left: 0;
-            opacity: 0;
-                
-            &:nth-child(2) {
-                z-index: 2;
+        .map-layers-nav {
+            grid-area: navi;
+            padding: 40px;
+
+            h3 {
+                @include headline-30;
+                margin-top: 0;
+                margin-bottom: 40px;
             }
-            
-            &:nth-child(3) {
-                z-index: 3
+
+            button {
+                display: block;
+                appearance: none;
+                border: none;
+                background-color: none;
+                @include body-16;
             }
-            
-            &:nth-child(4) {
-                z-index: 4
-            }
+        }
         
-            &.show {
-                opacity: 1;
+        .maps {
+            position: relative;
+            grid-area: maps;
+            
+            #main-map {
+                position: relative;
+                top: 0;
+                left: 0;
+                z-index: 1;
+            }
+
+            .map-layer {
+                position: absolute;
+                top: 0;
+                left: 0;
+                opacity: 0;
+                    
+                &:nth-child(2) {
+                    z-index: 2;
+                }
+                
+                &:nth-child(3) {
+                    z-index: 3
+                }
+                
+                &:nth-child(4) {
+                    z-index: 4
+                }
+            
+                &.show {
+                    opacity: 1;
+                }
             }
         }
     }

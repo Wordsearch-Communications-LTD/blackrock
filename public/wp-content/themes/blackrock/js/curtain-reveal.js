@@ -41,7 +41,7 @@ class HeroCurtain {
 
     createCopySlices(){
         let classes =  this.copyContainer;
-        let cols = 4;
+        let cols = 6;
         
         for(let i = 0; i < cols; i++){
             let clonedCopyContainer = this.copyContainer.cloneNode(true);
@@ -95,11 +95,28 @@ class HeroCurtain {
                 let width = this.colWidth - (this.colWidth * percent);          
                 let translateX = width - this.colWidth; 
                     
+                console.log(this.containerID);
+
+                if(percent > 0){
+                    this.container.classList.add('scrolled');
+                }
+
                 if(percent > 0.5) {
                     this.container.classList.add('revealed');
+                    
+                    if(this.containerID == "home-hero"){
+                        document.querySelectorAll('.header-menu')[0].classList.add('show-menu');
+                    }
                 }
                 else {
                     this.container.classList.remove('revealed');
+                }
+
+                if(percent <= 0){                   
+                    if(this.containerID == "home-hero"){
+                        document.querySelectorAll('.header-menu')[0].classList.remove('show-menu');
+                    }
+                    this.container.classList.remove('scrolled');
                 }
 
                 if(containerTop >= 0){
@@ -144,4 +161,6 @@ curtainReveals.forEach(element => {
     }
 });
 
-let heroCurtain = new HeroCurtain('home-hero', '.column-reveal_slices div.slice_contain');
+if(document.getElementById('home-hero')){
+    let heroCurtain = new HeroCurtain('home-hero', '.column-reveal_slices div.slice_contain');
+}

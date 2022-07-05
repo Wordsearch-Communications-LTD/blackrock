@@ -9,9 +9,11 @@ class Contact {
     updateContact(){
         if(this.contactOpen) {
             document.querySelector('html').classList.add('contact-open');
+            //this.contactOpen = true;
         } 
         else {
             document.querySelector('html').classList.remove('contact-open');
+            //this.contactOpen = false;
         }    
     }
     setEventListeners(){

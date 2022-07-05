@@ -11,7 +11,12 @@
   </style>
   
     <div class="column-reveal_slices">
-        <h1><img src="<?= $titleImage['url'] ?>" class="style-svg"></h1>
+        <div class="home-hero_title">
+          <div class="content">
+            <h1><img src="<?= $titleImage['url'] ?>" class="style-svg"></h1>
+            <?= $subtitle ?>
+          </div>
+        </div>
         <div class="slice-grid">
           <div class="slice_contain"><div class="slice"></div></div><div class="slice_contain"><div class="slice"></div></div><div class="slice_contain"><div class="slice"></div></div><div class="slice_contain"><div class="slice"></div></div><div class="slice_contain"><div class="slice"></div></div><div class="slice_contain"><div class="slice"></div></div><div class="slice_contain"><div class="slice"></div></div><div class="slice_contain"><div class="slice"></div></div><div class="slice_contain"><div class="slice"></div></div><div class="slice_contain"><div class="slice"></div></div><div class="slice_contain"><div class="slice"></div></div><div class="slice_contain"><div class="slice"></div></div>
         </div>

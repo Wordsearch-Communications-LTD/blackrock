@@ -1,14 +1,16 @@
 <footer id="footer">
-	<p>© <?php echo date('Y'); ?> <?php echo get_bloginfo( 'name' ); ?></p>
-		
-	<?php 
-		wp_nav_menu( array(
-			'menu'           => 'Main Menu',
-			'theme_location' => 'main-menu',
-			'fallback_cb'    => false // Do not fall back to wp_page_menu()
-		) );
-	?>
-	
+    <div class="footer-content-main">
+        <p class="copyright">© <?php echo date('Y'); ?> <?php echo get_bloginfo( 'name' ); ?></p>
+            
+        <?php 
+            wp_nav_menu( array(
+                'menu'           => 'Main Menu',
+                'theme_location' => 'main-menu',
+                'fallback_cb'    => false // Do not fall back to wp_page_menu()
+            ) );
+        ?>
+	</div>
+
 	<section class="contact-module-container">
 		<button id="close-contact">Close Contact</button>
         <?php 
@@ -34,6 +36,19 @@
             </div>
             <div class="image-container">
                 <?= wp_get_attachment_image( $image['id'], 'full' ); ?>
+            </div>
+        </div>
+        <div class="footer-bg">
+            <div class="footer-content-contact">
+                <p class="copyright">© <?php echo date('Y'); ?> <?php echo get_bloginfo( 'name' ); ?></p>
+                    
+                <?php 
+                    wp_nav_menu( array(
+                        'menu'           => 'Main Menu',
+                        'theme_location' => 'main-menu',
+                        'fallback_cb'    => false // Do not fall back to wp_page_menu()
+                    ) );
+                ?>
             </div>
         </div>
     </section>

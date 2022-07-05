@@ -21,29 +21,48 @@
         width: 100vw;
         height: 100vh;
         grid-template-columns: repeat(12, 1fr);
+        
+        
     }
 
     .original {
-        display: none !important;
+      //  display: none !important;
+        z-index: 101 !important;
+        background-color: transparent;
+
+        p {
+            //opacity: 0;
+        }
     }
     
     .copy {
         overflow: hidden;
         display: block;
         height: auto;
-        width: calc((100vw / 12) * 4);
+        width: calc((100vw / 12) * 6);
         height: 100vh;
         position: absolute;
         z-index: 10;
+        left: 0;
     }
     
     .copy .container {
         display: block;
-        width: calc((100vw / 12) * 4);
-        margin-left: calc(100vw / 12); 
-        margin-top: calc(100vw / 12);
+        width: calc((100vw / 12) * 6);
+        margin-left: 0; 
+        margin-top: calc((100vw / 12) + 100px);
+        overflow: hidden;
+        padding-left: 40px;
         
-        padding: 20px;
+        p {
+            @include headline-50;
+            margin-bottom: 30px;
+        }
+
+        .button {
+            border-color: $br-blue;
+            color: $br-blue;
+        }
     }
     
     &.revealed .copy.split,
@@ -52,49 +71,82 @@
         opacity: 1;
     }
 
-    .js-col-0, .js-col-1, .js-col-2, .js-col-3 {
+    &.revealed {
+        .original p {
+            opacity: 0;
+        }
+    }
+
+    //col uses index of element so 0=1
+    .js-col-0, 
+    .js-col-1, 
+    .js-col-2, 
+    .js-col-3, 
+    .js-col-4,
+    .js-col-5 {
         z-index: 100;
         width: calc(100vw / 12);
-    }
-    
-    .js-col-0, .js-col-1, .js-col-2, .js-col-3 {
+        overflow: hidden;
         
-        overflow: hidden;
-    }
-    
-    .js-col-0 .container, .js-col-1 .container, .js-col-2 .container, .js-col-3 .container {
-        display: block;
-        margin-left: 0;
-        margin-top: calc(100vw / 12);
-        overflow: hidden;
-        width: calc((100vw / 12) * 4);
-    }
-    
-    .js-col-0 {
-        margin-left: calc(100vw / 12); 
+        .container {
+            display: block;
+            margin-left: 0;
+            margin-top: calc((100vw / 12) + 100px);
+            overflow: hidden;
+            width: calc((100vw / 12) * 6);
+        }
     }
     
     .js-col-1 {
-        margin-left: calc((100vw / 12) * 2); 
+        margin-left: calc(((100vw / 12) * 1)); 
+        
+        .container {
+            margin-left: calc((100vw /12 * -1));
+        }
     }
     
     .js-col-2 {
-        margin-left: calc((100vw / 12) * 3); 
+        margin-left: calc((100vw / 12) * 2); 
+        
+        .container {
+            margin-left: calc(((100vw /12 * -2)));
+        }
     }
     
     .js-col-3 {
+        margin-left: calc((100vw / 12) * 3); 
+        
+        .container {
+            margin-left: calc(((100vw /12 * -3)));
+        }
+    }
+    
+    .js-col-4 {
         margin-left: calc((100vw / 12) * 4); 
+        
+        .container {
+            margin-left: calc(((100vw /12 * -4)));
+        }   
     }
     
-    .js-col-1 .container {
-        margin-left: calc((100vw /12 * -1));
+    .js-col-5 {
+        margin-left: calc((100vw / 12) * 5); 
+        
+        .container {
+            margin-left: calc(((100vw /12 * -5)));
+        }   
     }
-    
-    .js-col-2 .container {
-        margin-left: calc((100vw /12 * -2));
+
+
+    &.solid-bg {
+        &.revealed .original  a {
+            opacity: 0;
+        }
     }
-    
-    .js-col-3 .container {
-        margin-left: calc((100vw /12 * -3));
+
+    &.solid-bg.scrolled {
+        .original  p {
+            opacity: 0;
+        }
     }
 }

@@ -1,10 +1,13 @@
 .keep-exploring {
+    margin-bottom: calc(100vw / 12);
 
     .title {
-               
-        
         @include grid;
         
+        h2 {
+            @include headline-50;
+            margin-bottom: 1em;
+        }
     }
 
     .blocks {
@@ -13,5 +16,38 @@
         @media #{$mq-mobile}{
             grid-template-columns: 1fr 1fr;
         }
+
+        .link-text {
+            display: block;
+            color: $br-black;
+            text-decoration: none;
+            padding-top: 10px;
+            @include body-35;
+            
+        }
+
+        .link-image {
+            display: block;
+            height: auto;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .explore-block {
+            &:hover {
+                a {
+                    color: $br-blue;
+                }
+            }
+        }
+    }
+}
+
+.page-black .keep-exploring .blocks {
+    
+    .link-text, 
+    .explore-block:hover a {
+        color: $br-white;
     }
 }

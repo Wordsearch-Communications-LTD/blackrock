@@ -1,3 +1,7 @@
+#home-hero  {
+    z-index: 2;
+}
+
 .column-reveal {
     width: 100vw;
     max-width: 100%;
@@ -6,26 +10,50 @@
     padding: 0;
     margin: 0;
     overflow-x: clip;
-
+    z-index: 2;
 
     .column-reveal_slices, 
     .column-reveal_container {
         position: sticky;
+        position: relative;
         width: 100vw;
         max-width: 100%;
         z-index: 1;
     }
 
-    .column-reveal_slices h1 {
+    .column-reveal_slices .home-hero_title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         position: absolute;
-        font-size: 64px;
-        width: 100%;
-        top: 200px;
-        text-align:center;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        color: white;
+        overflow: hidden;
+        width: 100vw;
+        text-align: center;
         z-index: 10;
-        color: #987758;
-        letter-spacing: 1em;
         opacity: 1;
+
+        h2 {
+            @include headline-30;
+            margin-top: calc((100vw / 12) * 1.5);
+            margin-bottom: 20px;
+        }
+
+        p {
+            @include body-20;
+        }
+
+        h2, 
+        p {
+            @media #{$mq-mobile}{
+                max-width: (100vw / 3);
+                margin-left: 50%;
+                transform: translateX(-50%);
+            }
+        }
     }
 
     .column-reveal_container {
@@ -43,13 +71,13 @@
             top: 0;
         }
 
-        h2 {
+        h3 {
             position: absolute;
             top: 150vh;
             left: 200px;
             z-index: 2;
             color: white;
-            font-size: 64px;
+            @include headline-75;
             opacity: 0;
         }
     }
@@ -58,7 +86,7 @@
         display: block;
         position: sticky;
         top: 0;
-        z-index: 2;
+        z-index: 3;
 
         div.slice_contain {
             display: block;
@@ -84,12 +112,14 @@
         }
     }
     
-    &.revealed h1 {
-        opacity: 0;
-        transition: all 0.3s ease 0s;
+    &.revealed {
+        h1, h2, p {
+            opacity: 0;
+            transition: all 0.3s ease 0s;
+        }
     }
     
-    &.revealed h2 {
+    &.revealed h3 {
         opacity: 1;
         transition: all 0.3s ease 0s;
     }

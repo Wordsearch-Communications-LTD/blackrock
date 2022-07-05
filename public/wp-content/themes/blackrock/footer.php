@@ -6,6 +6,17 @@
         </div>
     </div>
 </div>
+<div id="page-reveal-slicing">
+<div class="slice-grid">
+      <div class="slice_contain"><div class="slice"></div></div><div class="slice_contain"><div class="slice"></div></div><div class="slice_contain"><div class="slice"></div></div><div class="slice_contain"><div class="slice"></div></div><div class="slice_contain"><div class="slice"></div></div><div class="slice_contain"><div class="slice"></div></div><div class="slice_contain"><div class="slice"></div></div><div class="slice_contain"><div class="slice"></div></div><div class="slice_contain"><div class="slice"></div></div><div class="slice_contain"><div class="slice"></div></div><div class="slice_contain"><div class="slice"></div></div><div class="slice_contain"><div class="slice"></div></div>
+    </div>
+</div>
 <?php wp_footer(); ?>
+<script>
+// self executing function here
+(function() {
+   document.getElementById('page-reveal-slicing').classList.add('reveal');
+})();
+</script>
 </body>
 </html>
