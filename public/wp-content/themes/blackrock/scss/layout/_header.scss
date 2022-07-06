@@ -6,103 +6,229 @@
     opacity: 1;
 }
 
-
-
-
 .header-menu {
     position: fixed;
     top:0;
     left: 0;
-    height: 100px;
+    height: 60px;
     width: 100vw;
     z-index: 3;
+
+    @media #{$mq-tablet-desk}{
+        height: 100px;
+    }
 
     a {
         @include body-20;
     }
 
-    &:after {}
-
     .logo {
         display: block;
-        margin-top: 38px;
-        margin-left: 40px;
-        height: 26px;
+        margin-top: 18px;
+        margin-left: 20px;
+        height: 16px;
         float: left;
-    }
-    
-    .menu-main-menu-container {
-        float: right;
-        margin-top: 20px;
-        margin-right: 40px;
 
-        .menu {
-            list-style-type: none;
+        svg {
+            height: 16px;
+            width: auto;
+        }
 
-            li {
-                display: inline-block;
-                font-size: 20px;
-
-                &:after {
-                    font-weight: bold;
-                    content: '/';
-                    padding-left: 10px;
-                    padding-right: 5px;
-                }
-
-                &:last-child:after {
-                    display: none;
-                }
-
-                a {
-                    text-decoration: none;
-                    color: black;
-                }
-
-                &:hover,
-                &.current_page_item {
-                    a {
-                        color: $br-blue;
-                    }
-                }
-
-                &.current_page_item a {
-                    padding-bottom: 3px;
-                    border-bottom: 2px solid $br-blue;
-                }
+        @media #{$mq-tablet-desk}{
+            margin-top: 38px;
+            margin-left: 40px;
+            height: 26px;
+            
+            svg {
+                height: 26px;
             }
         }
     }
 
     .burger-menu {
-        
-        &.burger-menu--closed {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 14px;
+        width: 32px;
+        height: 32px;
 
+        .bar {
+            display: block;
+            position: absolute;
+            height: 2px;
+            width: 24px;
+            top: 12px;
+            left: 4px;
+            background-color: $br-black;
+            transform-origin: center;
+            transition: all 0.15s ease 0s;
+            
+            &:last-child {
+                top: 20px;
+            }
+        }
+    }
+
+    .menu-main-menu-container {
+        position: fixed;
+        top: 60px;
+        left: 0;
+        transform: translateX(100vw);
+        width: 100vw;
+        height: calc(100vh - 60px);
+        transition: transform 0.3s ease 0s;
+
+        .menu {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            padding-left: 20px;
+            margin-top: 40px;
+
+            li {
+                padding-bottom: 20px;
+
+                a {
+                    @include body-35;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+    @media #{$mq-tablet-desk}{
+        .menu-main-menu-container {
+            position: relative;
+            float: right;
+            margin-top: 20px;
+            margin-right: 60px;
+            width: 50vw;
+            top: auto;
+            left: auto;
+            width: auto;
+            height: auto;
+            transform: translateX(0);
+
+            .menu {
+                margin-top: 20px;
+
+                li {
+                    display: inline-block;
+                    font-size: 20px;
+                    
+
+                    &:after {
+                        font-weight: bold;
+                        content: '/';
+                        padding-left: 10px;
+                        padding-right: 5px;
+                    }
+
+                    &:last-child:after {
+                        display: none;
+                    }
+
+                    a {
+                        @include body-20;
+                        text-decoration: none;
+                        color: black;
+                    }
+
+                    &:hover,
+                    &.current_page_item {
+                        a {
+                            color: $br-blue;
+                        }
+                    }
+
+                    &.current_page_item a {
+                        padding-bottom: 3px;
+                        border-bottom: 2px solid $br-blue;
+                    }
+                }
+            }
+        }
+        .burger-menu {
+            display: none;
+        }
+    }
+
+    
+}
+
+.menu-open {
+    .menu-main-menu-container {
+        transform: translateX(0);
+    }
+    
+    .burger-menu {
+        .bar {
+            top: 16px;
+            transform: rotate(45deg);
+
+            &:last-child {
+                transform: rotate(-45deg);
+                top: 16px;
+            }
         }
     }
 }
 
 .page-white {
+    .menu-main-menu-container {
+        background-color: rgba($br-white, 0.9);
+        
+        @media #{$mq-tablet-desk}{
+            background-color: rgba($br-white, 0);
+        }
+    }
+
     .header-menu {
-        background-color: $br-white;
+        background-color: rgba($br-white, 0.9);
     }
 }
 
 .page-cream {
+    .menu-main-menu-container {
+        background-color: rgba($br-cream, 0.9);
+        
+        @media #{$mq-tablet-desk}{
+            background-color: rgba($br-cream, 0);
+        }
+    }
+
     .header-menu {
-        background-color: $br-cream;
+        background-color: rgba($br-cream, 0.9);
     }
 
     &.home {
+        .menu-main-menu-container {
+            background-color: rgba($br-white, 0.9);
+            
+            @media #{$mq-tablet-desk}{
+                background-color: rgba($br-white, 0);
+            }
+        }
+        
         .header-menu {
-            background-color: $br-white;
+            background-color: rgba($br-white, 0.9);
         }
     }
 }
 
 .page-black {
+    
+    .menu-main-menu-container {
+        background-color: rgba($br-black, 0.9);
+        
+        @media #{$mq-tablet-desk}{
+            background-color: rgba($br-black, 0);
+        }
+    }
+
     .header-menu {
-        background-color: $br-black;
+        background-color: rgba($br-black, 0.9);
 
         svg path {
             fill: white;
@@ -111,9 +237,13 @@
         .menu-main-menu-container .menu li a {
             color: white;
         }
+
         .menu-main-menu-container .menu li.current_page_item a {
             border-color: $br-white;
-        }
+        }  
     }
     
+    .burger-menu .bar {
+        background-color: $br-white;
+    }
 }

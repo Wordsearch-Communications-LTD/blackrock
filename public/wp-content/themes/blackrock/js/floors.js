@@ -13,6 +13,7 @@ class Floors {
         this.floorToggle.addEventListener('click', e => {
             e.preventDefault();
             this.floorList.classList.toggle('hide-occupied');
+            this.floorToggle.classList.toggle('active');
         });
 
         this.units.forEach(unit => {

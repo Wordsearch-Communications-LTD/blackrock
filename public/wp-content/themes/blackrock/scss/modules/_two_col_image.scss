@@ -1,18 +1,18 @@
 .two-col-image {
     @include grid;
     
-    @media #{$mq-mobile}{
+    @media #{$mq-tablet-port}{
         margin: 0 40px calc(100vw /12) 40px;
     }
 
     &.equal {
-        @media #{$mq-mobile}{
+        @media #{$mq-tablet-port}{
             grid-template-columns: 1fr 1fr;
         }  
     }
 
     &.small-big {
-        @media #{$mq-mobile}{
+        @media #{$mq-tablet-port}{
             grid-template-columns: 3fr 3fr 6fr;
             grid-template-areas: "left . right";
         }
@@ -28,7 +28,7 @@
     }
 
     &.big-small {
-        @media #{$mq-mobile}{
+        @media #{$mq-tablet-port}{
             grid-template-columns: 6fr 3fr 3fr;
             grid-template-areas: "left . right";
         }

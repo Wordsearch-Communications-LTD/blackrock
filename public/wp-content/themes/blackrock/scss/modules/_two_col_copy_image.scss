@@ -5,8 +5,10 @@
     .copy {
         @include grid;
         grid-area: copy;
-            
-        @media #{$mq-mobile}{
+        padding: 0 20px;
+
+        @media #{$mq-tablet-port}{
+            padding: 0 0px;
             grid-template-columns: 5fr 1fr 6fr;
             margin: 0 40px calc(100vw / 12) 40px;
             grid-template-areas: "left . right";
@@ -16,11 +18,19 @@
         .right { grid-area: right;}
 
         h2 {
-            @include headline-50;
+            @include headline-30;
+            
+            @media #{$mq-tablet-port}{
+                @include headline-50;
+            }
         }
 
         p {
-            @include body-35;
+            @include body-20;
+            
+            @media #{$mq-tablet-port}{
+                @include body-35;
+            }
         }
     }
     
@@ -68,9 +78,30 @@
         z-index: 2;
         background-color: rgba($br-blue, 0.9);
         opacity: 0;
+        transition: all 0.3s ease 0s;
     }
 
-    &:hover:after {
-        opacity: 1;
+    &:before {
+        display: block;
+        content: '';
+        position: absolute;
+        z-index: 3;
+        width: 40px;
+        height: 40px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: url(../img/icons/image-expand.svg) 0 0 no-repeat;
+        background-size: 40px 40px;
+        opacity: 0;
+        transition: all 0.3s ease 0s;
+    }
+
+    &:hover {
+
+        &:before,
+        &:after {
+            opacity: 1;
+        }
     }
 }

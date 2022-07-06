@@ -2,7 +2,7 @@
     .copy-container {
         @include grid;
         
-        @media #{$mq-tablet-desk}{
+        @media #{$mq-tablet-port}{
             grid-template-columns: 5fr 7fr;
             grid-template-areas: "copy .";
         }
@@ -16,17 +16,28 @@
         }
 
         h1 {
-            @include headline-50;
+            @include headline-30;
         }
     }
 }
 
 .one-col-copy-image.page-hero {
-    margin-top: calc((100vw / 12));
-    margin-bottom: calc(100vw / 12);
-    
+
+    margin-top: 100px;
+    margin-bottom: 60px;
+
     .copy {
+        margin-bottom: 40px;
+        padding: 0 20px;
+    }
+
+    @media #{$mq-mobile}{
+        margin-top: calc((100vw / 12));
         margin-bottom: calc(100vw / 12);
+        
+        .copy {
+            margin-bottom: calc(100vw / 12);
+        }
     }
 
     .copy blockquote p {

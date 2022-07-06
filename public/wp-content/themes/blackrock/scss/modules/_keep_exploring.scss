@@ -5,15 +5,22 @@
         @include grid;
         
         h2 {
-            @include headline-50;
+            @include headline-30;
             margin-bottom: 1em;
+            padding: 0 20px;
+
+            @media #{$mq-tablet-port}{
+                @include headline-50;
+                margin-bottom: 1em;
+                padding: 0 0;
+            }
         }
     }
 
     .blocks {
         @include grid;
         
-        @media #{$mq-mobile}{
+        @media #{$mq-tablet-port}{
             grid-template-columns: 1fr 1fr;
         }
 
@@ -22,8 +29,23 @@
             color: $br-black;
             text-decoration: none;
             padding-top: 10px;
-            @include body-35;
-            
+            @include headline-30;
+            position: relative;
+            margin-left: 20px;
+            margin-bottom: 30px;
+
+            @media #{$mq-tablet-port}{
+                margin-left: 0;
+                margin-bottom: 0;
+                @include body-35;
+            }
+
+            svg {
+                display: inline-block;
+                position: relative;
+                transform: translate(5px, 5px);
+                transition: all 0.3s ease 0s;
+            }
         }
 
         .link-image {
@@ -32,12 +54,40 @@
             width: 100%;
             margin: 0;
             padding: 0;
+            position: relative;
+            line-height: 0;
+
+            &:after {
+                display: block;
+                content:'';
+                pointer-events: none;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                z-index: 2;
+                background-color: rgba($br-blue, 0.9);
+                opacity: 0;
+                transition: all 0.3s ease 0s;
+            }
         }
 
         .explore-block {
             &:hover {
                 a {
                     color: $br-blue;
+
+                    &.link-image:after {
+                        opacity: 1;
+                    }
+
+                    svg {
+                        transform: translate(10px, 5px);
+                        path {
+                            stroke: $br-blue;
+                        }
+                    }
                 }
             }
         }
@@ -49,5 +99,12 @@
     .link-text, 
     .explore-block:hover a {
         color: $br-white;
+
+        svg {
+            
+            path {
+                stroke: $br-white;
+            }
+        }
     }
 }

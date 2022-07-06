@@ -1,7 +1,7 @@
 .floors {
     margin-bottom: calc(100vw / 12);
     
-    @media #{$mq-mobile}{
+    @media #{$mq-tablet-port}{
         grid-template-columns: 2fr 1fr 8fr 1fr;
         grid-template-areas:  "floor-toggle . floor-list .";
     }
@@ -16,6 +16,11 @@
 
     .floor-toggle {
         grid-area: floor-toggle;
+        padding: 0 20px 20px 20px;
+
+        @media #{$mq-tablet-port}{
+            padding: 0 0 0 0;
+        }
 
         .legend {
             display: block;
@@ -27,12 +32,21 @@
             padding: 0;      
             line-height: 35px;
             padding-left: 10px;  
+            margin-bottom: 5px;
         }
     }   
 
+    #floor-toggle {
+        margin-top: 20px;
+    }
+
     .floor-list {
         grid-area: floor-list;
-        width: 75%;
+        padding: 0 20px;
+        
+        @media #{$mq-tablet-port}{
+            padding: 0 0;
+        }
 
         &.hide-occupied .floor-occupied {
             display: none;
@@ -69,9 +83,30 @@
             }
 
             &.expanded {
-                height: 400px;
+                height: 460px;
                 background-color: var(--availableColor);
-            
+                
+
+                header {
+                    display: grid;
+                    grid-template-columns: repeat(12, 1fr);
+                    grid-template-areas:  "floor-num floor-num floor-sqft floor-sqft floor-sqft floor-sqft floor-sqft floor-sqft floor-sqft floor-sqft";
+
+                    span {
+                        @include headline-50;
+                        padding-top: 10px;
+                    }
+
+                    .floor-header_floor-number {
+                        grid-area: floor-num;
+                    }
+
+                    .floor-header_name-sqft {
+                        grid-area: floor-sqft;
+                        position: static;
+                    }
+                }
+
                 .unit {
                     display: none;
                 }
@@ -95,7 +130,8 @@
                 .content {
                     display: none;
                     grid-template-columns: repeat(12, 1fr);
-                    grid-template-areas:  ". data data data data . img img img img img . .";
+                    grid-template-areas:  ". . data data data . img img img img img . .";
+                    
 
                     .data {
                         grid-area: data;
@@ -109,7 +145,7 @@
                             display: grid;
                             padding: 15px 0;
                             border-top: 2px solid white;
-                            grid-template-columns: 1fr 1fr;
+                            grid-template-columns: 2fr 1fr;
                             gap: 0px 10px;
 
                             &:first-of-type {
@@ -120,16 +156,37 @@
                             
                             span {
                                 display: block;
-                                overflow: hidden;                            
+                                overflow: hidden;          
+                                @include body-20;             
+                                line-height: 32px;
+                                margin-bottom: 0;
+                                padding-top: 0;
                                 
                                 &:last-of-type {
                                     justify-self: end;
                                 }
                             }
 
+                            a {
+                                display: block;
+                                overflow: hidden;
+                                width: 32px;
+                                height: 32px;
+                            }
+
                             h3 {
                                 padding-top: 0;
                                 margin-top: 0;
+                                @include body-20;             
+                                line-height: 32px;
+                                margin-bottom: 0;
+                                font-weight: normal;
+                            }
+
+                            svg {
+                                path {
+                                    stroke: $br-white;
+                                }
                             }
                         }
                     }
@@ -156,9 +213,35 @@
 
                     .content {
                         display: grid;
-                        padding: 20px;
+                        padding-top: 40px;
                     }
                 }
+            }
+        }
+    }
+
+    .close-unit {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 32px;
+        height: 32px;
+        border: 0;
+        appearance: none;
+        padding: 0;
+        background-color: transparent;
+
+        svg {
+            pointer-events: none;
+            transition: all 0.3s ease 0s;
+            path {
+                stroke: $br-white;
+            }
+        }
+
+        &:hover {
+            svg {
+                transform: rotate(90deg);
             }
         }
     }

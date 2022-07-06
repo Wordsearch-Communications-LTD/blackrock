@@ -16,4 +16,5 @@
             <?php endforeach; ?>
         </div>
     </div>
+    <div class="<?= $randClass ?>-pagination"></div>
 </section>

@@ -1,5 +1,5 @@
 @mixin grid(){
-    @media #{$mq-mobile}{
+    @media #{$mq-tablet-port}{
         display: grid;
         margin: 0 40px;
         column-gap: 20px;

@@ -2,10 +2,15 @@
     overflow: hidden;
     background-color: $br-blue;
     color: $br-white;
-    height: 80px;
+    height: 150px;
+    width: 100vw;
     z-index: 1000;
     @include body-16;
     margin-bottom: 0;
+
+    @media #{$mq-tablet-port}{
+        height: 80px;
+    }
 
     a {
         color: $br-white;
@@ -13,9 +18,14 @@
 
     p.copyright {
         margin: 0;
-        padding: 0 0 0 40px;
+        padding: 40px 0 0 20px;
         float: left;
-        line-height: 80px;
+        
+
+        @media #{$mq-tablet-port}{
+            line-height: 80px;
+            padding: 0 0 0 40px;
+        }
     }
 
     ul {
@@ -26,8 +36,13 @@
         list-style-type: none;
         padding: 0;
         margin: 0;
-        padding-top: 32px;
-        padding-left: calc((100vw / 12) + 40px);
+        padding-top: 30px;
+        padding-left: 20px;
+
+        @media #{$mq-tablet-port}{
+            padding-top: 32px;
+            padding-left: calc((100vw / 12) + 40px);
+        }
 
         li {
             display: inline-block;

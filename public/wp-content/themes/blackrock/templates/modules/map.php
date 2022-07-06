@@ -13,9 +13,10 @@
         <nav class="map-layers-nav">
             <?= $mapNavTitle ?>
             <?php foreach($layers as $index => $layer): ?>
-                <button data-layer-index="<?= $index ?>"><?= $layer['layer_title'] ?></button>
+                <div class="toggle <?= ($index == 0) ? 'active' : ''; ?>" data-layer-index="<?= $index ?>"><?= $layer['layer_title'] ?></div>
             <?php endforeach;  ?>
         </nav>
+
 
         <div class="maps">
             <div id="main-map">
@@ -23,7 +24,7 @@
                 <?php /*<img src="<?= $titleImage['url'] ?>" class="style-svg"> */?>
             </div>
             <?php foreach($layers as $index => $layer): ?>
-                <div class="map-layer" data-layer-index="<?= $index ?>">
+                <div class="map-layer <?= ($index == 0) ? 'show' : '' ?>" data-layer-index="<?= $index ?>">
                     <?= wp_get_attachment_image( $layer['layer_image']['id'], 'full' ); ?>
                     <?php /*<img src="<?= $layer['layer_image']['url'] ?>" class="style-svg"> */?>
                 </div>    

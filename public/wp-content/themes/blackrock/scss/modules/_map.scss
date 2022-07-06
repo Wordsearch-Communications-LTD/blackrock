@@ -1,14 +1,16 @@
 .map {
     @include grid;
     
-    @media #{$mq-mobile}{
+    @media #{$mq-tablet-port}{
         margin: 0 40px calc(100vw / 12) 40px;
     }
 
     .map-title {
-        display: grid;
-        grid-template-columns: 5fr 7fr;
-        margin-bottom: calc(100vw / 24);
+        @media #{$mq-tablet-port}{
+            display: grid;
+            grid-template-columns: 5fr 7fr;
+            margin-bottom: calc(100vw / 24);
+        }
 
         h2 {
             @include headline-50;
@@ -17,11 +19,11 @@
     }
 
     .map-container {
-        display: grid;
-        grid-template-columns: repeat(12, 1fr);
         background-color: $br-cream;
 
-        @media #{$mq-desk-small}{
+        @media #{$mq-tablet-port}{
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
             grid-template-areas:  "navi navi . maps maps maps maps maps maps maps maps maps";
         }
 
@@ -33,14 +35,6 @@
                 @include headline-30;
                 margin-top: 0;
                 margin-bottom: 40px;
-            }
-
-            button {
-                display: block;
-                appearance: none;
-                border: none;
-                background-color: none;
-                @include body-16;
             }
         }
         

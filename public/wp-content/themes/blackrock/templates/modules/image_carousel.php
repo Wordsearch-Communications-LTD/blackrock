@@ -5,7 +5,10 @@
 <section class="image-carousel">
     <div class="swiper <?= $randClass ?>" data-carousel-class=".<?= $randClass ?>">
 
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
     <div class="swiper-wrapper">
+        
             <?php foreach($images as $image): ?>
                 
                 <div class="swiper-slide">
@@ -16,4 +19,5 @@
             <?php endforeach; ?>
         </div>
     </div>
+    <div class="<?= $randClass ?>-pagination"></div>
 </section>

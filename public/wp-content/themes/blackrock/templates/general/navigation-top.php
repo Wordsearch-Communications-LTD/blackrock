@@ -8,8 +8,7 @@
 		) );
 	?>
 
-	<div class="burger-menu burger-menu--closed">
-		<div class="bar"></div>
+	<div class="burger-menu">
 		<div class="bar"></div>
 		<div class="bar"></div>
 	</div>

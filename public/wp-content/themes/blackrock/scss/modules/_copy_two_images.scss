@@ -1,7 +1,7 @@
 .copy-two-images {
     @include grid;
 
-    @media #{$mq-mobile}{
+    @media #{$mq-tablet-port}{
         margin: 0 40px calc(100vw / 12) 40px;
         grid-template-columns: 6fr 2fr 4fr;
         grid-template-areas: "copy-image . image-container";
@@ -34,7 +34,7 @@
     }
 
     &.mirrored {
-        @media #{$mq-mobile}{
+        @media #{$mq-tablet-port}{
             grid-template-columns: 6fr 1fr 5fr;
             grid-template-areas: "image-container . copy-image";
         }
@@ -43,11 +43,13 @@
         }
         
         .copy-image .image-container {
-            display: grid;
-            grid-template-columns: 1fr 4fr;
-            grid-template-areas: 
-                ". img"
-                ". cap";
+            @media #{$mq-tablet-port}{
+                display: grid;
+                grid-template-columns: 1fr 4fr;
+                grid-template-areas: 
+                    ". img"
+                    ". cap";
+            }
 
             .image {
                 grid-area: img;

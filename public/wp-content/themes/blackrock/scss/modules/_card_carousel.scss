@@ -1,11 +1,50 @@
 .card-carousel {
     margin-bottom: calc(100vw / 12);
 
+    @media #{$mq-mobile}{
+        margin-right: 20px;
+    }
+
     h3 {
         @include headline-20;
     }
 
     p {
         @include body-20;
+    }
+
+    .swiper-slide {
+        padding: 0 20px;
+    }
+
+    .swiper-pagination-bullets {
+        height: 3px;
+        width: calc(100% - 80px);
+        display: flex;
+        margin-left: 40px;
+        margin-top: 40px;
+        background-color: $br-blue !important;
+        position: relative;
+        top: auto;
+        left: auto;
+        bottom: auto;
+
+        .swiper-pagination-bullet {
+            flex: 1;
+            height: 3px;
+            border-radius: 0;
+            padding: 0;
+            margin: 0;
+            opacity: 0;
+
+           &.swiper-pagination-bullet-active {
+                background: $br-blue;
+            }
+        }
+
+        .swiper-pagination-bullet-active ~ .swiper-pagination-bullet {
+            background: $br-grey;
+			opacity: 1;
+        }
     }
 }

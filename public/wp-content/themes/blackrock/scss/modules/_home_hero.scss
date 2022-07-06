@@ -1,7 +1,7 @@
 #home-hero  {
     z-index: 2;
 }
-
+ 
 .column-reveal {
     width: 100vw;
     max-width: 100%;
@@ -14,11 +14,28 @@
 
     .column-reveal_slices, 
     .column-reveal_container {
-        position: sticky;
         position: relative;
-        width: 100vw;
-        max-width: 100%;
-        z-index: 1;
+
+        @media #{$mq-tablet-port}{
+            position: sticky;
+            width: 100vw;
+            max-width: 100%;
+            z-index: 1;
+        }
+    }
+
+    .down-arrow {
+        position: absolute;
+        width: 80px;
+        height: auto;
+        bottom: 40px;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 1;
+    }
+
+    &.scrolled .down-arrow {
+        opacity: 0;
     }
 
     .column-reveal_slices .home-hero_title {
@@ -57,45 +74,61 @@
     }
 
     .column-reveal_container {
-        position: sticky;
+        height: auto;
         top: 0;
         background-color: #E7E7E7;
         width: 100vw;
-        height: 185vh;
         padding-top: 0;
+
+        @media #{$mq-tablet-port}{
+            position: sticky;
+            height: 185vh;
+        }
 
         img {
             width: 100vw;
             z-index: 1;
-            position: sticky;
-            top: 0;
+            @media #{$mq-tablet-port}{
+                position: sticky;
+                top: 0;
+            }
         }
 
         h3 {
-            position: absolute;
-            top: 150vh;
-            left: 200px;
-            z-index: 2;
-            color: white;
-            @include headline-75;
-            opacity: 0;
+            @media #{$mq-tablet-port}{
+                position: absolute;
+                top: 150vh;
+                left: 200px;
+                z-index: 2;
+                color: white;
+                @include headline-75;
+                opacity: 0;
+            }
         }
     }
 
     .column-reveal_slices {
         display: block;
-        position: sticky;
-        top: 0;
-        z-index: 3;
+
+        @media #{$mq-tablet-port}{
+            display: block;
+            position: sticky;
+            top: 0;
+            z-index: 3;
+        }
 
         div.slice_contain {
-            display: block;
-            width: 100%;
-            height: 100vh;
-            z-index: 2;
-            position: relative;
-            top:0;
-            overflow: hidden;
+            display: none;
+
+            @media #{$mq-tablet-port}{
+                display: block;
+                width: 100%;
+                height: 100vh;
+                z-index: 2;
+                position: relative;
+                top:0;
+                overflow: hidden;
+            }
         }
 
         div.slice {
@@ -114,7 +147,9 @@
     
     &.revealed {
         h1, h2, p {
-            opacity: 0;
+            @media #{$mq-tablet-port}{
+                opacity: 0;
+            }
             transition: all 0.3s ease 0s;
         }
     }

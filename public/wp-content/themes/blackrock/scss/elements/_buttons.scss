@@ -13,6 +13,23 @@ a.button {
     padding-right: $button_Padding_Arrow;
     text-decoration: none;
     font-family: $regularFont;
+    position: relative;
+    transition: all 0.3s ease 0s;
+
+    svg {
+        height: $button_FontSize;
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: translate(0, -50%);
+        transition: all 0.3s ease 0s;
+    }
+
+    &:hover {
+        svg {
+            transform: translate(5px, -50%);
+        }
+    }
 }
 
 .page-cream, 
@@ -26,9 +43,24 @@ a.button {
         &:visited {
             color: $br-black;
         }
+
+        svg {
+            
+            path {
+                stroke: $br-black;
+            }
+        }
+
         &:hover {
             background-color: $br-white;
             color: $br-black;
+
+            svg {
+            
+                path {
+                    stroke: $br-black;
+                }
+            }
         }
     }
 }
@@ -42,9 +74,86 @@ a.button {
         &:visited {
             color: $br-white;
         }
+        
+        svg {
+            
+            path {
+                stroke: $br-white;
+            }
+        }
+
         &:hover {
             background-color: $br-white;
             color: $br-black;
+
+            svg {
+            
+                path {
+                    stroke: $br-black;
+                }
+            }
         }
     }
 }
+
+#floor-toggle,
+.map .map-container .toggle {
+        display: block;
+        appearance: none;
+        border: none;
+        background-color: none;
+        @include body-16;
+        padding-left: 60px;
+        position: relative;
+        cursor: pointer;
+
+        &:before {
+            position: absolute;
+            left: 0;
+            top: 0;
+            content: "";
+            display: block;
+            width: 50px;
+            height: 24px;
+            border: 2px solid $br-grey;
+            border-radius: 12px;
+            transition: all 0.3s ease 0s;
+        }
+
+        &:after {
+            position: absolute;
+            left: 4px;
+            top: 3px;
+            content: "";
+            display: block;
+            width: 18px;
+            height: 18px;
+            border-radius: 8px; 
+            background: $br-grey;
+            transition: all 0.3s ease 0s;
+        }
+
+
+        &:hover {
+            &:before {
+                border-color: $br-blue;
+                background-color: $br-blue;
+            }
+            
+            &:after {
+                background-color: $br-white;
+            }
+        }
+
+        &.active {
+            &:before {
+                border-color: $br-blue;
+                background-color: $br-blue;
+            }
+
+            &:after {
+                background-color: $br-white;
+                transform: translateX(25px);
+            }
+        }
+    }

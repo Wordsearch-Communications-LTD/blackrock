@@ -15,6 +15,7 @@
           <div class="content">
             <h1><img src="<?= $titleImage['url'] ?>" class="style-svg"></h1>
             <?= $subtitle ?>
+            <svg class="down-arrow" width="160" height="163" viewBox="0 0 160 163" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M79.3909 0L79.3909 159.249" stroke="white" stroke-width="4"/> <path d="M37 117.198L79.8022 160L122.605 117.198" stroke="white" stroke-width="4"/> </svg>
           </div>
         </div>
         <div class="slice-grid">

@@ -8,51 +8,52 @@
     }
     
     .sticky-expander {
-        display: block;
-        width: 10px;
-        height: 150vh;
-    }
-    
-    .slice-grid {
-        display: grid;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        grid-template-columns: repeat(12, 1fr);
-        
-        
-    }
-
-    .original {
-      //  display: none !important;
-        z-index: 101 !important;
-        background-color: transparent;
-
-        p {
-            //opacity: 0;
+        @media #{$mq-tablet-port}{
+            display: block;
+            width: 10px;
+            height: 150vh;
         }
     }
     
+    .slice-grid {
+        @media #{$mq-tablet-port}{
+            display: grid;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            grid-template-columns: repeat(12, 1fr);
+        }
+    }
+
+    .original {
+        z-index: 101 !important;
+        background-color: transparent;
+    }
+    
     .copy {
-        overflow: hidden;
-        display: block;
-        height: auto;
-        width: calc((100vw / 12) * 6);
-        height: 100vh;
-        position: absolute;
-        z-index: 10;
-        left: 0;
+        @media #{$mq-tablet-port}{
+            overflow: hidden;
+            display: block;
+            height: auto;
+            width: calc((100vw / 12) * 6);
+            height: 100vh;
+            position: absolute;
+            z-index: 10;
+            left: 0;
+        }
     }
     
     .copy .container {
-        display: block;
-        width: calc((100vw / 12) * 6);
-        margin-left: 0; 
-        margin-top: calc((100vw / 12) + 100px);
-        overflow: hidden;
-        padding-left: 40px;
+        @media #{$mq-tablet-port}{
+            display: block;
+            width: calc((100vw / 12) * 6);
+            margin-left: 0; 
+            margin-top: calc((100vw / 12) + 100px);
+            overflow: hidden;
+            padding-left: 40px;
+        }
         
         p {
             @include headline-50;
@@ -62,6 +63,13 @@
         .button {
             border-color: $br-blue;
             color: $br-blue;
+
+            svg {
+            
+                path {
+                    stroke: $br-blue !important;
+                }
+            }
         }
     }
     
@@ -73,7 +81,17 @@
 
     &.revealed {
         .original p {
-            opacity: 0;
+            @media #{$mq-tablet-port}{
+                opacity: 0;
+            }
+        }
+    }
+
+    .appended {
+        display: none;
+        
+        @media #{$mq-tablet-port}{
+            display: block;
         }
     }
 
@@ -140,13 +158,17 @@
 
     &.solid-bg {
         &.revealed .original  a {
-            opacity: 0;
+            @media #{$mq-tablet-port}{
+                opacity: 0;
+            }
         }
     }
 
     &.solid-bg.scrolled {
         .original  p {
-            opacity: 0;
+            @media #{$mq-tablet-port}{
+                opacity: 0;
+            }
         }
     }
 }

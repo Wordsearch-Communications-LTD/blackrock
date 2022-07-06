@@ -1,39 +1,14 @@
 .contact-module-container {
-    position: fixed;
-    top: 0;
-    left: 0;
     background-color: #000000;
     width: 100vw;
-    height: 100vh;
-    transform: translateX(100vw);
-    transition: all 0.3s ease 0.3s;
-    z-index: 1000;
-    color: #FFFFFF;
-    overflow-x: hidden;
-    overflow-y: scroll;
     padding-top: calc(100vw / 12);
-
-    #close-contact {
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        z-index: 2;
-    }
-
-    .footer-bg {
-        height: 80px;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100vw;
-        background-color: $br-blue;
-    }
+    padding-bottom: calc(100vw / 12);
 
     .contacts-container {
         @include grid;
-        grid-template-columns: 6fr 1fr 5fr;
         
-        @media #{$mq-desk-small}{
+        @media #{$mq-tablet-port}{
+            grid-template-columns: 6fr 1fr 5fr;
             grid-template-areas: "contacts . img ";
         }
 
@@ -44,21 +19,50 @@
             padding-top: calc(100vw / 12);
 
             h2 {
-                @include headline-50;
+                @include headline-30;
                 padding-bottom: calc(100vw / 24);
+                color: white;
+                margin-left: 20px;
+                margin-bottom: 40px;
+
+                @media #{$mq-tablet-port}{
+                    @include headline-50;
+                    margin-left: 0;
+                    margin-bottom: 0;
+                }
+            }
+
+            img {
+                width: 100px;
+                margin-left: 20px;
+                margin-bottom: 40px;
+
+                @media #{$mq-tablet-port}{
+                    width: 100%;
+                    margin-left: 0;
+                    margin-bottom: 0;
+                }   
             }
         }
 
         .contacts {
             @include grid;
-            padding-top: calc(100vw / 24);
-            margin: 0 !important;
-            grid-template-columns: repeat(3, 1fr);
+            
+            @media #{$mq-tablet-port}{
+                padding-top: calc(100vw / 24);
+                margin: 0 !important;
+                grid-template-columns: repeat(3, 1fr);
+            }
 
             .contact {
+                margin: 20px;
                 border-top: 2px solid white;
-                margin-bottom: 20px;
                 @include body-20;
+                color: $br-white;
+
+                @media #{$mq-tablet-port}{
+                    margin: 0;
+                }
 
                 h3, h4 {
                     @include body-20;
@@ -72,13 +76,28 @@
                 h4 {
                     margin-top: 0;
                 }
+
+                a {
+                    color: $br-white;
+                }
+
+                &:last-child {
+                    padding-bottom: 40px;
+
+                    @media #{$mq-tablet-port}{
+                        padding-bottom: 0;    
+                    }
+                }
             }
         }
 
         .image-container {
             grid-area: img;
-            position: sticky;
-            top: 0;
+
+            @media #{$mq-tablet-port}{
+                position: sticky;
+                top: 0;
+            }
         }
     }
 

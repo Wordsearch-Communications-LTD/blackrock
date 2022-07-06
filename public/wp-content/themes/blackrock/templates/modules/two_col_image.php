@@ -9,11 +9,9 @@
         <div class="image-expand">
             
             <div class="image">    
-                <?= wp_get_attachment_image( $image['image']['id'], 'full', "", ["data-original" => $image['image']['url']] ); ?>
+                <?= wp_get_attachment_image( $image['image']['id'], 'full', "", ["data-original" => $image['image']['url'], "data-caption" => $image['caption']] ); ?>
             </div>
-            <div class="caption">
-                <?= $image['caption'] ?>
-            </div>
+            <div class="caption"><?= $image['caption'] ?></div>
         </div>
     <?php endforeach; ?>
     

@@ -4,16 +4,19 @@
     .title {
         @include grid;
         
-        @media #{$mq-mobile}{
+        @media #{$mq-tablet-port}{
             grid-template-columns: 5fr 7fr;
         }
 
 
         h2 {
-            @include headline-50;
+            @include headline-30;
+            padding: 20px;
             
-            @media #{$mq-mobile}{
+            @media #{$mq-tablet-port}{
                 margin-bottom: calc(100vw / 24);
+                padding: 0;
+                @include headline-50;
             }
         }
     }
@@ -22,12 +25,17 @@
     .copy-blocks {
         @include grid;
         
-        @media #{$mq-mobile}{
+        @media #{$mq-tablet-port}{
             grid-template-columns: repeat(4, 1fr);
         }  
 
         .copy-block {
             border-top: 2px solid $br-black;
+            margin: 20px;
+
+            @media #{$mq-tablet-port}{
+                margin: 0;
+            }
 
             h3 {
                 @include headline-20;

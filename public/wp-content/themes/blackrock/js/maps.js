@@ -3,7 +3,7 @@ class AreaMap {
     constructor() {
         this.mapSection = document.querySelector('.map');
         this.mapLayers = this.mapSection.querySelectorAll('.map-layer');
-        this.mapLayerButtons = this.mapSection.querySelectorAll('.map-layers-nav button');
+        this.mapLayerButtons = this.mapSection.querySelectorAll('.map-layers-nav .toggle');
 
         this.setEventListeners();
     }
