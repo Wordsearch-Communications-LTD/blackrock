@@ -2550,6 +2550,10 @@ a.button:hover svg {
   width: 100%;
   text-align: center;
 }
+/* line 65, ../scss/modules/_modal_popup.scss */
+#modal-popup .image-container .caption p {
+  color: #000000;
+}
 
 /* line 1, ../scss/modules/_one_col_copy_image.scss */
 .one-col-copy-image {
@@ -2876,13 +2880,14 @@ a.button:hover svg {
   margin: 0;
   overflow: hidden;
   line-height: 0;
+  cursor: pointer;
 }
-/* line 84, ../scss/modules/_two_col_copy_image.scss */
+/* line 85, ../scss/modules/_two_col_copy_image.scss */
 .image-expand .image img {
   position: relative;
   z-index: 1;
 }
-/* line 89, ../scss/modules/_two_col_copy_image.scss */
+/* line 90, ../scss/modules/_two_col_copy_image.scss */
 .image-expand .image:after {
   display: block;
   content: '';
@@ -2897,7 +2902,7 @@ a.button:hover svg {
   opacity: 0;
   transition: all 0.3s ease 0s;
 }
-/* line 104, ../scss/modules/_two_col_copy_image.scss */
+/* line 105, ../scss/modules/_two_col_copy_image.scss */
 .image-expand .image:before {
   display: block;
   content: '';
@@ -2913,7 +2918,7 @@ a.button:hover svg {
   opacity: 0;
   transition: all 0.3s ease 0s;
 }
-/* line 122, ../scss/modules/_two_col_copy_image.scss */
+/* line 123, ../scss/modules/_two_col_copy_image.scss */
 .image-expand .image:hover:before, .image-expand .image:hover:after {
   opacity: 1;
 }
