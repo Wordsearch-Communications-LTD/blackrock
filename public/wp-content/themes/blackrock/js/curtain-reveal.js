@@ -67,8 +67,6 @@ class HeroCurtain {
             for(let copySlice of copySlices){
                 let percent = Math.round(percentage) / 100;
                 let width = this.colWidth - (this.colWidth * percent);          
-                let translateX = width - this.colWidth; 
-                
                 
                 if(containerTop >= 0){
                     width = this.colWidth;
@@ -95,7 +93,7 @@ class HeroCurtain {
                 let width = this.colWidth - (this.colWidth * percent);          
                 let translateX = width - this.colWidth; 
                     
-                console.log(this.containerID);
+                //console.log(this.containerID);
 
                 if(percent > 0){
                     this.container.classList.add('scrolled');

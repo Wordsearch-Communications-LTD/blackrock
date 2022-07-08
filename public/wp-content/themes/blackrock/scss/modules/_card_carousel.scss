@@ -1,20 +1,25 @@
 .card-carousel {
-    margin-bottom: calc(100vw / 12);
 
-    @media #{$mq-mobile}{
-        margin-right: 20px;
+    margin-top: 40px;
+    
+    @media #{$mq-tablet-port}{
+        margin-top: calc(100vw / 12);
     }
+
+    
 
     h3 {
         @include headline-20;
+        margin-right: 10px;
     }
 
     p {
         @include body-20;
+        margin-right: 10px;
     }
 
     .swiper-slide {
-        padding: 0 20px;
+        padding: 0 10px;
     }
 
     .swiper-pagination-bullets {

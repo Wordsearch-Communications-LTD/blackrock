@@ -3,10 +3,11 @@
     $cta = get_sub_field('cta');
     $image = get_sub_field('image');
     $largeCaption = get_sub_field('large_caption');
+    $last = get_sub_field('last_item');
     $randClass = 'hs' . substr(md5(microtime()),rand(0,26), 8);
 ?>
 
-<section class="column-reveal image-curtain solid-bg" id="<?= $randClass ?>">
+<section class="column-reveal image-curtain solid-bg <?= ($last) ? 'last-item' : '';?>" id="<?= $randClass ?>">
   <style>
     <?php $randClass ?> .column-reveal_slices .slice {background-color: #F3EADF};
   </style>

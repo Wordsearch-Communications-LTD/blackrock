@@ -1,5 +1,5 @@
 .keep-exploring {
-    margin-bottom: calc(100vw / 12);
+    margin-top: calc(100vw / 12);
 
     .title {
         @include grid;
@@ -12,6 +12,7 @@
             @media #{$mq-tablet-port}{
                 @include headline-50;
                 margin-bottom: 1em;
+                margin-top: 0;
                 padding: 0 0;
             }
         }

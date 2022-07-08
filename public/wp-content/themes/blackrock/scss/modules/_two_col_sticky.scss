@@ -1,8 +1,11 @@
 .two-col-sticky {
     @include grid;
     
+    margin: 40px 0 0 0;
+
     @media #{$mq-tablet-port}{
-        margin: 0px 40px calc(100vw / 12) 40px;
+        margin: 0 40px 0 40px;
+        padding-top: calc(100vw / 12);
         grid-template-columns: 5fr 1fr 6fr;
         grid-template-areas: "left . right";
     }  
@@ -11,20 +14,29 @@
         position: relative;
         grid-area: left;
         
+        
         h2 {
             @include headline-50;
             margin-top: 0;
         }
 
         .stick {
-            position: sticky;
-            top: 0;
+            
+            @media #{$mq-tablet-port}{
+                position: sticky;
+                top: 0;    
+                padding-top: calc(100vw / 12);
+            }
         }
     }
 
     .right {
         grid-area: right;
         
+        @media #{$mq-tablet-port}{
+            padding-top: calc(100vw / 12);
+        }
+
         h3 {
             @include body-20;
             font-weight: bold;
@@ -35,10 +47,19 @@
             @include body-20;
         }
 
-        .button {
-            float: right;
-        }
 
+        .button-container {
+            text-align: right;
+            
+            .button {
+                margin-right: 20px;
+
+                @media #{$mq-tablet-port}{
+                    margin-right: 0;
+                }
+            }
+        }
+        
         article {
             display: flex;
             justify-content: flex-start;

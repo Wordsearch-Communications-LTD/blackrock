@@ -4,7 +4,7 @@
     $image = get_sub_field('image');
     $caption = get_sub_field('caption');
 ?>
-<section class="two-col-copy-image">
+<section class="two-col-copy-image <?= ($image) ? 'has-image' : '' ;?>">
     <div class="copy">
         <div class="left">
             <?php echo $title ?>

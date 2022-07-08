@@ -4,18 +4,21 @@ const fullImageCarousels = document.querySelectorAll('.image-carousel .swiper');
 cardCarousels.forEach(cardCarousel => {
     cardCarousel = new Swiper('' + cardCarousel.dataset.carouselClass + '', {
         slidesPerView: 1,
-        slidesOffsetBefore: 0,
-        spaceBetween: 20,
+        slidesOffsetBefore: 10,
+        spaceBetween: 0,
         pagination: {
             el: cardCarousel.dataset.carouselClass + '-pagination',
           },
         breakpoints: {
             768: {
                 slidesPerView: 2,
-                slidesOffsetBefore: 40
+                slidesOffsetBefore: 30,
+                spaceBetween: 0,
             },
             1024: {
-                slidesPerView: 3
+                slidesPerView: 3,
+                slidesOffsetBefore: 30,
+                spaceBetween: 0,
             }
         }  
     });

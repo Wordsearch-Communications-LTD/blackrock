@@ -7,10 +7,15 @@
 ?>
 <section class="column-reveal image-curtain" id="home-hero">
   <style>
-      #home-hero .column-reveal_slices div .slice { background-image: url(<?= $curtainImage ?>)};
+      
+    
+      #home-hero .column-reveal_slices div .slice { background-image: url(<?= $curtainImage['url'] ?>)}
+        
+      #home-hero .mobile-header-background { background-image: url(<?= $curtainImage['sizes']['large'] ?>)}
   </style>
   
     <div class="column-reveal_slices">
+      <div class="mobile-header-background"></div>
         <div class="home-hero_title">
           <div class="content">
             <h1><img src="<?= $titleImage['url'] ?>" class="style-svg"></h1>

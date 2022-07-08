@@ -1,5 +1,9 @@
 .title-multiple-columns {
-    margin-bottom: calc(100vw / 12);
+    margin-top: 40px;
+    
+    @media #{$mq-tablet-port}{
+        margin-top: calc(100vw / 12);
+    }
     
     .title {
         @include grid;
@@ -14,9 +18,9 @@
             padding: 20px;
             
             @media #{$mq-tablet-port}{
-                margin-bottom: calc(100vw / 24);
                 padding: 0;
                 @include headline-50;
+                margin-bottom: calc(100vw / 24);
             }
         }
     }
@@ -32,6 +36,7 @@
         .copy-block {
             border-top: 2px solid $br-black;
             margin: 20px;
+            padding: 10px 0 20px 0;
 
             @media #{$mq-tablet-port}{
                 margin: 0;

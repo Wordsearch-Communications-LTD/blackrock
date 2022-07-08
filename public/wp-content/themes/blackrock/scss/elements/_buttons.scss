@@ -1,23 +1,31 @@
 $button_Radius: 30px;
 $button_Padding: 15px 28px;
 $button_Padding_Arrow: 58px;
-$button_FontSize: 20px;
-$button_LetterSpacing: calc($button_FontSize * 0.05);
+$button_FontSizeMob: 16px;
+$button_FontSizeDesk: 20px;
 
 a.button {
     display: inline-block;
-    font-size: $button_FontSize;
+    font-size: $button_FontSizeMob;
     padding: $button_Padding;
     border-radius: $button_Radius;
-    letter-spacing: $button_LetterSpacing;
+    letter-spacing: calc($button_FontSizeMob * 0.05);
     padding-right: $button_Padding_Arrow;
     text-decoration: none;
     font-family: $regularFont;
     position: relative;
     transition: all 0.3s ease 0s;
 
+    @media #{$mq-tablet-port}{
+        font-size: $button_FontSizeDesk;
+        letter-spacing: calc($button_FontSizeDesk * 0.05);
+    }
+
     svg {
-        height: $button_FontSize;
+        height: $button_FontSizeMob;
+        @media #{$mq-tablet-port}{
+            height: $button_FontSizeDesk;
+        }
         position: absolute;
         top: 50%;
         right: 20px;

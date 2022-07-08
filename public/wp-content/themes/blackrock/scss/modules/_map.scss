@@ -2,7 +2,7 @@
     @include grid;
     
     @media #{$mq-tablet-port}{
-        margin: 0 40px calc(100vw / 12) 40px;
+        margin: calc(100vw / 12) 40px 0 40px;
     }
 
     .map-title {
@@ -13,8 +13,15 @@
         }
 
         h2 {
-            @include headline-50;
+            @include headline-30;
             margin-top: 0;
+            margin-bottom: 40px;
+
+            @media #{$mq-tablet-port}{
+                @include headline-50;
+                margin-top: 0;
+                margin-bottom: 0;
+            }
         }
     }
 
@@ -29,12 +36,20 @@
 
         .map-layers-nav {
             grid-area: navi;
-            padding: 40px;
+            padding: 20px;
+
+            @media #{$mq-tablet-port}{
+                padding: 40px;
+            }
 
             h3 {
                 @include headline-30;
                 margin-top: 0;
-                margin-bottom: 40px;
+                margin-bottom: 20px;
+                
+                @media #{$mq-tablet-port}{
+                    margin-bottom: 40px;
+                }
             }
         }
         

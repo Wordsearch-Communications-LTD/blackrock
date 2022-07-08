@@ -46,6 +46,8 @@
     }
     
     .copy .container {
+        padding-bottom: 40px;
+
         @media #{$mq-tablet-port}{
             display: block;
             width: calc((100vw / 12) * 6);
@@ -53,16 +55,27 @@
             margin-top: calc((100vw / 12) + 100px);
             overflow: hidden;
             padding-left: 40px;
+            padding-bottom: 0;
         }
         
         p {
-            @include headline-50;
-            margin-bottom: 30px;
+            @include headline-20;
+            margin: 20px;
+
+            @media #{$mq-tablet-port}{
+                @include headline-50;
+                margin: 0 0 30px 0;
+            }
         }
 
         .button {
             border-color: $br-blue;
             color: $br-blue;
+            margin-left: 20px;
+
+            @media #{$mq-tablet-port}{
+                margin-left: 0;
+            }
 
             svg {
             
@@ -169,6 +182,18 @@
             @media #{$mq-tablet-port}{
                 opacity: 0;
             }
+        }
+    }
+
+    &.last-item {
+        @media #{$mq-tablet-port}{
+        background-color: transparent;
+
+        .columm-reveal-container {
+            height: 50vh;
+            background-color: transparent;
+        }
+
         }
     }
 }

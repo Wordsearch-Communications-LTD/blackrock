@@ -1,8 +1,8 @@
 .two-col-image {
     @include grid;
     
-    @media #{$mq-tablet-port}{
-        margin: 0 40px calc(100vw /12) 40px;
+    @media #{$mq-tablet-desk}{
+        margin: calc(100vw /12) 40px 0 40px;
     }
 
     &.equal {
@@ -13,6 +13,10 @@
 
     &.small-big {
         @media #{$mq-tablet-port}{
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: "left right"
+        }
+        @media #{$mq-tablet-desk}{
             grid-template-columns: 3fr 3fr 6fr;
             grid-template-areas: "left . right";
         }
@@ -28,7 +32,7 @@
     }
 
     &.big-small {
-        @media #{$mq-tablet-port}{
+        @media #{$mq-tablet-desk}{
             grid-template-columns: 6fr 3fr 3fr;
             grid-template-areas: "left . right";
         }

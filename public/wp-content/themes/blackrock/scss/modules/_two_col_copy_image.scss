@@ -1,21 +1,26 @@
 .two-col-copy-image {
     
-    margin-bottom: calc(100vw / 12);
+    margin-top: calc(100vw / 12);
 
     .copy {
         @include grid;
         grid-area: copy;
         padding: 0 20px;
 
-        @media #{$mq-tablet-port}{
-            padding: 0 0px;
-            grid-template-columns: 5fr 1fr 6fr;
-            margin: 0 40px calc(100vw / 12) 40px;
-            grid-template-areas: "left . right";
-        }
-
         .left { grid-area: left;}
         .right { grid-area: right;}
+
+        @media #{$mq-tablet-port}{
+            grid-template-columns: 1fr;
+            grid-template-areas: "left" "right";
+        }
+
+        @media #{$mq-tablet-desk}{
+            padding: 0 0px;
+            grid-template-columns: 5fr 1fr 6fr;
+            margin: 0 40px 0 40px;
+            grid-template-areas: "left . right";
+        }
 
         h2 {
             @include headline-30;
@@ -33,9 +38,24 @@
             }
         }
     }
+
+    &.has-image .copy {
+        margin-bottom: 40px;
+
+        @media #{$mq-tablet-port}{
+            margin-bottom: calc(100vw / 12);
+        }
+    }
     
     .image-container {
         @include grid;
+
+        @media #{$mq-tablet-port}{
+            grid-template-columns: 1fr;
+            grid-template-areas:  
+                "img"
+                "cap";
+        }
 
         @media #{$mq-tablet-desk}{
             grid-template-columns: 8fr 4fr;

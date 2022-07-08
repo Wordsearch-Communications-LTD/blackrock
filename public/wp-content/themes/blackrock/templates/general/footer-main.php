@@ -9,9 +9,9 @@
     <div class="contacts-container">
         <div class="left">
             <div class="copy">
-                    <?= $contactIntro ?>
-                    <?= wp_get_attachment_image( $logo['id'], 'full', '', ["class" => "contact-logo"] ); ?>
-            </div>       
+                <?= $contactIntro ?>
+                <?= wp_get_attachment_image( $logo['id'], 'full', '', ["class" => "contact-logo"] ); ?>
+            </div>
             <div class="contacts">
                 <?php foreach($contacts as $contact): ?>
                     <div class="contact">

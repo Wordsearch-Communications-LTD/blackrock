@@ -1,7 +1,11 @@
 .image-carousel {
-    margin-bottom: calc(100vw / 12);
     position: relative;
-    
+    margin-top: 40px;
+
+    @media #{$mq-tablet-port}{
+        margin-top: calc(100vw / 12);
+    }
+
     .caption {
         @media #{$mq-tablet-port}{
             padding-left: 40px;
@@ -20,6 +24,10 @@
 
         @media #{$mq-tablet-port}{
             display: block;
+        }
+
+        @media (hover: none){ //this is great especially for touch screen laptops
+            pointer-events: none;
         }
 
         &:after {

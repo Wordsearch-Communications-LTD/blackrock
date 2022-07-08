@@ -1,7 +1,13 @@
 .floors {
-    margin-bottom: calc(100vw / 12);
+    margin-top: 40px;
     
     @media #{$mq-tablet-port}{
+        margin-top: calc(100vw / 12);
+        grid-template-columns: 3fr 9fr;
+        grid-template-areas:  "floor-toggle floor-list";
+    }
+    
+    @media #{$mq-desk-small}{
         grid-template-columns: 2fr 1fr 8fr 1fr;
         grid-template-areas:  "floor-toggle . floor-list .";
     }
