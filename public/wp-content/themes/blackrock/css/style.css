@@ -614,6 +614,24 @@ a.button:hover svg {
   transform: translateX(25px);
 }
 
+/* line 1, ../scss/modules/_error404.scss */
+.error-404 {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* line 7, ../scss/modules/_error404.scss */
+.error-404 h2 {
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 1.3em;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  font-family: "PPNeueMontreal-Medium";
+  text-align: center;
+}
+
 /* line 1, ../scss/modules/_card_carousel.scss */
 .card-carousel {
   margin-top: 40px;

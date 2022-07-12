@@ -12,6 +12,11 @@
 	if($pageColor === 'black'){
 		$pageColorHex = '#000000';
 	}
+
+	if(is_404()){
+		$pageColor = 'black';
+		$pageColorHex = '#000000';
+	}
 ?>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
