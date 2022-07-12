@@ -104,30 +104,31 @@ blockquote {
   /* line 1, ../scss/layout/_footer.scss */
   #footer {
     height: 80px;
+    width: 100vw;
   }
 }
-/* line 17, ../scss/layout/_footer.scss */
+/* line 18, ../scss/layout/_footer.scss */
 #footer a {
   color: #FFFFFF;
 }
-/* line 21, ../scss/layout/_footer.scss */
+/* line 22, ../scss/layout/_footer.scss */
 #footer p.copyright {
   margin: 0;
   padding: 40px 0 0 20px;
-  float: left;
 }
 @media (min-width: 768px) {
-  /* line 21, ../scss/layout/_footer.scss */
+  /* line 22, ../scss/layout/_footer.scss */
   #footer p.copyright {
     line-height: 80px;
     padding: 0 0 0 40px;
+    float: left;
   }
 }
-/* line 33, ../scss/layout/_footer.scss */
+/* line 35, ../scss/layout/_footer.scss */
 #footer ul {
   float: left;
 }
-/* line 37, ../scss/layout/_footer.scss */
+/* line 39, ../scss/layout/_footer.scss */
 #footer .menu {
   list-style-type: none;
   padding: 0;
@@ -136,48 +137,48 @@ blockquote {
   padding-left: 20px;
 }
 @media (min-width: 768px) {
-  /* line 37, ../scss/layout/_footer.scss */
+  /* line 39, ../scss/layout/_footer.scss */
   #footer .menu {
     padding-top: 32px;
     padding-left: calc((100vw / 12) + 40px);
   }
 }
-/* line 49, ../scss/layout/_footer.scss */
+/* line 51, ../scss/layout/_footer.scss */
 #footer .menu li {
   display: inline-block;
   font-size: 16px;
 }
-/* line 54, ../scss/layout/_footer.scss */
+/* line 56, ../scss/layout/_footer.scss */
 #footer .menu li:after {
   font-weight: bold;
   content: '/';
   padding-left: 10px;
   padding-right: 5px;
 }
-/* line 61, ../scss/layout/_footer.scss */
+/* line 63, ../scss/layout/_footer.scss */
 #footer .menu li:last-child:after {
   display: none;
 }
-/* line 65, ../scss/layout/_footer.scss */
+/* line 67, ../scss/layout/_footer.scss */
 #footer .menu li a {
   text-decoration: none;
   color: white;
 }
-/* line 72, ../scss/layout/_footer.scss */
+/* line 74, ../scss/layout/_footer.scss */
 #footer .menu li:hover a, #footer .menu li.current_page_item a {
   color: white;
 }
-/* line 77, ../scss/layout/_footer.scss */
+/* line 79, ../scss/layout/_footer.scss */
 #footer .menu li.current_page_item a {
   padding-bottom: 3px;
   border-bottom: 2px solid white;
 }
 
-/* line 84, ../scss/layout/_footer.scss */
+/* line 86, ../scss/layout/_footer.scss */
 .contact-open #footer {
   background-color: transparent;
 }
-/* line 86, ../scss/layout/_footer.scss */
+/* line 88, ../scss/layout/_footer.scss */
 .contact-open #footer .footer-content-main {
   opacity: 0;
 }

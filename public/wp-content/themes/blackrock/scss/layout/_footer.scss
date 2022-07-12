@@ -12,6 +12,7 @@
 
     @media #{$mq-tablet-port}{
         height: 80px;
+        width: 100vw;
     }
 
     a {
@@ -21,12 +22,13 @@
     p.copyright {
         margin: 0;
         padding: 40px 0 0 20px;
-        float: left;
+        
         
 
         @media #{$mq-tablet-port}{
             line-height: 80px;
             padding: 0 0 0 40px;
+            float: left;
         }
     }
 
