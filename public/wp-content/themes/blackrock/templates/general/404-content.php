@@ -6,6 +6,6 @@
 <section class="error-404">
     <div class="inner">
         <?= $copy ?>
-        
+        <a href="<?= $link ?>"><?= $link ?></a>
     </div>
 </section>
