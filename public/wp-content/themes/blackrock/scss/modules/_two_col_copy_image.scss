@@ -1,6 +1,9 @@
 .two-col-copy-image {
-    
-    margin-top: calc(100vw / 12);
+    margin-top: 80px;
+
+    @media #{$mq-tablet-port}{
+        margin-top: calc(100vw / 12);
+    }
 
     .copy {
         @include grid;
@@ -40,7 +43,7 @@
     }
 
     &.has-image .copy {
-        margin-bottom: 40px;
+        margin-bottom: 100px;
 
         @media #{$mq-tablet-port}{
             margin-bottom: calc(100vw / 12);
@@ -49,8 +52,10 @@
     
     .image-container {
         @include grid;
+        margin: 0 20px 0 20px;
 
         @media #{$mq-tablet-port}{
+            margin: 0 40px 0 40px;
             grid-template-columns: 1fr;
             grid-template-areas:  
                 "img"

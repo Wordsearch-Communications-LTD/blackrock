@@ -59,7 +59,7 @@ blockquote {
 
 /* line 46, ../scss/layout/_general.scss */
 .caption p {
-  padding: 10px 20px 10px 20px;
+  padding: 10px 10px 10px 0px;
   margin: 0;
   font-size: 16px;
   line-height: 1.3em;
@@ -67,7 +67,13 @@ blockquote {
   padding-bottom: 0;
   font-family: "PPNeueMontreal-Regular";
 }
-/* line 51, ../scss/layout/_general.scss */
+@media (min-width: 768px) {
+  /* line 46, ../scss/layout/_general.scss */
+  .caption p {
+    padding: 10px 20px 10px 20px;
+  }
+}
+/* line 55, ../scss/layout/_general.scss */
 .caption p span {
   font-weight: lighter;
 }
@@ -845,6 +851,11 @@ a.button:hover svg {
 /* line 1, ../scss/modules/_copy_two_images.scss */
 .copy-two-images {
   margin: 40px 0 0 0;
+  display: grid;
+  margin: 0 20px 0 20px;
+  grid-gap: 10px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "copy copy" "image-container-left image-container-right";
 }
 @media (min-width: 768px) {
   /* line 1, ../scss/modules/_copy_two_images.scss */
@@ -906,13 +917,6 @@ a.button:hover svg {
     margin-top: calc((100vw / 12) * -2);
   }
 }
-@media (min-width: 768px) {
-  /* line 1, ../scss/modules/_copy_two_images.scss */
-  .copy-two-images {
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: "copy copy" "image-container-left image-container-right";
-  }
-}
 @media (min-width: 1024px) {
   /* line 1, ../scss/modules/_copy_two_images.scss */
   .copy-two-images {
@@ -922,32 +926,32 @@ a.button:hover svg {
   }
 }
 @media (min-width: 768px) {
-  /* line 64, ../scss/modules/_copy_two_images.scss */
+  /* line 66, ../scss/modules/_copy_two_images.scss */
   .copy-two-images.mirrored {
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "copy copy" "image-container-right image-container-left";
   }
 }
 @media (min-width: 1024px) {
-  /* line 64, ../scss/modules/_copy_two_images.scss */
+  /* line 66, ../scss/modules/_copy_two_images.scss */
   .copy-two-images.mirrored {
     grid-template-columns: 6fr 1fr 5fr;
     grid-template-areas: "image-container-left . copy" ". . image-container-right";
   }
 }
-/* line 75, ../scss/modules/_copy_two_images.scss */
+/* line 77, ../scss/modules/_copy_two_images.scss */
 .copy-two-images.mirrored .image-container {
   padding-top: 0;
 }
-/* line 89, ../scss/modules/_copy_two_images.scss */
+/* line 91, ../scss/modules/_copy_two_images.scss */
 .copy-two-images.mirrored .image-container .image {
   grid-area: img;
 }
-/* line 92, ../scss/modules/_copy_two_images.scss */
+/* line 94, ../scss/modules/_copy_two_images.scss */
 .copy-two-images.mirrored .image-container .caption {
   grid-area: cap;
 }
-/* line 98, ../scss/modules/_copy_two_images.scss */
+/* line 100, ../scss/modules/_copy_two_images.scss */
 .copy-two-images.mirrored .copy {
   padding-top: calc(100vw / 12);
 }
@@ -2598,28 +2602,29 @@ a.button:hover svg {
   appearance: none;
   padding: 0;
   background-color: transparent;
+  z-index: 10;
 }
-/* line 27, ../scss/modules/_modal_popup.scss */
+/* line 28, ../scss/modules/_modal_popup.scss */
 #modal-popup .close svg {
   pointer-events: none;
   transition: all 0.3s ease 0s;
 }
-/* line 33, ../scss/modules/_modal_popup.scss */
+/* line 34, ../scss/modules/_modal_popup.scss */
 #modal-popup .close:hover svg {
   transform: rotate(90deg);
 }
-/* line 36, ../scss/modules/_modal_popup.scss */
+/* line 37, ../scss/modules/_modal_popup.scss */
 #modal-popup .close:hover svg path {
   stroke: #0627CA;
 }
-/* line 43, ../scss/modules/_modal_popup.scss */
+/* line 44, ../scss/modules/_modal_popup.scss */
 #modal-popup .image-container {
   width: 100%;
   height: calc(100vh - 60px);
   overflow: hidden;
   position: relative;
 }
-/* line 49, ../scss/modules/_modal_popup.scss */
+/* line 50, ../scss/modules/_modal_popup.scss */
 #modal-popup .image-container img {
   max-width: 100%;
   max-height: calc(100% - 80px);
@@ -2629,14 +2634,14 @@ a.button:hover svg {
   left: 50%;
   transform: translate(-50%, 0);
 }
-/* line 59, ../scss/modules/_modal_popup.scss */
+/* line 60, ../scss/modules/_modal_popup.scss */
 #modal-popup .image-container .caption {
   position: absolute;
   bottom: 0;
   width: 100%;
   text-align: center;
 }
-/* line 65, ../scss/modules/_modal_popup.scss */
+/* line 66, ../scss/modules/_modal_popup.scss */
 #modal-popup .image-container .caption p {
   color: #000000;
 }
@@ -2698,7 +2703,7 @@ a.button:hover svg {
 /* line 39, ../scss/modules/_one_col_copy_image.scss */
 .one-col-copy-image.page-hero .copy {
   margin-top: 80px;
-  margin-bottom: 40px;
+  margin-bottom: 80px;
   padding: 0 20px;
 }
 @media (min-width: 768px) {
@@ -2841,38 +2846,44 @@ a.button:hover svg {
 
 /* line 1, ../scss/modules/_two_col_copy_image.scss */
 .two-col-copy-image {
-  margin-top: calc(100vw / 12);
+  margin-top: 80px;
 }
-/* line 5, ../scss/modules/_two_col_copy_image.scss */
+@media (min-width: 768px) {
+  /* line 1, ../scss/modules/_two_col_copy_image.scss */
+  .two-col-copy-image {
+    margin-top: calc(100vw / 12);
+  }
+}
+/* line 8, ../scss/modules/_two_col_copy_image.scss */
 .two-col-copy-image .copy {
   grid-area: copy;
   padding: 0 20px;
 }
 @media (min-width: 768px) {
-  /* line 5, ../scss/modules/_two_col_copy_image.scss */
+  /* line 8, ../scss/modules/_two_col_copy_image.scss */
   .two-col-copy-image .copy {
     display: grid;
     margin: 0 40px;
     column-gap: 20px;
   }
 }
-/* line 10, ../scss/modules/_two_col_copy_image.scss */
+/* line 13, ../scss/modules/_two_col_copy_image.scss */
 .two-col-copy-image .copy .left {
   grid-area: left;
 }
-/* line 11, ../scss/modules/_two_col_copy_image.scss */
+/* line 14, ../scss/modules/_two_col_copy_image.scss */
 .two-col-copy-image .copy .right {
   grid-area: right;
 }
 @media (min-width: 768px) {
-  /* line 5, ../scss/modules/_two_col_copy_image.scss */
+  /* line 8, ../scss/modules/_two_col_copy_image.scss */
   .two-col-copy-image .copy {
     grid-template-columns: 1fr;
     grid-template-areas: "left" "right";
   }
 }
 @media (min-width: 1024px) {
-  /* line 5, ../scss/modules/_two_col_copy_image.scss */
+  /* line 8, ../scss/modules/_two_col_copy_image.scss */
   .two-col-copy-image .copy {
     padding: 0 0px;
     grid-template-columns: 5fr 1fr 6fr;
@@ -2880,7 +2891,7 @@ a.button:hover svg {
     grid-template-areas: "left . right";
   }
 }
-/* line 25, ../scss/modules/_two_col_copy_image.scss */
+/* line 28, ../scss/modules/_two_col_copy_image.scss */
 .two-col-copy-image .copy h2 {
   font-weight: normal;
   font-size: 30px;
@@ -2890,7 +2901,7 @@ a.button:hover svg {
   font-family: "PPNeueMontreal-Medium";
 }
 @media (min-width: 768px) {
-  /* line 25, ../scss/modules/_two_col_copy_image.scss */
+  /* line 28, ../scss/modules/_two_col_copy_image.scss */
   .two-col-copy-image .copy h2 {
     font-weight: normal;
     font-size: 50px;
@@ -2900,7 +2911,7 @@ a.button:hover svg {
     font-family: "PPNeueMontreal-Regular";
   }
 }
-/* line 33, ../scss/modules/_two_col_copy_image.scss */
+/* line 36, ../scss/modules/_two_col_copy_image.scss */
 .two-col-copy-image .copy p {
   font-size: 20px;
   line-height: 1.3em;
@@ -2909,7 +2920,7 @@ a.button:hover svg {
   font-family: "PPNeueMontreal-Regular";
 }
 @media (min-width: 768px) {
-  /* line 33, ../scss/modules/_two_col_copy_image.scss */
+  /* line 36, ../scss/modules/_two_col_copy_image.scss */
   .two-col-copy-image .copy p {
     font-size: 35px;
     line-height: 1.3em;
@@ -2918,18 +2929,22 @@ a.button:hover svg {
     font-family: "PPNeueMontreal-Regular";
   }
 }
-/* line 42, ../scss/modules/_two_col_copy_image.scss */
+/* line 45, ../scss/modules/_two_col_copy_image.scss */
 .two-col-copy-image.has-image .copy {
-  margin-bottom: 40px;
+  margin-bottom: 100px;
 }
 @media (min-width: 768px) {
-  /* line 42, ../scss/modules/_two_col_copy_image.scss */
+  /* line 45, ../scss/modules/_two_col_copy_image.scss */
   .two-col-copy-image.has-image .copy {
     margin-bottom: calc(100vw / 12);
   }
 }
+/* line 53, ../scss/modules/_two_col_copy_image.scss */
+.two-col-copy-image .image-container {
+  margin: 0 20px 0 20px;
+}
 @media (min-width: 768px) {
-  /* line 50, ../scss/modules/_two_col_copy_image.scss */
+  /* line 53, ../scss/modules/_two_col_copy_image.scss */
   .two-col-copy-image .image-container {
     display: grid;
     margin: 0 40px;
@@ -2937,29 +2952,30 @@ a.button:hover svg {
   }
 }
 @media (min-width: 768px) {
-  /* line 50, ../scss/modules/_two_col_copy_image.scss */
+  /* line 53, ../scss/modules/_two_col_copy_image.scss */
   .two-col-copy-image .image-container {
+    margin: 0 40px 0 40px;
     grid-template-columns: 1fr;
     grid-template-areas: "img" "cap";
   }
 }
 @media (min-width: 1024px) {
-  /* line 50, ../scss/modules/_two_col_copy_image.scss */
+  /* line 53, ../scss/modules/_two_col_copy_image.scss */
   .two-col-copy-image .image-container {
     grid-template-columns: 8fr 4fr;
     grid-template-areas: "img ." "cap .";
   }
 }
-/* line 67, ../scss/modules/_two_col_copy_image.scss */
+/* line 72, ../scss/modules/_two_col_copy_image.scss */
 .two-col-copy-image .image-container .image {
   grid-area: img;
 }
-/* line 71, ../scss/modules/_two_col_copy_image.scss */
+/* line 76, ../scss/modules/_two_col_copy_image.scss */
 .two-col-copy-image .image-container .caption {
   grid-area: cap;
 }
 
-/* line 77, ../scss/modules/_two_col_copy_image.scss */
+/* line 82, ../scss/modules/_two_col_copy_image.scss */
 .image-expand .image {
   position: relative;
   padding: 0;
@@ -2968,12 +2984,12 @@ a.button:hover svg {
   line-height: 0;
   cursor: pointer;
 }
-/* line 85, ../scss/modules/_two_col_copy_image.scss */
+/* line 90, ../scss/modules/_two_col_copy_image.scss */
 .image-expand .image img {
   position: relative;
   z-index: 1;
 }
-/* line 90, ../scss/modules/_two_col_copy_image.scss */
+/* line 95, ../scss/modules/_two_col_copy_image.scss */
 .image-expand .image:after {
   display: block;
   content: '';
@@ -2988,7 +3004,7 @@ a.button:hover svg {
   opacity: 0;
   transition: all 0.3s ease 0s;
 }
-/* line 105, ../scss/modules/_two_col_copy_image.scss */
+/* line 110, ../scss/modules/_two_col_copy_image.scss */
 .image-expand .image:before {
   display: block;
   content: '';
@@ -3004,7 +3020,7 @@ a.button:hover svg {
   opacity: 0;
   transition: all 0.3s ease 0s;
 }
-/* line 123, ../scss/modules/_two_col_copy_image.scss */
+/* line 128, ../scss/modules/_two_col_copy_image.scss */
 .image-expand .image:hover:before, .image-expand .image:hover:after {
   opacity: 1;
 }
@@ -3029,9 +3045,18 @@ a.button:hover svg {
     grid-template-columns: 1fr 1fr;
   }
 }
+/* line 14, ../scss/modules/_two_col_image.scss */
+.two-col-image.small-big {
+  display: grid;
+  margin: 100px 20px 0 20px;
+  grid-gap: 10px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "left right";
+}
 @media (min-width: 768px) {
   /* line 14, ../scss/modules/_two_col_image.scss */
   .two-col-image.small-big {
+    margin: calc(100vw /12) 40px 0 40px;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "left right";
   }
@@ -3043,40 +3068,40 @@ a.button:hover svg {
     grid-template-areas: "left . right";
   }
 }
-/* line 24, ../scss/modules/_two_col_image.scss */
+/* line 31, ../scss/modules/_two_col_image.scss */
 .two-col-image.small-big div {
   grid-area: right;
 }
-/* line 25, ../scss/modules/_two_col_image.scss */
+/* line 32, ../scss/modules/_two_col_image.scss */
 .two-col-image.small-big div:first-of-type {
   grid-area: left;
   align-self: center;
 }
 @media (min-width: 1024px) {
-  /* line 34, ../scss/modules/_two_col_image.scss */
+  /* line 41, ../scss/modules/_two_col_image.scss */
   .two-col-image.big-small {
     grid-template-columns: 6fr 3fr 3fr;
     grid-template-areas: "left . right";
   }
 }
-/* line 40, ../scss/modules/_two_col_image.scss */
+/* line 47, ../scss/modules/_two_col_image.scss */
 .two-col-image.big-small div {
   grid-area: left;
 }
-/* line 43, ../scss/modules/_two_col_image.scss */
+/* line 50, ../scss/modules/_two_col_image.scss */
 .two-col-image.big-small div:last-of-type {
   grid-area: right;
   align-self: center;
 }
-/* line 52, ../scss/modules/_two_col_image.scss */
+/* line 59, ../scss/modules/_two_col_image.scss */
 .two-col-image.offset-top div .image {
   margin-top: calc(100vw / 12);
 }
-/* line 57, ../scss/modules/_two_col_image.scss */
+/* line 64, ../scss/modules/_two_col_image.scss */
 .two-col-image.offset-top div:first-of-type {
   align-self: start;
 }
-/* line 60, ../scss/modules/_two_col_image.scss */
+/* line 67, ../scss/modules/_two_col_image.scss */
 .two-col-image.offset-top div:first-of-type .image {
   margin-top: 0;
 }

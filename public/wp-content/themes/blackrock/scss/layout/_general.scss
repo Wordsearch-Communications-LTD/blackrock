@@ -44,7 +44,11 @@ blockquote {
 .caption {
   
   p {
-      padding: 10px 20px 10px 20px;
+      padding: 10px 10px 10px 0px;
+      @media #{$mq-tablet-port}{
+        padding: 10px 20px 10px 20px;
+      }
+
       margin: 0;
       @include body-16;
       

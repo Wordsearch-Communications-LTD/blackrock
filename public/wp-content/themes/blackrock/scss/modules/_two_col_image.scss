@@ -12,9 +12,16 @@
     }
 
     &.small-big {
+        display: grid;
+        margin: 100px 20px 0 20px;
+        grid-gap: 10px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: "left right";
+
         @media #{$mq-tablet-port}{
+            margin: calc(100vw /12) 40px 0 40px;
             grid-template-columns: 1fr 1fr;
-            grid-template-areas: "left right"
+            grid-template-areas: "left right";
         }
         @media #{$mq-tablet-desk}{
             grid-template-columns: 3fr 3fr 6fr;

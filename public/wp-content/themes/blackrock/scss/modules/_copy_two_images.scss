@@ -45,10 +45,12 @@
         }
     }
 
-    @media #{$mq-tablet-port}{
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas: "copy copy" "image-container-left image-container-right";
-    }
+    display: grid;
+    margin: 0 20px 0 20px;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "copy copy" "image-container-left image-container-right";
+    
 
     @media #{$mq-tablet-desk}{
         margin: calc(100vw / 12) 40px 0 40px;
