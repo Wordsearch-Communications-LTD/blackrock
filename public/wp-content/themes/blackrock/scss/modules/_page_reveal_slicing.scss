@@ -1,0 +1,83 @@
+#page-reveal-slicing {
+    
+    .slice-grid {
+        display: grid;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        grid-template-columns: repeat(6, 2fr);
+
+        @media #{$mq-tablet-port}{
+            grid-template-columns: repeat(12, 1fr);
+        }
+    } 
+
+    div.slice_contain {
+        display: block;
+        width: 100%;
+        height: 100vh;
+        z-index: 2;
+        position: relative;
+        top:0;
+        overflow: hidden;
+    }
+
+    div.slice {
+        display: block;
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        top:0;
+        left: 0;
+        background-size: 100vw 100vh;
+        background-repeat: no-repeat;
+        transition: all 0s ease 0s;
+        transform-origin: center;
+        opacity: 1;
+    }
+
+    .slice_contain:nth-child(1) .slice { background-position: 0 0;}
+    .slice_contain:nth-child(2) .slice { background-position: calc((100vw / 6) * -1);}
+    .slice_contain:nth-child(3) .slice { background-position: calc((100vw / 6)* -2) 0;}
+    .slice_contain:nth-child(4) .slice { background-position: calc((100vw / 6)* -3) 0;}
+    .slice_contain:nth-child(5) .slice { background-position: calc((100vw / 6)* -4) 0;}
+    .slice_contain:nth-child(6) .slice { background-position: calc((100vw / 6)* -5) 0;}
+
+    @media #{$mq-tablet-port}{
+        .slice_contain:nth-child(1) .slice { background-position: 0 0;}
+        .slice_contain:nth-child(2) .slice { background-position: calc((100vw / 12) * -1);}
+        .slice_contain:nth-child(3) .slice { background-position: calc((100vw / 12)* -2) 0;}
+        .slice_contain:nth-child(4) .slice { background-position: calc((100vw / 12)* -3) 0;}
+        .slice_contain:nth-child(5) .slice { background-position: calc((100vw / 12)* -4) 0;}
+        .slice_contain:nth-child(6) .slice { background-position: calc((100vw / 12)* -5) 0;}
+        .slice_contain:nth-child(7) .slice { background-position: calc((100vw / 12)* -6) 0;}
+        .slice_contain:nth-child(8) .slice { background-position: calc((100vw / 12)* -7) 0;}
+        .slice_contain:nth-child(9) .slice { background-position: calc((100vw / 12)* -8) 0;}
+        .slice_contain:nth-child(10) .slice { background-position: calc((100vw / 12)* -9) 0;}
+        .slice_contain:nth-child(11) .slice { background-position: calc((100vw / 12)* -10) 0;}
+        .slice_contain:nth-child(12) .slice { background-position: calc((100vw / 12)* -11) 0;}
+    }
+
+    &.reveal .slice {
+        animation-name: curtainReveal;
+        animation-duration: 0.66s;
+        animation-delay: 0.3s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+    }
+
+}
+
+@keyframes curtainReveal {
+    100% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    90% {
+        transform: translateX(-100%);
+        opacity: 1;
+    }
+}

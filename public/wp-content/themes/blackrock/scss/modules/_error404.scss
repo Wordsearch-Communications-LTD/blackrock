@@ -1,0 +1,11 @@
+.error-404 {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+        @include headline-30;
+        text-align: center;
+    }
+}
