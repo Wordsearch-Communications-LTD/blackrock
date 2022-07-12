@@ -1063,68 +1063,110 @@ a.button:hover svg {
 .floors .floor-list .floor header .floor-header_name-sqft {
   position: absolute;
   left: calc((100vw / 24) + 10px);
+  display: none;
 }
-/* line 86, ../scss/modules/_floors.scss */
+@media (min-width: 768px) {
+  /* line 81, ../scss/modules/_floors.scss */
+  .floors .floor-list .floor header .floor-header_name-sqft {
+    display: block;
+  }
+}
+/* line 91, ../scss/modules/_floors.scss */
 .floors .floor-list .floor header .floor-header_floor-number {
   margin-left: 10px;
 }
-/* line 91, ../scss/modules/_floors.scss */
-.floors .floor-list .floor.expanded {
-  height: 460px;
-  background-color: var(--availableColor);
-}
 /* line 96, ../scss/modules/_floors.scss */
-.floors .floor-list .floor.expanded header {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-areas: "floor-num floor-num floor-sqft floor-sqft floor-sqft floor-sqft floor-sqft floor-sqft floor-sqft floor-sqft";
+.floors .floor-list .floor.expanded {
+  background-color: var(--availableColor);
+  min-height: calc(100vh - 80px);
 }
-/* line 101, ../scss/modules/_floors.scss */
-.floors .floor-list .floor.expanded header span {
-  font-weight: normal;
-  font-size: 50px;
-  line-height: 1.2em;
-  margin-bottom: 0;
-  padding-bottom: 0;
-  font-family: "PPNeueMontreal-Regular";
-  padding-top: 10px;
+@media (min-width: 768px) {
+  /* line 96, ../scss/modules/_floors.scss */
+  .floors .floor-list .floor.expanded {
+    height: 460px;
+  }
 }
 /* line 106, ../scss/modules/_floors.scss */
+.floors .floor-list .floor.expanded header {
+  display: grid;
+  grid-template-columns: 3fr 9fr;
+  grid-template-areas: "floor-num floor-sqft";
+}
+@media (min-width: 768px) {
+  /* line 106, ../scss/modules/_floors.scss */
+  .floors .floor-list .floor.expanded header {
+    grid-template-columns: 2fr 10fr;
+  }
+}
+/* line 116, ../scss/modules/_floors.scss */
+.floors .floor-list .floor.expanded header span {
+  font-weight: normal;
+  font-size: 30px;
+  line-height: 1.3em;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  font-family: "PPNeueMontreal-Medium";
+  padding-top: 10px;
+}
+@media (min-width: 768px) {
+  /* line 116, ../scss/modules/_floors.scss */
+  .floors .floor-list .floor.expanded header span {
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 1.2em;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    font-family: "PPNeueMontreal-Regular";
+  }
+}
+/* line 125, ../scss/modules/_floors.scss */
 .floors .floor-list .floor.expanded header .floor-header_floor-number {
   grid-area: floor-num;
 }
-/* line 110, ../scss/modules/_floors.scss */
+/* line 129, ../scss/modules/_floors.scss */
 .floors .floor-list .floor.expanded header .floor-header_name-sqft {
   grid-area: floor-sqft;
   position: static;
+  display: block;
 }
-/* line 116, ../scss/modules/_floors.scss */
+@media (min-width: 768px) {
+  /* line 129, ../scss/modules/_floors.scss */
+  .floors .floor-list .floor.expanded header .floor-header_name-sqft {
+    display: block;
+  }
+}
+/* line 141, ../scss/modules/_floors.scss */
 .floors .floor-list .floor.expanded .unit {
   display: none;
 }
-/* line 121, ../scss/modules/_floors.scss */
+/* line 146, ../scss/modules/_floors.scss */
 .floors .floor-list .floor .floor-number {
   position: absolute;
   z-index: 2;
   color: #FFFFFF;
 }
-/* line 127, ../scss/modules/_floors.scss */
+/* line 152, ../scss/modules/_floors.scss */
 .floors .floor-list .floor .unit {
   flex: 1;
   height: 35px;
   color: #FFFFFF;
 }
-/* line 132, ../scss/modules/_floors.scss */
+/* line 157, ../scss/modules/_floors.scss */
 .floors .floor-list .floor .unit .close-unit {
   display: none;
 }
-/* line 136, ../scss/modules/_floors.scss */
+/* line 161, ../scss/modules/_floors.scss */
 .floors .floor-list .floor .unit .content {
   display: none;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-areas: ". . data data data . img img img img img . .";
 }
-/* line 142, ../scss/modules/_floors.scss */
+@media (min-width: 768px) {
+  /* line 161, ../scss/modules/_floors.scss */
+  .floors .floor-list .floor .unit .content {
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-areas: ". . data data data . img img img img img . .";
+  }
+}
+/* line 169, ../scss/modules/_floors.scss */
 .floors .floor-list .floor .unit .content .data {
   grid-area: data;
   display: block;
@@ -1133,7 +1175,7 @@ a.button:hover svg {
   padding: 0;
   overflow: hidden;
 }
-/* line 150, ../scss/modules/_floors.scss */
+/* line 177, ../scss/modules/_floors.scss */
 .floors .floor-list .floor .unit .content .data li {
   display: grid;
   padding: 15px 0;
@@ -1141,13 +1183,13 @@ a.button:hover svg {
   grid-template-columns: 2fr 1fr;
   gap: 0px 10px;
 }
-/* line 157, ../scss/modules/_floors.scss */
+/* line 184, ../scss/modules/_floors.scss */
 .floors .floor-list .floor .unit .content .data li:first-of-type {
   border-style: none;
   display: block;
   padding-top: 0;
 }
-/* line 163, ../scss/modules/_floors.scss */
+/* line 190, ../scss/modules/_floors.scss */
 .floors .floor-list .floor .unit .content .data li span {
   display: block;
   overflow: hidden;
@@ -1160,18 +1202,18 @@ a.button:hover svg {
   margin-bottom: 0;
   padding-top: 0;
 }
-/* line 171, ../scss/modules/_floors.scss */
+/* line 198, ../scss/modules/_floors.scss */
 .floors .floor-list .floor .unit .content .data li span:last-of-type {
   justify-self: end;
 }
-/* line 176, ../scss/modules/_floors.scss */
+/* line 203, ../scss/modules/_floors.scss */
 .floors .floor-list .floor .unit .content .data li a {
   display: block;
   overflow: hidden;
   width: 32px;
   height: 32px;
 }
-/* line 183, ../scss/modules/_floors.scss */
+/* line 210, ../scss/modules/_floors.scss */
 .floors .floor-list .floor .unit .content .data li h3 {
   padding-top: 0;
   margin-top: 0;
@@ -1184,23 +1226,30 @@ a.button:hover svg {
   margin-bottom: 0;
   font-weight: normal;
 }
-/* line 193, ../scss/modules/_floors.scss */
+/* line 220, ../scss/modules/_floors.scss */
 .floors .floor-list .floor .unit .content .data li svg path {
   stroke: #FFFFFF;
 }
-/* line 200, ../scss/modules/_floors.scss */
+/* line 227, ../scss/modules/_floors.scss */
 .floors .floor-list .floor .unit .content .image {
   display: block;
   overflow: hidden;
   grid-area: img;
+  padding-top: 40px;
 }
-/* line 207, ../scss/modules/_floors.scss */
+@media (min-width: 768px) {
+  /* line 227, ../scss/modules/_floors.scss */
+  .floors .floor-list .floor .unit .content .image {
+    padding-top: 0;
+  }
+}
+/* line 239, ../scss/modules/_floors.scss */
 .floors .floor-list .floor .unit.selected {
   width: 100%;
   display: block;
   position: relative;
 }
-/* line 212, ../scss/modules/_floors.scss */
+/* line 244, ../scss/modules/_floors.scss */
 .floors .floor-list .floor .unit.selected .close-unit {
   display: block;
   position: absolute;
@@ -1208,12 +1257,19 @@ a.button:hover svg {
   right: 10px;
   z-index: 2;
 }
-/* line 220, ../scss/modules/_floors.scss */
+/* line 252, ../scss/modules/_floors.scss */
 .floors .floor-list .floor .unit.selected .content {
-  display: grid;
-  padding-top: 40px;
+  display: block;
+  padding: 40px 20px 20px 20px;
 }
-/* line 229, ../scss/modules/_floors.scss */
+@media (min-width: 768px) {
+  /* line 252, ../scss/modules/_floors.scss */
+  .floors .floor-list .floor .unit.selected .content {
+    display: grid;
+    padding: 40px 0 0 0;
+  }
+}
+/* line 266, ../scss/modules/_floors.scss */
 .floors .close-unit {
   position: absolute;
   top: 20px;
@@ -1225,16 +1281,16 @@ a.button:hover svg {
   padding: 0;
   background-color: transparent;
 }
-/* line 240, ../scss/modules/_floors.scss */
+/* line 277, ../scss/modules/_floors.scss */
 .floors .close-unit svg {
   pointer-events: none;
   transition: all 0.3s ease 0s;
 }
-/* line 243, ../scss/modules/_floors.scss */
+/* line 280, ../scss/modules/_floors.scss */
 .floors .close-unit svg path {
   stroke: #FFFFFF;
 }
-/* line 249, ../scss/modules/_floors.scss */
+/* line 286, ../scss/modules/_floors.scss */
 .floors .close-unit:hover svg {
   transform: rotate(90deg);
 }
@@ -3026,7 +3082,7 @@ a.button:hover svg {
 
 /* line 1, ../scss/modules/_two_col_sticky.scss */
 .two-col-sticky {
-  margin: 40px 0 0 0;
+  margin: 40px 20px 0 20px;
 }
 @media (min-width: 768px) {
   /* line 1, ../scss/modules/_two_col_sticky.scss */
@@ -3053,32 +3109,44 @@ a.button:hover svg {
 /* line 18, ../scss/modules/_two_col_sticky.scss */
 .two-col-sticky .left h2 {
   font-weight: normal;
-  font-size: 50px;
-  line-height: 1.2em;
+  font-size: 30px;
+  line-height: 1.3em;
   margin-bottom: 0;
   padding-bottom: 0;
-  font-family: "PPNeueMontreal-Regular";
+  font-family: "PPNeueMontreal-Medium";
+  margin-bottom: 40px;
   margin-top: 0;
 }
 @media (min-width: 768px) {
-  /* line 23, ../scss/modules/_two_col_sticky.scss */
+  /* line 18, ../scss/modules/_two_col_sticky.scss */
+  .two-col-sticky .left h2 {
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 1.2em;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    font-family: "PPNeueMontreal-Regular";
+  }
+}
+@media (min-width: 768px) {
+  /* line 29, ../scss/modules/_two_col_sticky.scss */
   .two-col-sticky .left .stick {
     position: sticky;
     top: 0;
     padding-top: calc(100vw / 12);
   }
 }
-/* line 33, ../scss/modules/_two_col_sticky.scss */
+/* line 39, ../scss/modules/_two_col_sticky.scss */
 .two-col-sticky .right {
   grid-area: right;
 }
 @media (min-width: 768px) {
-  /* line 33, ../scss/modules/_two_col_sticky.scss */
+  /* line 39, ../scss/modules/_two_col_sticky.scss */
   .two-col-sticky .right {
     padding-top: calc(100vw / 12);
   }
 }
-/* line 40, ../scss/modules/_two_col_sticky.scss */
+/* line 46, ../scss/modules/_two_col_sticky.scss */
 .two-col-sticky .right h3 {
   font-size: 20px;
   line-height: 1.3em;
@@ -3088,7 +3156,7 @@ a.button:hover svg {
   font-weight: bold;
   margin-top: 0;
 }
-/* line 46, ../scss/modules/_two_col_sticky.scss */
+/* line 52, ../scss/modules/_two_col_sticky.scss */
 .two-col-sticky .right p {
   font-size: 20px;
   line-height: 1.3em;
@@ -3096,31 +3164,31 @@ a.button:hover svg {
   padding-bottom: 0;
   font-family: "PPNeueMontreal-Regular";
 }
-/* line 51, ../scss/modules/_two_col_sticky.scss */
+/* line 57, ../scss/modules/_two_col_sticky.scss */
 .two-col-sticky .right .button-container {
   text-align: right;
 }
-/* line 54, ../scss/modules/_two_col_sticky.scss */
+/* line 60, ../scss/modules/_two_col_sticky.scss */
 .two-col-sticky .right .button-container .button {
   margin-right: 20px;
 }
 @media (min-width: 768px) {
-  /* line 54, ../scss/modules/_two_col_sticky.scss */
+  /* line 60, ../scss/modules/_two_col_sticky.scss */
   .two-col-sticky .right .button-container .button {
     margin-right: 0;
   }
 }
-/* line 63, ../scss/modules/_two_col_sticky.scss */
+/* line 69, ../scss/modules/_two_col_sticky.scss */
 .two-col-sticky .right article {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   margin-bottom: 40px;
 }
-/* line 69, ../scss/modules/_two_col_sticky.scss */
+/* line 75, ../scss/modules/_two_col_sticky.scss */
 .two-col-sticky .right article .number {
-  min-width: 100px;
-  padding-right: 40px;
+  min-width: 80px;
+  padding-right: 20px;
   font-weight: normal;
   font-size: 50px;
   line-height: 1.2em;
@@ -3129,6 +3197,13 @@ a.button:hover svg {
   font-family: "PPNeueMontreal-Regular";
   font-weight: normal;
   line-height: 0.9em;
+}
+@media (min-width: 768px) {
+  /* line 75, ../scss/modules/_two_col_sticky.scss */
+  .two-col-sticky .right article .number {
+    padding-right: 40px;
+    min-width: 100px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

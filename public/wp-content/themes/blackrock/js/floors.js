@@ -22,6 +22,7 @@ class Floors {
                 this.minimiseFloors();
                 unit.parentNode.classList.add('expanded');
                 unit.classList.add('selected');
+                this.scrollToUnit(unit);
             });
         });
 
@@ -33,6 +34,21 @@ class Floors {
                 console.log('close');
             });
         });
+    }
+
+    scrollToUnit(unit){
+        let unitRect = unit.getBoundingClientRect();
+
+        console.log(unitRect);
+
+        if(window.innerWidth <= 768) {
+            
+            window.scrollTo({
+                top: ((unitRect.y + window.scrollY) - 60),
+                left: 0,
+                behavior: 'smooth'
+              });
+        }
     }
 
     minimiseFloors(){

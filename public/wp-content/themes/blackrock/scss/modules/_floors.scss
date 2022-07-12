@@ -81,6 +81,11 @@
                 .floor-header_name-sqft {
                     position: absolute;
                     left: calc((100vw / 24) + 10px);
+                    display: none;
+
+                    @media #{$mq-tablet-port}{
+                        display: block;
+                    }
                 }
 
                 .floor-header_floor-number {
@@ -89,18 +94,32 @@
             }
 
             &.expanded {
-                height: 460px;
                 background-color: var(--availableColor);
-                
+                min-height: calc(100vh - 80px);
 
+                @media #{$mq-tablet-port}{
+                    height: 460px;
+                }
+                
+                
+                
                 header {
                     display: grid;
-                    grid-template-columns: repeat(12, 1fr);
-                    grid-template-areas:  "floor-num floor-num floor-sqft floor-sqft floor-sqft floor-sqft floor-sqft floor-sqft floor-sqft floor-sqft";
+
+                    grid-template-columns: 3fr 9fr;
+                    grid-template-areas:  "floor-num floor-sqft";
+                    
+                    @media #{$mq-tablet-port}{
+                        grid-template-columns: 2fr 10fr;    
+                    }
 
                     span {
-                        @include headline-50;
+                        @include headline-30;
                         padding-top: 10px;
+                        
+                        @media #{$mq-tablet-port}{
+                            @include headline-50;
+                        }
                     }
 
                     .floor-header_floor-number {
@@ -110,6 +129,12 @@
                     .floor-header_name-sqft {
                         grid-area: floor-sqft;
                         position: static;
+
+                        display: block;
+
+                        @media #{$mq-tablet-port}{
+                            display: block;
+                        }
                     }
                 }
 
@@ -135,9 +160,11 @@
 
                 .content {
                     display: none;
-                    grid-template-columns: repeat(12, 1fr);
-                    grid-template-areas:  ". . data data data . img img img img img . .";
-                    
+
+                    @media #{$mq-tablet-port}{
+                        grid-template-columns: repeat(12, 1fr);
+                        grid-template-areas:  ". . data data data . img img img img img . .";
+                    }
 
                     .data {
                         grid-area: data;
@@ -201,6 +228,11 @@
                         display: block;
                         overflow: hidden;
                         grid-area: img;
+                        padding-top: 40px;
+
+                        @media #{$mq-tablet-port}{
+                            padding-top: 0;
+                        }
                     }
                 }
 
@@ -218,8 +250,13 @@
                     }
 
                     .content {
-                        display: grid;
-                        padding-top: 40px;
+                        display: block;
+                        padding: 40px 20px 20px 20px;
+
+                        @media #{$mq-tablet-port}{
+                            display: grid;
+                            padding: 40px 0 0 0;
+                        }
                     }
                 }
             }

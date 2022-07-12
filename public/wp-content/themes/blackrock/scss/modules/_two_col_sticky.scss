@@ -1,7 +1,7 @@
 .two-col-sticky {
     @include grid;
     
-    margin: 40px 0 0 0;
+    margin: 40px 20px 0 20px;
 
     @media #{$mq-tablet-port}{
         margin: 0 40px 0 40px;
@@ -16,7 +16,13 @@
         
         
         h2 {
-            @include headline-50;
+            @include headline-30;
+            margin-bottom: 40px;
+
+            @media #{$mq-tablet-port}{
+                @include headline-50;
+            }
+
             margin-top: 0;
         }
 
@@ -67,11 +73,16 @@
             margin-bottom: 40px;
 
             .number {
-                min-width: 100px;
-                padding-right: 40px;
+                min-width: 80px;
+                padding-right: 20px;
                 @include headline-50;
                 font-weight: normal;
                 line-height: 0.9em;
+
+                @media #{$mq-tablet-port}{
+                    padding-right: 40px;
+                    min-width: 100px;
+                }
             }
         }
     }
