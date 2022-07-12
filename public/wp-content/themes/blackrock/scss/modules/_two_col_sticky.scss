@@ -1,25 +1,25 @@
 .two-col-sticky {
     @include grid;
-    
-    margin: 40px 20px 0 20px;
 
-    @media #{$mq-tablet-port}{
+    margin: 100px 20px 0 20px;
+
+    @media #{$mq-tablet-port} {
         margin: 0 40px 0 40px;
         padding-top: calc(100vw / 12);
         grid-template-columns: 5fr 1fr 6fr;
         grid-template-areas: "left . right";
-    }  
+    }
 
     .left {
         position: relative;
         grid-area: left;
-        
-        
+
+
         h2 {
             @include headline-30;
             margin-bottom: 40px;
 
-            @media #{$mq-tablet-port}{
+            @media #{$mq-tablet-port} {
                 @include headline-50;
             }
 
@@ -27,10 +27,10 @@
         }
 
         .stick {
-            
-            @media #{$mq-tablet-port}{
+
+            @media #{$mq-tablet-port} {
                 position: sticky;
-                top: 0;    
+                top: 0;
                 padding-top: calc(100vw / 12);
             }
         }
@@ -38,8 +38,8 @@
 
     .right {
         grid-area: right;
-        
-        @media #{$mq-tablet-port}{
+
+        @media #{$mq-tablet-port} {
             padding-top: calc(100vw / 12);
         }
 
@@ -56,16 +56,16 @@
 
         .button-container {
             text-align: right;
-            
+
             .button {
                 margin-right: 20px;
 
-                @media #{$mq-tablet-port}{
+                @media #{$mq-tablet-port} {
                     margin-right: 0;
                 }
             }
         }
-        
+
         article {
             display: flex;
             justify-content: flex-start;
@@ -79,7 +79,7 @@
                 font-weight: normal;
                 line-height: 0.9em;
 
-                @media #{$mq-tablet-port}{
+                @media #{$mq-tablet-port} {
                     padding-right: 40px;
                     min-width: 100px;
                 }

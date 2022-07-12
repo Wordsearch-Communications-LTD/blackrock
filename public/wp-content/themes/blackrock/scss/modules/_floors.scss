@@ -1,291 +1,300 @@
 .floors {
-    margin-top: 40px;
-    
-    @media #{$mq-tablet-port}{
-        margin-top: calc(100vw / 12);
-        grid-template-columns: 3fr 9fr;
-        grid-template-areas:  "floor-toggle floor-list";
-    }
-    
-    @media #{$mq-desk-small}{
-        grid-template-columns: 2fr 1fr 8fr 1fr;
-        grid-template-areas:  "floor-toggle . floor-list .";
-    }
+	margin-top: 40px;
 
-    @media #{$mq-desk-large}{
-        grid-template-columns: 2fr 1fr 6fr 3fr;
-        grid-template-areas:  "floor-toggle . floor-list .";
-    }
-    
-    .occupied { background-color: var(--occupiedColor); }
-    .available { background-color: var(--availableColor); }
+	@media #{$mq-tablet-port} {
+		margin-top: calc(100vw / 12);
+		grid-template-columns: 3fr 9fr;
+		grid-template-areas: "floor-toggle floor-list";
+	}
 
-    .floor-toggle {
-        grid-area: floor-toggle;
-        padding: 0 20px 20px 20px;
+	@media #{$mq-desk-small} {
+		grid-template-columns: 2fr 1fr 8fr 1fr;
+		grid-template-areas: "floor-toggle . floor-list .";
+	}
 
-        @media #{$mq-tablet-port}{
-            padding: 0 0 0 0;
-        }
+	@media #{$mq-desk-large} {
+		grid-template-columns: 2fr 1fr 6fr 3fr;
+		grid-template-areas: "floor-toggle . floor-list .";
+	}
 
-        .legend {
-            display: block;
-            height: 35px;
-            color: $br-white;
-            @include body-20;
-            font-size: 14px;
-            margin: 0;
-            padding: 0;      
-            line-height: 35px;
-            padding-left: 10px;  
-            margin-bottom: 5px;
-        }
-    }   
+	.occupied {
+		background-color: var(--occupiedColor);
+	}
 
-    #floor-toggle {
-        margin-top: 20px;
-    }
+	.available {
+		background-color: var(--availableColor);
+	}
 
-    .floor-list {
-        grid-area: floor-list;
-        padding: 0 20px;
-        
-        @media #{$mq-tablet-port}{
-            padding: 0 0;
-        }
+	.floor-toggle {
+		grid-area: floor-toggle;
+		padding: 0 20px 20px 20px;
 
-        &.hide-occupied .floor-occupied {
-            display: none;
-        }
+		@media #{$mq-tablet-port} {
+			padding: 0 0 0 0;
+		}
 
-        .floor {
-            width: 100%;
-            display: flex;
-            margin-bottom: 5px;
-            gap: 5px;
-            position: relative;
+		.legend {
+			display: block;
+			height: 35px;
+			color: $br-white;
+			@include body-20;
+			font-size: 14px;
+			margin: 0;
+			padding: 0;
+			line-height: 35px;
+			padding-left: 10px;
+			margin-bottom: 5px;
+		}
+	}
 
-            header {
-                position: relative;
-                z-index: 1;
-                .floor-header_floor-number, 
-                .floor-header_name-sqft {
-                    display: inline-block;
-                    @include body-20;
-                    font-size: 14px;
-                    line-height: 35px;
-                    padding: 0;
-                    margin: 0;
-                }
+	#floor-toggle {
+		margin-top: 20px;
+	}
 
-                .floor-header_name-sqft {
-                    position: absolute;
-                    left: calc((100vw / 24) + 10px);
-                    display: none;
+	.floor-list {
+		grid-area: floor-list;
+		padding: 0 20px;
 
-                    @media #{$mq-tablet-port}{
-                        display: block;
-                    }
-                }
+		@media #{$mq-tablet-port} {
+			padding: 0 0;
+		}
 
-                .floor-header_floor-number {
-                    margin-left: 10px;
-                }
-            }
+		&.hide-occupied .floor-occupied {
+			display: none;
+		}
 
-            &.expanded {
-                background-color: var(--availableColor);
-                min-height: calc(100vh - 80px);
+		.floor {
+			width: 100%;
+			display: flex;
+			margin-bottom: 5px;
+			gap: 5px;
+			position: relative;
 
-                @media #{$mq-tablet-port}{
-                    height: 460px;
-                }
-                
-                
-                
-                header {
-                    display: grid;
+			header {
+				position: relative;
+				z-index: 1;
 
-                    grid-template-columns: 3fr 9fr;
-                    grid-template-areas:  "floor-num floor-sqft";
-                    
-                    @media #{$mq-tablet-port}{
-                        grid-template-columns: 2fr 10fr;    
-                    }
+				.floor-header_floor-number,
+				.floor-header_name-sqft {
+					display: inline-block;
+					@include body-20;
+					font-size: 14px;
+					line-height: 35px;
+					padding: 0;
+					margin: 0;
+				}
 
-                    span {
-                        @include headline-30;
-                        padding-top: 10px;
-                        
-                        @media #{$mq-tablet-port}{
-                            @include headline-50;
-                        }
-                    }
+				.floor-header_name-sqft {
+					position: absolute;
+					left: calc((100vw / 24) + 10px);
+					display: none;
 
-                    .floor-header_floor-number {
-                        grid-area: floor-num;
-                    }
+					@media #{$mq-tablet-port} {
+						display: block;
+					}
+				}
 
-                    .floor-header_name-sqft {
-                        grid-area: floor-sqft;
-                        position: static;
+				.floor-header_floor-number {
+					margin-left: 10px;
+				}
+			}
 
-                        display: block;
+			&.expanded {
+				background-color: var(--availableColor);
+				//min-height: calc(100vh - 80px);
+				height: auto;
 
-                        @media #{$mq-tablet-port}{
-                            display: block;
-                        }
-                    }
-                }
+				@media #{$mq-tablet-port} {
+					height: 460px;
+				}
 
-                .unit {
-                    display: none;
-                }
-            }
 
-            .floor-number {
-                position: absolute;
-                z-index: 2;
-                color: $br-white;
-            }
 
-            .unit {
-                flex: 1;
-                height: 35px;
-                color: $br-white;
+				header {
+					display: grid;
 
-                .close-unit {
-                    display: none;
-                }
+					grid-template-columns: 3fr 9fr;
+					grid-template-areas: "floor-num floor-sqft";
 
-                .content {
-                    display: none;
+					@media #{$mq-tablet-port} {
+						grid-template-columns: 2fr 10fr;
+					}
 
-                    @media #{$mq-tablet-port}{
-                        grid-template-columns: repeat(12, 1fr);
-                        grid-template-areas:  ". . data data data . img img img img img . .";
-                    }
+					span {
+						@include headline-30;
+						padding-top: 10px;
 
-                    .data {
-                        grid-area: data;
-                        display: block;
-                        list-style-type: none;
-                        margin: 0;
-                        padding: 0;
-                        overflow: hidden;
-                        
-                        li {
-                            display: grid;
-                            padding: 15px 0;
-                            border-top: 2px solid white;
-                            grid-template-columns: 2fr 1fr;
-                            gap: 0px 10px;
+						@media #{$mq-tablet-port} {
+							@include headline-50;
+						}
+					}
 
-                            &:first-of-type {
-                                border-style:none;
-                                display: block;
-                                padding-top: 0;
-                            }
-                            
-                            span {
-                                display: block;
-                                overflow: hidden;          
-                                @include body-20;             
-                                line-height: 32px;
-                                margin-bottom: 0;
-                                padding-top: 0;
-                                
-                                &:last-of-type {
-                                    justify-self: end;
-                                }
-                            }
+					.floor-header_floor-number {
+						grid-area: floor-num;
+					}
 
-                            a {
-                                display: block;
-                                overflow: hidden;
-                                width: 32px;
-                                height: 32px;
-                            }
+					.floor-header_name-sqft {
+						grid-area: floor-sqft;
+						position: static;
 
-                            h3 {
-                                padding-top: 0;
-                                margin-top: 0;
-                                @include body-20;             
-                                line-height: 32px;
-                                margin-bottom: 0;
-                                font-weight: normal;
-                            }
+						display: block;
 
-                            svg {
-                                path {
-                                    stroke: $br-white;
-                                }
-                            }
-                        }
-                    }
+						@media #{$mq-tablet-port} {
+							display: block;
+						}
+					}
+				}
 
-                    .image {
-                        display: block;
-                        overflow: hidden;
-                        grid-area: img;
-                        padding-top: 40px;
+				.unit {
+					display: none;
+				}
+			}
 
-                        @media #{$mq-tablet-port}{
-                            padding-top: 0;
-                        }
-                    }
-                }
+			.floor-number {
+				position: absolute;
+				z-index: 2;
+				color: $br-white;
+			}
 
-                &.selected {
-                    width: 100%;
-                    display: block;
-                    position: relative;
+			.unit {
+				flex: 1;
+				height: 35px;
+				color: $br-white;
 
-                    .close-unit {
-                        display: block;
-                        position: absolute;
-                        top: 10px;
-                        right: 10px;
-                        z-index: 2;
-                    }
+				.close-unit {
+					display: none;
+				}
 
-                    .content {
-                        display: block;
-                        padding: 40px 20px 20px 20px;
+				.content {
+					display: none;
 
-                        @media #{$mq-tablet-port}{
-                            display: grid;
-                            padding: 40px 0 0 0;
-                        }
-                    }
-                }
-            }
-        }
-    }
+					@media #{$mq-tablet-port} {
+						grid-template-columns: repeat(12, 1fr);
+						grid-template-areas: ". . data data data . img img img img img . .";
+					}
 
-    .close-unit {
-        position: absolute;
-        top: 20px;
-        right: 20px;
-        width: 32px;
-        height: 32px;
-        border: 0;
-        appearance: none;
-        padding: 0;
-        background-color: transparent;
+					.data {
+						grid-area: data;
+						display: block;
+						list-style-type: none;
+						margin: 0;
+						padding: 0;
+						overflow: hidden;
 
-        svg {
-            pointer-events: none;
-            transition: all 0.3s ease 0s;
-            path {
-                stroke: $br-white;
-            }
-        }
+						li {
+							display: grid;
+							padding: 15px 0;
+							border-top: 2px solid white;
+							grid-template-columns: 2fr 1fr;
+							gap: 0px 10px;
 
-        &:hover {
-            svg {
-                transform: rotate(90deg);
-            }
-        }
-    }
+							&:first-of-type {
+								border-style: none;
+								display: block;
+								padding-top: 0;
+							}
+
+							span {
+								display: block;
+								overflow: hidden;
+								@include body-20;
+								line-height: 32px;
+								margin-bottom: 0;
+								padding-top: 0;
+
+								&:last-of-type {
+									justify-self: end;
+								}
+							}
+
+							a {
+								display: block;
+								overflow: hidden;
+								width: 32px;
+								height: 32px;
+							}
+
+							h3 {
+								padding-top: 0;
+								margin-top: 0;
+								@include body-20;
+								line-height: 32px;
+								margin-bottom: 0;
+								font-weight: normal;
+							}
+
+							svg {
+								path {
+									stroke: $br-white;
+								}
+							}
+						}
+					}
+
+					.image {
+						display: block;
+						overflow: hidden;
+						grid-area: img;
+						padding-top: 40px;
+
+						@media #{$mq-tablet-port} {
+							padding-top: 0;
+						}
+					}
+				}
+
+				&.selected {
+					width: 100%;
+					display: block;
+					position: relative;
+					height: auto;
+
+					.close-unit {
+						display: block;
+						position: absolute;
+						top: 10px;
+						right: 10px;
+						z-index: 2;
+					}
+
+					.content {
+						display: block;
+						padding: 40px 20px 20px 20px;
+
+						@media #{$mq-tablet-port} {
+							display: grid;
+							padding: 40px 0 0 0;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.close-unit {
+		position: absolute;
+		top: 20px;
+		right: 20px;
+		width: 32px;
+		height: 32px;
+		border: 0;
+		appearance: none;
+		padding: 0;
+		background-color: transparent;
+
+		svg {
+			pointer-events: none;
+			transition: all 0.3s ease 0s;
+
+			path {
+				stroke: $br-white;
+			}
+		}
+
+		&:hover {
+			svg {
+				transform: rotate(90deg);
+			}
+		}
+	}
 }

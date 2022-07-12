@@ -1,250 +1,251 @@
 .home .header-menu {
-    
-    opacity: 0;
+
+	opacity: 0;
 }
 
 .home .header-menu.show-menu {
-    opacity: 1;
+	opacity: 1;
 }
 
 .header-menu {
-    position: fixed;
-    top:0;
-    left: 0;
-    height: 60px;
-    width: 100vw;
-    z-index: 3;
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 60px;
+	width: 100vw;
+	z-index: 3;
 
-    @media #{$mq-tablet-desk}{
-        height: 100px;
-    }
+	@media #{$mq-tablet-desk} {
+		height: 100px;
+	}
 
-    a {
-        @include body-20;
-    }
+	a {
+		@include body-20;
+	}
 
-    .logo {
-        display: block;
-        margin-top: 18px;
-        margin-left: 20px;
-        height: 16px;
-        float: left;
+	.logo {
+		display: block;
+		margin-top: 18px;
+		margin-left: 20px;
+		height: 16px;
+		float: left;
 
-        svg {
-            height: 16px;
-            width: auto;
-        }
+		svg {
+			height: 16px;
+			width: auto;
+		}
 
-        @media #{$mq-tablet-desk}{
-            margin-top: 38px;
-            margin-left: 40px;
-            height: 26px;
-            
-            svg {
-                height: 26px;
-            }
-        }
-    }
+		@media #{$mq-tablet-desk} {
+			margin-top: 38px;
+			margin-left: 40px;
+			height: 26px;
 
-    .burger-menu {
-        display: block;
-        position: absolute;
-        right: 20px;
-        top: 14px;
-        width: 32px;
-        height: 32px;
+			svg {
+				height: 26px;
+			}
+		}
+	}
 
-        .bar {
-            display: block;
-            position: absolute;
-            height: 2px;
-            width: 24px;
-            top: 12px;
-            left: 4px;
-            background-color: $br-black;
-            transform-origin: center;
-            transition: all 0.15s ease 0s;
-            
-            &:last-child {
-                top: 20px;
-            }
-        }
-    }
+	.burger-menu {
+		display: block;
+		position: absolute;
+		right: 20px;
+		top: 14px;
+		width: 32px;
+		height: 32px;
 
-    .menu-main-menu-container {
-        position: fixed;
-        top: 60px;
-        left: 0;
-        transform: translateX(100vw);
-        width: 100vw;
-        height: calc(100vh - 60px);
-        transition: transform 0.3s ease 0s;
+		.bar {
+			display: block;
+			position: absolute;
+			height: 2px;
+			width: 24px;
+			top: 12px;
+			left: 4px;
+			background-color: $br-black;
+			transform-origin: center;
+			transition: all 0.15s ease 0s;
 
-        .menu {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-            padding-left: 20px;
-            margin-top: 40px;
+			&:last-child {
+				top: 20px;
+			}
+		}
+	}
 
-            li {
-                padding-bottom: 20px;
+	.menu-main-menu-container {
+		position: fixed;
+		top: 60px;
+		left: 0;
+		transform: translateX(100vw);
+		width: 100vw;
+		height: calc(100vh - 60px);
+		transition: transform 0.3s ease 0s;
 
-                a {
-                    @include body-35;
-                    text-decoration: none;
-                }
-            }
-        }
-    }
+		.menu {
+			list-style-type: none;
+			padding: 0;
+			margin: 0;
+			padding-left: 20px;
+			margin-top: 40px;
 
-    @media #{$mq-tablet-desk}{
-        .menu-main-menu-container {
-            position: relative;
-            float: right;
-            margin-top: 20px;
-            margin-right: 60px;
-            width: 50vw;
-            top: auto;
-            left: auto;
-            width: auto;
-            height: auto;
-            transform: translateX(0);
+			li {
+				padding-bottom: 20px;
 
-            .menu {
-                margin-top: 20px;
+				a {
+					@include body-35;
+					text-decoration: none;
+				}
+			}
+		}
+	}
 
-                li {
-                    display: inline-block;
-                    font-size: 20px;
-                    
+	@media #{$mq-tablet-desk} {
+		.menu-main-menu-container {
+			position: relative;
+			float: right;
+			margin-top: 20px;
+			margin-right: 60px;
+			width: 50vw;
+			top: auto;
+			left: auto;
+			width: auto;
+			height: auto;
+			transform: translateX(0);
 
-                    &:after {
-                        font-weight: bold;
-                        content: '/';
-                        padding-left: 10px;
-                        padding-right: 5px;
-                    }
+			.menu {
+				margin-top: 20px;
 
-                    &:last-child:after {
-                        display: none;
-                    }
+				li {
+					display: inline-block;
+					font-size: 20px;
 
-                    a {
-                        @include body-20;
-                        text-decoration: none;
-                        color: black;
-                    }
 
-                    &:hover,
-                    &.current_page_item {
-                        a {
-                            color: $br-blue;
-                        }
-                    }
+					&:after {
+						font-weight: bold;
+						content: '/';
+						padding-left: 10px;
+						padding-right: 5px;
+					}
 
-                    &.current_page_item a {
-                        padding-bottom: 3px;
-                        border-bottom: 2px solid $br-blue;
-                    }
-                }
-            }
-        }
-        .burger-menu {
-            display: none;
-        }
-    }
+					&:last-child:after {
+						display: none;
+					}
 
-    
+					a {
+						@include body-20;
+						text-decoration: none;
+						color: black;
+					}
+
+					&:hover,
+					&.current_page_item {
+						a {
+							color: $br-blue;
+						}
+					}
+
+					&.current_page_item a {
+						padding-bottom: 3px;
+						border-bottom: 2px solid $br-blue;
+					}
+				}
+			}
+		}
+
+		.burger-menu {
+			display: none;
+		}
+	}
+
+
 }
 
 .menu-open {
-    .menu-main-menu-container {
-        transform: translateX(0);
-    }
-    
-    .burger-menu {
-        .bar {
-            top: 16px;
-            transform: rotate(45deg);
+	.menu-main-menu-container {
+		transform: translateX(0);
+	}
 
-            &:last-child {
-                transform: rotate(-45deg);
-                top: 16px;
-            }
-        }
-    }
+	.burger-menu {
+		.bar {
+			top: 16px;
+			transform: rotate(45deg);
+
+			&:last-child {
+				transform: rotate(-45deg);
+				top: 16px;
+			}
+		}
+	}
 }
 
 .page-white {
-    .menu-main-menu-container {
-        background-color: rgba($br-white, 0.9);
-        
-        @media #{$mq-tablet-desk}{
-            background-color: rgba($br-white, 0);
-        }
-    }
+	.menu-main-menu-container {
+		background-color: rgba($br-white, 0.9);
 
-    .header-menu {
-        background-color: rgba($br-white, 0.9);
-    }
+		@media #{$mq-tablet-desk} {
+			background-color: rgba($br-white, 0);
+		}
+	}
+
+	.header-menu {
+		background-color: rgba($br-white, 0.9);
+	}
 }
 
 .page-cream {
-    .menu-main-menu-container {
-        background-color: rgba($br-cream, 0.9);
-        
-        @media #{$mq-tablet-desk}{
-            background-color: rgba($br-cream, 0);
-        }
-    }
+	.menu-main-menu-container {
+		background-color: rgba($br-cream, 0.9);
 
-    .header-menu {
-        background-color: rgba($br-cream, 0.9);
-    }
+		@media #{$mq-tablet-desk} {
+			background-color: rgba($br-cream, 0);
+		}
+	}
 
-    &.home {
-        .menu-main-menu-container {
-            background-color: rgba($br-white, 0.9);
-            
-            @media #{$mq-tablet-desk}{
-                background-color: rgba($br-white, 0);
-            }
-        }
-        
-        .header-menu {
-            background-color: rgba($br-white, 0.9);
-        }
-    }
+	.header-menu {
+		background-color: rgba($br-cream, 0.9);
+	}
+
+	&.home {
+		.menu-main-menu-container {
+			background-color: rgba($br-white, 0.9);
+
+			@media #{$mq-tablet-desk} {
+				background-color: rgba($br-white, 0);
+			}
+		}
+
+		.header-menu {
+			background-color: rgba($br-white, 0.9);
+		}
+	}
 }
 
 .page-black {
-    
-    .menu-main-menu-container {
-        background-color: rgba($br-black, 0.9);
-        
-        @media #{$mq-tablet-desk}{
-            background-color: rgba($br-black, 0);
-        }
-    }
 
-    .header-menu {
-        background-color: rgba($br-black, 0.9);
+	.menu-main-menu-container {
+		background-color: rgba($br-black, 0.9);
 
-        svg path {
-            fill: white;
-        }
+		@media #{$mq-tablet-desk} {
+			background-color: rgba($br-black, 0);
+		}
+	}
 
-        .menu-main-menu-container .menu li a {
-            color: white;
-        }
+	.header-menu {
+		background-color: rgba($br-black, 0.9);
 
-        .menu-main-menu-container .menu li.current_page_item a {
-            border-color: $br-white;
-        }  
-    }
-    
-    .burger-menu .bar {
-        background-color: $br-white;
-    }
+		svg path {
+			fill: white;
+		}
+
+		.menu-main-menu-container .menu li a {
+			color: white;
+		}
+
+		.menu-main-menu-container .menu li.current_page_item a {
+			border-color: $br-white;
+		}
+	}
+
+	.burger-menu .bar {
+		background-color: $br-white;
+	}
 }

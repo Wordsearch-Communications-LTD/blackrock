@@ -1,14 +1,14 @@
 .two-col-image {
     @include grid;
-    
-    @media #{$mq-tablet-desk}{
+
+    @media #{$mq-tablet-desk} {
         margin: calc(100vw /12) 40px 0 40px;
     }
 
     &.equal {
-        @media #{$mq-tablet-port}{
+        @media #{$mq-tablet-port} {
             grid-template-columns: 1fr 1fr;
-        }  
+        }
     }
 
     &.small-big {
@@ -18,12 +18,13 @@
         grid-template-columns: 1fr 1fr;
         grid-template-areas: "left right";
 
-        @media #{$mq-tablet-port}{
+        @media #{$mq-tablet-port} {
             margin: calc(100vw /12) 40px 0 40px;
             grid-template-columns: 1fr 1fr;
             grid-template-areas: "left right";
         }
-        @media #{$mq-tablet-desk}{
+
+        @media #{$mq-tablet-desk} {
             grid-template-columns: 3fr 3fr 6fr;
             grid-template-areas: "left . right";
         }
@@ -31,7 +32,10 @@
         div {
             &:first-of-type {
                 grid-area: left;
-                align-self: center;
+
+                @media #{$mq-tablet-port} {
+                    align-self: center;
+                }
             }
 
             grid-area: right;
@@ -39,17 +43,20 @@
     }
 
     &.big-small {
-        @media #{$mq-tablet-desk}{
+        @media #{$mq-tablet-desk} {
             grid-template-columns: 6fr 3fr 3fr;
             grid-template-areas: "left . right";
         }
 
         div {
             grid-area: left;
-            
+
             &:last-of-type {
                 grid-area: right;
-                align-self: center;
+
+                @media #{$mq-tablet-port} {
+                    align-self: center;
+                }
             }
         }
     }

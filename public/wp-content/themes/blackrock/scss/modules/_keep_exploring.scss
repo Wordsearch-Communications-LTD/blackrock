@@ -1,15 +1,19 @@
 .keep-exploring {
-    margin-top: calc(100vw / 12);
+    margin-top: 100px;
+
+    @media #{$mq-tablet-port} {
+        margin-top: calc(100vw / 12);
+    }
 
     .title {
         @include grid;
-        
+
         h2 {
             @include headline-30;
             margin-bottom: 1em;
             padding: 0 20px;
 
-            @media #{$mq-tablet-port}{
+            @media #{$mq-tablet-port} {
                 @include headline-50;
                 margin-bottom: 1em;
                 margin-top: 0;
@@ -20,8 +24,8 @@
 
     .blocks {
         @include grid;
-        
-        @media #{$mq-tablet-port}{
+
+        @media #{$mq-tablet-port} {
             grid-template-columns: 1fr 1fr;
         }
 
@@ -35,7 +39,7 @@
             margin-left: 20px;
             margin-bottom: 30px;
 
-            @media #{$mq-tablet-port}{
+            @media #{$mq-tablet-port} {
                 margin-left: 0;
                 margin-bottom: 0;
                 @include body-35;
@@ -60,7 +64,7 @@
 
             &:after {
                 display: block;
-                content:'';
+                content: '';
                 pointer-events: none;
                 position: absolute;
                 width: 100%;
@@ -85,6 +89,7 @@
 
                     svg {
                         transform: translate(10px, 5px);
+
                         path {
                             stroke: $br-blue;
                         }
@@ -96,13 +101,13 @@
 }
 
 .page-black .keep-exploring .blocks {
-    
-    .link-text, 
+
+    .link-text,
     .explore-block:hover a {
         color: $br-white;
 
         svg {
-            
+
             path {
                 stroke: $br-white;
             }

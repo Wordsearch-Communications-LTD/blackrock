@@ -9,28 +9,30 @@ html {
 }
 
 body {
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 img {
-    width: 100%;
-    // max-width: 100%;
-    height: auto;
+  width: 100%;
+  // max-width: 100%;
+  height: auto;
 }
 
 body {
   &.page-cream {
     background-color: $br-cream;
   }
+
   &.page-black {
     background-color: $br-black;
 
     color: $br-white;
   }
+
   &.page-white {
     background-color: $br-white;
   }
@@ -42,23 +44,24 @@ blockquote {
 }
 
 .caption {
-  
+
   p {
-      padding: 10px 10px 10px 0px;
-      @media #{$mq-tablet-port}{
-        padding: 10px 20px 10px 20px;
-      }
+    padding: 10px 10px 10px 0px;
 
-      margin: 0;
-      @include body-16;
-      
-      span {
-        font-weight: lighter;
-      }
+    @media #{$mq-tablet-port} {
+      padding: 10px 20px 10px 20px;
+    }
 
-      @media #{$mq-tablet-port}{
-        padding: 10px 0 0 0;
-        @include body-20;
-      }
+    margin: 0;
+    @include body-16;
+
+    span {
+      font-weight: lighter;
+    }
+
+    @media #{$mq-tablet-port} {
+      padding: 10px 0 0 0;
+      @include body-20;
+    }
   }
 }

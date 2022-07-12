@@ -1,185 +1,198 @@
 .timeline {
-    @include grid;
+	@include grid;
 
-    @media #{$mq-tablet-port}{
-        grid-template-columns: 1fr 2fr;
-        margin: 0 40px 0 40px;
-    }  
+	@media #{$mq-tablet-port} {
+		grid-template-columns: 1fr 2fr;
+		margin: 0 40px 0 40px;
+	}
 
-    @media #{$mq-tablet-desk}{
-        grid-template-columns: 3fr 9fr;
-        margin: 0 40px 0 40px;
-    }  
+	@media #{$mq-tablet-desk} {
+		grid-template-columns: 3fr 9fr;
+		margin: 0 40px 0 40px;
+	}
 
-    .timeline_nav {
-        position: relative;
-                
-        h2 {
-            @include headline-50;
-            margin: 40px 0 10px 20px;
-            border-top: 2px solid transparent;
-            
+	.timeline_nav {
+		position: relative;
 
-            @media #{$mq-tablet-port}{
-                margin: 0 0 1em 0;
-            }
-        }
+		h2 {
+			@include headline-30;
+			margin: 40px 0 10px 20px;
+			border-top: 2px solid transparent;
 
-        .stick {
-            @media #{$mq-tablet-port}{
-                padding-top: calc(100vw / 12);
-                position: sticky;
-                top: 0;
-            }
-        }
+			@media #{$mq-tablet-port} {
+				margin: 0 0 1em 0;
+				@include headline-50;
+			}
+		}
 
-        ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-            @include headline-20;
+		.stick {
+			@media #{$mq-tablet-port} {
+				padding-top: calc(100vw / 12);
+				position: sticky;
+				top: 0;
+			}
+		}
 
-            display: none;
-            
-            @media #{$mq-tablet-port}{
-                display: block;
-            }
+		ul {
+			list-style-type: none;
+			padding: 0;
+			margin: 0;
+			@include headline-20;
 
-            li {
-                margin-bottom: 2em;
-            }
-        }
+			display: none;
 
-        button {
-            @include headline-20;
-            border: 0;
-            background-color: transparent;
-            appearance: none;
+			@media #{$mq-tablet-port} {
+				display: block;
+			}
 
-            &.active {
-                color: $br-blue;
-            }
+			li {
+				margin-bottom: 2em;
+			}
+		}
 
-            span {
-                display: inline-block;
-                margin-right: 5px;
+		button {
+			@include headline-20;
+			border: 0;
+			background-color: transparent;
+			appearance: none;
+			text-align: left;
 
-                &:after {
-                    content: '/';
-                }
-            }
-        }
-    }
+			&.active {
+				color: $br-blue;
+			}
 
-    .timeline_data {
-        @media #{$mq-tablet-port}{
-            padding-top: calc(100vw / 12);
-        }
+			span {
+				display: inline-block;
+				margin-right: 5px;
 
-        header {
-            @include headline-30;
-            border-top: 2px solid black;
-            position: relative;
-            padding-top: 30px;
-            padding-bottom: 0px;
-            overflow: hidden;
-            padding-left: 20px;
-            line-height: 39px;
-            
+				&:after {
+					content: '/';
+				}
+			}
+		}
+	}
 
-            @media #{$mq-tablet-port}{
-                @include headline-30;
-                padding-left: 0;
-            }
+	.timeline_data {
+		@media #{$mq-tablet-port} {
+			padding-top: calc(100vw / 12);
+		}
 
-            span {
-                vertical-align: top;
-                display: inline-block;
-                line-height: 39px;
-            }
+		header {
+			@include headline-30;
+			border-top: 2px solid black;
+			position: relative;
+			padding-top: 30px;
+			padding-bottom: 0px;
+			overflow: hidden;
+			padding-left: 0px;
+			line-height: 39px;
+			margin-left: 20px;
+			margin-right: 20px;
 
-            span.number {
-                margin-right: 40px;
-            }
 
-            span.title {
-                display: inline-block;
-                @include headline-20;
-                line-height: 39px;
-                padding: 0;
-                margin: 0;
-            }
+			@media #{$mq-tablet-port} {
+				@include headline-30;
+				padding-left: 0;
+				margin-left: 0;
+				margin-right: 0;
+			}
 
-            &:hover {
-                color: $br-blue;
-            }
-        }
+			span {
+				vertical-align: top;
+				display: inline-block;
+				line-height: 39px;
+			}
 
-        .content {
-            @include body-20;
-            padding: 10px 20px 0 20px;
-            max-height: 0;
-            overflow: hidden;
-            
-            @media #{$mq-tablet-port}{
-                padding: 10px 0 0 0;
-            }
+			span.number {
+				margin-right: 40px;
+			}
 
-            @media #{$mq-desk-small}{
-                display: grid;
-                grid-template-columns: 6fr 3fr;
-            }
-        }
+			span.title {
+				display: inline-block;
+				@include headline-20;
+				line-height: 39px;
+				padding: 0;
+				margin: 0;
+			}
 
-        .close {
-            display: none;
-            position: absolute;
-            top: 35px;
-            right: 20px;
-            width: 32px;
-            height: 32px;
-            border: 0;
-            appearance: none;
-            padding: 0;
-            background-color: transparent;
-    
-            @media #{$mq-tablet-port}{
-                top: 33px;
-                right: 0px;
-            }
+			&:hover {
+				color: $br-blue;
+			}
+		}
 
-            svg {
-                pointer-events: none;
-                transition: all 0.3s ease 0s;
-                path {
-                    stroke: $br-blue;
-                }
-            }
-    
-            &:hover {
-                svg {
-                    transform: rotate(90deg);
-                }
-            }
-        }
+		.content {
+			@include body-20;
+			padding: 10px 20px 0 20px;
+			max-height: 0;
+			overflow: hidden;
 
-        .active {
+			@media #{$mq-tablet-port} {
+				padding: 10px 0 0 0;
+			}
 
-            header {
-                color: $br-blue;
+			@media #{$mq-desk-small} {
+				display: grid;
+				grid-template-columns: 6fr 3fr;
+			}
+		}
 
-                span.title {
-                    @include headline-30;
-                }
-            }
+		.close {
+			display: none;
+			position: absolute;
+			top: 35px;
+			right: 20px;
+			width: 32px;
+			height: 32px;
+			border: 0;
+			appearance: none;
+			padding: 0;
+			background-color: transparent;
 
-            .close {
-                display: block;
-            }
+			@media #{$mq-tablet-port} {
+				top: 33px;
+				right: 0px;
+			}
 
-            .content {
-                max-height: 100vh;
-            }
-        }
-    }
+			svg {
+				pointer-events: none;
+				transition: all 0.3s ease 0s;
+
+				path {
+					stroke: $br-blue;
+				}
+			}
+
+			&:hover {
+				svg {
+					transform: rotate(90deg);
+				}
+			}
+		}
+
+		.active {
+
+			header {
+				color: $br-blue;
+
+
+				span.title {
+					max-width: calc(100vw - 190px);
+
+					@include headline-30;
+
+					@media #{$mq-tablet-port} {
+						max-width: none;
+					}
+				}
+			}
+
+			.close {
+				display: block;
+			}
+
+			.content {
+				max-height: 100vh;
+			}
+		}
+	}
 }
