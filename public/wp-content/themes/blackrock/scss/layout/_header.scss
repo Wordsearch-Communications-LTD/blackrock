@@ -78,7 +78,7 @@
 		transform: translateX(100vw);
 		width: 100vw;
 		height: calc(100vh - 60px);
-		transition: transform 0.3s ease 0s;
+		transition: transform 0.2s ease 0s;
 
 		.menu {
 			list-style-type: none;
@@ -89,10 +89,19 @@
 
 			li {
 				padding-bottom: 20px;
+				opacity: 0;
+				transform: translateX(40px);
+				transition: all 0.2s ease 0.1s;
 
 				a {
 					@include body-35;
 					text-decoration: none;
+					color: $br-black;
+				}
+
+				&.current_page_item a {
+					padding-bottom: 3px;
+					border-bottom: 2px solid white;
 				}
 			}
 		}
@@ -117,6 +126,7 @@
 				li {
 					display: inline-block;
 					font-size: 20px;
+					opacity: 1;
 
 
 					&:after {
@@ -162,6 +172,11 @@
 .menu-open {
 	.menu-main-menu-container {
 		transform: translateX(0);
+
+		.menu li {
+			opacity: 1;
+			transform: translateX(0);
+		}
 	}
 
 	.burger-menu {
@@ -197,6 +212,10 @@
 
 		@media #{$mq-tablet-desk} {
 			background-color: rgba($br-cream, 0);
+		}
+
+		.menu li.current_page_item a {
+			border-bottom: 2px solid $br-black;
 		}
 	}
 

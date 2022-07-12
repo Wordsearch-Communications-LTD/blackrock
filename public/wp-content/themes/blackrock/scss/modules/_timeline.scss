@@ -3,16 +3,41 @@
 
 	@media #{$mq-tablet-port} {
 		grid-template-columns: 1fr 2fr;
+		grid-template-areas: "timeline-nav timeline-data";
 		margin: 0 40px 0 40px;
 	}
 
 	@media #{$mq-tablet-desk} {
 		grid-template-columns: 3fr 9fr;
+		grid-template-areas: "timeline-nav timeline-data";
 		margin: 0 40px 0 40px;
+	}
+
+	&.has-legal {
+		@media #{$mq-tablet-desk} {
+			grid-template-columns: 5fr 1fr 6fr;
+			grid-template-areas: "timeline-nav . timeline-data";
+			margin: 0 40px 0 40px;
+		}
+
+		.timeline_data .content {
+			@media #{$mq-desk-small} {
+				display: block;
+			}
+		}
+	}
+
+	#legal-intro-text {
+		p {
+			margin: 0;
+			padding: 20px 0;
+			@include body-20;
+		}
 	}
 
 	.timeline_nav {
 		position: relative;
+		grid-area: timeline-nav;
 
 		h2 {
 			@include headline-30;
@@ -20,8 +45,9 @@
 			border-top: 2px solid transparent;
 
 			@media #{$mq-tablet-port} {
-				margin: 0 0 1em 0;
+
 				@include headline-50;
+				margin: 0 0 40px 0;
 			}
 		}
 
@@ -73,8 +99,14 @@
 	}
 
 	.timeline_data {
+		grid-area: timeline-data;
+
 		@media #{$mq-tablet-port} {
 			padding-top: calc(100vw / 12);
+		}
+
+		article:last-of-type {
+			border-bottom: 2px solid black;
 		}
 
 		header {

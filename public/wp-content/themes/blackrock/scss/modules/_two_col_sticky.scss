@@ -70,7 +70,13 @@
             display: flex;
             justify-content: flex-start;
             align-items: flex-start;
-            margin-bottom: 40px;
+            padding-bottom: 20px;
+            padding-top: 40px;
+            border-bottom: 2px solid white;
+
+            &:first-of-type {
+                border-top: 2px solid white;
+            }
 
             .number {
                 min-width: 80px;
@@ -84,6 +90,10 @@
                     min-width: 100px;
                 }
             }
+        }
+
+        .button-container {
+            margin-top: 40px;
         }
     }
 }

@@ -42,14 +42,26 @@ class Timeline {
     }
 
     scrollToArticle(article){
-        let title = document.querySelector('.timeline');
+        let title = document.querySelector('.timeline_nav');
         let articleIndex = article.dataset.timelineIndex;
-        let containerRect = title.getBoundingClientRect();     
- 
+        let containerRect = title.getBoundingClientRect();
+        let legalContent =  document.getElementById('legal-intro-text');
+        let legalDimensions = (legalContent) ? legalContent.getBoundingClientRect() : 0;
+        let calculatedPos = 0;
+
         article.classList.add('active');
  
+        console.log(legalDimensions.height);
+
+        if(legalContent){
+            calculatedPos = ((containerRect.y + window.scrollY) + ((this.closeArticleHeight + legalDimensions.height) * articleIndex))
+        }
+        else {
+            calculatedPos = ((containerRect.y + window.scrollY) + (this.closeArticleHeight * articleIndex))
+        }
+
         window.scrollTo({
-            top: ((containerRect.y + window.scrollY) + (this.closeArticleHeight * articleIndex)),
+            top: calculatedPos,
             left: 0,
             behavior: 'smooth'
           });
