@@ -8,6 +8,10 @@ wp-admin/
 
 readme.html
 
+wp-content/plugins
+wp-content/plugins/*
+wp-content/plugins/*/**
+
 wp-content/uploads/*
 wp-content/uploads/*/**
 wp-content/uploads
