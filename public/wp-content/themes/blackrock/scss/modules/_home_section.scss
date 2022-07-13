@@ -187,10 +187,12 @@
 
     &.last-item {
         @media #{$mq-tablet-port} {
+            position: static;
             background-color: transparent;
 
+
+
             .columm-reveal-container {
-                height: 50vh;
                 background-color: transparent;
             }
 

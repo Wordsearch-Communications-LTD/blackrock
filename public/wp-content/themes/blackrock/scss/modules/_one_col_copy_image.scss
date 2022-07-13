@@ -10,9 +10,12 @@
     .copy-container {
         @include grid;
 
-        @media #{$mq-tablet-port} {
+        grid-template-columns: 7fr 5fr;
+        grid-template-areas: "copy .";
+
+        @media #{$mq-desk-small} {
             grid-template-columns: 5fr 7fr;
-            grid-template-areas: "copy .";
+
         }
 
         .copy {

@@ -1818,6 +1818,7 @@ a.button:hover svg {
   }
   /* line 252, ../scss/modules/_home_hero.scss */
   .column-reveal.last-item .column-reveal_container {
+    height: 100vh !important;
     background-color: black;
   }
 }
@@ -2021,11 +2022,11 @@ a.button:hover svg {
 @media (min-width: 768px) {
   /* line 188, ../scss/modules/_home_section.scss */
   .column-reveal.last-item {
+    position: static;
     background-color: transparent;
   }
-  /* line 192, ../scss/modules/_home_section.scss */
+  /* line 195, ../scss/modules/_home_section.scss */
   .column-reveal.last-item .columm-reveal-container {
-    height: 50vh;
     background-color: transparent;
   }
 }
@@ -2873,9 +2874,9 @@ a.button:hover svg {
   max-height: calc(100% - 80px);
   object-fit: contain;
   position: relative;
-  top: 0;
+  top: 45%;
   left: 50%;
-  transform: translate(-50%, 0);
+  transform: translate(-50%, -50%);
 }
 /* line 60, ../scss/modules/_modal_popup.scss */
 #modal-popup .image-container .caption {
@@ -2899,6 +2900,11 @@ a.button:hover svg {
     margin-top: calc(100vw / 12);
   }
 }
+/* line 10, ../scss/modules/_one_col_copy_image.scss */
+.one-col-copy-image .copy-container {
+  grid-template-columns: 7fr 5fr;
+  grid-template-areas: "copy .";
+}
 @media (min-width: 768px) {
   /* line 10, ../scss/modules/_one_col_copy_image.scss */
   .one-col-copy-image .copy-container {
@@ -2907,22 +2913,21 @@ a.button:hover svg {
     column-gap: 20px;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 1280px) {
   /* line 10, ../scss/modules/_one_col_copy_image.scss */
   .one-col-copy-image .copy-container {
     grid-template-columns: 5fr 7fr;
-    grid-template-areas: "copy .";
   }
 }
-/* line 18, ../scss/modules/_one_col_copy_image.scss */
+/* line 21, ../scss/modules/_one_col_copy_image.scss */
 .one-col-copy-image .copy-container .copy {
   grid-area: copy;
 }
-/* line 21, ../scss/modules/_one_col_copy_image.scss */
+/* line 24, ../scss/modules/_one_col_copy_image.scss */
 .one-col-copy-image .copy-container .copy span {
   color: #0627CA;
 }
-/* line 26, ../scss/modules/_one_col_copy_image.scss */
+/* line 29, ../scss/modules/_one_col_copy_image.scss */
 .one-col-copy-image .copy-container h1 {
   font-weight: normal;
   font-size: 30px;
@@ -2932,7 +2937,7 @@ a.button:hover svg {
   font-family: "PPNeueMontreal-Medium";
 }
 @media (min-width: 1024px) {
-  /* line 26, ../scss/modules/_one_col_copy_image.scss */
+  /* line 29, ../scss/modules/_one_col_copy_image.scss */
   .one-col-copy-image .copy-container h1 {
     font-weight: normal;
     font-size: 50px;
@@ -2943,11 +2948,11 @@ a.button:hover svg {
   }
 }
 
-/* line 36, ../scss/modules/_one_col_copy_image.scss */
+/* line 39, ../scss/modules/_one_col_copy_image.scss */
 .one-col-copy-image.page-hero {
   margin-top: 120px;
 }
-/* line 39, ../scss/modules/_one_col_copy_image.scss */
+/* line 42, ../scss/modules/_one_col_copy_image.scss */
 .one-col-copy-image.page-hero .mobile-image-container {
   width: 100vw;
   max-height: 600px;
@@ -2955,13 +2960,13 @@ a.button:hover svg {
   overflow: hidden;
 }
 @media (min-width: 768px) {
-  /* line 39, ../scss/modules/_one_col_copy_image.scss */
+  /* line 42, ../scss/modules/_one_col_copy_image.scss */
   .one-col-copy-image.page-hero .mobile-image-container {
     width: auto;
     height: auto;
   }
 }
-/* line 50, ../scss/modules/_one_col_copy_image.scss */
+/* line 53, ../scss/modules/_one_col_copy_image.scss */
 .one-col-copy-image.page-hero .mobile-image-container img {
   position: relative;
   height: 100%;
@@ -2970,29 +2975,29 @@ a.button:hover svg {
   transform: translateX(-50%);
 }
 @media (min-width: 768px) {
-  /* line 50, ../scss/modules/_one_col_copy_image.scss */
+  /* line 53, ../scss/modules/_one_col_copy_image.scss */
   .one-col-copy-image.page-hero .mobile-image-container img {
     height: auto;
     width: 100%;
   }
 }
-/* line 64, ../scss/modules/_one_col_copy_image.scss */
+/* line 67, ../scss/modules/_one_col_copy_image.scss */
 .one-col-copy-image.page-hero .copy {
   margin-top: 80px;
   margin-bottom: 80px;
   padding: 0 20px;
 }
 @media (min-width: 768px) {
-  /* line 36, ../scss/modules/_one_col_copy_image.scss */
+  /* line 39, ../scss/modules/_one_col_copy_image.scss */
   .one-col-copy-image.page-hero {
     margin-top: calc((100vw / 12));
   }
-  /* line 73, ../scss/modules/_one_col_copy_image.scss */
+  /* line 76, ../scss/modules/_one_col_copy_image.scss */
   .one-col-copy-image.page-hero .copy {
     margin-bottom: calc(100vw / 12);
   }
 }
-/* line 78, ../scss/modules/_one_col_copy_image.scss */
+/* line 81, ../scss/modules/_one_col_copy_image.scss */
 .one-col-copy-image.page-hero .copy blockquote p {
   font-weight: normal;
   font-size: 30px;
@@ -3002,7 +3007,7 @@ a.button:hover svg {
   font-family: "PPNeueMontreal-Medium";
 }
 @media (min-width: 1024px) {
-  /* line 78, ../scss/modules/_one_col_copy_image.scss */
+  /* line 81, ../scss/modules/_one_col_copy_image.scss */
   .one-col-copy-image.page-hero .copy blockquote p {
     font-weight: normal;
     font-size: 50px;
@@ -3012,15 +3017,15 @@ a.button:hover svg {
     font-family: "PPNeueMontreal-Regular";
   }
 }
-/* line 85, ../scss/modules/_one_col_copy_image.scss */
+/* line 88, ../scss/modules/_one_col_copy_image.scss */
 .one-col-copy-image.page-hero .copy blockquote p:first-of-type {
   margin-top: 0;
 }
-/* line 89, ../scss/modules/_one_col_copy_image.scss */
+/* line 92, ../scss/modules/_one_col_copy_image.scss */
 .one-col-copy-image.page-hero .copy blockquote p:last-of-type {
   margin-top: 0;
 }
-/* line 93, ../scss/modules/_one_col_copy_image.scss */
+/* line 96, ../scss/modules/_one_col_copy_image.scss */
 .one-col-copy-image.page-hero .copy blockquote p span {
   font-size: 20px;
   line-height: 1.3em;

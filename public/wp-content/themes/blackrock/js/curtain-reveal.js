@@ -151,7 +151,7 @@ class HeroCurtain {
     }
 }
 
-let curtainReveals = document.querySelectorAll('.column-reveal');
+let curtainReveals = document.querySelectorAll('.column-reveal:not(.last-item)');
 
 curtainReveals.forEach(element => {
     if(element.id !== 'home-hero'){
