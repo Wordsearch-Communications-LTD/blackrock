@@ -48,6 +48,7 @@
         @media #{$mq-tablet-port} {
             width: auto;
             height: auto;
+            max-height: none;
         }
 
         img {

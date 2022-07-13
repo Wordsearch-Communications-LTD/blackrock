@@ -16,16 +16,18 @@ a.button {
     position: relative;
     transition: all 0.3s ease 0s;
 
-    @media #{$mq-tablet-port}{
+    @media #{$mq-tablet-port} {
         font-size: $button_FontSizeDesk;
         letter-spacing: calc($button_FontSizeDesk * 0.05);
     }
 
     svg {
         height: $button_FontSizeMob;
-        @media #{$mq-tablet-port}{
+
+        @media #{$mq-tablet-port} {
             height: $button_FontSizeDesk;
         }
+
         position: absolute;
         top: 50%;
         right: 20px;
@@ -40,20 +42,20 @@ a.button {
     }
 }
 
-.page-cream, 
+.page-cream,
 .page-white {
-    
+
     a.button {
         border: 1px solid $br-white;
         color: $br-black;
 
-        &:active, 
+        &:active,
         &:visited {
             color: $br-black;
         }
 
         svg {
-            
+
             path {
                 stroke: $br-black;
             }
@@ -64,7 +66,7 @@ a.button {
             color: $br-black;
 
             svg {
-            
+
                 path {
                     stroke: $br-black;
                 }
@@ -78,13 +80,13 @@ a.button {
         border: 1px solid $br-white;
         color: $br-white;
 
-        &:active, 
+        &:active,
         &:visited {
             color: $br-white;
         }
-        
+
         svg {
-            
+
             path {
                 stroke: $br-white;
             }
@@ -95,7 +97,7 @@ a.button {
             color: $br-black;
 
             svg {
-            
+
                 path {
                     stroke: $br-black;
                 }
@@ -106,54 +108,44 @@ a.button {
 
 #floor-toggle,
 .map .map-container .toggle {
+    display: block;
+    appearance: none;
+    border: none;
+    background-color: none;
+    @include body-16;
+    padding-left: 60px;
+    position: relative;
+    cursor: pointer;
+
+    &:before {
+        position: absolute;
+        left: 0;
+        top: 0;
+        content: "";
         display: block;
-        appearance: none;
-        border: none;
-        background-color: none;
-        @include body-16;
-        padding-left: 60px;
-        position: relative;
-        cursor: pointer;
+        width: 50px;
+        height: 24px;
+        border: 2px solid $br-grey;
+        border-radius: 12px;
+        transition: all 0.3s ease 0s;
+    }
 
-        &:before {
-            position: absolute;
-            left: 0;
-            top: 0;
-            content: "";
-            display: block;
-            width: 50px;
-            height: 24px;
-            border: 2px solid $br-grey;
-            border-radius: 12px;
-            transition: all 0.3s ease 0s;
-        }
+    &:after {
+        position: absolute;
+        left: 4px;
+        top: 3px;
+        content: "";
+        display: block;
+        width: 18px;
+        height: 18px;
+        border-radius: 8px;
+        background: $br-grey;
+        transition: all 0.3s ease 0s;
+    }
 
-        &:after {
-            position: absolute;
-            left: 4px;
-            top: 3px;
-            content: "";
-            display: block;
-            width: 18px;
-            height: 18px;
-            border-radius: 8px; 
-            background: $br-grey;
-            transition: all 0.3s ease 0s;
-        }
+    &:hover {
+        @media (hover: hover) {
 
-
-        &:hover {
-            &:before {
-                border-color: $br-blue;
-                background-color: $br-blue;
-            }
-            
-            &:after {
-                background-color: $br-white;
-            }
-        }
-
-        &.active {
             &:before {
                 border-color: $br-blue;
                 background-color: $br-blue;
@@ -161,7 +153,19 @@ a.button {
 
             &:after {
                 background-color: $br-white;
-                transform: translateX(25px);
             }
         }
     }
+
+    &.active {
+        &:before {
+            border-color: $br-blue;
+            background-color: $br-blue;
+        }
+
+        &:after {
+            background-color: $br-white;
+            transform: translateX(25px);
+        }
+    }
+}

@@ -31,7 +31,6 @@ class Floors {
                 e.preventDefault();
                 e.stopPropagation();
                 this.minimiseFloors();
-                console.log('close');
             });
         });
     }
@@ -59,7 +58,6 @@ class Floors {
         });
         
         this.expandedFloors.forEach(floor => {
-            console.log(floor);
             floor.classList.remove('expanded');
         });
     }
