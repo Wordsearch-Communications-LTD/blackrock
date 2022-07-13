@@ -10,6 +10,7 @@
             <?php echo $copy ?>
         </div>
     </div>
-    
-    <?php echo wp_get_attachment_image( $image['id'], 'full', false, ["class" => "image"] ); ?>
+    <div class="mobile-image-container">
+        <?php echo wp_get_attachment_image( $image['id'], 'full', false, ["class" => "image"] ); ?>
+    </div>
 </section>

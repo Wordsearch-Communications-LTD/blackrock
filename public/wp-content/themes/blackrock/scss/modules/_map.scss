@@ -1,12 +1,12 @@
 .map {
     @include grid;
-    
-    @media #{$mq-tablet-port}{
+
+    @media #{$mq-tablet-port} {
         margin: calc(100vw / 12) 40px 0 40px;
     }
 
     .map-title {
-        @media #{$mq-tablet-port}{
+        @media #{$mq-tablet-port} {
             display: grid;
             grid-template-columns: 5fr 7fr;
             margin-bottom: calc(100vw / 24);
@@ -17,7 +17,7 @@
             margin-top: 0;
             margin-bottom: 40px;
 
-            @media #{$mq-tablet-port}{
+            @media #{$mq-tablet-port} {
                 @include headline-50;
                 margin-top: 0;
                 margin-bottom: 0;
@@ -28,17 +28,17 @@
     .map-container {
         background-color: $br-cream;
 
-        @media #{$mq-tablet-port}{
+        @media #{$mq-tablet-port} {
             display: grid;
             grid-template-columns: repeat(12, 1fr);
-            grid-template-areas:  "navi navi . maps maps maps maps maps maps maps maps maps";
+            grid-template-areas: "navi navi . maps maps maps maps maps maps maps maps maps";
         }
 
         .map-layers-nav {
             grid-area: navi;
             padding: 20px;
 
-            @media #{$mq-tablet-port}{
+            @media #{$mq-tablet-port} {
                 padding: 40px;
             }
 
@@ -46,17 +46,23 @@
                 @include headline-30;
                 margin-top: 0;
                 margin-bottom: 20px;
-                
-                @media #{$mq-tablet-port}{
+
+                @media #{$mq-tablet-port} {
                     margin-bottom: 40px;
                 }
             }
         }
-        
+
         .maps {
             position: relative;
             grid-area: maps;
-            
+
+            overflow: scroll;
+
+            @media #{$mq-tablet-port} {
+                overflow: hidden;
+            }
+
             #main-map {
                 position: relative;
                 top: 0;
@@ -69,23 +75,77 @@
                 top: 0;
                 left: 0;
                 opacity: 0;
-                    
+
                 &:nth-child(2) {
                     z-index: 2;
                 }
-                
+
                 &:nth-child(3) {
                     z-index: 3
                 }
-                
+
                 &:nth-child(4) {
                     z-index: 4
                 }
-            
+
                 &.show {
                     opacity: 1;
                 }
             }
+
+            img {
+                height: calc(100vw * 1.5);
+                width: auto;
+
+                @media #{$mq-tablet-port} {
+                    width: 100%;
+                    height: auto;
+                }
+            }
         }
+
+        .maps-scrollable-container {
+
+            display: block;
+            width: calc((100vw * 1.152) * 0.86);
+            height: calc(100vw * 1.152);
+            line-height: 0;
+
+            @media #{$mq-tablet-port} {
+                width: auto;
+                height: auto;
+            }
+        }
+    }
+
+    .scroll-map-info {
+        display: block;
+        position: absolute;
+        width: 200px;
+        height: 60px;
+        background-color: $br-grey;
+        border-radius: 60px;
+        pointer-events: none;
+        z-index: 100;
+        @include body-20;
+        line-height: 60px;
+        padding-left: 35px;
+        color: $br-white;
+        opacity: 1;
+        transition: opacity 0.3s ease 0s;
+
+        @media #{$mq-tablet-port} {
+            display: none;
+        }
+
+        svg {
+            position: absolute;
+            right: 35px;
+            top: 14px;
+        }
+    }
+
+    .touched .scroll-map-info {
+        opacity: 0;
     }
 }

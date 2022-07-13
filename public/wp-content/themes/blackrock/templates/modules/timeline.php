@@ -8,7 +8,7 @@
     
     <nav class="timeline_nav">
         <div class="stick">
-            <h2><?= $title ?></h2>
+            <?= $title ?>
             <ul>
             <?php foreach($timeline as $index => $time): ?>
               <li><button <?= ($index == 0) ? ' class="active"' : ''; ?> data-timeline-index="<?= $index ?>"><span><?= leadingZero($index) ?></span> <?= $time['title'] ?> </button></li>
@@ -31,7 +31,7 @@
 			<?php foreach($timeline as $index => $time): ?>
 				<article <?= ($index == 0) ? ' class="active"' : ''; ?> data-timeline-index="<?= $index ?>">
 					<header>
-						<span class="number"><?= leadingZero($index) ?></span> <span class="title"><?= $time['title'] ?></span>
+						<span class="number"><?= leadingZero($index) ?>/</span> <span class="title"><?= $time['title'] ?></span>
 						<button class="close"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"> <g clip-path="url(#clip0_66_3961)"> <path d="M7.48535 24.4853L24.4559 7.51473" stroke="black" stroke-width="2"/> <path d="M24.4558 24.4853L7.48525 7.51473" stroke="black" stroke-width="2"/> </g> <defs> <clipPath id="clip0_66_3961"> <rect width="32" height="32" fill="white"/> </clipPath> </defs> </svg></button>
 					</header>
 					<div class="content">

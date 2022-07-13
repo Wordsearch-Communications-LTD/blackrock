@@ -1,0 +1,381 @@
+0000.001 (0) Opened log file at time: Wed, 13 Jul 2022 12:20:56 +0000 on http://blackrock.local
+0000.012 (0) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 2.22.4.1 WP: 6.0.1 PHP: 7.4.1 (cgi-fcgi, Windows NT DESKTOP-OINKS 10.0 build 22622 (Windows 10) AMD64) MySQL: 8.0.16 (max packet size=16777216) WPLANG: en_US Server: nginx/1.16.0 safe_mode: 0 max_execution_time: 900 memory_limit: 256M (used: 5.3M | 4M) multisite: N openssl: OpenSSL 1.1.1d  10 Sep 2019 mcrypt: N LANG:  ZipArchive::addFile: Y
+0000.024 (0) Free space on disk containing Updraft's temporary directory: 1806611.9 MB
+0000.037 (0) Tasks: Backup files: 1 (schedule: unset) Backup DB: 1 (schedule: unset)
+0000.059 (0) Requesting semaphore lock (fd) (apparently not via scheduler)
+0000.106 (0) Set semaphore last lock (fd) time to 2022-07-13 12:20:57
+0000.118 (0) Semaphore lock (fd) complete
+0000.161 (0) Backup run: resumption=0, nonce=88dbfce62281, file_nonce=88dbfce62281 begun at=1657714856 (1s ago), job type=backup
+0000.184 (0) Scheduling a resumption (1) after 300 seconds (1657715157) in case this run gets aborted
+0000.209 (0) Checking if we have a zip executable available
+0000.231 (0) Creation of backups of directories: beginning
+0000.272 (0) Beginning creation of dump of plugins (split every: 100 MB)
+0000.731 (0) Total entities for the zip file: 515 directories, 3070 files (0 skipped as non-modified), 54.3 MB
+0000.807 (0) Zip: backup_2022-07-13-1220_blackrock_88dbfce62281-plugins.zip.tmp: 100 files added (on-disk size: 0 KB)
+0000.843 (0) Zip: backup_2022-07-13-1220_blackrock_88dbfce62281-plugins.zip.tmp: 200 files added (on-disk size: 0 KB)
+0000.878 (0) Zip: backup_2022-07-13-1220_blackrock_88dbfce62281-plugins.zip.tmp: 300 files added (on-disk size: 0 KB)
+0000.913 (0) Zip: backup_2022-07-13-1220_blackrock_88dbfce62281-plugins.zip.tmp: 400 files added (on-disk size: 0 KB)
+0000.947 (0) Zip: backup_2022-07-13-1220_blackrock_88dbfce62281-plugins.zip.tmp: 500 files added (on-disk size: 0 KB)
+0000.980 (0) Zip: backup_2022-07-13-1220_blackrock_88dbfce62281-plugins.zip.tmp: 600 files added (on-disk size: 0 KB)
+0001.015 (0) Zip: backup_2022-07-13-1220_blackrock_88dbfce62281-plugins.zip.tmp: 700 files added (on-disk size: 0 KB)
+0001.052 (0) Zip: backup_2022-07-13-1220_blackrock_88dbfce62281-plugins.zip.tmp: 800 files added (on-disk size: 0 KB)
+0001.089 (0) Zip: backup_2022-07-13-1220_blackrock_88dbfce62281-plugins.zip.tmp: 900 files added (on-disk size: 0 KB)
+0001.104 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 25 MB added on this batch (25.1 MB, 3070 files batched, 916 (916) added so far); re-opening (prior size: 0 KB)
+0003.963 (0) A useful amount of data was added after this amount of zip processing: 3.9 s (normalised: 3.9 s, rate: 6505.3 KB/s)
+0003.991 (0) Performance is good - will increase the amount of data we attempt to batch (time=3.946958065033, normalised_time=3.9352503709248, max_time=3.975702047348, data points known=1, old_max_bytes=26214400, new_max_bytes=39968587)
+0004.049 (0) Zip: backup_2022-07-13-1220_blackrock_88dbfce62281-plugins.zip.tmp: 1000 files added (on-disk size: 6752.5 KB)
+0004.098 (0) Zip: backup_2022-07-13-1220_blackrock_88dbfce62281-plugins.zip.tmp: 1100 files added (on-disk size: 6752.5 KB)
+0004.137 (0) Zip: backup_2022-07-13-1220_blackrock_88dbfce62281-plugins.zip.tmp: 1200 files added (on-disk size: 6752.5 KB)
+0004.176 (0) Zip: backup_2022-07-13-1220_blackrock_88dbfce62281-plugins.zip.tmp: 1300 files added (on-disk size: 6752.5 KB)
+0004.214 (0) Zip: backup_2022-07-13-1220_blackrock_88dbfce62281-plugins.zip.tmp: 1400 files added (on-disk size: 6752.5 KB)
+0004.251 (0) Zip: backup_2022-07-13-1220_blackrock_88dbfce62281-plugins.zip.tmp: 1500 files added (on-disk size: 6752.5 KB)
+0004.289 (0) Zip: backup_2022-07-13-1220_blackrock_88dbfce62281-plugins.zip.tmp: 1600 files added (on-disk size: 6752.5 KB)
+0004.328 (0) Zip: backup_2022-07-13-1220_blackrock_88dbfce62281-plugins.zip.tmp: 1700 files added (on-disk size: 6752.5 KB)
+0004.368 (0) Zip: backup_2022-07-13-1220_blackrock_88dbfce62281-plugins.zip.tmp: 1800 files added (on-disk size: 6752.5 KB)
+0004.411 (0) Zip: backup_2022-07-13-1220_blackrock_88dbfce62281-plugins.zip.tmp: 1900 files added (on-disk size: 6752.5 KB)
+0004.429 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 1000 files added on this batch (13.5 MB, 3070 files batched, 1001 (1917) added so far); re-opening (prior size: 6752.5 KB)
+0005.882 (0) Zip: backup_2022-07-13-1220_blackrock_88dbfce62281-plugins.zip.tmp: 2000 files added (on-disk size: 10548.4 KB)
+0005.921 (0) Zip: backup_2022-07-13-1220_blackrock_88dbfce62281-plugins.zip.tmp: 2100 files added (on-disk size: 10548.4 KB)
+0005.958 (0) Zip: backup_2022-07-13-1220_blackrock_88dbfce62281-plugins.zip.tmp: 2200 files added (on-disk size: 10548.4 KB)
+0006.114 (0) Zip: backup_2022-07-13-1220_blackrock_88dbfce62281-plugins.zip.tmp: 2300 files added (on-disk size: 10548.4 KB)
+0006.157 (0) Zip: backup_2022-07-13-1220_blackrock_88dbfce62281-plugins.zip.tmp: 2400 files added (on-disk size: 10548.4 KB)
+0006.195 (0) Zip: backup_2022-07-13-1220_blackrock_88dbfce62281-plugins.zip.tmp: 2500 files added (on-disk size: 10548.4 KB)
+0006.231 (0) Zip: backup_2022-07-13-1220_blackrock_88dbfce62281-plugins.zip.tmp: 2600 files added (on-disk size: 10548.4 KB)
+0006.269 (0) Zip: backup_2022-07-13-1220_blackrock_88dbfce62281-plugins.zip.tmp: 2700 files added (on-disk size: 10548.4 KB)
+0006.307 (0) Zip: backup_2022-07-13-1220_blackrock_88dbfce62281-plugins.zip.tmp: 2800 files added (on-disk size: 10548.4 KB)
+0006.346 (0) Zip: backup_2022-07-13-1220_blackrock_88dbfce62281-plugins.zip.tmp: 2900 files added (on-disk size: 10548.4 KB)
+0006.364 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 1000 files added on this batch (14.6 MB, 3070 files batched, 1001 (2918) added so far); re-opening (prior size: 10548.4 KB)
+0009.670 (0) Zip: backup_2022-07-13-1220_blackrock_88dbfce62281-plugins.zip.tmp: 3000 files added (on-disk size: 15937.2 KB)
+0009.983 (0) Creating zip file manifest (D:\Local Sites\blackrock\app\public/wp-content/updraft/backup_2022-07-13-1220_blackrock_88dbfce62281-plugins.zip.list-temp.tmp)
+0010.006 (0) Successfully created zip file manifest (size: 261881)
+0010.160 (0) Created plugins zip (0) - 16311.9 KB in 9.9 s (1651.5 KB/s) (sha1: c15e5d16c511c243624624c6b221b76bfb564ae7, sha256: 3c6f96dadfabb28dbd73ce2c89f55977d07276ebaf619d924d7eeecc97a6738f)
+0010.192 (0) Beginning creation of dump of themes (split every: 100 MB)
+0010.315 (0) Total entities for the zip file: 126 directories, 617 files (0 skipped as non-modified), 16.7 MB
+0010.349 (0) Zip: backup_2022-07-13-1220_blackrock_88dbfce62281-themes.zip.tmp: 100 files added (on-disk size: 0 KB)
+0010.380 (0) Zip: backup_2022-07-13-1220_blackrock_88dbfce62281-themes.zip.tmp: 200 files added (on-disk size: 0 KB)
+0010.420 (0) Zip: backup_2022-07-13-1220_blackrock_88dbfce62281-themes.zip.tmp: 300 files added (on-disk size: 0 KB)
+0010.458 (0) Zip: backup_2022-07-13-1220_blackrock_88dbfce62281-themes.zip.tmp: 400 files added (on-disk size: 0 KB)
+0010.495 (0) Zip: backup_2022-07-13-1220_blackrock_88dbfce62281-themes.zip.tmp: 500 files added (on-disk size: 0 KB)
+0010.546 (0) Zip: backup_2022-07-13-1220_blackrock_88dbfce62281-themes.zip.tmp: 600 files added (on-disk size: 0 KB)
+0012.166 (0) Creating zip file manifest (D:\Local Sites\blackrock\app\public/wp-content/updraft/backup_2022-07-13-1220_blackrock_88dbfce62281-themes.zip.list-temp.tmp)
+0012.189 (0) Successfully created zip file manifest (size: 43803)
+0012.307 (0) Created themes zip (0) - 11955.8 KB in 2.1 s (5700.6 KB/s) (sha1: 18071882c6ccd53e0c217c92883a5260d5d05564, sha256: 92b4499f6ca5b9e249839f6c2b1de16cf19a683c5df013854d330d85bb92873c)
+0012.338 (0) Exclusion option setting (uploads): backup*,*backups,backwpup*,wp-clone,snapshots
+0012.354 (0) Looking for candidates to backup in: D:\Local Sites\blackrock\app\public/wp-content/uploads
+0012.369 (0) finding files: 2022: adding to list (1)
+0012.382 (0) Beginning creation of dump of uploads (split every: 100 MB)
+0012.439 (0) Total entities for the zip file: 3 directories, 172 files (0 skipped as non-modified), 78 MB
+0012.466 (0) Adding batch to zip file (UpdraftPlus_ZipArchive): over 38.1 MB added on this batch (38.7 MB, 172 files batched, 83 (83) added so far); re-opening (prior size: 0 KB)
+0013.752 (0) A useful amount of data was added after this amount of zip processing: 1.7 s (normalised: 1.7 s, rate: 22827.2 KB/s)
+0013.781 (0) Performance is good - will increase the amount of data we attempt to batch (time=1.7359359264374, normalised_time=1.7098849489391, max_time=13.767239093781, data points known=1, old_max_bytes=39968587, new_max_bytes=104857600)
+0013.810 (0) Zip: backup_2022-07-13-1220_blackrock_88dbfce62281-uploads.zip.tmp: 100 files added (on-disk size: 39582.2 KB)
+0014.644 (0) Creating zip file manifest (D:\Local Sites\blackrock\app\public/wp-content/updraft/backup_2022-07-13-1220_blackrock_88dbfce62281-uploads.zip.list-temp.tmp)
+0014.659 (0) Successfully created zip file manifest (size: 9492)
+0015.232 (0) Created uploads zip (0) - 79797.7 KB in 2.8 s (28200.6 KB/s) (sha1: 68f0afcf9d2e70d9d24609c3bc3d64613b84c8e1, sha256: e0deb1a2ad1b2b9a04e07bbca54015cde2c27c482081b37999de27ea73036853)
+0015.263 (0) Beginning backup of other directories found in the content directory (index: 0)
+0015.278 (0) Exclusion option setting (others): upgrade,cache,updraft,backup*,*backups,mysql.sql,debug.log
+0015.293 (0) Looking for candidates to backup in: D:\Local Sites\blackrock\app\public/wp-content
+0015.308 (0) finding files: index.php: adding to list (1)
+0015.321 (0) finding files: languages: adding to list (2)
+0015.337 (0) finding files: plugins: skipping: this is the plugins directory
+0015.351 (0) finding files: themes: skipping: this is the themes directory
+0015.364 (0) finding files: updraft: skipping: this is the updraft directory
+0015.381 (0) finding files: upgrade: skipping: excluded by options
+0015.393 (0) finding files: uploads: skipping: this is the uploads directory
+0015.408 (0) finding files: wflogs: adding to list (3)
+0015.454 (0) Total entities for the zip file: 4 directories, 79 files (0 skipped as non-modified), 8.4 MB
+0017.926 (0) Creating zip file manifest (D:\Local Sites\blackrock\app\public/wp-content/updraft/backup_2022-07-13-1220_blackrock_88dbfce62281-others.zip.list-temp.tmp)
+0017.941 (0) Successfully created zip file manifest (size: 4422)
+0018.002 (0) Created others zip (0) - 3400.3 KB in 2.6 s (1319.6 KB/s) (sha1: ce9bae460c1f281faa0fff5ec434102a88997c47, sha256: 47d398a518e4a67aaeea3f107bf5431e4e9ccce0e21875490011a5c093fde40a)
+0018.059 (0) Saving backup status to database (elements: 8)
+0018.093 (0) Beginning creation of database dump (WordPress DB)
+0018.110 (0) SQL compatibility mode is: NO_ZERO_IN_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION
+0018.142 (0) Testing potential mysqldump binary: C:\Program Files\MySQL\MySQL Workbench 8.0 CE\mysqldump.exe
+0022.349 (0) Binary mysqldump: error (code: 2)
+0022.429 (0) Table wp_options: Total expected rows (via COUNT): 250
+0022.445 (0) Table is relatively small; fetch_rows will thus be: 500 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0022.521 (0) Table wp_options: Rows added in this batch (next record: 2438): 244 (uncompressed bytes in this segment=1252032) in 0.11 seconds
+0022.586 (0) Table wp_options: finishing file(s) (2, 311.5 KB)
+0022.629 (0) Table wp_users: Total expected rows (via COUNT): 1
+0022.641 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0022.679 (0) Table wp_users: Rows added in this batch (next record: 1): 1 (uncompressed bytes in this segment=1396) in 0.06 seconds
+0022.729 (0) Table wp_users: finishing file(s) (2, 0.6 KB)
+0022.780 (0) Table wp_usermeta: Total expected rows (via COUNT): 28
+0022.795 (0) Table is relatively small; fetch_rows will thus be: 50 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0022.825 (0) Table wp_usermeta: Rows added in this batch (next record: 30): 28 (uncompressed bytes in this segment=2533) in 0.06 seconds
+0022.884 (0) Table wp_usermeta: finishing file(s) (2, 1.3 KB)
+0022.942 (0) Table wp_commentmeta: Total expected rows (via COUNT): 0
+0022.973 (0) Table wp_commentmeta: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=685) in 0.05 seconds
+0023.024 (0) Table wp_commentmeta: finishing file(s) (2, 0.4 KB)
+0023.065 (0) Table wp_comments: Total expected rows (via COUNT): 1
+0023.075 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0023.109 (0) Table wp_comments: Rows added in this batch (next record: 1): 1 (uncompressed bytes in this segment=2141) in 0.05 seconds
+0023.154 (0) Table wp_comments: finishing file(s) (2, 0.7 KB)
+0023.192 (0) Table wp_links: Total expected rows (via COUNT): 0
+0023.224 (0) Table wp_links: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=1310) in 0.04 seconds
+0023.272 (0) Table wp_links: finishing file(s) (2, 0.5 KB)
+0023.340 (0) Table wp_postmeta: Total expected rows (approximate): 22919
+0023.762 (0) Table wp_postmeta: Rows added in this batch (next record: 28453): 24025 (uncompressed bytes in this segment=2606225) in 0.45 seconds
+0023.824 (0) Table wp_postmeta: finishing file(s) (2, 213.7 KB)
+0023.876 (0) Table wp_posts: Total expected rows (via COUNT): 235
+0023.892 (0) Table is relatively small; fetch_rows will thus be: 250 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0023.950 (0) Table wp_posts: Rows added in this batch (next record: 247): 235 (uncompressed bytes in this segment=253676) in 0.09 seconds
+0024.012 (0) Table wp_posts: finishing file(s) (2, 18.9 KB)
+0024.050 (0) Table wp_term_relationships: Total expected rows (approximate): 9
+0024.084 (0) Table wp_term_relationships: Rows added in this batch (next record: 100000): 9 (uncompressed bytes in this segment=814) in 0.03 seconds
+0024.130 (0) Table wp_term_relationships: finishing file(s) (2, 0.4 KB)
+0024.197 (0) Table wp_term_taxonomy: Total expected rows (via COUNT): 3
+0024.209 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0024.231 (0) Table wp_term_taxonomy: Rows added in this batch (next record: 3): 3 (uncompressed bytes in this segment=988) in 0.05 seconds
+0024.276 (0) Table wp_term_taxonomy: finishing file(s) (2, 0.5 KB)
+0024.318 (0) Table wp_termmeta: Total expected rows (via COUNT): 0
+0024.343 (0) Table wp_termmeta: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=658) in 0.04 seconds
+0024.389 (0) Table wp_termmeta: finishing file(s) (2, 0.4 KB)
+0024.420 (0) Table wp_terms: Total expected rows (via COUNT): 3
+0024.429 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0024.451 (0) Table wp_terms: Rows added in this batch (next record: 3): 3 (uncompressed bytes in this segment=800) in 0.03 seconds
+0024.484 (0) Table wp_terms: finishing file(s) (2, 0.5 KB)
+0024.512 (0) Table wp_wfblockediplog: Total expected rows (approximate): 1
+0024.537 (0) Table wp_wfblockediplog: Rows added in this batch (next record: 1000): 1 (uncompressed bytes in this segment=728) in 0.03 seconds
+0024.571 (0) Table wp_wfblockediplog: finishing file(s) (2, 0.4 KB)
+0024.604 (0) Table wp_wfblocks7: Total expected rows (via COUNT): 0
+0024.614 (0) Table wp_wfblocks7: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=811) in 0.01 seconds
+0024.647 (0) Table wp_wfblocks7: finishing file(s) (2, 0.4 KB)
+0024.676 (0) Table wp_wfconfig: Total expected rows (approximate): 252
+0024.787 (0) Table wp_wfconfig: Rows added in this batch (next record: 1000): 255 (uncompressed bytes in this segment=1708375) in 0.11 seconds
+0024.821 (0) Table wp_wfconfig: finishing file(s) (2, 920.1 KB)
+0024.852 (0) Table wp_wfcrawlers: Total expected rows (approximate): 0
+0024.863 (0) Table wp_wfcrawlers: Rows added in this batch (next record: 0): 0 (uncompressed bytes in this segment=552) in 0.01 seconds
+0024.897 (0) Table wp_wfcrawlers: finishing file(s) (2, 0.3 KB)
+0024.927 (0) Table wp_wffilechanges: Total expected rows (approximate): 0
+0024.939 (0) Table wp_wffilechanges: Rows added in this batch (next record: 0): 0 (uncompressed bytes in this segment=452) in 0.01 seconds
+0024.973 (0) Table wp_wffilechanges: finishing file(s) (2, 0.3 KB)
+0025.049 (0) Table wp_wffilemods: Total expected rows (approximate): 2044
+0025.140 (0) Table wp_wffilemods: Rows added in this batch (next record: 2000): 1979 (uncompressed bytes in this segment=518717) in 0.09 seconds
+0025.173 (0) Table wp_wffilemods: finishing file(s) (2, 186.3 KB)
+0025.204 (0) Table wp_wfhits: Total expected rows (via COUNT): 9
+0025.214 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0025.242 (0) Table wp_wfhits: Rows added in this batch (next record: 9): 9 (uncompressed bytes in this segment=31609) in 0.04 seconds
+0025.274 (0) Table wp_wfhits: finishing file(s) (2, 4.1 KB)
+0025.306 (0) Table wp_wfhoover: Total expected rows (via COUNT): 0
+0025.330 (0) Table wp_wfhoover: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=476) in 0.03 seconds
+0025.363 (0) Table wp_wfhoover: finishing file(s) (2, 0.3 KB)
+0025.395 (0) Table wp_wfissues: Total expected rows (via COUNT): 3
+0025.406 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0025.432 (0) Table wp_wfissues: Rows added in this batch (next record: 21): 3 (uncompressed bytes in this segment=4467) in 0.04 seconds
+0025.462 (0) Table wp_wfissues: finishing file(s) (2, 1.7 KB)
+0025.488 (0) Table wp_wfknownfilelist: Total expected rows (approximate): 3942
+0025.560 (0) Table wp_wfknownfilelist: Rows added in this batch (next record: 3962): 3962 (uncompressed bytes in this segment=266752) in 0.07 seconds
+0025.593 (0) Table wp_wfknownfilelist: finishing file(s) (2, 35.7 KB)
+0025.619 (0) Table wp_wflivetraffichuman: Total expected rows (approximate): 0
+0025.630 (0) Table wp_wflivetraffichuman: Rows added in this batch (next record: 0): 0 (uncompressed bytes in this segment=648) in 0.01 seconds
+0025.667 (0) Table wp_wflivetraffichuman: finishing file(s) (2, 0.3 KB)
+0025.693 (0) Table wp_wflocs: Total expected rows (approximate): 1
+0025.721 (0) Table wp_wflocs: Rows added in this batch (next record: 1000): 1 (uncompressed bytes in this segment=809) in 0.03 seconds
+0025.777 (0) Table wp_wflocs: finishing file(s) (2, 0.4 KB)
+0025.808 (0) Table wp_wflogins: Total expected rows (via COUNT): 3
+0025.819 (0) Table is relatively small; fetch_rows will thus be: 20 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0025.843 (0) Table wp_wflogins: Rows added in this batch (next record: 3): 3 (uncompressed bytes in this segment=1367) in 0.04 seconds
+0025.874 (0) Table wp_wflogins: finishing file(s) (2, 0.6 KB)
+0025.905 (0) Table wp_wfls_2fa_secrets: Total expected rows (via COUNT): 0
+0025.928 (0) Table wp_wfls_2fa_secrets: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=681) in 0.03 seconds
+0025.965 (0) Table wp_wfls_2fa_secrets: finishing file(s) (2, 0.4 KB)
+0025.995 (0) Table wp_wfls_settings: Total expected rows (approximate): 20
+0026.007 (0) Table wp_wfls_settings: Rows added in this batch (next record: 1000): 20 (uncompressed bytes in this segment=1633) in 0.01 seconds
+0026.041 (0) Table wp_wfls_settings: finishing file(s) (2, 0.8 KB)
+0026.072 (0) Table wp_wfnotifications: Total expected rows (approximate): 2
+0026.085 (0) Table wp_wfnotifications: Rows added in this batch (next record: 1000): 3 (uncompressed bytes in this segment=1715) in 0.01 seconds
+0026.122 (0) Table wp_wfnotifications: finishing file(s) (2, 0.8 KB)
+0026.155 (0) Table wp_wfpendingissues: Total expected rows (via COUNT): 0
+0026.168 (0) Table wp_wfpendingissues: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=846) in 0.01 seconds
+0026.197 (0) Table wp_wfpendingissues: finishing file(s) (2, 0.4 KB)
+0026.225 (0) Table wp_wfreversecache: Total expected rows (approximate): 1
+0026.236 (0) Table wp_wfreversecache: Rows added in this batch (next record: 1000): 1 (uncompressed bytes in this segment=601) in 0.01 seconds
+0026.267 (0) Table wp_wfreversecache: finishing file(s) (2, 0.4 KB)
+0026.298 (0) Table wp_wfsnipcache: Total expected rows (via COUNT): 0
+0026.311 (0) Table wp_wfsnipcache: Rows added in this batch (next record: -1): 0 (uncompressed bytes in this segment=701) in 0.02 seconds
+0026.351 (0) Table wp_wfsnipcache: finishing file(s) (2, 0.4 KB)
+0026.391 (0) Table wp_wfstatus: Total expected rows (via COUNT): 275
+0026.406 (0) Table is relatively small; fetch_rows will thus be: 500 (allow_further_reductions=1, is_first_fetch=1, known_bigger_than_table=1)
+0026.437 (0) Table wp_wfstatus: Rows added in this batch (next record: 275): 275 (uncompressed bytes in this segment=26072) in 0.05 seconds
+0026.726 (0) Table wp_wfstatus: finishing file(s) (2, 4.8 KB)
+0026.765 (0) Table wp_wftrafficrates: Total expected rows (approximate): 0
+0026.790 (0) Table wp_wftrafficrates: Rows added in this batch (next record: 0): 0 (uncompressed bytes in this segment=566) in 0.03 seconds
+0026.837 (0) Table wp_wftrafficrates: finishing file(s) (2, 0.3 KB)
+0026.850 (0) backup_2022-07-13-1220_blackrock_88dbfce62281-db-table-wp_options.table.tmpr2439.gz (1/33/fopen): adding to final database dump
+0026.872 (0) backup_2022-07-13-1220_blackrock_88dbfce62281-db-table-wp_options.table.gz (2/33/fopen): adding to final database dump
+0026.883 (0) backup_2022-07-13-1220_blackrock_88dbfce62281-db-table-wp_users.table.tmpr2.gz (3/33/fopen): adding to final database dump
+0026.894 (0) backup_2022-07-13-1220_blackrock_88dbfce62281-db-table-wp_users.table.gz (4/33/fopen): adding to final database dump
+0026.906 (0) backup_2022-07-13-1220_blackrock_88dbfce62281-db-table-wp_usermeta.table.tmpr31.gz (5/33/fopen): adding to final database dump
+0026.918 (0) backup_2022-07-13-1220_blackrock_88dbfce62281-db-table-wp_usermeta.table.gz (6/33/fopen): adding to final database dump
+0026.929 (0) backup_2022-07-13-1220_blackrock_88dbfce62281-db-table-wp_commentmeta.table.tmpr0.gz (7/33/fopen): adding to final database dump
+0026.945 (0) backup_2022-07-13-1220_blackrock_88dbfce62281-db-table-wp_commentmeta.table.gz (8/33/fopen): adding to final database dump
+0026.960 (0) backup_2022-07-13-1220_blackrock_88dbfce62281-db-table-wp_comments.table.tmpr2.gz (9/33/fopen): adding to final database dump
+0026.971 (0) backup_2022-07-13-1220_blackrock_88dbfce62281-db-table-wp_comments.table.gz (10/33/fopen): adding to final database dump
+0026.981 (0) backup_2022-07-13-1220_blackrock_88dbfce62281-db-table-wp_links.table.tmpr0.gz (11/33/fopen): adding to final database dump
+0026.993 (0) backup_2022-07-13-1220_blackrock_88dbfce62281-db-table-wp_links.table.gz (12/33/fopen): adding to final database dump
+0027.002 (0) backup_2022-07-13-1220_blackrock_88dbfce62281-db-table-wp_postmeta.table.tmpr28454.gz (13/33/fopen): adding to final database dump
+0027.018 (0) backup_2022-07-13-1220_blackrock_88dbfce62281-db-table-wp_postmeta.table.gz (14/33/fopen): adding to final database dump
+0027.029 (0) backup_2022-07-13-1220_blackrock_88dbfce62281-db-table-wp_posts.table.tmpr248.gz (15/33/fopen): adding to final database dump
+0027.041 (0) backup_2022-07-13-1220_blackrock_88dbfce62281-db-table-wp_posts.table.gz (16/33/fopen): adding to final database dump
+0027.052 (0) backup_2022-07-13-1220_blackrock_88dbfce62281-db-table-wp_term_relationships.table.tmpr100001.gz (17/33/fopen): adding to final database dump
+0027.063 (0) backup_2022-07-13-1220_blackrock_88dbfce62281-db-table-wp_term_relationships.table.gz (18/33/fopen): adding to final database dump
+0027.075 (0) backup_2022-07-13-1220_blackrock_88dbfce62281-db-table-wp_term_taxonomy.table.tmpr4.gz (19/33/fopen): adding to final database dump
+0027.088 (0) backup_2022-07-13-1220_blackrock_88dbfce62281-db-table-wp_term_taxonomy.table.gz (20/33/fopen): adding to final database dump
+0027.100 (0) backup_2022-07-13-1220_blackrock_88dbfce62281-db-table-wp_termmeta.table.tmpr0.gz (21/33/fopen): adding to final database dump
+0027.112 (0) backup_2022-07-13-1220_blackrock_88dbfce62281-db-table-wp_termmeta.table.gz (22/33/fopen): adding to final database dump
+0027.124 (0) backup_2022-07-13-1220_blackrock_88dbfce62281-db-table-wp_terms.table.tmpr4.gz (23/33/fopen): adding to final database dump
+0027.136 (0) backup_2022-07-13-1220_blackrock_88dbfce62281-db-table-wp_terms.table.gz (24/33/fopen): adding to final database dump
+0027.145 (0) backup_2022-07-13-1220_blackrock_88dbfce62281-db-table-wp_wfblockediplog.table.tmpr1001.gz (25/33/fopen): adding to final database dump
+0027.157 (0) backup_2022-07-13-1220_blackrock_88dbfce62281-db-table-wp_wfblockediplog.table.gz (26/33/fopen): adding to final database dump
+0027.169 (0) backup_2022-07-13-1220_blackrock_88dbfce62281-db-table-wp_wfblocks7.table.tmpr0.gz (27/33/fopen): adding to final database dump
+0027.181 (0) backup_2022-07-13-1220_blackrock_88dbfce62281-db-table-wp_wfblocks7.table.gz (28/33/fopen): adding to final database dump
+0027.192 (0) backup_2022-07-13-1220_blackrock_88dbfce62281-db-table-wp_wfconfig.table.tmpr1001.gz (29/33/fopen): adding to final database dump
+0027.220 (0) backup_2022-07-13-1220_blackrock_88dbfce62281-db-table-wp_wfconfig.table.gz (30/33/fopen): adding to final database dump
+0027.228 (0) backup_2022-07-13-1220_blackrock_88dbfce62281-db-table-wp_wfcrawlers.table.tmpr1.gz (31/33/fopen): adding to final database dump
+0027.238 (0) backup_2022-07-13-1220_blackrock_88dbfce62281-db-table-wp_wfcrawlers.table.gz (32/33/fopen): adding to final database dump
+0027.248 (0) backup_2022-07-13-1220_blackrock_88dbfce62281-db-table-wp_wffilechanges.table.tmpr1.gz (33/33/fopen): adding to final database dump
+0027.260 (0) backup_2022-07-13-1220_blackrock_88dbfce62281-db-table-wp_wffilechanges.table.gz (34/33/fopen): adding to final database dump
+0027.271 (0) backup_2022-07-13-1220_blackrock_88dbfce62281-db-table-wp_wffilemods.table.tmpr2001.gz (35/33/fopen): adding to final database dump
+0027.285 (0) backup_2022-07-13-1220_blackrock_88dbfce62281-db-table-wp_wffilemods.table.gz (36/33/fopen): adding to final database dump
+0027.298 (0) backup_2022-07-13-1220_blackrock_88dbfce62281-db-table-wp_wfhits.table.tmpr10.gz (37/33/fopen): adding to final database dump
+0027.308 (0) backup_2022-07-13-1220_blackrock_88dbfce62281-db-table-wp_wfhits.table.gz (38/33/fopen): adding to final database dump
+0027.320 (0) backup_2022-07-13-1220_blackrock_88dbfce62281-db-table-wp_wfhoover.table.tmpr0.gz (39/33/fopen): adding to final database dump
+0027.332 (0) backup_2022-07-13-1220_blackrock_88dbfce62281-db-table-wp_wfhoover.table.gz (40/33/fopen): adding to final database dump
+0027.341 (0) backup_2022-07-13-1220_blackrock_88dbfce62281-db-table-wp_wfissues.table.tmpr22.gz (41/33/fopen): adding to final database dump
+0027.352 (0) backup_2022-07-13-1220_blackrock_88dbfce62281-db-table-wp_wfissues.table.gz (42/33/fopen): adding to final database dump
+0027.362 (0) backup_2022-07-13-1220_blackrock_88dbfce62281-db-table-wp_wfknownfilelist.table.tmpr3963.gz (43/33/fopen): adding to final database dump
+0027.378 (0) backup_2022-07-13-1220_blackrock_88dbfce62281-db-table-wp_wfknownfilelist.table.gz (44/33/fopen): adding to final database dump
+0027.390 (0) backup_2022-07-13-1220_blackrock_88dbfce62281-db-table-wp_wflivetraffichuman.table.tmpr1.gz (45/33/fopen): adding to final database dump
+0027.403 (0) backup_2022-07-13-1220_blackrock_88dbfce62281-db-table-wp_wflivetraffichuman.table.gz (46/33/fopen): adding to final database dump
+0027.418 (0) backup_2022-07-13-1220_blackrock_88dbfce62281-db-table-wp_wflocs.table.tmpr1001.gz (47/33/fopen): adding to final database dump
+0027.428 (0) backup_2022-07-13-1220_blackrock_88dbfce62281-db-table-wp_wflocs.table.gz (48/33/fopen): adding to final database dump
+0027.439 (0) backup_2022-07-13-1220_blackrock_88dbfce62281-db-table-wp_wflogins.table.tmpr4.gz (49/33/fopen): adding to final database dump
+0027.451 (0) backup_2022-07-13-1220_blackrock_88dbfce62281-db-table-wp_wflogins.table.gz (50/33/fopen): adding to final database dump
+0027.461 (0) backup_2022-07-13-1220_blackrock_88dbfce62281-db-table-wp_wfls_2fa_secrets.table.tmpr0.gz (51/33/fopen): adding to final database dump
+0027.481 (0) backup_2022-07-13-1220_blackrock_88dbfce62281-db-table-wp_wfls_2fa_secrets.table.gz (52/33/fopen): adding to final database dump
+0027.495 (0) backup_2022-07-13-1220_blackrock_88dbfce62281-db-table-wp_wfls_settings.table.tmpr1001.gz (53/33/fopen): adding to final database dump
+0027.505 (0) backup_2022-07-13-1220_blackrock_88dbfce62281-db-table-wp_wfls_settings.table.gz (54/33/fopen): adding to final database dump
+0027.519 (0) backup_2022-07-13-1220_blackrock_88dbfce62281-db-table-wp_wfnotifications.table.tmpr1001.gz (55/33/fopen): adding to final database dump
+0027.529 (0) backup_2022-07-13-1220_blackrock_88dbfce62281-db-table-wp_wfnotifications.table.gz (56/33/fopen): adding to final database dump
+0027.540 (0) backup_2022-07-13-1220_blackrock_88dbfce62281-db-table-wp_wfpendingissues.table.tmpr0.gz (57/33/fopen): adding to final database dump
+0027.564 (0) backup_2022-07-13-1220_blackrock_88dbfce62281-db-table-wp_wfpendingissues.table.gz (58/33/fopen): adding to final database dump
+0027.574 (0) backup_2022-07-13-1220_blackrock_88dbfce62281-db-table-wp_wfreversecache.table.tmpr1001.gz (59/33/fopen): adding to final database dump
+0027.584 (0) backup_2022-07-13-1220_blackrock_88dbfce62281-db-table-wp_wfreversecache.table.gz (60/33/fopen): adding to final database dump
+0027.594 (0) backup_2022-07-13-1220_blackrock_88dbfce62281-db-table-wp_wfsnipcache.table.tmpr0.gz (61/33/fopen): adding to final database dump
+0027.609 (0) backup_2022-07-13-1220_blackrock_88dbfce62281-db-table-wp_wfsnipcache.table.gz (62/33/fopen): adding to final database dump
+0027.621 (0) backup_2022-07-13-1220_blackrock_88dbfce62281-db-table-wp_wfstatus.table.tmpr276.gz (63/33/fopen): adding to final database dump
+0027.631 (0) backup_2022-07-13-1220_blackrock_88dbfce62281-db-table-wp_wfstatus.table.gz (64/33/fopen): adding to final database dump
+0027.643 (0) backup_2022-07-13-1220_blackrock_88dbfce62281-db-table-wp_wftrafficrates.table.tmpr1.gz (65/33/fopen): adding to final database dump
+0027.655 (0) backup_2022-07-13-1220_blackrock_88dbfce62281-db-table-wp_wftrafficrates.table.gz (66/33/fopen): adding to final database dump
+0027.678 (0) backup_2022-07-13-1220_blackrock_88dbfce62281-db.gz: finished writing out complete database file (1708.5 KB)
+0027.747 (0) Total database tables backed up: 33 (backup_2022-07-13-1220_blackrock_88dbfce62281-db.gz, size: 1749571, sha1: d6f88c9db4df8d98c842e9a39159b03b7a5c865c, sha256: ede6d48852c96153b30d533dab5cde7e3612f8c49296e668776958a20f4781db)
+0027.793 (0) backup_2022-07-13-1220_blackrock_88dbfce62281-plugins.zip: plugins: This file has not yet been successfully uploaded: will queue
+0027.804 (0) backup_2022-07-13-1220_blackrock_88dbfce62281-themes.zip: themes: This file has not yet been successfully uploaded: will queue
+0027.816 (0) backup_2022-07-13-1220_blackrock_88dbfce62281-uploads.zip: uploads: This file has not yet been successfully uploaded: will queue
+0027.828 (0) backup_2022-07-13-1220_blackrock_88dbfce62281-others.zip: others: This file has not yet been successfully uploaded: will queue
+0027.838 (0) backup_2022-07-13-1220_blackrock_88dbfce62281-db.gz: db: This file has not yet been successfully uploaded: will queue
+0027.850 (0) Saving backup history. Total backup size: 110.5 MB
+0027.870 (0) Requesting upload of the files that have not yet been successfully uploaded (5)
+0027.906 (0) Cloud backup selection (1/1): remotesend with instance (1/1) (last)
+0027.918 (0) Beginning dispatch of backup to remote (remotesend)
+0027.930 (0) remotesend: upload : attempt: backup_2022-07-13-1220_blackrock_88dbfce62281-plugins.zip
+0028.736 (0) remotesend: backup_2022-07-13-1220_blackrock_88dbfce62281-plugins.zip: existing size: 0
+0028.754 (0) Remote send upload: backup_2022-07-13-1220_blackrock_88dbfce62281-plugins.zip (chunks: 8, of size: 2097152) -> remotesend://https://wordsearch-ny.dev/blackrock-main/backup_2022-07-13-1220_blackrock_88dbfce62281-plugins.zip (0)
+0031.486 (0) Remotesend chunked upload: 12.6 % uploaded (1)
+0036.624 (0) Remotesend chunked upload: 25.1 % uploaded (2)
+0044.426 (0) Remotesend chunked upload: 37.7 % uploaded (3)
+0047.035 (0) Remotesend chunked upload: 50.2 % uploaded (4)
+0049.827 (0) Remotesend chunked upload: 62.8 % uploaded (5)
+0052.546 (0) Remotesend chunked upload: 75.3 % uploaded (6)
+0055.392 (0) Remotesend chunked upload: 87.9 % uploaded (7)
+0058.277 (0) Remotesend chunked upload: 100 % uploaded (8)
+0058.300 (0) Remote send upload: success
+0058.312 (0) Recording as successfully uploaded: backup_2022-07-13-1220_blackrock_88dbfce62281-plugins.zip
+0058.338 (0) Deleting local file: backup_2022-07-13-1220_blackrock_88dbfce62281-plugins.zip: OK
+0058.349 (0) Deleting zip manifest (backup_2022-07-13-1220_blackrock_88dbfce62281-plugins.zip.list.tmp)
+0058.360 (0) remotesend: upload : attempt: backup_2022-07-13-1220_blackrock_88dbfce62281-themes.zip
+0059.130 (0) remotesend: backup_2022-07-13-1220_blackrock_88dbfce62281-themes.zip: existing size: 0
+0059.142 (0) Remote send upload: backup_2022-07-13-1220_blackrock_88dbfce62281-themes.zip (chunks: 6, of size: 2097152) -> remotesend://https://wordsearch-ny.dev/blackrock-main/backup_2022-07-13-1220_blackrock_88dbfce62281-themes.zip (0)
+0061.918 (0) Remotesend chunked upload: 17.1 % uploaded (1)
+0065.948 (0) Remotesend chunked upload: 34.3 % uploaded (2)
+0069.330 (0) Remotesend chunked upload: 51.4 % uploaded (3)
+0076.344 (0) Remotesend chunked upload: 68.5 % uploaded (4)
+0088.341 (0) Remotesend chunked upload: 85.6 % uploaded (5)
+0091.454 (0) Remotesend chunked upload: 100 % uploaded (6)
+0091.473 (0) Remote send upload: success
+0091.485 (0) Recording as successfully uploaded: backup_2022-07-13-1220_blackrock_88dbfce62281-themes.zip
+0091.505 (0) Deleting local file: backup_2022-07-13-1220_blackrock_88dbfce62281-themes.zip: OK
+0091.530 (0) Deleting zip manifest (backup_2022-07-13-1220_blackrock_88dbfce62281-themes.zip.list.tmp)
+0091.540 (0) remotesend: upload : attempt: backup_2022-07-13-1220_blackrock_88dbfce62281-uploads.zip
+0092.301 (0) remotesend: backup_2022-07-13-1220_blackrock_88dbfce62281-uploads.zip: existing size: 0
+0092.314 (0) Remote send upload: backup_2022-07-13-1220_blackrock_88dbfce62281-uploads.zip (chunks: 39, of size: 2097152) -> remotesend://https://wordsearch-ny.dev/blackrock-main/backup_2022-07-13-1220_blackrock_88dbfce62281-uploads.zip (0)
+0095.074 (0) Remotesend chunked upload: 2.6 % uploaded (1)
+0100.641 (0) Remotesend chunked upload: 5.1 % uploaded (2)
+0105.443 (0) Remotesend chunked upload: 7.7 % uploaded (3)
+0109.224 (0) Remotesend chunked upload: 10.3 % uploaded (4)
+0112.242 (0) Remotesend chunked upload: 12.8 % uploaded (5)
+0115.073 (0) Remotesend chunked upload: 15.4 % uploaded (6)
+0117.685 (0) Remotesend chunked upload: 18 % uploaded (7)
+0126.581 (0) Remotesend chunked upload: 20.5 % uploaded (8)
+0129.329 (0) Remotesend chunked upload: 23.1 % uploaded (9)
+0140.244 (0) Remotesend chunked upload: 25.7 % uploaded (10)
+0143.523 (0) Remotesend chunked upload: 28.2 % uploaded (11)
+0146.254 (0) Remotesend chunked upload: 30.8 % uploaded (12)
+0149.205 (0) Remotesend chunked upload: 33.4 % uploaded (13)
+0151.957 (0) Remotesend chunked upload: 35.9 % uploaded (14)
+0159.582 (0) Remotesend chunked upload: 38.5 % uploaded (15)
+0162.238 (0) Remotesend chunked upload: 41.1 % uploaded (16)
+0164.876 (0) Remotesend chunked upload: 43.6 % uploaded (17)
+0172.202 (0) Remotesend chunked upload: 46.2 % uploaded (18)
+0178.346 (0) Remotesend chunked upload: 48.8 % uploaded (19)
+0181.375 (0) Remotesend chunked upload: 51.3 % uploaded (20)
+0197.460 (0) Remotesend chunked upload: 53.9 % uploaded (21)
+0202.193 (0) Remotesend chunked upload: 56.5 % uploaded (22)
+0206.126 (0) Remotesend chunked upload: 59 % uploaded (23)
+0212.885 (0) Remotesend chunked upload: 61.6 % uploaded (24)
+0222.052 (0) Remotesend chunked upload: 64.2 % uploaded (25)
+0225.964 (0) Remotesend chunked upload: 66.7 % uploaded (26)
+0237.058 (0) Remotesend chunked upload: 69.3 % uploaded (27)
+0239.810 (0) Remotesend chunked upload: 71.9 % uploaded (28)
+0242.473 (0) Remotesend chunked upload: 74.4 % uploaded (29)
+0245.598 (0) Remotesend chunked upload: 77 % uploaded (30)
+0252.807 (0) Remotesend chunked upload: 79.6 % uploaded (31)
+0255.585 (0) The scheduled resumption is within 45 seconds - will reschedule
+0255.611 (0) Rescheduling resumption 1: moving to 345 seconds from now (1657715457)
+0255.657 (0) To decrease the likelihood of overlaps, increasing resumption interval to: 300 + 45 = 345
+0255.669 (0) Remotesend chunked upload: 82.1 % uploaded (32)
+0262.573 (0) Remotesend chunked upload: 84.7 % uploaded (33)
+0265.345 (0) Remotesend chunked upload: 87.3 % uploaded (34)
+0270.777 (0) Remotesend chunked upload: 89.8 % uploaded (35)
+0273.519 (0) Remotesend chunked upload: 92.4 % uploaded (36)
+0277.487 (0) Remotesend chunked upload: 95 % uploaded (37)
+0281.240 (0) Remotesend chunked upload: 97.5 % uploaded (38)
+0283.971 (0) Remotesend chunked upload: 100 % uploaded (39)
+0283.992 (0) Remote send upload: success
+0284.004 (0) Recording as successfully uploaded: backup_2022-07-13-1220_blackrock_88dbfce62281-uploads.zip
+0284.034 (0) Deleting local file: backup_2022-07-13-1220_blackrock_88dbfce62281-uploads.zip: OK
+0284.044 (0) Deleting zip manifest (backup_2022-07-13-1220_blackrock_88dbfce62281-uploads.zip.list.tmp)
+0284.056 (0) remotesend: upload : attempt: backup_2022-07-13-1220_blackrock_88dbfce62281-others.zip
+0284.859 (0) remotesend: backup_2022-07-13-1220_blackrock_88dbfce62281-others.zip: existing size: 0
+0284.871 (0) Remote send upload: backup_2022-07-13-1220_blackrock_88dbfce62281-others.zip (chunks: 2, of size: 2097152) -> remotesend://https://wordsearch-ny.dev/blackrock-main/backup_2022-07-13-1220_blackrock_88dbfce62281-others.zip (0)
+0287.627 (0) Remotesend chunked upload: 60.2 % uploaded (1)
+0290.133 (0) Remotesend chunked upload: 100 % uploaded (2)
+0290.162 (0) Remote send upload: success
+0290.175 (0) Recording as successfully uploaded: backup_2022-07-13-1220_blackrock_88dbfce62281-others.zip
+0290.201 (0) Deleting local file: backup_2022-07-13-1220_blackrock_88dbfce62281-others.zip: OK
+0290.216 (0) Deleting zip manifest (backup_2022-07-13-1220_blackrock_88dbfce62281-others.zip.list.tmp)
+0290.232 (0) remotesend: upload : attempt: backup_2022-07-13-1220_blackrock_88dbfce62281-db.gz
+0290.980 (0) remotesend: backup_2022-07-13-1220_blackrock_88dbfce62281-db.gz: existing size: 0
+0290.996 (0) Remote send upload: backup_2022-07-13-1220_blackrock_88dbfce62281-db.gz (chunks: 1, of size: 2097152) -> remotesend://https://wordsearch-ny.dev/blackrock-main/backup_2022-07-13-1220_blackrock_88dbfce62281-db.gz (0)
+0293.589 (0) Remotesend chunked upload: 100 % uploaded (1)
+0293.617 (0) Remote send upload: success
+0293.630 (0) Recording as successfully uploaded: backup_2022-07-13-1220_blackrock_88dbfce62281-db.gz
+0293.661 (0) Deleting local file: backup_2022-07-13-1220_blackrock_88dbfce62281-db.gz: OK
+0294.398 (0) Prune old backups from local store: skipping, as this was a remote send operation
+0294.412 (0) Resume backup (88dbfce62281, 0): finish run
+0294.464 (0) Decremented the semaphore (fd) by 1
+0294.494 (0) Semaphore (fd) unlocked
+0294.510 (0) There were no errors in the uploads, so the 'resume' event (1) is being unscheduled
+0294.555 (0) No email will/can be sent - the user has not configured an email address.
+0294.567 (0) The backup apparently succeeded and is now complete. To complete your migration/clone, you should now log in to the remote site and restore the backup set.

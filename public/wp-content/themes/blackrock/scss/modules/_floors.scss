@@ -87,6 +87,7 @@
 				.floor-header_name-sqft {
 					position: absolute;
 					left: calc((100vw / 24) + 10px);
+					top: 0;
 					display: none;
 
 					@media #{$mq-tablet-port} {

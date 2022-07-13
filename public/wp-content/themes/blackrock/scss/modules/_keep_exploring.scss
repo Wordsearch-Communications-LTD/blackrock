@@ -1,5 +1,6 @@
 .keep-exploring {
     margin-top: 100px;
+    margin-bottom: 100px;
 
     @media #{$mq-tablet-port} {
         margin-top: calc(100vw / 12);

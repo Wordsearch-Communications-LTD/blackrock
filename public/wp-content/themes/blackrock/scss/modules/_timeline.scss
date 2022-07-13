@@ -17,7 +17,7 @@
 		@media #{$mq-tablet-desk} {
 			grid-template-columns: 5fr 1fr 6fr;
 			grid-template-areas: "timeline-nav . timeline-data";
-			margin: 0 40px 0 40px;
+			margin: 0 40px 100px 40px;
 		}
 
 		.timeline_data .content {
@@ -25,13 +25,35 @@
 				display: block;
 			}
 		}
+
+		.number {
+			@media #{$mq-desk-small} {
+				line-height: 52px !important;
+			}
+		}
+
+		.title {
+
+			@media #{$mq-tablet-desk} {
+				width: calc(50vw - 210px);
+			}
+
+			@media #{$mq-desk-small} {
+
+				line-height: 52px !important;
+			}
+		}
 	}
 
 	#legal-intro-text {
 		p {
 			margin: 0;
-			padding: 20px 0;
+			padding: 20px 20px 20px 20px;
 			@include body-20;
+
+			@media #{$mq-tablet-port} {
+				padding: 40px 0px 40px 0px;
+			}
 		}
 	}
 
@@ -129,6 +151,10 @@
 				margin-right: 0;
 			}
 
+			@media #{$mq-tablet-desk} {
+				@include headline-50;
+			}
+
 			span {
 				vertical-align: top;
 				display: inline-block;
@@ -136,15 +162,22 @@
 			}
 
 			span.number {
-				margin-right: 40px;
+				margin-right: 20px;
 			}
 
 			span.title {
 				display: inline-block;
-				@include headline-20;
+				@include headline-30;
 				line-height: 39px;
 				padding: 0;
 				margin: 0;
+
+				@media #{$mq-desk-small} {
+					@include headline-50;
+					line-height: 39px;
+					padding: 0;
+					margin: 0;
+				}
 			}
 
 			&:hover {
@@ -214,6 +247,14 @@
 
 					@media #{$mq-tablet-port} {
 						max-width: none;
+					}
+
+					@media #{$mq-desk-small} {
+
+						@include headline-50;
+						line-height: 39px;
+						padding: 0;
+						margin: 0;
 					}
 				}
 			}

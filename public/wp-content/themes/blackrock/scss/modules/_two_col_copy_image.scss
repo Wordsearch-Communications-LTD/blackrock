@@ -1,7 +1,7 @@
 .two-col-copy-image {
     margin-top: 80px;
 
-    @media #{$mq-tablet-port}{
+    @media #{$mq-tablet-port} {
         margin-top: calc(100vw / 12);
     }
 
@@ -10,15 +10,20 @@
         grid-area: copy;
         padding: 0 20px;
 
-        .left { grid-area: left;}
-        .right { grid-area: right;}
-
-        @media #{$mq-tablet-port}{
-            grid-template-columns: 1fr;
-            grid-template-areas: "left" "right";
+        .left {
+            grid-area: left;
         }
 
-        @media #{$mq-tablet-desk}{
+        .right {
+            grid-area: right;
+        }
+
+        @media #{$mq-tablet-port} {
+            grid-template-columns: 1fr;
+            grid-template-areas: "left""right";
+        }
+
+        @media #{$mq-tablet-desk} {
             padding: 0 0px;
             grid-template-columns: 5fr 1fr 6fr;
             margin: 0 40px 0 40px;
@@ -27,16 +32,16 @@
 
         h2 {
             @include headline-30;
-            
-            @media #{$mq-tablet-port}{
+
+            @media #{$mq-tablet-port} {
                 @include headline-50;
             }
         }
 
         p {
             @include body-20;
-            
-            @media #{$mq-tablet-port}{
+
+            @media #{$mq-tablet-port} {
                 @include body-35;
             }
         }
@@ -45,26 +50,26 @@
     &.has-image .copy {
         margin-bottom: 100px;
 
-        @media #{$mq-tablet-port}{
+        @media #{$mq-tablet-port} {
             margin-bottom: calc(100vw / 12);
         }
     }
-    
+
     .image-container {
         @include grid;
         margin: 0 20px 0 20px;
 
-        @media #{$mq-tablet-port}{
+        @media #{$mq-tablet-port} {
             margin: 0 40px 0 40px;
             grid-template-columns: 1fr;
-            grid-template-areas:  
+            grid-template-areas:
                 "img"
                 "cap";
         }
 
-        @media #{$mq-tablet-desk}{
+        @media #{$mq-tablet-desk} {
             grid-template-columns: 8fr 4fr;
-            grid-template-areas:  
+            grid-template-areas:
                 "img ."
                 "cap .";
         }
@@ -94,7 +99,7 @@
 
     &:after {
         display: block;
-        content:'';
+        content: '';
         pointer-events: none;
         position: absolute;
         width: 100%;
@@ -112,13 +117,13 @@
         content: '';
         position: absolute;
         z-index: 3;
-        width: 40px;
-        height: 40px;
+        width: 50px;
+        height: 50px;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         background: url(../img/icons/image-expand.svg) 0 0 no-repeat;
-        background-size: 40px 40px;
+        background-size: 50px 50px;
         opacity: 0;
         transition: all 0.3s ease 0s;
     }

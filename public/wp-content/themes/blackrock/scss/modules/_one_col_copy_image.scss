@@ -36,6 +36,31 @@
 .one-col-copy-image.page-hero {
     margin-top: 120px;
 
+    .mobile-image-container {
+        width: 100vw;
+        max-height: 600px;
+        height: calc(100vw * 1.152);
+        overflow: hidden;
+
+        @media #{$mq-tablet-port} {
+            width: auto;
+            height: auto;
+        }
+
+        img {
+            position: relative;
+            height: 100%;
+            width: auto;
+            left: 50%;
+            transform: translateX(-50%);
+
+            @media #{$mq-tablet-port} {
+                height: auto;
+                width: 100%;
+            }
+        }
+    }
+
     .copy {
         margin-top: 80px;
         margin-bottom: 80px;

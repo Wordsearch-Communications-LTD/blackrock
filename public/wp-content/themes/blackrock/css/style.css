@@ -1095,6 +1095,7 @@ a.button:hover svg {
 .floors .floor-list .floor header .floor-header_name-sqft {
   position: absolute;
   left: calc((100vw / 24) + 10px);
+  top: 0;
   display: none;
 }
 @media (min-width: 768px) {
@@ -1103,34 +1104,34 @@ a.button:hover svg {
     display: block;
   }
 }
-/* line 97, ../scss/modules/_floors.scss */
+/* line 98, ../scss/modules/_floors.scss */
 .floors .floor-list .floor header .floor-header_floor-number {
   margin-left: 10px;
 }
-/* line 102, ../scss/modules/_floors.scss */
+/* line 103, ../scss/modules/_floors.scss */
 .floors .floor-list .floor.expanded {
   background-color: var(--availableColor);
   height: auto;
 }
 @media (min-width: 768px) {
-  /* line 102, ../scss/modules/_floors.scss */
+  /* line 103, ../scss/modules/_floors.scss */
   .floors .floor-list .floor.expanded {
     height: 460px;
   }
 }
-/* line 113, ../scss/modules/_floors.scss */
+/* line 114, ../scss/modules/_floors.scss */
 .floors .floor-list .floor.expanded header {
   display: grid;
   grid-template-columns: 3fr 9fr;
   grid-template-areas: "floor-num floor-sqft";
 }
 @media (min-width: 768px) {
-  /* line 113, ../scss/modules/_floors.scss */
+  /* line 114, ../scss/modules/_floors.scss */
   .floors .floor-list .floor.expanded header {
     grid-template-columns: 2fr 10fr;
   }
 }
-/* line 123, ../scss/modules/_floors.scss */
+/* line 124, ../scss/modules/_floors.scss */
 .floors .floor-list .floor.expanded header span {
   font-weight: normal;
   font-size: 30px;
@@ -1141,7 +1142,7 @@ a.button:hover svg {
   padding-top: 10px;
 }
 @media (min-width: 768px) {
-  /* line 123, ../scss/modules/_floors.scss */
+  /* line 124, ../scss/modules/_floors.scss */
   .floors .floor-list .floor.expanded header span {
     font-weight: normal;
     font-size: 50px;
@@ -1151,54 +1152,54 @@ a.button:hover svg {
     font-family: "PPNeueMontreal-Regular";
   }
 }
-/* line 132, ../scss/modules/_floors.scss */
+/* line 133, ../scss/modules/_floors.scss */
 .floors .floor-list .floor.expanded header .floor-header_floor-number {
   grid-area: floor-num;
 }
-/* line 136, ../scss/modules/_floors.scss */
+/* line 137, ../scss/modules/_floors.scss */
 .floors .floor-list .floor.expanded header .floor-header_name-sqft {
   grid-area: floor-sqft;
   position: static;
   display: block;
 }
 @media (min-width: 768px) {
-  /* line 136, ../scss/modules/_floors.scss */
+  /* line 137, ../scss/modules/_floors.scss */
   .floors .floor-list .floor.expanded header .floor-header_name-sqft {
     display: block;
   }
 }
-/* line 148, ../scss/modules/_floors.scss */
+/* line 149, ../scss/modules/_floors.scss */
 .floors .floor-list .floor.expanded .unit {
   display: none;
 }
-/* line 153, ../scss/modules/_floors.scss */
+/* line 154, ../scss/modules/_floors.scss */
 .floors .floor-list .floor .floor-number {
   position: absolute;
   z-index: 2;
   color: #FFFFFF;
 }
-/* line 159, ../scss/modules/_floors.scss */
+/* line 160, ../scss/modules/_floors.scss */
 .floors .floor-list .floor .unit {
   flex: 1;
   height: 35px;
   color: #FFFFFF;
 }
-/* line 164, ../scss/modules/_floors.scss */
+/* line 165, ../scss/modules/_floors.scss */
 .floors .floor-list .floor .unit .close-unit {
   display: none;
 }
-/* line 168, ../scss/modules/_floors.scss */
+/* line 169, ../scss/modules/_floors.scss */
 .floors .floor-list .floor .unit .content {
   display: none;
 }
 @media (min-width: 768px) {
-  /* line 168, ../scss/modules/_floors.scss */
+  /* line 169, ../scss/modules/_floors.scss */
   .floors .floor-list .floor .unit .content {
     grid-template-columns: repeat(12, 1fr);
     grid-template-areas: ". . data data data . img img img img img . .";
   }
 }
-/* line 176, ../scss/modules/_floors.scss */
+/* line 177, ../scss/modules/_floors.scss */
 .floors .floor-list .floor .unit .content .data {
   grid-area: data;
   display: block;
@@ -1207,7 +1208,7 @@ a.button:hover svg {
   padding: 0;
   overflow: hidden;
 }
-/* line 184, ../scss/modules/_floors.scss */
+/* line 185, ../scss/modules/_floors.scss */
 .floors .floor-list .floor .unit .content .data li {
   display: grid;
   padding: 15px 0;
@@ -1215,13 +1216,13 @@ a.button:hover svg {
   grid-template-columns: 2fr 1fr;
   gap: 0px 10px;
 }
-/* line 191, ../scss/modules/_floors.scss */
+/* line 192, ../scss/modules/_floors.scss */
 .floors .floor-list .floor .unit .content .data li:first-of-type {
   border-style: none;
   display: block;
   padding-top: 0;
 }
-/* line 197, ../scss/modules/_floors.scss */
+/* line 198, ../scss/modules/_floors.scss */
 .floors .floor-list .floor .unit .content .data li span {
   display: block;
   overflow: hidden;
@@ -1234,18 +1235,18 @@ a.button:hover svg {
   margin-bottom: 0;
   padding-top: 0;
 }
-/* line 205, ../scss/modules/_floors.scss */
+/* line 206, ../scss/modules/_floors.scss */
 .floors .floor-list .floor .unit .content .data li span:last-of-type {
   justify-self: end;
 }
-/* line 210, ../scss/modules/_floors.scss */
+/* line 211, ../scss/modules/_floors.scss */
 .floors .floor-list .floor .unit .content .data li a {
   display: block;
   overflow: hidden;
   width: 32px;
   height: 32px;
 }
-/* line 217, ../scss/modules/_floors.scss */
+/* line 218, ../scss/modules/_floors.scss */
 .floors .floor-list .floor .unit .content .data li h3 {
   padding-top: 0;
   margin-top: 0;
@@ -1258,11 +1259,11 @@ a.button:hover svg {
   margin-bottom: 0;
   font-weight: normal;
 }
-/* line 227, ../scss/modules/_floors.scss */
+/* line 228, ../scss/modules/_floors.scss */
 .floors .floor-list .floor .unit .content .data li svg path {
   stroke: #FFFFFF;
 }
-/* line 234, ../scss/modules/_floors.scss */
+/* line 235, ../scss/modules/_floors.scss */
 .floors .floor-list .floor .unit .content .image {
   display: block;
   overflow: hidden;
@@ -1270,19 +1271,19 @@ a.button:hover svg {
   padding-top: 40px;
 }
 @media (min-width: 768px) {
-  /* line 234, ../scss/modules/_floors.scss */
+  /* line 235, ../scss/modules/_floors.scss */
   .floors .floor-list .floor .unit .content .image {
     padding-top: 0;
   }
 }
-/* line 246, ../scss/modules/_floors.scss */
+/* line 247, ../scss/modules/_floors.scss */
 .floors .floor-list .floor .unit.selected {
   width: 100%;
   display: block;
   position: relative;
   height: auto;
 }
-/* line 252, ../scss/modules/_floors.scss */
+/* line 253, ../scss/modules/_floors.scss */
 .floors .floor-list .floor .unit.selected .close-unit {
   display: block;
   position: absolute;
@@ -1290,19 +1291,19 @@ a.button:hover svg {
   right: 10px;
   z-index: 2;
 }
-/* line 260, ../scss/modules/_floors.scss */
+/* line 261, ../scss/modules/_floors.scss */
 .floors .floor-list .floor .unit.selected .content {
   display: block;
   padding: 40px 20px 20px 20px;
 }
 @media (min-width: 768px) {
-  /* line 260, ../scss/modules/_floors.scss */
+  /* line 261, ../scss/modules/_floors.scss */
   .floors .floor-list .floor .unit.selected .content {
     display: grid;
     padding: 40px 0 0 0;
   }
 }
-/* line 274, ../scss/modules/_floors.scss */
+/* line 275, ../scss/modules/_floors.scss */
 .floors .close-unit {
   position: absolute;
   top: 20px;
@@ -1314,16 +1315,16 @@ a.button:hover svg {
   padding: 0;
   background-color: transparent;
 }
-/* line 285, ../scss/modules/_floors.scss */
+/* line 286, ../scss/modules/_floors.scss */
 .floors .close-unit svg {
   pointer-events: none;
   transition: all 0.3s ease 0s;
 }
-/* line 289, ../scss/modules/_floors.scss */
+/* line 290, ../scss/modules/_floors.scss */
 .floors .close-unit svg path {
   stroke: #FFFFFF;
 }
-/* line 295, ../scss/modules/_floors.scss */
+/* line 296, ../scss/modules/_floors.scss */
 .floors .close-unit:hover svg {
   transform: rotate(90deg);
 }
@@ -1411,7 +1412,7 @@ a.button:hover svg {
 .contact-module-container .contacts-container .left .copy img {
   width: 100px;
   margin-left: 20px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 @media (min-width: 768px) {
   /* line 50, ../scss/modules/_contact.scss */
@@ -1420,7 +1421,7 @@ a.button:hover svg {
     margin-left: 0;
     margin-bottom: 0;
     margin-top: calc(100vw / 12);
-    margin-bottom: calc(100vw / 24);
+    margin-bottom: 40px;
   }
 }
 @media (min-width: 768px) {
@@ -1477,45 +1478,50 @@ a.button:hover svg {
 /* line 100, ../scss/modules/_contact.scss */
 .contact-module-container .contacts-container .contacts .contact a {
   color: #FFFFFF;
+  text-decoration: none;
 }
 /* line 104, ../scss/modules/_contact.scss */
+.contact-module-container .contacts-container .contacts .contact a:hover {
+  text-decoration: underline;
+}
+/* line 109, ../scss/modules/_contact.scss */
 .contact-module-container .contacts-container .contacts .contact:last-child {
   padding-bottom: 40px;
 }
 @media (min-width: 768px) {
-  /* line 104, ../scss/modules/_contact.scss */
+  /* line 109, ../scss/modules/_contact.scss */
   .contact-module-container .contacts-container .contacts .contact:last-child {
     padding-bottom: 0;
   }
 }
-/* line 114, ../scss/modules/_contact.scss */
+/* line 119, ../scss/modules/_contact.scss */
 .contact-module-container .contacts-container .image-container {
   grid-area: img;
   line-height: 0;
 }
 @media (min-width: 768px) {
-  /* line 114, ../scss/modules/_contact.scss */
+  /* line 119, ../scss/modules/_contact.scss */
   .contact-module-container .contacts-container .image-container {
     position: sticky;
     top: 0;
   }
 }
-/* line 125, ../scss/modules/_contact.scss */
+/* line 130, ../scss/modules/_contact.scss */
 .contact-module-container .contact-logo {
   width: calc((100vw - 80px) / 12);
 }
 
-/* line 130, ../scss/modules/_contact.scss */
+/* line 135, ../scss/modules/_contact.scss */
 .contact-open .contact-module-container {
   transform: translateX(0);
 }
 
-/* line 134, ../scss/modules/_contact.scss */
+/* line 139, ../scss/modules/_contact.scss */
 .home .contact-module-container {
   margin-top: 0;
 }
 @media (min-width: 768px) {
-  /* line 134, ../scss/modules/_contact.scss */
+  /* line 139, ../scss/modules/_contact.scss */
   .home .contact-module-container {
     margin-top: calc((100vh - 80px) *-1);
   }
@@ -2122,6 +2128,7 @@ a.button:hover svg {
 /* line 1, ../scss/modules/_keep_exploring.scss */
 .keep-exploring {
   margin-top: 100px;
+  margin-bottom: 100px;
 }
 @media (min-width: 768px) {
   /* line 1, ../scss/modules/_keep_exploring.scss */
@@ -2130,14 +2137,14 @@ a.button:hover svg {
   }
 }
 @media (min-width: 768px) {
-  /* line 8, ../scss/modules/_keep_exploring.scss */
+  /* line 9, ../scss/modules/_keep_exploring.scss */
   .keep-exploring .title {
     display: grid;
     margin: 0 40px;
     column-gap: 20px;
   }
 }
-/* line 11, ../scss/modules/_keep_exploring.scss */
+/* line 12, ../scss/modules/_keep_exploring.scss */
 .keep-exploring .title h2 {
   font-weight: normal;
   font-size: 30px;
@@ -2149,7 +2156,7 @@ a.button:hover svg {
   padding: 0 20px;
 }
 @media (min-width: 768px) {
-  /* line 11, ../scss/modules/_keep_exploring.scss */
+  /* line 12, ../scss/modules/_keep_exploring.scss */
   .keep-exploring .title h2 {
     font-weight: normal;
     font-size: 50px;
@@ -2163,7 +2170,7 @@ a.button:hover svg {
   }
 }
 @media (min-width: 768px) {
-  /* line 25, ../scss/modules/_keep_exploring.scss */
+  /* line 26, ../scss/modules/_keep_exploring.scss */
   .keep-exploring .blocks {
     display: grid;
     margin: 0 40px;
@@ -2171,12 +2178,12 @@ a.button:hover svg {
   }
 }
 @media (min-width: 768px) {
-  /* line 25, ../scss/modules/_keep_exploring.scss */
+  /* line 26, ../scss/modules/_keep_exploring.scss */
   .keep-exploring .blocks {
     grid-template-columns: 1fr 1fr;
   }
 }
-/* line 32, ../scss/modules/_keep_exploring.scss */
+/* line 33, ../scss/modules/_keep_exploring.scss */
 .keep-exploring .blocks .link-text {
   display: block;
   color: #000000;
@@ -2193,7 +2200,7 @@ a.button:hover svg {
   margin-bottom: 30px;
 }
 @media (min-width: 768px) {
-  /* line 32, ../scss/modules/_keep_exploring.scss */
+  /* line 33, ../scss/modules/_keep_exploring.scss */
   .keep-exploring .blocks .link-text {
     margin-left: 0;
     margin-bottom: 0;
@@ -2204,14 +2211,14 @@ a.button:hover svg {
     font-family: "PPNeueMontreal-Regular";
   }
 }
-/* line 48, ../scss/modules/_keep_exploring.scss */
+/* line 49, ../scss/modules/_keep_exploring.scss */
 .keep-exploring .blocks .link-text svg {
   display: inline-block;
   position: relative;
   transform: translate(5px, 5px);
   transition: all 0.3s ease 0s;
 }
-/* line 56, ../scss/modules/_keep_exploring.scss */
+/* line 57, ../scss/modules/_keep_exploring.scss */
 .keep-exploring .blocks .link-image {
   display: block;
   height: auto;
@@ -2221,7 +2228,7 @@ a.button:hover svg {
   position: relative;
   line-height: 0;
 }
-/* line 65, ../scss/modules/_keep_exploring.scss */
+/* line 66, ../scss/modules/_keep_exploring.scss */
 .keep-exploring .blocks .link-image:after {
   display: block;
   content: '';
@@ -2236,29 +2243,29 @@ a.button:hover svg {
   opacity: 0;
   transition: all 0.3s ease 0s;
 }
-/* line 83, ../scss/modules/_keep_exploring.scss */
+/* line 84, ../scss/modules/_keep_exploring.scss */
 .keep-exploring .blocks .explore-block:hover a {
   color: #0627CA;
 }
-/* line 86, ../scss/modules/_keep_exploring.scss */
+/* line 87, ../scss/modules/_keep_exploring.scss */
 .keep-exploring .blocks .explore-block:hover a.link-image:after {
   opacity: 1;
 }
-/* line 90, ../scss/modules/_keep_exploring.scss */
+/* line 91, ../scss/modules/_keep_exploring.scss */
 .keep-exploring .blocks .explore-block:hover a svg {
   transform: translate(10px, 5px);
 }
-/* line 93, ../scss/modules/_keep_exploring.scss */
+/* line 94, ../scss/modules/_keep_exploring.scss */
 .keep-exploring .blocks .explore-block:hover a svg path {
   stroke: #0627CA;
 }
 
-/* line 105, ../scss/modules/_keep_exploring.scss */
+/* line 106, ../scss/modules/_keep_exploring.scss */
 .page-black .keep-exploring .blocks .link-text,
 .page-black .keep-exploring .blocks .explore-block:hover a {
   color: #FFFFFF;
 }
-/* line 111, ../scss/modules/_keep_exploring.scss */
+/* line 112, ../scss/modules/_keep_exploring.scss */
 .page-black .keep-exploring .blocks .link-text svg path,
 .page-black .keep-exploring .blocks .explore-block:hover a svg path {
   stroke: #FFFFFF;
@@ -2354,36 +2361,106 @@ a.button:hover svg {
 .map .map-container .maps {
   position: relative;
   grid-area: maps;
+  overflow: scroll;
 }
-/* line 60, ../scss/modules/_map.scss */
+@media (min-width: 768px) {
+  /* line 56, ../scss/modules/_map.scss */
+  .map .map-container .maps {
+    overflow: hidden;
+  }
+}
+/* line 66, ../scss/modules/_map.scss */
 .map .map-container .maps #main-map {
   position: relative;
   top: 0;
   left: 0;
   z-index: 1;
 }
-/* line 67, ../scss/modules/_map.scss */
+/* line 73, ../scss/modules/_map.scss */
 .map .map-container .maps .map-layer {
   position: absolute;
   top: 0;
   left: 0;
   opacity: 0;
 }
-/* line 73, ../scss/modules/_map.scss */
+/* line 79, ../scss/modules/_map.scss */
 .map .map-container .maps .map-layer:nth-child(2) {
   z-index: 2;
 }
-/* line 77, ../scss/modules/_map.scss */
+/* line 83, ../scss/modules/_map.scss */
 .map .map-container .maps .map-layer:nth-child(3) {
   z-index: 3;
 }
-/* line 81, ../scss/modules/_map.scss */
+/* line 87, ../scss/modules/_map.scss */
 .map .map-container .maps .map-layer:nth-child(4) {
   z-index: 4;
 }
-/* line 85, ../scss/modules/_map.scss */
+/* line 91, ../scss/modules/_map.scss */
 .map .map-container .maps .map-layer.show {
   opacity: 1;
+}
+/* line 96, ../scss/modules/_map.scss */
+.map .map-container .maps img {
+  height: calc(100vw * 1.5);
+  width: auto;
+}
+@media (min-width: 768px) {
+  /* line 96, ../scss/modules/_map.scss */
+  .map .map-container .maps img {
+    width: 100%;
+    height: auto;
+  }
+}
+/* line 107, ../scss/modules/_map.scss */
+.map .map-container .maps-scrollable-container {
+  display: block;
+  width: calc((100vw * 1.152) * 0.86);
+  height: calc(100vw * 1.152);
+  line-height: 0;
+}
+@media (min-width: 768px) {
+  /* line 107, ../scss/modules/_map.scss */
+  .map .map-container .maps-scrollable-container {
+    width: auto;
+    height: auto;
+  }
+}
+/* line 121, ../scss/modules/_map.scss */
+.map .scroll-map-info {
+  display: block;
+  position: absolute;
+  width: 200px;
+  height: 60px;
+  background-color: #5B5B5B;
+  border-radius: 60px;
+  pointer-events: none;
+  z-index: 100;
+  font-size: 20px;
+  line-height: 1.3em;
+  margin-bottom: 20px;
+  padding-bottom: 0;
+  font-family: "PPNeueMontreal-Regular";
+  line-height: 60px;
+  padding-left: 35px;
+  color: #FFFFFF;
+  opacity: 1;
+  transition: opacity 0.3s ease 0s;
+}
+@media (min-width: 768px) {
+  /* line 121, ../scss/modules/_map.scss */
+  .map .scroll-map-info {
+    display: none;
+  }
+}
+/* line 141, ../scss/modules/_map.scss */
+.map .scroll-map-info svg {
+  position: absolute;
+  right: 35px;
+  top: 14px;
+}
+/* line 148, ../scss/modules/_map.scss */
+.map .touched .scroll-map-info {
+  opacity: 0;
 }
 
 @media (min-width: 768px) {
@@ -2415,7 +2492,7 @@ a.button:hover svg {
   .timeline.has-legal {
     grid-template-columns: 5fr 1fr 6fr;
     grid-template-areas: "timeline-nav . timeline-data";
-    margin: 0 40px 0 40px;
+    margin: 0 40px 100px 40px;
   }
 }
 @media (min-width: 1280px) {
@@ -2424,22 +2501,46 @@ a.button:hover svg {
     display: block;
   }
 }
-/* line 31, ../scss/modules/_timeline.scss */
+@media (min-width: 1280px) {
+  /* line 29, ../scss/modules/_timeline.scss */
+  .timeline.has-legal .number {
+    line-height: 52px !important;
+  }
+}
+@media (min-width: 1024px) {
+  /* line 35, ../scss/modules/_timeline.scss */
+  .timeline.has-legal .title {
+    width: calc(50vw - 210px);
+  }
+}
+@media (min-width: 1280px) {
+  /* line 35, ../scss/modules/_timeline.scss */
+  .timeline.has-legal .title {
+    line-height: 52px !important;
+  }
+}
+/* line 49, ../scss/modules/_timeline.scss */
 .timeline #legal-intro-text p {
   margin: 0;
-  padding: 20px 0;
+  padding: 20px 20px 20px 20px;
   font-size: 20px;
   line-height: 1.3em;
   margin-bottom: 20px;
   padding-bottom: 0;
   font-family: "PPNeueMontreal-Regular";
 }
-/* line 38, ../scss/modules/_timeline.scss */
+@media (min-width: 768px) {
+  /* line 49, ../scss/modules/_timeline.scss */
+  .timeline #legal-intro-text p {
+    padding: 40px 0px 40px 0px;
+  }
+}
+/* line 60, ../scss/modules/_timeline.scss */
 .timeline .timeline_nav {
   position: relative;
   grid-area: timeline-nav;
 }
-/* line 42, ../scss/modules/_timeline.scss */
+/* line 64, ../scss/modules/_timeline.scss */
 .timeline .timeline_nav h2 {
   font-weight: normal;
   font-size: 30px;
@@ -2451,7 +2552,7 @@ a.button:hover svg {
   border-top: 2px solid transparent;
 }
 @media (min-width: 768px) {
-  /* line 42, ../scss/modules/_timeline.scss */
+  /* line 64, ../scss/modules/_timeline.scss */
   .timeline .timeline_nav h2 {
     font-weight: normal;
     font-size: 50px;
@@ -2463,14 +2564,14 @@ a.button:hover svg {
   }
 }
 @media (min-width: 768px) {
-  /* line 54, ../scss/modules/_timeline.scss */
+  /* line 76, ../scss/modules/_timeline.scss */
   .timeline .timeline_nav .stick {
     padding-top: calc(100vw / 12);
     position: sticky;
     top: 0;
   }
 }
-/* line 62, ../scss/modules/_timeline.scss */
+/* line 84, ../scss/modules/_timeline.scss */
 .timeline .timeline_nav ul {
   list-style-type: none;
   padding: 0;
@@ -2484,16 +2585,16 @@ a.button:hover svg {
   display: none;
 }
 @media (min-width: 768px) {
-  /* line 62, ../scss/modules/_timeline.scss */
+  /* line 84, ../scss/modules/_timeline.scss */
   .timeline .timeline_nav ul {
     display: block;
   }
 }
-/* line 74, ../scss/modules/_timeline.scss */
+/* line 96, ../scss/modules/_timeline.scss */
 .timeline .timeline_nav ul li {
   margin-bottom: 2em;
 }
-/* line 79, ../scss/modules/_timeline.scss */
+/* line 101, ../scss/modules/_timeline.scss */
 .timeline .timeline_nav button {
   font-weight: normal;
   font-size: 20px;
@@ -2506,34 +2607,34 @@ a.button:hover svg {
   appearance: none;
   text-align: left;
 }
-/* line 86, ../scss/modules/_timeline.scss */
+/* line 108, ../scss/modules/_timeline.scss */
 .timeline .timeline_nav button.active {
   color: #0627CA;
 }
-/* line 90, ../scss/modules/_timeline.scss */
+/* line 112, ../scss/modules/_timeline.scss */
 .timeline .timeline_nav button span {
   display: inline-block;
   margin-right: 5px;
 }
-/* line 94, ../scss/modules/_timeline.scss */
+/* line 116, ../scss/modules/_timeline.scss */
 .timeline .timeline_nav button span:after {
   content: '/';
 }
-/* line 101, ../scss/modules/_timeline.scss */
+/* line 123, ../scss/modules/_timeline.scss */
 .timeline .timeline_data {
   grid-area: timeline-data;
 }
 @media (min-width: 768px) {
-  /* line 101, ../scss/modules/_timeline.scss */
+  /* line 123, ../scss/modules/_timeline.scss */
   .timeline .timeline_data {
     padding-top: calc(100vw / 12);
   }
 }
-/* line 108, ../scss/modules/_timeline.scss */
+/* line 130, ../scss/modules/_timeline.scss */
 .timeline .timeline_data article:last-of-type {
   border-bottom: 2px solid black;
 }
-/* line 112, ../scss/modules/_timeline.scss */
+/* line 134, ../scss/modules/_timeline.scss */
 .timeline .timeline_data header {
   font-weight: normal;
   font-size: 30px;
@@ -2552,7 +2653,7 @@ a.button:hover svg {
   margin-right: 20px;
 }
 @media (min-width: 768px) {
-  /* line 112, ../scss/modules/_timeline.scss */
+  /* line 134, ../scss/modules/_timeline.scss */
   .timeline .timeline_data header {
     font-weight: normal;
     font-size: 30px;
@@ -2565,22 +2666,33 @@ a.button:hover svg {
     margin-right: 0;
   }
 }
-/* line 132, ../scss/modules/_timeline.scss */
+@media (min-width: 1024px) {
+  /* line 134, ../scss/modules/_timeline.scss */
+  .timeline .timeline_data header {
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 1.2em;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    font-family: "PPNeueMontreal-Regular";
+  }
+}
+/* line 158, ../scss/modules/_timeline.scss */
 .timeline .timeline_data header span {
   vertical-align: top;
   display: inline-block;
   line-height: 39px;
 }
-/* line 138, ../scss/modules/_timeline.scss */
+/* line 164, ../scss/modules/_timeline.scss */
 .timeline .timeline_data header span.number {
-  margin-right: 40px;
+  margin-right: 20px;
 }
-/* line 142, ../scss/modules/_timeline.scss */
+/* line 168, ../scss/modules/_timeline.scss */
 .timeline .timeline_data header span.title {
   display: inline-block;
   font-weight: normal;
-  font-size: 20px;
-  line-height: 1.4em;
+  font-size: 30px;
+  line-height: 1.3em;
   margin-bottom: 0;
   padding-bottom: 0;
   font-family: "PPNeueMontreal-Medium";
@@ -2588,11 +2700,25 @@ a.button:hover svg {
   padding: 0;
   margin: 0;
 }
-/* line 150, ../scss/modules/_timeline.scss */
+@media (min-width: 1280px) {
+  /* line 168, ../scss/modules/_timeline.scss */
+  .timeline .timeline_data header span.title {
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 1.2em;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    font-family: "PPNeueMontreal-Regular";
+    line-height: 39px;
+    padding: 0;
+    margin: 0;
+  }
+}
+/* line 183, ../scss/modules/_timeline.scss */
 .timeline .timeline_data header:hover {
   color: #0627CA;
 }
-/* line 155, ../scss/modules/_timeline.scss */
+/* line 188, ../scss/modules/_timeline.scss */
 .timeline .timeline_data .content {
   font-size: 20px;
   line-height: 1.3em;
@@ -2604,19 +2730,19 @@ a.button:hover svg {
   overflow: hidden;
 }
 @media (min-width: 768px) {
-  /* line 155, ../scss/modules/_timeline.scss */
+  /* line 188, ../scss/modules/_timeline.scss */
   .timeline .timeline_data .content {
     padding: 10px 0 0 0;
   }
 }
 @media (min-width: 1280px) {
-  /* line 155, ../scss/modules/_timeline.scss */
+  /* line 188, ../scss/modules/_timeline.scss */
   .timeline .timeline_data .content {
     display: grid;
     grid-template-columns: 6fr 3fr;
   }
 }
-/* line 171, ../scss/modules/_timeline.scss */
+/* line 204, ../scss/modules/_timeline.scss */
 .timeline .timeline_data .close {
   display: none;
   position: absolute;
@@ -2630,30 +2756,30 @@ a.button:hover svg {
   background-color: transparent;
 }
 @media (min-width: 768px) {
-  /* line 171, ../scss/modules/_timeline.scss */
+  /* line 204, ../scss/modules/_timeline.scss */
   .timeline .timeline_data .close {
     top: 33px;
     right: 0px;
   }
 }
-/* line 188, ../scss/modules/_timeline.scss */
+/* line 221, ../scss/modules/_timeline.scss */
 .timeline .timeline_data .close svg {
   pointer-events: none;
   transition: all 0.3s ease 0s;
 }
-/* line 192, ../scss/modules/_timeline.scss */
+/* line 225, ../scss/modules/_timeline.scss */
 .timeline .timeline_data .close svg path {
   stroke: #0627CA;
 }
-/* line 198, ../scss/modules/_timeline.scss */
+/* line 231, ../scss/modules/_timeline.scss */
 .timeline .timeline_data .close:hover svg {
   transform: rotate(90deg);
 }
-/* line 206, ../scss/modules/_timeline.scss */
+/* line 239, ../scss/modules/_timeline.scss */
 .timeline .timeline_data .active header {
   color: #0627CA;
 }
-/* line 210, ../scss/modules/_timeline.scss */
+/* line 243, ../scss/modules/_timeline.scss */
 .timeline .timeline_data .active header span.title {
   max-width: calc(100vw - 190px);
   font-weight: normal;
@@ -2664,16 +2790,30 @@ a.button:hover svg {
   font-family: "PPNeueMontreal-Medium";
 }
 @media (min-width: 768px) {
-  /* line 210, ../scss/modules/_timeline.scss */
+  /* line 243, ../scss/modules/_timeline.scss */
   .timeline .timeline_data .active header span.title {
     max-width: none;
   }
 }
-/* line 221, ../scss/modules/_timeline.scss */
+@media (min-width: 1280px) {
+  /* line 243, ../scss/modules/_timeline.scss */
+  .timeline .timeline_data .active header span.title {
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 1.2em;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    font-family: "PPNeueMontreal-Regular";
+    line-height: 39px;
+    padding: 0;
+    margin: 0;
+  }
+}
+/* line 262, ../scss/modules/_timeline.scss */
 .timeline .timeline_data .active .close {
   display: block;
 }
-/* line 225, ../scss/modules/_timeline.scss */
+/* line 266, ../scss/modules/_timeline.scss */
 .timeline .timeline_data .active .content {
   max-height: 100vh;
 }
@@ -2808,6 +2948,35 @@ a.button:hover svg {
   margin-top: 120px;
 }
 /* line 39, ../scss/modules/_one_col_copy_image.scss */
+.one-col-copy-image.page-hero .mobile-image-container {
+  width: 100vw;
+  max-height: 600px;
+  height: calc(100vw * 1.152);
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+  /* line 39, ../scss/modules/_one_col_copy_image.scss */
+  .one-col-copy-image.page-hero .mobile-image-container {
+    width: auto;
+    height: auto;
+  }
+}
+/* line 50, ../scss/modules/_one_col_copy_image.scss */
+.one-col-copy-image.page-hero .mobile-image-container img {
+  position: relative;
+  height: 100%;
+  width: auto;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@media (min-width: 768px) {
+  /* line 50, ../scss/modules/_one_col_copy_image.scss */
+  .one-col-copy-image.page-hero .mobile-image-container img {
+    height: auto;
+    width: 100%;
+  }
+}
+/* line 64, ../scss/modules/_one_col_copy_image.scss */
 .one-col-copy-image.page-hero .copy {
   margin-top: 80px;
   margin-bottom: 80px;
@@ -2818,12 +2987,12 @@ a.button:hover svg {
   .one-col-copy-image.page-hero {
     margin-top: calc((100vw / 12));
   }
-  /* line 48, ../scss/modules/_one_col_copy_image.scss */
+  /* line 73, ../scss/modules/_one_col_copy_image.scss */
   .one-col-copy-image.page-hero .copy {
     margin-bottom: calc(100vw / 12);
   }
 }
-/* line 53, ../scss/modules/_one_col_copy_image.scss */
+/* line 78, ../scss/modules/_one_col_copy_image.scss */
 .one-col-copy-image.page-hero .copy blockquote p {
   font-weight: normal;
   font-size: 30px;
@@ -2833,7 +3002,7 @@ a.button:hover svg {
   font-family: "PPNeueMontreal-Medium";
 }
 @media (min-width: 1024px) {
-  /* line 53, ../scss/modules/_one_col_copy_image.scss */
+  /* line 78, ../scss/modules/_one_col_copy_image.scss */
   .one-col-copy-image.page-hero .copy blockquote p {
     font-weight: normal;
     font-size: 50px;
@@ -2843,15 +3012,15 @@ a.button:hover svg {
     font-family: "PPNeueMontreal-Regular";
   }
 }
-/* line 60, ../scss/modules/_one_col_copy_image.scss */
+/* line 85, ../scss/modules/_one_col_copy_image.scss */
 .one-col-copy-image.page-hero .copy blockquote p:first-of-type {
   margin-top: 0;
 }
-/* line 64, ../scss/modules/_one_col_copy_image.scss */
+/* line 89, ../scss/modules/_one_col_copy_image.scss */
 .one-col-copy-image.page-hero .copy blockquote p:last-of-type {
   margin-top: 0;
 }
-/* line 68, ../scss/modules/_one_col_copy_image.scss */
+/* line 93, ../scss/modules/_one_col_copy_image.scss */
 .one-col-copy-image.page-hero .copy blockquote p span {
   font-size: 20px;
   line-height: 1.3em;
@@ -2978,7 +3147,7 @@ a.button:hover svg {
 .two-col-copy-image .copy .left {
   grid-area: left;
 }
-/* line 14, ../scss/modules/_two_col_copy_image.scss */
+/* line 17, ../scss/modules/_two_col_copy_image.scss */
 .two-col-copy-image .copy .right {
   grid-area: right;
 }
@@ -2998,7 +3167,7 @@ a.button:hover svg {
     grid-template-areas: "left . right";
   }
 }
-/* line 28, ../scss/modules/_two_col_copy_image.scss */
+/* line 33, ../scss/modules/_two_col_copy_image.scss */
 .two-col-copy-image .copy h2 {
   font-weight: normal;
   font-size: 30px;
@@ -3008,7 +3177,7 @@ a.button:hover svg {
   font-family: "PPNeueMontreal-Medium";
 }
 @media (min-width: 768px) {
-  /* line 28, ../scss/modules/_two_col_copy_image.scss */
+  /* line 33, ../scss/modules/_two_col_copy_image.scss */
   .two-col-copy-image .copy h2 {
     font-weight: normal;
     font-size: 50px;
@@ -3018,7 +3187,7 @@ a.button:hover svg {
     font-family: "PPNeueMontreal-Regular";
   }
 }
-/* line 36, ../scss/modules/_two_col_copy_image.scss */
+/* line 41, ../scss/modules/_two_col_copy_image.scss */
 .two-col-copy-image .copy p {
   font-size: 20px;
   line-height: 1.3em;
@@ -3027,7 +3196,7 @@ a.button:hover svg {
   font-family: "PPNeueMontreal-Regular";
 }
 @media (min-width: 768px) {
-  /* line 36, ../scss/modules/_two_col_copy_image.scss */
+  /* line 41, ../scss/modules/_two_col_copy_image.scss */
   .two-col-copy-image .copy p {
     font-size: 35px;
     line-height: 1.3em;
@@ -3036,22 +3205,22 @@ a.button:hover svg {
     font-family: "PPNeueMontreal-Regular";
   }
 }
-/* line 45, ../scss/modules/_two_col_copy_image.scss */
+/* line 50, ../scss/modules/_two_col_copy_image.scss */
 .two-col-copy-image.has-image .copy {
   margin-bottom: 100px;
 }
 @media (min-width: 768px) {
-  /* line 45, ../scss/modules/_two_col_copy_image.scss */
+  /* line 50, ../scss/modules/_two_col_copy_image.scss */
   .two-col-copy-image.has-image .copy {
     margin-bottom: calc(100vw / 12);
   }
 }
-/* line 53, ../scss/modules/_two_col_copy_image.scss */
+/* line 58, ../scss/modules/_two_col_copy_image.scss */
 .two-col-copy-image .image-container {
   margin: 0 20px 0 20px;
 }
 @media (min-width: 768px) {
-  /* line 53, ../scss/modules/_two_col_copy_image.scss */
+  /* line 58, ../scss/modules/_two_col_copy_image.scss */
   .two-col-copy-image .image-container {
     display: grid;
     margin: 0 40px;
@@ -3059,7 +3228,7 @@ a.button:hover svg {
   }
 }
 @media (min-width: 768px) {
-  /* line 53, ../scss/modules/_two_col_copy_image.scss */
+  /* line 58, ../scss/modules/_two_col_copy_image.scss */
   .two-col-copy-image .image-container {
     margin: 0 40px 0 40px;
     grid-template-columns: 1fr;
@@ -3067,22 +3236,22 @@ a.button:hover svg {
   }
 }
 @media (min-width: 1024px) {
-  /* line 53, ../scss/modules/_two_col_copy_image.scss */
+  /* line 58, ../scss/modules/_two_col_copy_image.scss */
   .two-col-copy-image .image-container {
     grid-template-columns: 8fr 4fr;
     grid-template-areas: "img ." "cap .";
   }
 }
-/* line 72, ../scss/modules/_two_col_copy_image.scss */
+/* line 77, ../scss/modules/_two_col_copy_image.scss */
 .two-col-copy-image .image-container .image {
   grid-area: img;
 }
-/* line 76, ../scss/modules/_two_col_copy_image.scss */
+/* line 81, ../scss/modules/_two_col_copy_image.scss */
 .two-col-copy-image .image-container .caption {
   grid-area: cap;
 }
 
-/* line 82, ../scss/modules/_two_col_copy_image.scss */
+/* line 87, ../scss/modules/_two_col_copy_image.scss */
 .image-expand .image {
   position: relative;
   padding: 0;
@@ -3091,12 +3260,12 @@ a.button:hover svg {
   line-height: 0;
   cursor: pointer;
 }
-/* line 90, ../scss/modules/_two_col_copy_image.scss */
+/* line 95, ../scss/modules/_two_col_copy_image.scss */
 .image-expand .image img {
   position: relative;
   z-index: 1;
 }
-/* line 95, ../scss/modules/_two_col_copy_image.scss */
+/* line 100, ../scss/modules/_two_col_copy_image.scss */
 .image-expand .image:after {
   display: block;
   content: '';
@@ -3111,23 +3280,23 @@ a.button:hover svg {
   opacity: 0;
   transition: all 0.3s ease 0s;
 }
-/* line 110, ../scss/modules/_two_col_copy_image.scss */
+/* line 115, ../scss/modules/_two_col_copy_image.scss */
 .image-expand .image:before {
   display: block;
   content: '';
   position: absolute;
   z-index: 3;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   background: url(../img/icons/image-expand.svg) 0 0 no-repeat;
-  background-size: 40px 40px;
+  background-size: 50px 50px;
   opacity: 0;
   transition: all 0.3s ease 0s;
 }
-/* line 128, ../scss/modules/_two_col_copy_image.scss */
+/* line 133, ../scss/modules/_two_col_copy_image.scss */
 .image-expand .image:hover:before, .image-expand .image:hover:after {
   opacity: 1;
 }

@@ -1,0 +1,53 @@
+0000.000 (0) Opened log file at time: Wed, 13 Jul 2022 13:37:28 +0000 on http://blackrock.local
+0000.015 (0) UpdraftPlus WordPress backup plugin (https://updraftplus.com): 2.22.4.1 WP: 6.0.1 PHP: 7.4.1 (cgi-fcgi, Windows NT DESKTOP-OINKS 10.0 build 22622 (Windows 10) AMD64) MySQL: 8.0.16 (max packet size=16777216) WPLANG: en_US Server: nginx/1.16.0 safe_mode: 0 max_execution_time: 900 memory_limit: 256M (used: 5.3M | 2M) multisite: N openssl: OpenSSL 1.1.1d  10 Sep 2019 mcrypt: N LANG:  ZipArchive::addFile: Y
+0000.030 (0) Free space on disk containing Updraft's temporary directory: 1806611.9 MB
+0000.047 (0) Tasks: Backup files: 1 (schedule: unset) Backup DB: 0 (schedule: unset)
+0000.062 (0) Semaphore (f, wp_options) being initialised
+0000.108 (0) Requesting semaphore lock (f) (apparently not via scheduler)
+0000.154 (0) Set semaphore last lock (f) time to 2022-07-13 13:37:28
+0000.169 (0) Semaphore lock (f) complete
+0000.217 (0) Backup run: resumption=0, nonce=6c31474095bc, file_nonce=6c31474095bc begun at=1657719448 (0s ago), job type=backup
+0000.247 (0) Scheduling a resumption (1) after 300 seconds (1657719748) in case this run gets aborted
+0000.279 (0) Checking if we have a zip executable available
+0000.309 (0) Creation of backups of directories: beginning
+0000.340 (0) No backup of plugins: excluded by user's options
+0000.370 (0) Beginning creation of dump of themes (split every: 100 MB)
+0000.497 (0) Total entities for the zip file: 126 directories, 617 files (0 skipped as non-modified), 16.7 MB
+0000.543 (0) Zip: backup_2022-07-13-1337_blackrock_6c31474095bc-themes.zip.tmp: 100 files added (on-disk size: 0 KB)
+0000.571 (0) Zip: backup_2022-07-13-1337_blackrock_6c31474095bc-themes.zip.tmp: 200 files added (on-disk size: 0 KB)
+0000.600 (0) Zip: backup_2022-07-13-1337_blackrock_6c31474095bc-themes.zip.tmp: 300 files added (on-disk size: 0 KB)
+0000.625 (0) Zip: backup_2022-07-13-1337_blackrock_6c31474095bc-themes.zip.tmp: 400 files added (on-disk size: 0 KB)
+0000.651 (0) Zip: backup_2022-07-13-1337_blackrock_6c31474095bc-themes.zip.tmp: 500 files added (on-disk size: 0 KB)
+0000.680 (0) Zip: backup_2022-07-13-1337_blackrock_6c31474095bc-themes.zip.tmp: 600 files added (on-disk size: 0 KB)
+0001.316 (0) Creating zip file manifest (D:\Local Sites\blackrock\app\public/wp-content/updraft/backup_2022-07-13-1337_blackrock_6c31474095bc-themes.zip.list-temp.tmp)
+0001.330 (0) Successfully created zip file manifest (size: 43803)
+0001.446 (0) Created themes zip (0) - 11957.8 KB in 1.1 s (11277.2 KB/s) (sha1: d1ebdb0609ef421fe79adc665b74aebbbde22b6a, sha256: 1bc9ce8ac420a1c31985213b08583a7fd72873413d29f0f2305f16b77e7cdb5c)
+0001.463 (0) No backup of uploads: excluded by user's options
+0001.481 (0) No backup of others: excluded by user's options
+0001.563 (0) Saving backup status to database (elements: 2)
+0001.594 (0) No database backup (wp) - not part of this run
+0001.625 (0) backup_2022-07-13-1337_blackrock_6c31474095bc-themes.zip: themes: This file has not yet been successfully uploaded: will queue
+0001.638 (0) Saving backup history. Total backup size: 11.7 MB
+0001.669 (0) Requesting upload of the files that have not yet been successfully uploaded (1)
+0001.712 (0) Cloud backup selection (1/1): remotesend with instance (1/1) (last)
+0001.727 (0) Beginning dispatch of backup to remote (remotesend)
+0001.740 (0) remotesend: upload : attempt: backup_2022-07-13-1337_blackrock_6c31474095bc-themes.zip
+0002.585 (0) remotesend: backup_2022-07-13-1337_blackrock_6c31474095bc-themes.zip: existing size: 0
+0002.601 (0) Remote send upload: backup_2022-07-13-1337_blackrock_6c31474095bc-themes.zip (chunks: 6, of size: 2097152) -> remotesend://https://wordsearch-ny.dev/blackrock-main/backup_2022-07-13-1337_blackrock_6c31474095bc-themes.zip (0)
+0012.315 (0) Remotesend chunked upload: 17.1 % uploaded (1)
+0016.841 (0) Remotesend chunked upload: 34.3 % uploaded (2)
+0021.183 (0) Remotesend chunked upload: 51.4 % uploaded (3)
+0024.073 (0) Remotesend chunked upload: 68.5 % uploaded (4)
+0036.273 (0) Remotesend chunked upload: 85.6 % uploaded (5)
+0049.087 (0) Remotesend chunked upload: 100 % uploaded (6)
+0049.114 (0) Remote send upload: success
+0049.127 (0) Recording as successfully uploaded: backup_2022-07-13-1337_blackrock_6c31474095bc-themes.zip
+0049.153 (0) Deleting local file: backup_2022-07-13-1337_blackrock_6c31474095bc-themes.zip: OK
+0049.167 (0) Deleting zip manifest (backup_2022-07-13-1337_blackrock_6c31474095bc-themes.zip.list.tmp)
+0049.954 (0) Prune old backups from local store: skipping, as this was a remote send operation
+0049.970 (0) Resume backup (6c31474095bc, 0): finish run
+0050.015 (0) Decremented the semaphore (f) by 1
+0050.045 (0) Semaphore (f) unlocked
+0050.061 (0) There were no errors in the uploads, so the 'resume' event (1) is being unscheduled
+0050.107 (0) No email will/can be sent - the user has not configured an email address.
+0050.128 (0) The backup apparently succeeded and is now complete. To complete your migration/clone, you should now log in to the remote site and restore the backup set.

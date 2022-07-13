@@ -50,14 +50,14 @@
 				img {
 					width: 100px;
 					margin-left: 20px;
-					margin-bottom: 40px;
+					margin-bottom: 20px;
 
 					@media #{$mq-tablet-port} {
 						width: auto;
 						margin-left: 0;
 						margin-bottom: 0;
 						margin-top: calc(100vw / 12);
-						margin-bottom: calc(100vw / 24);
+						margin-bottom: 40px;
 					}
 				}
 			}
@@ -99,6 +99,11 @@
 
 				a {
 					color: $br-white;
+					text-decoration: none;
+
+					&:hover {
+						text-decoration: underline;
+					}
 				}
 
 				&:last-child {
