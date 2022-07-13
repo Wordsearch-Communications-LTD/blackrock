@@ -2508,13 +2508,13 @@ a.button:hover svg {
   }
 }
 @media (min-width: 1024px) {
-  /* line 35, ../scss/modules/_timeline.scss */
+  /* line 36, ../scss/modules/_timeline.scss */
   .timeline.has-legal .title {
     width: calc(50vw - 210px);
   }
 }
 @media (min-width: 1280px) {
-  /* line 35, ../scss/modules/_timeline.scss */
+  /* line 36, ../scss/modules/_timeline.scss */
   .timeline.has-legal .title {
     line-height: 52px !important;
   }
