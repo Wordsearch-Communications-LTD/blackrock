@@ -2304,8 +2304,7 @@ a.button:hover svg {
   margin-bottom: 0;
   padding-bottom: 0;
   font-family: "PPNeueMontreal-Medium";
-  margin-top: 0;
-  margin-bottom: 40px;
+  margin: 100px 20px 40px 20px;
 }
 @media (min-width: 768px) {
   /* line 15, ../scss/modules/_map.scss */
@@ -2316,34 +2315,33 @@ a.button:hover svg {
     margin-bottom: 0;
     padding-bottom: 0;
     font-family: "PPNeueMontreal-Regular";
-    margin-top: 0;
-    margin-bottom: 0;
+    margin: 0;
   }
 }
-/* line 28, ../scss/modules/_map.scss */
+/* line 26, ../scss/modules/_map.scss */
 .map .map-container {
   background-color: #F3EADF;
 }
 @media (min-width: 768px) {
-  /* line 28, ../scss/modules/_map.scss */
+  /* line 26, ../scss/modules/_map.scss */
   .map .map-container {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-areas: "navi navi . maps maps maps maps maps maps maps maps maps";
   }
 }
-/* line 37, ../scss/modules/_map.scss */
+/* line 35, ../scss/modules/_map.scss */
 .map .map-container .map-layers-nav {
   grid-area: navi;
   padding: 20px;
 }
 @media (min-width: 768px) {
-  /* line 37, ../scss/modules/_map.scss */
+  /* line 35, ../scss/modules/_map.scss */
   .map .map-container .map-layers-nav {
     padding: 40px;
   }
 }
-/* line 45, ../scss/modules/_map.scss */
+/* line 43, ../scss/modules/_map.scss */
 .map .map-container .map-layers-nav h3 {
   font-weight: normal;
   font-size: 30px;
@@ -2355,66 +2353,66 @@ a.button:hover svg {
   margin-bottom: 20px;
 }
 @media (min-width: 768px) {
-  /* line 45, ../scss/modules/_map.scss */
+  /* line 43, ../scss/modules/_map.scss */
   .map .map-container .map-layers-nav h3 {
     margin-bottom: 40px;
   }
 }
-/* line 56, ../scss/modules/_map.scss */
+/* line 54, ../scss/modules/_map.scss */
 .map .map-container .maps {
   position: relative;
   grid-area: maps;
   overflow: scroll;
 }
 @media (min-width: 768px) {
-  /* line 56, ../scss/modules/_map.scss */
+  /* line 54, ../scss/modules/_map.scss */
   .map .map-container .maps {
     overflow: hidden;
   }
 }
-/* line 66, ../scss/modules/_map.scss */
+/* line 64, ../scss/modules/_map.scss */
 .map .map-container .maps #main-map {
   position: relative;
   top: 0;
   left: 0;
   z-index: 1;
 }
-/* line 73, ../scss/modules/_map.scss */
+/* line 71, ../scss/modules/_map.scss */
 .map .map-container .maps .map-layer {
   position: absolute;
   top: 0;
   left: 0;
   opacity: 0;
 }
-/* line 79, ../scss/modules/_map.scss */
+/* line 77, ../scss/modules/_map.scss */
 .map .map-container .maps .map-layer:nth-child(2) {
   z-index: 2;
 }
-/* line 83, ../scss/modules/_map.scss */
+/* line 81, ../scss/modules/_map.scss */
 .map .map-container .maps .map-layer:nth-child(3) {
   z-index: 3;
 }
-/* line 87, ../scss/modules/_map.scss */
+/* line 85, ../scss/modules/_map.scss */
 .map .map-container .maps .map-layer:nth-child(4) {
   z-index: 4;
 }
-/* line 91, ../scss/modules/_map.scss */
+/* line 89, ../scss/modules/_map.scss */
 .map .map-container .maps .map-layer.show {
   opacity: 1;
 }
-/* line 96, ../scss/modules/_map.scss */
+/* line 94, ../scss/modules/_map.scss */
 .map .map-container .maps img {
   height: calc(100vw * 1.5);
   width: auto;
 }
 @media (min-width: 768px) {
-  /* line 96, ../scss/modules/_map.scss */
+  /* line 94, ../scss/modules/_map.scss */
   .map .map-container .maps img {
     width: 100%;
     height: auto;
   }
 }
-/* line 107, ../scss/modules/_map.scss */
+/* line 105, ../scss/modules/_map.scss */
 .map .map-container .maps-scrollable-container {
   display: block;
   width: calc((100vw * 1.152) * 0.86);
@@ -2422,13 +2420,13 @@ a.button:hover svg {
   line-height: 0;
 }
 @media (min-width: 768px) {
-  /* line 107, ../scss/modules/_map.scss */
+  /* line 105, ../scss/modules/_map.scss */
   .map .map-container .maps-scrollable-container {
     width: auto;
     height: auto;
   }
 }
-/* line 121, ../scss/modules/_map.scss */
+/* line 119, ../scss/modules/_map.scss */
 .map .scroll-map-info {
   display: block;
   position: absolute;
@@ -2450,18 +2448,18 @@ a.button:hover svg {
   transition: opacity 0.3s ease 0s;
 }
 @media (min-width: 768px) {
-  /* line 121, ../scss/modules/_map.scss */
+  /* line 119, ../scss/modules/_map.scss */
   .map .scroll-map-info {
     display: none;
   }
 }
-/* line 141, ../scss/modules/_map.scss */
+/* line 139, ../scss/modules/_map.scss */
 .map .scroll-map-info svg {
   position: absolute;
   right: 35px;
   top: 14px;
 }
-/* line 148, ../scss/modules/_map.scss */
+/* line 146, ../scss/modules/_map.scss */
 .map .touched .scroll-map-info {
   opacity: 0;
 }
@@ -2490,6 +2488,10 @@ a.button:hover svg {
     margin: 0 40px 0 40px;
   }
 }
+/* line 16, ../scss/modules/_timeline.scss */
+.timeline.has-legal {
+  margin: 100px 0px 100px 0px;
+}
 @media (min-width: 1024px) {
   /* line 16, ../scss/modules/_timeline.scss */
   .timeline.has-legal {
@@ -2499,30 +2501,34 @@ a.button:hover svg {
   }
 }
 @media (min-width: 1280px) {
-  /* line 23, ../scss/modules/_timeline.scss */
+  /* line 25, ../scss/modules/_timeline.scss */
   .timeline.has-legal .timeline_data .content {
     display: block;
   }
 }
 @media (min-width: 1280px) {
-  /* line 29, ../scss/modules/_timeline.scss */
+  /* line 31, ../scss/modules/_timeline.scss */
   .timeline.has-legal .number {
     line-height: 52px !important;
   }
 }
+/* line 38, ../scss/modules/_timeline.scss */
+.timeline.has-legal .title {
+  width: calc(100vw - 120px);
+}
 @media (min-width: 1024px) {
-  /* line 36, ../scss/modules/_timeline.scss */
+  /* line 38, ../scss/modules/_timeline.scss */
   .timeline.has-legal .title {
     width: calc(50vw - 210px);
   }
 }
 @media (min-width: 1280px) {
-  /* line 36, ../scss/modules/_timeline.scss */
+  /* line 38, ../scss/modules/_timeline.scss */
   .timeline.has-legal .title {
     line-height: 52px !important;
   }
 }
-/* line 49, ../scss/modules/_timeline.scss */
+/* line 53, ../scss/modules/_timeline.scss */
 .timeline #legal-intro-text p {
   margin: 0;
   padding: 20px 20px 20px 20px;
@@ -2533,17 +2539,17 @@ a.button:hover svg {
   font-family: "PPNeueMontreal-Regular";
 }
 @media (min-width: 768px) {
-  /* line 49, ../scss/modules/_timeline.scss */
+  /* line 53, ../scss/modules/_timeline.scss */
   .timeline #legal-intro-text p {
     padding: 40px 0px 40px 0px;
   }
 }
-/* line 60, ../scss/modules/_timeline.scss */
+/* line 64, ../scss/modules/_timeline.scss */
 .timeline .timeline_nav {
   position: relative;
   grid-area: timeline-nav;
 }
-/* line 64, ../scss/modules/_timeline.scss */
+/* line 68, ../scss/modules/_timeline.scss */
 .timeline .timeline_nav h2 {
   font-weight: normal;
   font-size: 30px;
@@ -2555,7 +2561,7 @@ a.button:hover svg {
   border-top: 2px solid transparent;
 }
 @media (min-width: 768px) {
-  /* line 64, ../scss/modules/_timeline.scss */
+  /* line 68, ../scss/modules/_timeline.scss */
   .timeline .timeline_nav h2 {
     font-weight: normal;
     font-size: 50px;
@@ -2567,14 +2573,14 @@ a.button:hover svg {
   }
 }
 @media (min-width: 768px) {
-  /* line 76, ../scss/modules/_timeline.scss */
+  /* line 80, ../scss/modules/_timeline.scss */
   .timeline .timeline_nav .stick {
     padding-top: calc(100vw / 12);
     position: sticky;
     top: 0;
   }
 }
-/* line 84, ../scss/modules/_timeline.scss */
+/* line 88, ../scss/modules/_timeline.scss */
 .timeline .timeline_nav ul {
   list-style-type: none;
   padding: 0;
@@ -2588,16 +2594,16 @@ a.button:hover svg {
   display: none;
 }
 @media (min-width: 768px) {
-  /* line 84, ../scss/modules/_timeline.scss */
+  /* line 88, ../scss/modules/_timeline.scss */
   .timeline .timeline_nav ul {
     display: block;
   }
 }
-/* line 96, ../scss/modules/_timeline.scss */
+/* line 100, ../scss/modules/_timeline.scss */
 .timeline .timeline_nav ul li {
   margin-bottom: 2em;
 }
-/* line 101, ../scss/modules/_timeline.scss */
+/* line 105, ../scss/modules/_timeline.scss */
 .timeline .timeline_nav button {
   font-weight: normal;
   font-size: 20px;
@@ -2610,34 +2616,48 @@ a.button:hover svg {
   appearance: none;
   text-align: left;
 }
-/* line 108, ../scss/modules/_timeline.scss */
+/* line 112, ../scss/modules/_timeline.scss */
 .timeline .timeline_nav button.active {
   color: #0627CA;
 }
-/* line 112, ../scss/modules/_timeline.scss */
+/* line 116, ../scss/modules/_timeline.scss */
 .timeline .timeline_nav button span {
   display: inline-block;
   margin-right: 5px;
 }
-/* line 116, ../scss/modules/_timeline.scss */
+/* line 120, ../scss/modules/_timeline.scss */
 .timeline .timeline_nav button span:after {
   content: '/';
 }
-/* line 123, ../scss/modules/_timeline.scss */
+/* line 127, ../scss/modules/_timeline.scss */
 .timeline .timeline_data {
   grid-area: timeline-data;
 }
 @media (min-width: 768px) {
-  /* line 123, ../scss/modules/_timeline.scss */
+  /* line 127, ../scss/modules/_timeline.scss */
   .timeline .timeline_data {
     padding-top: calc(100vw / 12);
   }
 }
-/* line 130, ../scss/modules/_timeline.scss */
-.timeline .timeline_data article:last-of-type {
+/* line 135, ../scss/modules/_timeline.scss */
+.timeline .timeline_data article:last-of-type:after {
+  display: block;
+  content: '';
+  width: calc(100% - 40px);
   border-bottom: 2px solid black;
+  margin-left: 20px;
 }
-/* line 134, ../scss/modules/_timeline.scss */
+@media (min-width: 768px) {
+  /* line 134, ../scss/modules/_timeline.scss */
+  .timeline .timeline_data article:last-of-type {
+    border-bottom: 2px solid black;
+  }
+  /* line 146, ../scss/modules/_timeline.scss */
+  .timeline .timeline_data article:last-of-type:after {
+    display: none;
+  }
+}
+/* line 152, ../scss/modules/_timeline.scss */
 .timeline .timeline_data header {
   font-weight: normal;
   font-size: 30px;
@@ -2656,7 +2676,7 @@ a.button:hover svg {
   margin-right: 20px;
 }
 @media (min-width: 768px) {
-  /* line 134, ../scss/modules/_timeline.scss */
+  /* line 152, ../scss/modules/_timeline.scss */
   .timeline .timeline_data header {
     font-weight: normal;
     font-size: 30px;
@@ -2670,7 +2690,7 @@ a.button:hover svg {
   }
 }
 @media (min-width: 1024px) {
-  /* line 134, ../scss/modules/_timeline.scss */
+  /* line 152, ../scss/modules/_timeline.scss */
   .timeline .timeline_data header {
     font-weight: normal;
     font-size: 50px;
@@ -2680,17 +2700,17 @@ a.button:hover svg {
     font-family: "PPNeueMontreal-Regular";
   }
 }
-/* line 158, ../scss/modules/_timeline.scss */
+/* line 176, ../scss/modules/_timeline.scss */
 .timeline .timeline_data header span {
   vertical-align: top;
   display: inline-block;
   line-height: 39px;
 }
-/* line 164, ../scss/modules/_timeline.scss */
+/* line 182, ../scss/modules/_timeline.scss */
 .timeline .timeline_data header span.number {
   margin-right: 20px;
 }
-/* line 168, ../scss/modules/_timeline.scss */
+/* line 186, ../scss/modules/_timeline.scss */
 .timeline .timeline_data header span.title {
   display: inline-block;
   font-weight: normal;
@@ -2704,7 +2724,7 @@ a.button:hover svg {
   margin: 0;
 }
 @media (min-width: 1280px) {
-  /* line 168, ../scss/modules/_timeline.scss */
+  /* line 186, ../scss/modules/_timeline.scss */
   .timeline .timeline_data header span.title {
     font-weight: normal;
     font-size: 50px;
@@ -2717,11 +2737,11 @@ a.button:hover svg {
     margin: 0;
   }
 }
-/* line 183, ../scss/modules/_timeline.scss */
+/* line 201, ../scss/modules/_timeline.scss */
 .timeline .timeline_data header:hover {
   color: #0627CA;
 }
-/* line 188, ../scss/modules/_timeline.scss */
+/* line 206, ../scss/modules/_timeline.scss */
 .timeline .timeline_data .content {
   font-size: 20px;
   line-height: 1.3em;
@@ -2733,19 +2753,19 @@ a.button:hover svg {
   overflow: hidden;
 }
 @media (min-width: 768px) {
-  /* line 188, ../scss/modules/_timeline.scss */
+  /* line 206, ../scss/modules/_timeline.scss */
   .timeline .timeline_data .content {
     padding: 10px 0 0 0;
   }
 }
 @media (min-width: 1280px) {
-  /* line 188, ../scss/modules/_timeline.scss */
+  /* line 206, ../scss/modules/_timeline.scss */
   .timeline .timeline_data .content {
     display: grid;
     grid-template-columns: 6fr 3fr;
   }
 }
-/* line 204, ../scss/modules/_timeline.scss */
+/* line 222, ../scss/modules/_timeline.scss */
 .timeline .timeline_data .close {
   display: none;
   position: absolute;
@@ -2759,30 +2779,30 @@ a.button:hover svg {
   background-color: transparent;
 }
 @media (min-width: 768px) {
-  /* line 204, ../scss/modules/_timeline.scss */
+  /* line 222, ../scss/modules/_timeline.scss */
   .timeline .timeline_data .close {
     top: 33px;
     right: 0px;
   }
 }
-/* line 221, ../scss/modules/_timeline.scss */
+/* line 239, ../scss/modules/_timeline.scss */
 .timeline .timeline_data .close svg {
   pointer-events: none;
   transition: all 0.3s ease 0s;
 }
-/* line 225, ../scss/modules/_timeline.scss */
+/* line 243, ../scss/modules/_timeline.scss */
 .timeline .timeline_data .close svg path {
   stroke: #0627CA;
 }
-/* line 231, ../scss/modules/_timeline.scss */
+/* line 249, ../scss/modules/_timeline.scss */
 .timeline .timeline_data .close:hover svg {
   transform: rotate(90deg);
 }
-/* line 239, ../scss/modules/_timeline.scss */
+/* line 257, ../scss/modules/_timeline.scss */
 .timeline .timeline_data .active header {
   color: #0627CA;
 }
-/* line 243, ../scss/modules/_timeline.scss */
+/* line 261, ../scss/modules/_timeline.scss */
 .timeline .timeline_data .active header span.title {
   max-width: calc(100vw - 190px);
   font-weight: normal;
@@ -2793,13 +2813,13 @@ a.button:hover svg {
   font-family: "PPNeueMontreal-Medium";
 }
 @media (min-width: 768px) {
-  /* line 243, ../scss/modules/_timeline.scss */
+  /* line 261, ../scss/modules/_timeline.scss */
   .timeline .timeline_data .active header span.title {
     max-width: none;
   }
 }
 @media (min-width: 1280px) {
-  /* line 243, ../scss/modules/_timeline.scss */
+  /* line 261, ../scss/modules/_timeline.scss */
   .timeline .timeline_data .active header span.title {
     font-weight: normal;
     font-size: 50px;
@@ -2812,11 +2832,11 @@ a.button:hover svg {
     margin: 0;
   }
 }
-/* line 262, ../scss/modules/_timeline.scss */
+/* line 280, ../scss/modules/_timeline.scss */
 .timeline .timeline_data .active .close {
   display: block;
 }
-/* line 266, ../scss/modules/_timeline.scss */
+/* line 284, ../scss/modules/_timeline.scss */
 .timeline .timeline_data .active .content {
   max-height: 100vh;
 }
@@ -3366,36 +3386,87 @@ a.button:hover svg {
     align-self: center;
   }
 }
+/* line 45, ../scss/modules/_two_col_image.scss */
+.two-col-image.big-small {
+  display: grid;
+  margin: 100px 20px 0 20px;
+  grid-gap: 10px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "left right";
+  align-items: end;
+}
 @media (min-width: 1024px) {
   /* line 45, ../scss/modules/_two_col_image.scss */
   .two-col-image.big-small {
     grid-template-columns: 6fr 3fr 3fr;
     grid-template-areas: "left . right";
+    align-items: normal;
   }
 }
-/* line 51, ../scss/modules/_two_col_image.scss */
+/* line 59, ../scss/modules/_two_col_image.scss */
 .two-col-image.big-small div {
   grid-area: left;
 }
-/* line 54, ../scss/modules/_two_col_image.scss */
+/* line 62, ../scss/modules/_two_col_image.scss */
 .two-col-image.big-small div:last-of-type {
   grid-area: right;
 }
 @media (min-width: 768px) {
-  /* line 54, ../scss/modules/_two_col_image.scss */
+  /* line 62, ../scss/modules/_two_col_image.scss */
   .two-col-image.big-small div:last-of-type {
     align-self: center;
   }
 }
-/* line 66, ../scss/modules/_two_col_image.scss */
+/* line 72, ../scss/modules/_two_col_image.scss */
+.two-col-image.small-land {
+  display: grid;
+  margin: 100px 20px 0 20px;
+  grid-gap: 10px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "left right";
+  align-items: end;
+}
+@media (min-width: 768px) {
+  /* line 72, ../scss/modules/_two_col_image.scss */
+  .two-col-image.small-land {
+    display: grid;
+    grid-gap: 10px;
+    margin: calc(100vw /12) 40px 0 40px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "left right";
+    align-items: normal;
+  }
+}
+@media (min-width: 1024px) {
+  /* line 72, ../scss/modules/_two_col_image.scss */
+  .two-col-image.small-land {
+    grid-template-columns: 3fr 1fr 8fr;
+    grid-template-areas: "left . right";
+  }
+}
+/* line 94, ../scss/modules/_two_col_image.scss */
+.two-col-image.small-land div {
+  grid-area: right;
+}
+/* line 95, ../scss/modules/_two_col_image.scss */
+.two-col-image.small-land div:first-of-type {
+  grid-area: left;
+}
+@media (min-width: 768px) {
+  /* line 95, ../scss/modules/_two_col_image.scss */
+  .two-col-image.small-land div:first-of-type {
+    align-self: center;
+  }
+}
+/* line 109, ../scss/modules/_two_col_image.scss */
 .two-col-image.offset-top div .image {
   margin-top: calc(100vw / 12);
 }
-/* line 71, ../scss/modules/_two_col_image.scss */
+/* line 114, ../scss/modules/_two_col_image.scss */
 .two-col-image.offset-top div:first-of-type {
   align-self: start;
 }
-/* line 74, ../scss/modules/_two_col_image.scss */
+/* line 117, ../scss/modules/_two_col_image.scss */
 .two-col-image.offset-top div:first-of-type .image {
   margin-top: 0;
 }

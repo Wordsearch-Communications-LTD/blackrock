@@ -14,6 +14,8 @@
 	}
 
 	&.has-legal {
+		margin: 100px 0px 100px 0px;
+
 		@media #{$mq-tablet-desk} {
 			grid-template-columns: 5fr 1fr 6fr;
 			grid-template-areas: "timeline-nav . timeline-data";
@@ -34,6 +36,8 @@
 
 
 		.title {
+			width: calc(100vw - 120px);
+
 			@media #{$mq-tablet-desk} {
 				width: calc(50vw - 210px);
 			}
@@ -128,7 +132,21 @@
 		}
 
 		article:last-of-type {
-			border-bottom: 2px solid black;
+			&:after {
+				display: block;
+				content: '';
+				width: calc(100% - 40px);
+				border-bottom: 2px solid black;
+				margin-left: 20px;
+			}
+
+			@media #{$mq-tablet-port} {
+				border-bottom: 2px solid black;
+
+				&:after {
+					display: none;
+				}
+			}
 		}
 
 		header {

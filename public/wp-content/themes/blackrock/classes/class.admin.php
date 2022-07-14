@@ -114,9 +114,9 @@ class WordsearchAdmin {
         //   wp_enqueue_script( 'contact', get_stylesheet_directory_uri() . '/js/contact.js', array( 'jquery' ), null, true);
           wp_enqueue_script( 'curtain-reveal', get_stylesheet_directory_uri() . '/js/curtain-reveal.js', array( 'jquery' ), null, true);
           // Main theme script
-          wp_enqueue_script( 'custom-js', get_stylesheet_directory_uri() . '/js/custom.js', array( 'jquery' ), null, true);
-          wp_localize_script( 'custom-js', 'ajax_object',
-            array( 'ajax_url' => admin_url( 'admin-ajax.php' ), 'we_value' => 1234 ) );
+          wp_enqueue_script( 'burger-menu-js', get_stylesheet_directory_uri() . '/js/burger-menu.js', array( 'jquery' ), null, true);
+          // wp_localize_script( 'custom-js', 'ajax_object',
+          //   array( 'ajax_url' => admin_url( 'admin-ajax.php' ), 'we_value' => 1234 ) );
             
     }
 
