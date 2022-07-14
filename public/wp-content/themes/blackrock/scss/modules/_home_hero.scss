@@ -6,7 +6,11 @@
 	display: block;
 	width: 100vw;
 	height: 100vh;
-	background-size: cover;
+	background-size: 200% 100%;
+
+	@media (min-width: 600px) {
+		background-size: 150% 100%;
+	}
 
 	@media #{$mq-tablet-port} {
 		display: none;
@@ -65,9 +69,14 @@
 		opacity: 1;
 
 		h1 {
-			width: calc(100vw - 80px);
+			width: calc(100vw - 40px);
 			margin-left: 50%;
+			margin-top: -50px;
 			transform: translateX(-50%);
+
+			@media #{$mq-tablet-port} {
+				margin-top: 0;
+			}
 
 			svg {
 				width: 100%;
@@ -76,8 +85,12 @@
 
 		h2 {
 			@include headline-30;
-			margin-top: calc((100vw / 12) * 1.5);
+			margin-top: 70px;
 			margin-bottom: 20px;
+
+			@media #{$mq-tablet-port} {
+				margin-top: 150px;
+			}
 		}
 
 		p {
@@ -86,7 +99,7 @@
 
 		h2,
 		p {
-			max-width: calc(100vw - 80px);
+			max-width: calc(100vw - 40px);
 
 
 			@media #{$mq-tablet-port} {

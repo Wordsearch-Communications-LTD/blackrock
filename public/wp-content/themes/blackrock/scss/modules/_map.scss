@@ -8,8 +8,16 @@
     .map-title {
         @media #{$mq-tablet-port} {
             display: grid;
-            grid-template-columns: 5fr 7fr;
+            grid-template-columns: 9fr 3fr;
             margin-bottom: calc(100vw / 24);
+        }
+
+        @media #{$mq-tablet-desk} {
+            grid-template-columns: 8fr 4fr;
+        }
+
+        @media #{$mq-desk-small} {
+            grid-template-columns: 5fr 7fr;
         }
 
         h2 {
@@ -17,8 +25,12 @@
             margin: 100px 20px 40px 20px;
 
             @media #{$mq-tablet-port} {
+                margin: 100px 0px 40px 0px;
+            }
+
+            @media #{$mq-tablet-desk} {
                 @include headline-50;
-                margin: 0;
+                margin: 100px 20px 40px 20px;
             }
         }
     }
@@ -108,10 +120,12 @@
             width: calc((100vw * 1.152) * 0.86);
             height: calc(100vw * 1.152);
             line-height: 0;
+            max-height: 600px;
 
             @media #{$mq-tablet-port} {
                 width: auto;
                 height: auto;
+                max-height: none;
             }
         }
     }
@@ -121,7 +135,7 @@
         position: absolute;
         width: 200px;
         height: 60px;
-        background-color: $br-grey;
+        background-color: rgba($br-grey, 0.9);
         border-radius: 60px;
         pointer-events: none;
         z-index: 100;

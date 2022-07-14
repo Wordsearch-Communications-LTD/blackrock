@@ -24,7 +24,7 @@
 		grid-area: copy;
 
 		@media #{$mq-tablet-port} {
-			padding: 0 0 calc(100vw / 12) 0;
+			padding: calc(100vw / 12) 0 calc(100vw / 12) 0;
 		}
 
 		p {

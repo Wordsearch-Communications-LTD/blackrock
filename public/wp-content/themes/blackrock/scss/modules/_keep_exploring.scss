@@ -12,13 +12,17 @@
         h2 {
             @include headline-30;
             margin-bottom: 1em;
-            padding: 0 20px;
+            padding: 0 0 0 20px;
 
             @media #{$mq-tablet-port} {
+                padding: 0;
+            }
+
+            @media #{$mq-tablet-desk} {
                 @include headline-50;
                 margin-bottom: 1em;
                 margin-top: 0;
-                padding: 0 0;
+
             }
         }
     }
@@ -34,13 +38,20 @@
             display: block;
             color: $br-black;
             text-decoration: none;
-            padding-top: 10px;
-            @include headline-30;
+
+            @include body-20;
             position: relative;
-            margin-left: 20px;
+            margin-left: 0px;
             margin-bottom: 30px;
+            padding-top: 10px;
+            padding-left: 20px;
 
             @media #{$mq-tablet-port} {
+                padding-left: 0;
+            }
+
+            @media #{$mq-tablet-desk} {
+
                 margin-left: 0;
                 margin-bottom: 0;
                 @include body-35;
@@ -51,6 +62,13 @@
                 position: relative;
                 transform: translate(5px, 5px);
                 transition: all 0.3s ease 0s;
+                width: 20px;
+                height: 20px;
+
+                @media #{$mq-tablet-desk} {
+                    width: 32px;
+                    height: 32px;
+                }
             }
         }
 

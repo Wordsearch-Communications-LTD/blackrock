@@ -13,7 +13,7 @@
     <div class="right">
         <?php foreach($rightItems as $index => $item): ?>
             <article>
-                <div class="number"><?= leadingZero($index) ?></div>
+                <div class="number"><?= leadingZero($index) ?>/</div>
                 <div class="content"><?= $item['copy'] ?></div>
             </article>
         <?php endforeach; ?>

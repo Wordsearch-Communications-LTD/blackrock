@@ -81,13 +81,14 @@
             .number {
                 min-width: 80px;
                 padding-right: 20px;
-                @include headline-50;
+                @include headline-30;
                 font-weight: normal;
                 line-height: 0.9em;
 
                 @media #{$mq-tablet-port} {
                     padding-right: 40px;
                     min-width: 100px;
+                    @include headline-50;
                 }
             }
         }

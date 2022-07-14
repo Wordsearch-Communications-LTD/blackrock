@@ -25,6 +25,7 @@ cardCarousels.forEach(cardCarousel => {
 });
 
 fullImageCarousels.forEach(imageCarousel => {
+    let currentCarouseNode = imageCarousel;
 
     imageCarousel = new Swiper('' + imageCarousel.dataset.carouselClass + '', {
         slidesPerView: 1,
@@ -36,6 +37,12 @@ fullImageCarousels.forEach(imageCarousel => {
             el: imageCarousel.dataset.carouselClass + '-pagination',
           },
     });
+
+    currentCarouseNode.addEventListener('touchstart', e => {
+        currentCarouseNode.classList.add('mobile-touched');
+    });
 });
+
+
 
 

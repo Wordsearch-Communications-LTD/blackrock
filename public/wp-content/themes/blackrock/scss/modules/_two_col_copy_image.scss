@@ -19,12 +19,13 @@
         }
 
         @media #{$mq-tablet-port} {
+            padding: 0 0px;
             grid-template-columns: 1fr;
             grid-template-areas: "left""right";
         }
 
         @media #{$mq-tablet-desk} {
-            padding: 0 0px;
+
             grid-template-columns: 5fr 1fr 6fr;
             margin: 0 40px 0 40px;
             grid-template-areas: "left . right";
@@ -33,7 +34,7 @@
         h2 {
             @include headline-30;
 
-            @media #{$mq-tablet-port} {
+            @media #{$mq-tablet-desk} {
                 @include headline-50;
             }
         }
@@ -41,7 +42,7 @@
         p {
             @include body-20;
 
-            @media #{$mq-tablet-port} {
+            @media #{$mq-tablet-desk} {
                 @include body-35;
             }
         }

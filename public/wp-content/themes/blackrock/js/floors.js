@@ -38,8 +38,6 @@ class Floors {
     scrollToUnit(unit){
         let unitRect = unit.getBoundingClientRect();
 
-        console.log(unitRect);
-
         if(window.innerWidth <= 768) {
             
             window.scrollTo({
