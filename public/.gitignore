@@ -12,9 +12,14 @@ wp-content/plugins
 wp-content/plugins/*
 wp-content/plugins/*/**
 
+wp-content/updraft
+wp-content/updraft/*
+wp-content/updraft/*/**
+
+wp-content/uploads
 wp-content/uploads/*
 wp-content/uploads/*/**
-wp-content/uploads
+
 license.txt
 
 .DS_Store
