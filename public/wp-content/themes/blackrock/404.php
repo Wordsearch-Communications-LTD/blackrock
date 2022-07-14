@@ -1,4 +1,4 @@
-<?php /* Template Name: Thankyou Page */ 
+<?php /* Template Name: 404 Template */ 
 get_header(); 
 ?>
 

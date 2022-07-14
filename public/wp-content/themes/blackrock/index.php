@@ -1,4 +1,4 @@
-<?php /* Template Name: Default Template */ 
+<?php /* Template Name: N/A Default Template */ 
 get_header(); 
 global $post;
 ?>
