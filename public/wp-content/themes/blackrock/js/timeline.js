@@ -54,7 +54,6 @@ class Timeline {
         console.log(legalDimensions.height);
 
         if(legalContent){
-            console.log();
             calculatedPos = (legalDimensions.height + (this.closeArticleHeight * articleIndex) + 50);
         }
         else {

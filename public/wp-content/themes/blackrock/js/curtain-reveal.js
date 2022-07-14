@@ -92,9 +92,7 @@ class HeroCurtain {
                 let percent = Math.round(percentage) / 100;
                 let width = this.colWidth - (this.colWidth * percent);          
                 let translateX = width - this.colWidth; 
-                    
-                //console.log(this.containerID);
-
+                
                 if(percent > 0){
                     this.container.classList.add('scrolled');
                 }
