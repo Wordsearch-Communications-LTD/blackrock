@@ -13,8 +13,8 @@
 
 	@media #{$mq-tablet-desk} {
 		margin: calc(100vw / 12) 40px 0 40px;
-		grid-template-columns: 6fr 2fr 4fr;
-		grid-template-areas: "copy . image-container-left""image-container-right . .";
+		grid-template-columns: 5fr 1fr 2fr 4fr;
+		grid-template-areas: "copy . . image-container-left""image-container-right image-container-right  . .";
 	}
 
 
@@ -24,7 +24,8 @@
 		grid-area: copy;
 
 		@media #{$mq-tablet-port} {
-			padding: calc(100vw / 12) 0 calc(100vw / 12) 0;
+			//padding: calc(100vw / 12) 0 calc(100vw / 12) 0;
+			padding: 0 0 calc(100vw / 12) 0;
 		}
 
 		p {
@@ -37,6 +38,14 @@
 			span {
 				color: $br-blue;
 				@include body-20;
+			}
+		}
+
+		blockquote p {
+			margin-bottom: 0;
+
+			&:last-of-type {
+				font-size: 20px;
 			}
 		}
 	}
@@ -53,7 +62,7 @@
 		grid-area: image-container-right;
 
 		@media #{$mq-tablet-desk} {
-			margin-top: calc((100vw / 12) * -2);
+			margin-top: calc((100vw / 12) * -1);
 		}
 	}
 
@@ -65,27 +74,24 @@
 		grid-template-areas: "copy copy""image-container-right image-container-left";
 
 		@media #{$mq-tablet-port} {
+			margin: 0 40px 0 40px;
 			margin-top: calc(100vw / 12);
 		}
 
 		@media #{$mq-tablet-desk} {
-			grid-template-columns: 6fr 1fr 5fr;
-			grid-template-areas: "image-container-left . copy"". . image-container-right";
+			grid-template-columns: 5fr 1fr 1fr 1fr 4fr;
+			grid-template-areas: "image-container-left . . copy copy"". . . . image-container-right";
 		}
 
 		.image-container {
 			padding-top: 0;
 		}
 
-		.image-container {
+		.copy {
+			padding-top: (100vw / 12);
+		}
 
-			// @media #{$mq-tablet-port}{
-			//     display: grid;
-			//     grid-template-columns: 1fr 4fr;
-			//     grid-template-areas: 
-			//         ". img"
-			//         ". cap";
-			// }
+		.image-container {
 
 			.image {
 				grid-area: img;

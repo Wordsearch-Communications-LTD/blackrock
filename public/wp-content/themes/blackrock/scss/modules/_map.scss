@@ -40,8 +40,14 @@
 
         @media #{$mq-tablet-port} {
             display: grid;
-            grid-template-columns: repeat(12, 1fr);
-            grid-template-areas: "navi navi . maps maps maps maps maps maps maps maps maps";
+            grid-template-columns: 3fr 9fr;
+            grid-template-areas: "navi maps";
+        }
+
+        @media #{$mq-desk-medium} {
+            display: grid;
+            grid-template-columns: 2fr 10fr;
+            grid-template-areas: "navi maps";
         }
 
         .map-layers-nav {

@@ -59,10 +59,46 @@
 
 			h3 {
 				@include headline-20;
+				padding-bottom: 5px;
 			}
 
 			p {
 				@include body-20;
+			}
+		}
+	}
+
+	.download-buttons {
+		margin: 0px 20px 0 20px;
+		text-align: left;
+
+		@media #{$mq-tablet-port} {
+			margin: 50px 40px 0 40px;
+		}
+
+		@media #{$mq-tablet-desk} {
+			text-align: right;
+
+		}
+
+
+		.button.light {
+			margin-bottom: 20px;
+			margin-right: 10px;
+
+			@media #{$mq-tablet-desk} {
+				margin-right: 50px;
+				margin-bottom: 0;
+
+				&:last-of-type {
+					margin-right: 0px;
+				}
+			}
+
+			&:hover {
+				svg {
+					transform: translate(0px, -50%);
+				}
 			}
 		}
 	}

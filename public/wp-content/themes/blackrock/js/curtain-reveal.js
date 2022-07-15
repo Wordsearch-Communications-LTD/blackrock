@@ -99,13 +99,15 @@ class HeroCurtain {
 
                 if(percent > 0.5) {
                     this.container.classList.add('revealed');
-                    
-                    if(this.containerID == "home-hero"){
-                        document.querySelectorAll('.header-menu')[0].classList.add('show-menu');
-                    }
                 }
                 else {
                     this.container.classList.remove('revealed');
+                }
+
+                if(percent > 0.99) {
+                    if(this.containerID == "home-hero"){
+                        document.querySelectorAll('.header-menu')[0].classList.add('show-menu');
+                    }
                 }
 
                 if(percent <= 0){                   

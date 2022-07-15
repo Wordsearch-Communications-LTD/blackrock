@@ -65,6 +65,10 @@
                 width: 20px;
                 height: 20px;
 
+                path {
+                    stroke: $br-grey;
+                }
+
                 @media #{$mq-tablet-desk} {
                     width: 32px;
                     height: 32px;
@@ -91,16 +95,21 @@
                 top: 0;
                 left: 0;
                 z-index: 2;
-                background-color: rgba($br-blue, 0.9);
+                background-color: rgba($br-blue, 0.65);
                 opacity: 0;
                 transition: all 0.3s ease 0s;
             }
         }
 
         .explore-block {
+
+            a {
+                color: $br-grey
+            }
+
             &:hover {
                 a {
-                    color: $br-blue;
+                    color: $br-grey;
 
                     &.link-image:after {
                         opacity: 1;

@@ -1,12 +1,12 @@
 .card-carousel {
 
     margin-top: 40px;
-    
-    @media #{$mq-tablet-port}{
+
+    @media #{$mq-tablet-port} {
         margin-top: calc(100vw / 12);
     }
 
-    
+
 
     h3 {
         @include headline-20;
@@ -28,7 +28,7 @@
         display: flex;
         margin-left: 40px;
         margin-top: 40px;
-        background-color: $br-blue !important;
+        background-color: $br-blue  !important;
         position: relative;
         top: auto;
         left: auto;
@@ -42,14 +42,14 @@
             margin: 0;
             opacity: 0;
 
-           &.swiper-pagination-bullet-active {
+            &.swiper-pagination-bullet-active {
                 background: $br-blue;
             }
         }
 
-        .swiper-pagination-bullet-active ~ .swiper-pagination-bullet {
-            background: $br-grey;
-			opacity: 1;
+        .swiper-pagination-bullet-active~.swiper-pagination-bullet {
+            background: lighten($br-grey, 25%);
+            opacity: 1;
         }
     }
 }

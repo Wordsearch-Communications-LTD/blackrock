@@ -64,10 +64,14 @@
         top: 0;
         left: 0;
         width: 50vw;
-        height: 100%;
+        height: calc(100% - 60px);
 
         @media #{$mq-tablet-port} {
             display: block;
+        }
+
+        @media #{$mq-tablet-desk} {
+            pointer-events: all !important;
         }
 
         @media (hover: none) {
@@ -82,14 +86,14 @@
 
     .swiper-button-prev,
     .swiper-button-prev:hover {
-        cursor: url(../img/icons/arrow-white-left.svg) 0 0, pointer !important;
+        cursor: url(../img/icons/arrow-white-left.svg) 0 35, pointer;
     }
 
     .swiper-button-next,
     .swiper-button-next:hover {
         right: 0;
         left: auto;
-        cursor: url(../img/icons/arrow-white-right.svg) 0 0, pointer !important;
+        cursor: url(../img/icons/arrow-white-right.svg) 128 35, pointer;
     }
 
     .swiper-pagination-bullets {
@@ -118,7 +122,7 @@
         }
 
         .swiper-pagination-bullet-active~.swiper-pagination-bullet {
-            background: $br-grey;
+            background: lighten($br-grey, 25%);
             opacity: 1;
         }
     }
@@ -126,6 +130,32 @@
     .caption {
         padding: 0px 20px 10px 20px;
     }
+
+    .cursor-change {
+
+        .swiper-button-prev,
+        .swiper-button-prev:hover {
+            cursor: url(../img/icons/arrow-blue-left.svg) 0 35, pointer !important;
+        }
+
+        .swiper-button-next,
+        .swiper-button-next:hover {
+            right: 0;
+            left: auto;
+            cursor: url(../img/icons/arrow-blue-right.svg) 128 35, pointer !important;
+        }
+    }
+
+
+    .disable-prev .swiper-button-prev {
+        pointer-events: none !important;
+    }
+
+    .disable-next .swiper-button-next {
+        pointer-events: none !important;
+    }
+
+
 }
 
 @keyframes pulseSlide {

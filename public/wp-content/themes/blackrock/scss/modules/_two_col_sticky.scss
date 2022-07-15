@@ -83,12 +83,13 @@
                 padding-right: 20px;
                 @include headline-30;
                 font-weight: normal;
-                line-height: 0.9em;
+                line-height: 1em;
 
                 @media #{$mq-tablet-port} {
                     padding-right: 40px;
                     min-width: 100px;
                     @include headline-50;
+                    line-height: 1em;
                 }
             }
         }

@@ -80,7 +80,7 @@
             svg {
 
                 path {
-                    stroke: $br-blue  !important;
+                    stroke: $br-blue;
                 }
             }
         }
@@ -93,7 +93,9 @@
     }
 
     &.revealed {
-        .original p {
+
+        .original p,
+        .original a {
             @media #{$mq-tablet-port} {
                 opacity: 0;
             }
@@ -178,7 +180,9 @@
     }
 
     &.solid-bg.scrolled {
-        .original p {
+
+        .original p,
+        .original a {
             @media #{$mq-tablet-port} {
                 opacity: 0;
             }

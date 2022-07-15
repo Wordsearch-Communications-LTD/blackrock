@@ -48,7 +48,7 @@
 	}
 
 	#floor-toggle {
-		margin-top: 20px;
+		margin-top: 35px;
 	}
 
 	.floor-list {
@@ -82,6 +82,7 @@
 					line-height: 35px;
 					padding: 0;
 					margin: 0;
+					color: $br-white;
 				}
 
 				.floor-header_name-sqft {
@@ -122,6 +123,7 @@
 					span {
 						@include headline-30;
 						padding-top: 10px;
+						color: $br-white;
 
 						@media #{$mq-tablet-desk} {
 							@include headline-50;
@@ -186,6 +188,7 @@
 							border-top: 2px solid white;
 							grid-template-columns: 2fr 1fr;
 							gap: 0px 10px;
+							color: $br-white;
 
 							&:first-of-type {
 								border-style: none;
@@ -200,6 +203,7 @@
 								line-height: 32px;
 								margin-bottom: 0;
 								padding-top: 0;
+								color: $br-white;
 
 								&:last-of-type {
 									justify-self: end;
@@ -220,6 +224,7 @@
 								line-height: 32px;
 								margin-bottom: 0;
 								font-weight: normal;
+								color: $br-white;
 							}
 
 							svg {

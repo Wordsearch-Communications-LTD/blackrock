@@ -1,10 +1,38 @@
 .home .header-menu {
-
 	opacity: 0;
+
+	@media #{$mq-tablet-desk} {
+		transition: all 0.3s ease 0s;
+		transform: translateY(-100px);
+	}
+
+	.logo,
+	.menu-main-menu-container {
+		opacity: 0;
+
+		@media #{$mq-tablet-desk} {
+			transition: all 0.2s ease 0.1s;
+			transform: translateY(-30px);
+		}
+	}
 }
 
 .home .header-menu.show-menu {
 	opacity: 1;
+
+	@media #{$mq-tablet-desk} {
+		transform: translateY(0px);
+	}
+
+	.logo,
+	.menu-main-menu-container {
+		opacity: 1;
+
+		@media #{$mq-tablet-desk} {
+			transition: all 0.3s ease 0.1s;
+			transform: translateY(0px);
+		}
+	}
 }
 
 .header-menu {
@@ -101,7 +129,7 @@
 
 				&.current_page_item a {
 					padding-bottom: 3px;
-					border-bottom: 2px solid white;
+					border-bottom: 1px solid white;
 				}
 			}
 		}
@@ -109,12 +137,11 @@
 
 	@media #{$mq-tablet-desk} {
 		.menu-main-menu-container {
-			position: relative;
-			float: right;
-			margin-top: 20px;
-			margin-right: 60px;
-			width: 50vw;
-			top: auto;
+			position: absolute;
+			//float: right;
+			right: 40px;
+			top: 20px;
+			width: auto;
 			left: auto;
 			width: auto;
 			height: auto;
@@ -127,7 +154,7 @@
 					display: inline-block;
 					font-size: 20px;
 					opacity: 1;
-
+					transform: none;
 
 					&:after {
 						font-weight: bold;
@@ -150,12 +177,14 @@
 					&.current_page_item {
 						a {
 							color: $br-blue;
+							padding-bottom: 3px;
+							border-bottom: 1px solid $br-blue;
 						}
 					}
 
 					&.current_page_item a {
 						padding-bottom: 3px;
-						border-bottom: 2px solid $br-blue;
+						border-bottom: 1px solid $br-blue;
 					}
 				}
 			}
@@ -165,8 +194,6 @@
 			display: none;
 		}
 	}
-
-
 }
 
 .menu-open {
@@ -215,7 +242,7 @@
 		}
 
 		.menu li.current_page_item a {
-			border-bottom: 2px solid $br-blue;
+			border-bottom: 1px solid $br-blue;
 		}
 	}
 
@@ -257,6 +284,14 @@
 
 		.menu-main-menu-container .menu li a {
 			color: white;
+		}
+
+		.menu-main-menu-container .menu li:hover a,
+		.menu-main-menu-container .menu li a:hover {
+
+			@media #{$mq-tablet-desk} {
+				border-color: $br-white;
+			}
 		}
 
 		.menu-main-menu-container .menu li.current_page_item a {

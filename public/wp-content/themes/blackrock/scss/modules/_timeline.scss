@@ -98,7 +98,7 @@
 			}
 
 			li {
-				margin-bottom: 2em;
+				margin-bottom: 30px;
 			}
 		}
 
@@ -108,6 +108,8 @@
 			background-color: transparent;
 			appearance: none;
 			text-align: left;
+			color: $br-grey;
+
 
 			&.active {
 				color: $br-blue;
@@ -181,6 +183,7 @@
 
 			span.number {
 				margin-right: 20px;
+				color: $br-grey;
 			}
 
 			span.title {
@@ -189,9 +192,10 @@
 				line-height: 39px;
 				padding: 0;
 				margin: 0;
+				color: $br-grey;
 
 				@media #{$mq-desk-small} {
-					@include headline-50;
+					@include headline-30;
 					line-height: 39px;
 					padding: 0;
 					margin: 0;
@@ -208,6 +212,8 @@
 			padding: 10px 20px 0 20px;
 			max-height: 0;
 			overflow: hidden;
+
+			transition: all 0.4s ease 0s;
 
 			@media #{$mq-tablet-port} {
 				padding: 10px 0 0 0;
@@ -257,9 +263,13 @@
 			header {
 				color: $br-blue;
 
+				span.number {
+					color: $br-blue;
+				}
 
 				span.title {
 					max-width: calc(100vw - 190px);
+					color: $br-blue;
 
 					@include headline-30;
 

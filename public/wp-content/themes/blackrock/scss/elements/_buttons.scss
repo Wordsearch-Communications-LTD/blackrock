@@ -46,29 +46,29 @@ a.button {
 .page-white {
 
     a.button {
-        border: 1px solid $br-white;
-        color: $br-black;
+        border: 1px solid $br-blue;
+        color: $br-blue;
 
         &:active,
         &:visited {
-            color: $br-black;
+            color: $br-blue;
         }
 
         svg {
 
             path {
-                stroke: $br-black;
+                stroke: $br-blue;
             }
         }
 
         &:hover {
-            background-color: $br-white;
-            color: $br-black;
+            background-color: $br-blue  !important;
+            color: $br-white  !important;
 
             svg {
 
                 path {
-                    stroke: $br-black;
+                    stroke: $br-white  !important;
                 }
             }
         }

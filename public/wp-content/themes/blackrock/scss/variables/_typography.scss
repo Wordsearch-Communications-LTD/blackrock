@@ -23,62 +23,76 @@ $boldFont: "PPNeueMontreal-Bold";
         url('../fonts/PPNeueMontreal-Regular.woff2') format('woff2');
 }
 
-@mixin body-16 {//Neue Montreal
+@mixin body-16 {
+    //Neue Montreal
     font-size: 16px;
     line-height: 1.3em;
     margin-bottom: 15px;
     padding-bottom: 0;
     font-family: $regularFont;
+
 }
 
-@mixin body-20 {//Neue Montreal
+@mixin body-20 {
+    //Neue Montreal
     font-size: 20px;
     line-height: 1.3em;
     margin-bottom: 20px;
     padding-bottom: 0;
     font-family: $regularFont;
+
 }
 
-@mixin body-35 {//Neue Montreal
+@mixin body-35 {
+    //Neue Montreal
     font-size: 35px;
     line-height: 1.3em;
     margin-bottom: 20px;
     padding-bottom: 0;
     font-family: $regularFont;
+
 }
 
-@mixin headline-20 {//PP Neue Montreal
+@mixin headline-20 {
+    //PP Neue Montreal
     font-weight: normal;
     font-size: 20px;
     line-height: 1.4em;
     margin-bottom: 0;
     padding-bottom: 0;
     font-family: $mediumFont;
+
 }
 
-@mixin headline-30 {//PP Neue Montreal
+@mixin headline-30 {
+    //PP Neue Montreal
     font-weight: normal;
     font-size: 30px;
     line-height: 1.3em;
     margin-bottom: 0;
     padding-bottom: 0;
     font-family: $mediumFont;
+
 }
 
-@mixin headline-50 {//PP Neue Montreal
+@mixin headline-50 {
+    //PP Neue Montreal
     font-weight: normal;
     font-size: 50px;
     line-height: 1.2em;
     margin-bottom: 0;
     padding-bottom: 0;
     font-family: $regularFont;
+
 }
 
-@mixin headline-75 {//PP Neue Montreal
+@mixin headline-75 {
+    //PP Neue Montreal
     font-weight: normal;
     font-size: 75px;
     line-height: 1.2em;
     margin-bottom: 0;
     padding-bottom: 0;
     font-family: $regularFont;
+
 }
