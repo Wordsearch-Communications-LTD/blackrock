@@ -27,6 +27,10 @@
   src: url("../fonts/PPNeueMontreal-Bold.woff") format("woff"), url("../fonts/PPNeueMontreal-Bold.otf") format("otf"), url("../fonts/PPNeueMontreal-Bold.woff2") format("woff2");
 }
 @font-face {
+  font-family: "PPNeueMontreal-Book";
+  src: url("../fonts/PPNeueMontreal-Book.woff") format("woff"), url("../fonts/PPNeueMontreal-Book.otf") format("otf"), url("../fonts/PPNeueMontreal-Book.woff2") format("woff2");
+}
+@font-face {
   font-family: "PPNeueMontreal-Regular";
   src: url("../fonts/PPNeueMontreal-Regular.woff") format("woff"), url("../fonts/PPNeueMontreal-Regular.otf") format("otf"), url("../fonts/PPNeueMontreal-Regular.woff2") format("woff2");
 }
@@ -85,7 +89,7 @@ blockquote {
   line-height: 1.3em;
   margin-bottom: 15px;
   padding-bottom: 0;
-  font-family: "PPNeueMontreal-Regular";
+  font-family: "PPNeueMontreal-Book";
 }
 @media (min-width: 768px) {
   /* line 48, ../scss/layout/_general.scss */
@@ -105,7 +109,7 @@ blockquote {
     line-height: 1.3em;
     margin-bottom: 20px;
     padding-bottom: 0;
-    font-family: "PPNeueMontreal-Regular";
+    font-family: "PPNeueMontreal-Book";
   }
 }
 
@@ -121,7 +125,7 @@ blockquote {
   line-height: 1.3em;
   margin-bottom: 15px;
   padding-bottom: 0;
-  font-family: "PPNeueMontreal-Regular";
+  font-family: "PPNeueMontreal-Book";
   margin-bottom: 0;
   position: relative;
   z-index: 10;
@@ -288,7 +292,7 @@ blockquote {
   line-height: 1.3em;
   margin-bottom: 20px;
   padding-bottom: 0;
-  font-family: "PPNeueMontreal-Regular";
+  font-family: "PPNeueMontreal-Book";
 }
 /* line 54, ../scss/layout/_header.scss */
 .header-menu .logo {
@@ -371,7 +375,7 @@ blockquote {
   line-height: 1.3em;
   margin-bottom: 20px;
   padding-bottom: 0;
-  font-family: "PPNeueMontreal-Regular";
+  font-family: "PPNeueMontreal-Book";
   text-decoration: none;
   color: #000000;
 }
@@ -420,7 +424,7 @@ blockquote {
     line-height: 1.3em;
     margin-bottom: 20px;
     padding-bottom: 0;
-    font-family: "PPNeueMontreal-Regular";
+    font-family: "PPNeueMontreal-Book";
     text-decoration: none;
     color: black;
   }
@@ -563,7 +567,7 @@ a.button {
   letter-spacing: calc($button_FontSizeMob * 0.05);
   padding-right: 58px;
   text-decoration: none;
-  font-family: "PPNeueMontreal-Regular";
+  font-family: "PPNeueMontreal-Book";
   position: relative;
   transition: all 0.3s ease 0s;
 }
@@ -657,7 +661,7 @@ a.button:hover svg {
   line-height: 1.3em;
   margin-bottom: 15px;
   padding-bottom: 0;
-  font-family: "PPNeueMontreal-Regular";
+  font-family: "PPNeueMontreal-Book";
   padding-left: 60px;
   position: relative;
   cursor: pointer;
@@ -784,7 +788,7 @@ a.button:hover svg {
   line-height: 1.3em;
   margin-bottom: 20px;
   padding-bottom: 0;
-  font-family: "PPNeueMontreal-Regular";
+  font-family: "PPNeueMontreal-Book";
   margin-right: 10px;
 }
 /* line 21, ../scss/modules/_card_carousel.scss */
@@ -805,7 +809,7 @@ a.button:hover svg {
   line-height: 1.3em;
   margin-bottom: 20px;
   padding-bottom: 0;
-  font-family: "PPNeueMontreal-Regular";
+  font-family: "PPNeueMontreal-Book";
   line-height: 60px;
   padding-left: 35px;
   color: #FFFFFF;
@@ -1044,7 +1048,7 @@ a.button:hover svg {
   line-height: 1.3em;
   margin-bottom: 20px;
   padding-bottom: 0;
-  font-family: "PPNeueMontreal-Regular";
+  font-family: "PPNeueMontreal-Book";
 }
 /* line 34, ../scss/modules/_copy_two_images.scss */
 .copy-two-images .copy p:last-of-type {
@@ -1057,7 +1061,7 @@ a.button:hover svg {
   line-height: 1.3em;
   margin-bottom: 20px;
   padding-bottom: 0;
-  font-family: "PPNeueMontreal-Regular";
+  font-family: "PPNeueMontreal-Book";
 }
 /* line 44, ../scss/modules/_copy_two_images.scss */
 .copy-two-images .copy blockquote p {
@@ -1180,7 +1184,7 @@ a.button:hover svg {
   line-height: 1.3em;
   margin-bottom: 20px;
   padding-bottom: 0;
-  font-family: "PPNeueMontreal-Regular";
+  font-family: "PPNeueMontreal-Book";
   font-size: 14px;
   margin: 0;
   padding: 0;
@@ -1228,7 +1232,7 @@ a.button:hover svg {
   line-height: 1.3em;
   margin-bottom: 20px;
   padding-bottom: 0;
-  font-family: "PPNeueMontreal-Regular";
+  font-family: "PPNeueMontreal-Book";
   font-size: 14px;
   line-height: 35px;
   padding: 0;
@@ -1294,7 +1298,7 @@ a.button:hover svg {
     line-height: 1.2em;
     margin-bottom: 0;
     padding-bottom: 0;
-    font-family: "PPNeueMontreal-Regular";
+    font-family: "PPNeueMontreal-Book";
   }
 }
 /* line 133, ../scss/modules/_floors.scss */
@@ -1386,7 +1390,7 @@ a.button:hover svg {
   line-height: 1.3em;
   margin-bottom: 20px;
   padding-bottom: 0;
-  font-family: "PPNeueMontreal-Regular";
+  font-family: "PPNeueMontreal-Book";
   line-height: 32px;
   margin-bottom: 0;
   padding-top: 0;
@@ -1411,7 +1415,7 @@ a.button:hover svg {
   line-height: 1.3em;
   margin-bottom: 20px;
   padding-bottom: 0;
-  font-family: "PPNeueMontreal-Regular";
+  font-family: "PPNeueMontreal-Book";
   line-height: 32px;
   margin-bottom: 0;
   font-weight: normal;
@@ -1591,7 +1595,7 @@ a.button:hover svg {
     line-height: 1.2em;
     margin-bottom: 0;
     padding-bottom: 0;
-    font-family: "PPNeueMontreal-Regular";
+    font-family: "PPNeueMontreal-Book";
     margin-left: 0;
   }
 }
@@ -1634,7 +1638,7 @@ a.button:hover svg {
   line-height: 1.3em;
   margin-bottom: 20px;
   padding-bottom: 0;
-  font-family: "PPNeueMontreal-Regular";
+  font-family: "PPNeueMontreal-Book";
   color: #FFFFFF;
 }
 @media (min-width: 768px) {
@@ -1650,7 +1654,7 @@ a.button:hover svg {
   line-height: 1.3em;
   margin-bottom: 20px;
   padding-bottom: 0;
-  font-family: "PPNeueMontreal-Regular";
+  font-family: "PPNeueMontreal-Book";
 }
 /* line 95, ../scss/modules/_contact.scss */
 .contact-module-container .contacts-container .contacts .contact h3 {
@@ -1823,7 +1827,7 @@ a.button:hover svg {
   line-height: 1.3em;
   margin-bottom: 20px;
   padding-bottom: 0;
-  font-family: "PPNeueMontreal-Regular";
+  font-family: "PPNeueMontreal-Book";
   margin-top: 70px;
   margin-bottom: 20px;
   font-weight: normal;
@@ -1841,7 +1845,7 @@ a.button:hover svg {
   line-height: 1.3em;
   margin-bottom: 20px;
   padding-bottom: 0;
-  font-family: "PPNeueMontreal-Regular";
+  font-family: "PPNeueMontreal-Book";
 }
 /* line 107, ../scss/modules/_home_hero.scss */
 .column-reveal .column-reveal_slices .home-hero_title h2,
@@ -1915,7 +1919,7 @@ a.button:hover svg {
     line-height: 1.2em;
     margin-bottom: 0;
     padding-bottom: 0;
-    font-family: "PPNeueMontreal-Regular";
+    font-family: "PPNeueMontreal-Book";
     opacity: 0;
     margin: 0;
   }
@@ -2122,7 +2126,7 @@ a.button:hover svg {
     line-height: 1.2em;
     margin-bottom: 0;
     padding-bottom: 0;
-    font-family: "PPNeueMontreal-Regular";
+    font-family: "PPNeueMontreal-Book";
     margin: 0 0 30px 0;
   }
 }
@@ -2283,7 +2287,7 @@ a.button:hover svg {
   line-height: 1.3em;
   margin-bottom: 20px;
   padding-bottom: 0;
-  font-family: "PPNeueMontreal-Regular";
+  font-family: "PPNeueMontreal-Book";
   line-height: 60px;
   padding-left: 35px;
   color: #FFFFFF;
@@ -2473,7 +2477,7 @@ a.button:hover svg {
     line-height: 1.2em;
     margin-bottom: 0;
     padding-bottom: 0;
-    font-family: "PPNeueMontreal-Regular";
+    font-family: "PPNeueMontreal-Book";
     margin-bottom: 1em;
     margin-top: 0;
   }
@@ -2501,7 +2505,7 @@ a.button:hover svg {
   line-height: 1.3em;
   margin-bottom: 20px;
   padding-bottom: 0;
-  font-family: "PPNeueMontreal-Regular";
+  font-family: "PPNeueMontreal-Book";
   position: relative;
   margin-left: 0px;
   margin-bottom: 30px;
@@ -2523,7 +2527,7 @@ a.button:hover svg {
     line-height: 1.3em;
     margin-bottom: 20px;
     padding-bottom: 0;
-    font-family: "PPNeueMontreal-Regular";
+    font-family: "PPNeueMontreal-Book";
   }
 }
 /* line 60, ../scss/modules/_keep_exploring.scss */
@@ -2661,7 +2665,7 @@ a.button:hover svg {
     line-height: 1.2em;
     margin-bottom: 0;
     padding-bottom: 0;
-    font-family: "PPNeueMontreal-Regular";
+    font-family: "PPNeueMontreal-Book";
     margin: 100px 20px 40px 20px;
   }
 }
@@ -2797,7 +2801,7 @@ a.button:hover svg {
   line-height: 1.3em;
   margin-bottom: 20px;
   padding-bottom: 0;
-  font-family: "PPNeueMontreal-Regular";
+  font-family: "PPNeueMontreal-Book";
   line-height: 60px;
   padding-left: 35px;
   color: #FFFFFF;
@@ -2893,7 +2897,7 @@ a.button:hover svg {
   line-height: 1.3em;
   margin-bottom: 20px;
   padding-bottom: 0;
-  font-family: "PPNeueMontreal-Regular";
+  font-family: "PPNeueMontreal-Book";
 }
 @media (min-width: 768px) {
   /* line 53, ../scss/modules/_timeline.scss */
@@ -2925,7 +2929,7 @@ a.button:hover svg {
     line-height: 1.2em;
     margin-bottom: 0;
     padding-bottom: 0;
-    font-family: "PPNeueMontreal-Regular";
+    font-family: "PPNeueMontreal-Book";
     margin: 0 0 40px 0;
   }
 }
@@ -3055,7 +3059,7 @@ a.button:hover svg {
     line-height: 1.2em;
     margin-bottom: 0;
     padding-bottom: 0;
-    font-family: "PPNeueMontreal-Regular";
+    font-family: "PPNeueMontreal-Book";
   }
 }
 /* line 178, ../scss/modules/_timeline.scss */
@@ -3107,7 +3111,7 @@ a.button:hover svg {
   line-height: 1.3em;
   margin-bottom: 20px;
   padding-bottom: 0;
-  font-family: "PPNeueMontreal-Regular";
+  font-family: "PPNeueMontreal-Book";
   padding: 10px 20px 0 20px;
   max-height: 0;
   overflow: hidden;
@@ -3192,7 +3196,7 @@ a.button:hover svg {
     line-height: 1.2em;
     margin-bottom: 0;
     padding-bottom: 0;
-    font-family: "PPNeueMontreal-Regular";
+    font-family: "PPNeueMontreal-Book";
     line-height: 39px;
     padding: 0;
     margin: 0;
@@ -3362,7 +3366,7 @@ a.button:hover svg {
     line-height: 1.2em;
     margin-bottom: 0;
     padding-bottom: 0;
-    font-family: "PPNeueMontreal-Regular";
+    font-family: "PPNeueMontreal-Book";
   }
 }
 
@@ -3433,7 +3437,7 @@ a.button:hover svg {
     line-height: 1.2em;
     margin-bottom: 0;
     padding-bottom: 0;
-    font-family: "PPNeueMontreal-Regular";
+    font-family: "PPNeueMontreal-Book";
   }
 }
 /* line 89, ../scss/modules/_one_col_copy_image.scss */
@@ -3451,7 +3455,7 @@ a.button:hover svg {
   line-height: 1.3em;
   margin-bottom: 20px;
   padding-bottom: 0;
-  font-family: "PPNeueMontreal-Regular";
+  font-family: "PPNeueMontreal-Book";
 }
 
 /* line 1, ../scss/modules/_title_multiple_columns.scss */
@@ -3515,7 +3519,7 @@ a.button:hover svg {
     line-height: 1.2em;
     margin-bottom: 0;
     padding-bottom: 0;
-    font-family: "PPNeueMontreal-Regular";
+    font-family: "PPNeueMontreal-Book";
     margin-bottom: calc(100vw / 24);
   }
 }
@@ -3567,7 +3571,7 @@ a.button:hover svg {
   line-height: 1.3em;
   margin-bottom: 20px;
   padding-bottom: 0;
-  font-family: "PPNeueMontreal-Regular";
+  font-family: "PPNeueMontreal-Book";
 }
 /* line 71, ../scss/modules/_title_multiple_columns.scss */
 .title-multiple-columns .download-buttons {
@@ -3671,7 +3675,7 @@ a.button:hover svg {
     line-height: 1.2em;
     margin-bottom: 0;
     padding-bottom: 0;
-    font-family: "PPNeueMontreal-Regular";
+    font-family: "PPNeueMontreal-Book";
   }
 }
 /* line 42, ../scss/modules/_two_col_copy_image.scss */
@@ -3680,7 +3684,7 @@ a.button:hover svg {
   line-height: 1.3em;
   margin-bottom: 20px;
   padding-bottom: 0;
-  font-family: "PPNeueMontreal-Regular";
+  font-family: "PPNeueMontreal-Book";
 }
 @media (min-width: 1024px) {
   /* line 42, ../scss/modules/_two_col_copy_image.scss */
@@ -3689,7 +3693,7 @@ a.button:hover svg {
     line-height: 1.3em;
     margin-bottom: 20px;
     padding-bottom: 0;
-    font-family: "PPNeueMontreal-Regular";
+    font-family: "PPNeueMontreal-Book";
   }
 }
 /* line 51, ../scss/modules/_two_col_copy_image.scss */
@@ -3979,7 +3983,7 @@ a.button:hover svg {
     line-height: 1.2em;
     margin-bottom: 0;
     padding-bottom: 0;
-    font-family: "PPNeueMontreal-Regular";
+    font-family: "PPNeueMontreal-Book";
   }
 }
 @media (min-width: 1024px) {
@@ -4006,7 +4010,7 @@ a.button:hover svg {
   line-height: 1.3em;
   margin-bottom: 20px;
   padding-bottom: 0;
-  font-family: "PPNeueMontreal-Regular";
+  font-family: "PPNeueMontreal-Book";
   font-weight: bold;
   margin-top: 0;
 }
@@ -4016,7 +4020,7 @@ a.button:hover svg {
   line-height: 1.3em;
   margin-bottom: 20px;
   padding-bottom: 0;
-  font-family: "PPNeueMontreal-Regular";
+  font-family: "PPNeueMontreal-Book";
 }
 /* line 61, ../scss/modules/_two_col_sticky.scss */
 .two-col-sticky .right .button-container {
@@ -4068,7 +4072,7 @@ a.button:hover svg {
     line-height: 1.2em;
     margin-bottom: 0;
     padding-bottom: 0;
-    font-family: "PPNeueMontreal-Regular";
+    font-family: "PPNeueMontreal-Book";
     line-height: 1em;
   }
 }

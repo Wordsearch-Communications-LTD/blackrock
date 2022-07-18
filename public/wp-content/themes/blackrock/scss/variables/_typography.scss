@@ -1,6 +1,9 @@
 $regularFont: "PPNeueMontreal-Regular";
+$bookFont: "PPNeueMontreal-Book";
 $mediumFont: "PPNeueMontreal-Medium";
 $boldFont: "PPNeueMontreal-Bold";
+
+$regularFont: $bookFont;
 
 @font-face {
     font-family: "PPNeueMontreal-Medium";
@@ -14,6 +17,13 @@ $boldFont: "PPNeueMontreal-Bold";
     src: url('../fonts/PPNeueMontreal-Bold.woff') format('woff'),
         url('../fonts/PPNeueMontreal-Bold.otf') format('otf'),
         url('../fonts/PPNeueMontreal-Bold.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: "PPNeueMontreal-Book";
+    src: url('../fonts/PPNeueMontreal-Book.woff') format('woff'),
+        url('../fonts/PPNeueMontreal-Book.otf') format('otf'),
+        url('../fonts/PPNeueMontreal-Book.woff2') format('woff2');
 }
 
 @font-face {
