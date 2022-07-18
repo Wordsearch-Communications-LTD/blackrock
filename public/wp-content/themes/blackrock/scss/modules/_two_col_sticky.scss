@@ -1,10 +1,14 @@
 .two-col-sticky {
-    @include grid;
+
 
     margin: 100px 20px 0 20px;
 
     @media #{$mq-tablet-port} {
-        margin: 0 40px 0 40px;
+        margin: 100px 40px 0 40px;
+    }
+
+    @media #{$mq-tablet-desk} {
+        display: grid;
         padding-top: calc(100vw / 12);
         grid-template-columns: 5fr 1fr 6fr;
         grid-template-areas: "left . right";
@@ -28,7 +32,7 @@
 
         .stick {
 
-            @media #{$mq-tablet-port} {
+            @media #{$mq-tablet-desk} {
                 position: sticky;
                 top: 0;
                 padding-top: calc(100vw / 12);

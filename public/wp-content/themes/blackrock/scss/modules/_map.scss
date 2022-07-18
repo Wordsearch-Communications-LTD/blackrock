@@ -1,3 +1,5 @@
+$mq-mapBreakpoint: "(min-width: 900px)";
+
 .map {
     @include grid;
 
@@ -38,7 +40,7 @@
     .map-container {
         background-color: $br-cream;
 
-        @media #{$mq-tablet-port} {
+        @media #{$mq-mapBreakpoint} {
             display: grid;
             grid-template-columns: 3fr 9fr;
             grid-template-areas: "navi maps";
@@ -128,7 +130,7 @@
             line-height: 0;
             max-height: 600px;
 
-            @media #{$mq-tablet-port} {
+            @media #{$mq-mapBreakpoint} {
                 width: auto;
                 height: auto;
                 max-height: none;

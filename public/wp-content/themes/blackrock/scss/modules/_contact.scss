@@ -15,6 +15,11 @@
 		@include grid;
 
 		@media #{$mq-tablet-port} {
+			grid-template-columns: 1fr;
+			grid-template-areas: "contacts""img";
+		}
+
+		@media #{$mq-tablet-desk} {
 			grid-template-columns: 6fr 1fr 5fr;
 			grid-template-areas: "contacts . img ";
 		}
@@ -119,7 +124,7 @@
 			grid-area: img;
 			line-height: 0;
 
-			@media #{$mq-tablet-port} {
+			@media #{$mq-tablet-desk} {
 				position: sticky;
 				top: 0;
 				align-self: end;
