@@ -2,10 +2,13 @@ const cardCarousels = document.querySelectorAll('.card-carousel .swiper');
 const fullImageCarousels = document.querySelectorAll('.image-carousel .swiper');
 
 cardCarousels.forEach(cardCarousel => {
+    let currentCarouseNode = cardCarousel;
+
     cardCarousel = new Swiper('' + cardCarousel.dataset.carouselClass + '', {
         slidesPerView: 1,
         slidesOffsetBefore: 10,
         spaceBetween: 0,
+        draggable: true,
         pagination: {
             el: cardCarousel.dataset.carouselClass + '-pagination',
             clickable: true,
@@ -21,7 +24,11 @@ cardCarousels.forEach(cardCarousel => {
                 slidesOffsetBefore: 30,
                 spaceBetween: 0,
             }
-        }  
+        }
+    });
+
+    currentCarouseNode.addEventListener('pointerdown', e => {
+        currentCarouseNode.classList.add('mobile-touched');
     });
 });
 

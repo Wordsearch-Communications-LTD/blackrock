@@ -772,6 +772,47 @@ a.button:hover svg {
   padding: 0 10px;
 }
 /* line 25, ../scss/modules/_card_carousel.scss */
+.card-carousel .mobile-swipe-prompt {
+  display: block;
+  position: absolute;
+  width: 200px;
+  height: 60px;
+  background-color: rgba(91, 91, 91, 0.9);
+  border-radius: 60px;
+  pointer-events: none;
+  z-index: 1;
+  font-size: 20px;
+  line-height: 1.3em;
+  margin-bottom: 20px;
+  padding-bottom: 0;
+  font-family: "PPNeueMontreal-Regular";
+  line-height: 60px;
+  padding-left: 35px;
+  color: #FFFFFF;
+  opacity: 1;
+  transition: opacity 0.3s ease 0s;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+/* line 44, ../scss/modules/_card_carousel.scss */
+.card-carousel .mobile-swipe-prompt svg {
+  width: 30px;
+  height: auto;
+  position: absolute;
+  right: 50px;
+  top: 23px;
+  animation-name: pulseSlide;
+  animation-duration: 0.6s;
+  animation-delay: 0s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+/* line 59, ../scss/modules/_card_carousel.scss */
+.card-carousel .mobile-touched .mobile-swipe-prompt {
+  opacity: 0;
+}
+/* line 63, ../scss/modules/_card_carousel.scss */
 .card-carousel .swiper-pagination-bullets {
   height: 3px;
   width: calc(100% - 80px);
@@ -784,7 +825,7 @@ a.button:hover svg {
   left: auto;
   bottom: auto;
 }
-/* line 37, ../scss/modules/_card_carousel.scss */
+/* line 75, ../scss/modules/_card_carousel.scss */
 .card-carousel .swiper-pagination-bullets .swiper-pagination-bullet {
   flex: 1;
   height: 3px;
@@ -793,11 +834,11 @@ a.button:hover svg {
   margin: 0;
   opacity: 0;
 }
-/* line 45, ../scss/modules/_card_carousel.scss */
+/* line 83, ../scss/modules/_card_carousel.scss */
 .card-carousel .swiper-pagination-bullets .swiper-pagination-bullet.swiper-pagination-bullet-active {
   background: #0627CA;
 }
-/* line 50, ../scss/modules/_card_carousel.scss */
+/* line 88, ../scss/modules/_card_carousel.scss */
 .card-carousel .swiper-pagination-bullets .swiper-pagination-bullet-active ~ .swiper-pagination-bullet {
   background: #9b9b9b;
   opacity: 1;
