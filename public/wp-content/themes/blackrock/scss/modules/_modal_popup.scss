@@ -1,5 +1,5 @@
 #modal-popup {
-    display: none;
+    display: block;
     position: fixed;
     width: 100vw;
     height: 100vh;
@@ -8,9 +8,32 @@
     z-index: 10000;
     background-color: white;
     padding: 40px;
+    transform: translateX(100vw);
+    transition: transform 0.3s ease 0s;
+
+    .image-container {
+        opacity: 0;
+        transform: translateX(40px);
+        transition: all 0.3s ease 0.3s;
+    }
+
+    .close {
+        opacity: 0;
+        transition: opacity 0.3s ease 0.3s;
+    }
 
     &.visible {
         display: block;
+        transform: translateX(0);
+
+        .image-container {
+            opacity: 1;
+            transform: translateX(0px);
+        }
+
+        .close {
+            opacity: 1;
+        }
     }
 
     .close {

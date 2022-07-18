@@ -119,7 +119,7 @@
 				padding-bottom: 20px;
 				opacity: 0;
 				transform: translateX(40px);
-				transition: all 0.2s ease 0.1s;
+				transition: all 0.2s ease 0.2s;
 
 				a {
 					@include body-35;
@@ -242,7 +242,12 @@
 		}
 
 		.menu li.current_page_item a {
-			border-bottom: 1px solid $br-blue;
+			color: $br-blue;
+			border-bottom: 2px solid $br-blue;
+
+			@media #{$mq-tablet-desk} {
+				border-bottom: 1px solid $br-blue;
+			}
 		}
 	}
 

@@ -123,6 +123,7 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        transform-origin: center;
         background: url(../img/icons/image-expand.svg) 0 0 no-repeat;
         background-size: 50px 50px;
         opacity: 0;
@@ -134,6 +135,12 @@
         &:before,
         &:after {
             opacity: 1;
+            transform-origin: center;
+        }
+
+        &:before {
+            transform: translate(-50%, -50%) scale(1.5);
+
         }
     }
 }
