@@ -1,7 +1,17 @@
 .timeline {
-	@include grid;
+	max-width: 100%;
+
+	.timeline_nav {
+		grid-area: timeline-nav;
+	}
+
+	.timeline_data {
+		grid-area: timeline-data;
+	}
 
 	@media #{$mq-tablet-port} {
+		display: grid;
+		column-gap: 20px;
 		grid-template-columns: 1fr 2fr;
 		grid-template-areas: "timeline-nav timeline-data";
 		margin: 0 40px 0 40px;
@@ -9,16 +19,25 @@
 
 	@media #{$mq-tablet-desk} {
 		grid-template-columns: 3fr 9fr;
-		grid-template-areas: "timeline-nav timeline-data";
 		margin: 0 40px 0 40px;
 	}
+
 
 	&.has-legal {
 		margin: 100px 0px 100px 0px;
 
+		@media #{$mq-tablet-port} {
+			margin: 100px 40px 100px 40px;
+			display: block;
+
+
+		}
+
 		@media #{$mq-tablet-desk} {
-			grid-template-columns: 5fr 1fr 6fr;
+			display: grid;
 			grid-template-areas: "timeline-nav . timeline-data";
+			grid-template-columns: 5fr 1fr 6fr;
+
 			margin: 0 40px 100px 40px;
 		}
 
@@ -34,6 +53,23 @@
 			}
 		}
 
+		.timeline_nav {
+			ul {
+				display: none;
+
+				@media #{$mq-tablet-desk} {
+					display: block;
+				}
+			}
+		}
+
+		.timeline_data {
+			padding-top: 0;
+
+			@media #{$mq-tablet-desk} {
+				padding-top: calc(100vw / 12);
+			}
+		}
 
 		.title {
 			width: calc(100vw - 120px);
@@ -63,7 +99,6 @@
 
 	.timeline_nav {
 		position: relative;
-		grid-area: timeline-nav;
 
 		h2 {
 			@include headline-30;
@@ -127,7 +162,6 @@
 	}
 
 	.timeline_data {
-		grid-area: timeline-data;
 
 		@media #{$mq-tablet-port} {
 			padding-top: calc(100vw / 12);

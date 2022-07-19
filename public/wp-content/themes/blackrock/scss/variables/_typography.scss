@@ -1,4 +1,4 @@
-$regularFont: "PPNeueMontreal-Regular";
+//$regularFont: "PPNeueMontreal-Regular";
 $bookFont: "PPNeueMontreal-Book";
 $mediumFont: "PPNeueMontreal-Medium";
 $boldFont: "PPNeueMontreal-Bold";
@@ -26,12 +26,12 @@ $regularFont: $bookFont;
         url('../fonts/PPNeueMontreal-Book.woff2') format('woff2');
 }
 
-@font-face {
-    font-family: "PPNeueMontreal-Regular";
-    src: url('../fonts/PPNeueMontreal-Regular.woff') format('woff'),
-        url('../fonts/PPNeueMontreal-Regular.otf') format('otf'),
-        url('../fonts/PPNeueMontreal-Regular.woff2') format('woff2');
-}
+// @font-face {
+//     font-family: "PPNeueMontreal-Regular";
+//     src: url('../fonts/PPNeueMontreal-Regular.woff') format('woff'),
+//         url('../fonts/PPNeueMontreal-Regular.otf') format('otf'),
+//         url('../fonts/PPNeueMontreal-Regular.woff2') format('woff2');
+// }
 
 @mixin body-16 {
     //Neue Montreal

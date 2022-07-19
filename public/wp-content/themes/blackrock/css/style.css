@@ -30,10 +30,6 @@
   font-family: "PPNeueMontreal-Book";
   src: url("../fonts/PPNeueMontreal-Book.woff") format("woff"), url("../fonts/PPNeueMontreal-Book.otf") format("otf"), url("../fonts/PPNeueMontreal-Book.woff2") format("woff2");
 }
-@font-face {
-  font-family: "PPNeueMontreal-Regular";
-  src: url("../fonts/PPNeueMontreal-Regular.woff") format("woff"), url("../fonts/PPNeueMontreal-Regular.otf") format("otf"), url("../fonts/PPNeueMontreal-Regular.woff2") format("woff2");
-}
 /* line 1, ../scss/layout/_general.scss */
 *,
 *::before,
@@ -2825,17 +2821,23 @@ a.button:hover svg {
   opacity: 0;
 }
 
-@media (min-width: 768px) {
-  /* line 1, ../scss/modules/_timeline.scss */
-  .timeline {
-    display: grid;
-    margin: 0 40px;
-    column-gap: 20px;
-  }
+/* line 1, ../scss/modules/_timeline.scss */
+.timeline {
+  max-width: 100%;
+}
+/* line 4, ../scss/modules/_timeline.scss */
+.timeline .timeline_nav {
+  grid-area: timeline-nav;
+}
+/* line 8, ../scss/modules/_timeline.scss */
+.timeline .timeline_data {
+  grid-area: timeline-data;
 }
 @media (min-width: 768px) {
   /* line 1, ../scss/modules/_timeline.scss */
   .timeline {
+    display: grid;
+    column-gap: 20px;
     grid-template-columns: 1fr 2fr;
     grid-template-areas: "timeline-nav timeline-data";
     margin: 0 40px 0 40px;
@@ -2845,51 +2847,78 @@ a.button:hover svg {
   /* line 1, ../scss/modules/_timeline.scss */
   .timeline {
     grid-template-columns: 3fr 9fr;
-    grid-template-areas: "timeline-nav timeline-data";
     margin: 0 40px 0 40px;
   }
 }
-/* line 16, ../scss/modules/_timeline.scss */
+/* line 26, ../scss/modules/_timeline.scss */
 .timeline.has-legal {
   margin: 100px 0px 100px 0px;
 }
-@media (min-width: 1024px) {
-  /* line 16, ../scss/modules/_timeline.scss */
+@media (min-width: 768px) {
+  /* line 26, ../scss/modules/_timeline.scss */
   .timeline.has-legal {
-    grid-template-columns: 5fr 1fr 6fr;
+    margin: 100px 40px 100px 40px;
+    display: block;
+  }
+}
+@media (min-width: 1024px) {
+  /* line 26, ../scss/modules/_timeline.scss */
+  .timeline.has-legal {
+    display: grid;
     grid-template-areas: "timeline-nav . timeline-data";
+    grid-template-columns: 5fr 1fr 6fr;
     margin: 0 40px 100px 40px;
   }
 }
 @media (min-width: 1280px) {
-  /* line 25, ../scss/modules/_timeline.scss */
+  /* line 44, ../scss/modules/_timeline.scss */
   .timeline.has-legal .timeline_data .content {
     display: block;
   }
 }
 @media (min-width: 1280px) {
-  /* line 31, ../scss/modules/_timeline.scss */
+  /* line 50, ../scss/modules/_timeline.scss */
   .timeline.has-legal .number {
     line-height: 52px !important;
   }
 }
-/* line 38, ../scss/modules/_timeline.scss */
+/* line 57, ../scss/modules/_timeline.scss */
+.timeline.has-legal .timeline_nav ul {
+  display: none;
+}
+@media (min-width: 1024px) {
+  /* line 57, ../scss/modules/_timeline.scss */
+  .timeline.has-legal .timeline_nav ul {
+    display: block;
+  }
+}
+/* line 66, ../scss/modules/_timeline.scss */
+.timeline.has-legal .timeline_data {
+  padding-top: 0;
+}
+@media (min-width: 1024px) {
+  /* line 66, ../scss/modules/_timeline.scss */
+  .timeline.has-legal .timeline_data {
+    padding-top: calc(100vw / 12);
+  }
+}
+/* line 74, ../scss/modules/_timeline.scss */
 .timeline.has-legal .title {
   width: calc(100vw - 120px);
 }
 @media (min-width: 1024px) {
-  /* line 38, ../scss/modules/_timeline.scss */
+  /* line 74, ../scss/modules/_timeline.scss */
   .timeline.has-legal .title {
     width: calc(50vw - 210px);
   }
 }
 @media (min-width: 1280px) {
-  /* line 38, ../scss/modules/_timeline.scss */
+  /* line 74, ../scss/modules/_timeline.scss */
   .timeline.has-legal .title {
     line-height: 52px !important;
   }
 }
-/* line 53, ../scss/modules/_timeline.scss */
+/* line 89, ../scss/modules/_timeline.scss */
 .timeline #legal-intro-text p {
   margin: 0;
   padding: 20px 20px 20px 20px;
@@ -2900,17 +2929,16 @@ a.button:hover svg {
   font-family: "PPNeueMontreal-Book";
 }
 @media (min-width: 768px) {
-  /* line 53, ../scss/modules/_timeline.scss */
+  /* line 89, ../scss/modules/_timeline.scss */
   .timeline #legal-intro-text p {
     padding: 40px 0px 40px 0px;
   }
 }
-/* line 64, ../scss/modules/_timeline.scss */
+/* line 100, ../scss/modules/_timeline.scss */
 .timeline .timeline_nav {
   position: relative;
-  grid-area: timeline-nav;
 }
-/* line 68, ../scss/modules/_timeline.scss */
+/* line 103, ../scss/modules/_timeline.scss */
 .timeline .timeline_nav h2 {
   font-weight: normal;
   font-size: 30px;
@@ -2922,7 +2950,7 @@ a.button:hover svg {
   border-top: 2px solid transparent;
 }
 @media (min-width: 768px) {
-  /* line 68, ../scss/modules/_timeline.scss */
+  /* line 103, ../scss/modules/_timeline.scss */
   .timeline .timeline_nav h2 {
     font-weight: normal;
     font-size: 50px;
@@ -2934,14 +2962,14 @@ a.button:hover svg {
   }
 }
 @media (min-width: 768px) {
-  /* line 80, ../scss/modules/_timeline.scss */
+  /* line 115, ../scss/modules/_timeline.scss */
   .timeline .timeline_nav .stick {
     padding-top: calc(100vw / 12);
     position: sticky;
     top: 0;
   }
 }
-/* line 88, ../scss/modules/_timeline.scss */
+/* line 123, ../scss/modules/_timeline.scss */
 .timeline .timeline_nav ul {
   list-style-type: none;
   padding: 0;
@@ -2955,16 +2983,16 @@ a.button:hover svg {
   display: none;
 }
 @media (min-width: 768px) {
-  /* line 88, ../scss/modules/_timeline.scss */
+  /* line 123, ../scss/modules/_timeline.scss */
   .timeline .timeline_nav ul {
     display: block;
   }
 }
-/* line 100, ../scss/modules/_timeline.scss */
+/* line 135, ../scss/modules/_timeline.scss */
 .timeline .timeline_nav ul li {
   margin-bottom: 30px;
 }
-/* line 105, ../scss/modules/_timeline.scss */
+/* line 140, ../scss/modules/_timeline.scss */
 .timeline .timeline_nav button {
   font-weight: normal;
   font-size: 20px;
@@ -2978,30 +3006,26 @@ a.button:hover svg {
   text-align: left;
   color: #5B5B5B;
 }
-/* line 114, ../scss/modules/_timeline.scss */
+/* line 149, ../scss/modules/_timeline.scss */
 .timeline .timeline_nav button.active {
   color: #0627CA;
 }
-/* line 118, ../scss/modules/_timeline.scss */
+/* line 153, ../scss/modules/_timeline.scss */
 .timeline .timeline_nav button span {
   display: inline-block;
   margin-right: 5px;
 }
-/* line 122, ../scss/modules/_timeline.scss */
+/* line 157, ../scss/modules/_timeline.scss */
 .timeline .timeline_nav button span:after {
   content: '/';
 }
-/* line 129, ../scss/modules/_timeline.scss */
-.timeline .timeline_data {
-  grid-area: timeline-data;
-}
 @media (min-width: 768px) {
-  /* line 129, ../scss/modules/_timeline.scss */
+  /* line 164, ../scss/modules/_timeline.scss */
   .timeline .timeline_data {
     padding-top: calc(100vw / 12);
   }
 }
-/* line 137, ../scss/modules/_timeline.scss */
+/* line 171, ../scss/modules/_timeline.scss */
 .timeline .timeline_data article:last-of-type:after {
   display: block;
   content: '';
@@ -3010,16 +3034,16 @@ a.button:hover svg {
   margin-left: 20px;
 }
 @media (min-width: 768px) {
-  /* line 136, ../scss/modules/_timeline.scss */
+  /* line 170, ../scss/modules/_timeline.scss */
   .timeline .timeline_data article:last-of-type {
     border-bottom: 2px solid black;
   }
-  /* line 148, ../scss/modules/_timeline.scss */
+  /* line 182, ../scss/modules/_timeline.scss */
   .timeline .timeline_data article:last-of-type:after {
     display: none;
   }
 }
-/* line 154, ../scss/modules/_timeline.scss */
+/* line 188, ../scss/modules/_timeline.scss */
 .timeline .timeline_data header {
   font-weight: normal;
   font-size: 30px;
@@ -3038,7 +3062,7 @@ a.button:hover svg {
   margin-right: 20px;
 }
 @media (min-width: 768px) {
-  /* line 154, ../scss/modules/_timeline.scss */
+  /* line 188, ../scss/modules/_timeline.scss */
   .timeline .timeline_data header {
     font-weight: normal;
     font-size: 30px;
@@ -3052,7 +3076,7 @@ a.button:hover svg {
   }
 }
 @media (min-width: 1024px) {
-  /* line 154, ../scss/modules/_timeline.scss */
+  /* line 188, ../scss/modules/_timeline.scss */
   .timeline .timeline_data header {
     font-weight: normal;
     font-size: 50px;
@@ -3062,18 +3086,18 @@ a.button:hover svg {
     font-family: "PPNeueMontreal-Book";
   }
 }
-/* line 178, ../scss/modules/_timeline.scss */
+/* line 212, ../scss/modules/_timeline.scss */
 .timeline .timeline_data header span {
   vertical-align: top;
   display: inline-block;
   line-height: 39px;
 }
-/* line 184, ../scss/modules/_timeline.scss */
+/* line 218, ../scss/modules/_timeline.scss */
 .timeline .timeline_data header span.number {
   margin-right: 20px;
   color: #5B5B5B;
 }
-/* line 189, ../scss/modules/_timeline.scss */
+/* line 223, ../scss/modules/_timeline.scss */
 .timeline .timeline_data header span.title {
   display: inline-block;
   font-weight: normal;
@@ -3088,7 +3112,7 @@ a.button:hover svg {
   color: #5B5B5B;
 }
 @media (min-width: 1280px) {
-  /* line 189, ../scss/modules/_timeline.scss */
+  /* line 223, ../scss/modules/_timeline.scss */
   .timeline .timeline_data header span.title {
     font-weight: normal;
     font-size: 30px;
@@ -3101,11 +3125,11 @@ a.button:hover svg {
     margin: 0;
   }
 }
-/* line 205, ../scss/modules/_timeline.scss */
+/* line 239, ../scss/modules/_timeline.scss */
 .timeline .timeline_data header:hover {
   color: #0627CA;
 }
-/* line 210, ../scss/modules/_timeline.scss */
+/* line 244, ../scss/modules/_timeline.scss */
 .timeline .timeline_data .content {
   font-size: 20px;
   line-height: 1.3em;
@@ -3118,19 +3142,19 @@ a.button:hover svg {
   transition: all 0.4s ease 0s;
 }
 @media (min-width: 768px) {
-  /* line 210, ../scss/modules/_timeline.scss */
+  /* line 244, ../scss/modules/_timeline.scss */
   .timeline .timeline_data .content {
     padding: 10px 0 0 0;
   }
 }
 @media (min-width: 1280px) {
-  /* line 210, ../scss/modules/_timeline.scss */
+  /* line 244, ../scss/modules/_timeline.scss */
   .timeline .timeline_data .content {
     display: grid;
     grid-template-columns: 6fr 3fr;
   }
 }
-/* line 228, ../scss/modules/_timeline.scss */
+/* line 262, ../scss/modules/_timeline.scss */
 .timeline .timeline_data .close {
   display: none;
   position: absolute;
@@ -3144,34 +3168,34 @@ a.button:hover svg {
   background-color: transparent;
 }
 @media (min-width: 768px) {
-  /* line 228, ../scss/modules/_timeline.scss */
+  /* line 262, ../scss/modules/_timeline.scss */
   .timeline .timeline_data .close {
     top: 33px;
     right: 0px;
   }
 }
-/* line 245, ../scss/modules/_timeline.scss */
+/* line 279, ../scss/modules/_timeline.scss */
 .timeline .timeline_data .close svg {
   pointer-events: none;
   transition: all 0.3s ease 0s;
 }
-/* line 249, ../scss/modules/_timeline.scss */
+/* line 283, ../scss/modules/_timeline.scss */
 .timeline .timeline_data .close svg path {
   stroke: #0627CA;
 }
-/* line 255, ../scss/modules/_timeline.scss */
+/* line 289, ../scss/modules/_timeline.scss */
 .timeline .timeline_data .close:hover svg {
   transform: rotate(90deg);
 }
-/* line 263, ../scss/modules/_timeline.scss */
+/* line 297, ../scss/modules/_timeline.scss */
 .timeline .timeline_data .active header {
   color: #0627CA;
 }
-/* line 266, ../scss/modules/_timeline.scss */
+/* line 300, ../scss/modules/_timeline.scss */
 .timeline .timeline_data .active header span.number {
   color: #0627CA;
 }
-/* line 270, ../scss/modules/_timeline.scss */
+/* line 304, ../scss/modules/_timeline.scss */
 .timeline .timeline_data .active header span.title {
   max-width: calc(100vw - 190px);
   color: #0627CA;
@@ -3183,13 +3207,13 @@ a.button:hover svg {
   font-family: "PPNeueMontreal-Medium";
 }
 @media (min-width: 768px) {
-  /* line 270, ../scss/modules/_timeline.scss */
+  /* line 304, ../scss/modules/_timeline.scss */
   .timeline .timeline_data .active header span.title {
     max-width: none;
   }
 }
 @media (min-width: 1280px) {
-  /* line 270, ../scss/modules/_timeline.scss */
+  /* line 304, ../scss/modules/_timeline.scss */
   .timeline .timeline_data .active header span.title {
     font-weight: normal;
     font-size: 50px;
@@ -3202,11 +3226,11 @@ a.button:hover svg {
     margin: 0;
   }
 }
-/* line 290, ../scss/modules/_timeline.scss */
+/* line 324, ../scss/modules/_timeline.scss */
 .timeline .timeline_data .active .close {
   display: block;
 }
-/* line 294, ../scss/modules/_timeline.scss */
+/* line 328, ../scss/modules/_timeline.scss */
 .timeline .timeline_data .active .content {
   max-height: 100vh;
 }
