@@ -116,6 +116,7 @@
 			@media #{$mq-tablet-port} {
 				padding-top: calc(100vw / 12);
 				position: sticky;
+				position: -webkit-sticky;
 				top: 0;
 			}
 		}

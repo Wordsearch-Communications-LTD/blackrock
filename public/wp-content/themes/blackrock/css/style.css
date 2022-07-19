@@ -2966,10 +2966,11 @@ a.button:hover svg {
   .timeline .timeline_nav .stick {
     padding-top: calc(100vw / 12);
     position: sticky;
+    position: -webkit-sticky;
     top: 0;
   }
 }
-/* line 123, ../scss/modules/_timeline.scss */
+/* line 124, ../scss/modules/_timeline.scss */
 .timeline .timeline_nav ul {
   list-style-type: none;
   padding: 0;
@@ -2983,16 +2984,16 @@ a.button:hover svg {
   display: none;
 }
 @media (min-width: 768px) {
-  /* line 123, ../scss/modules/_timeline.scss */
+  /* line 124, ../scss/modules/_timeline.scss */
   .timeline .timeline_nav ul {
     display: block;
   }
 }
-/* line 135, ../scss/modules/_timeline.scss */
+/* line 136, ../scss/modules/_timeline.scss */
 .timeline .timeline_nav ul li {
   margin-bottom: 30px;
 }
-/* line 140, ../scss/modules/_timeline.scss */
+/* line 141, ../scss/modules/_timeline.scss */
 .timeline .timeline_nav button {
   font-weight: normal;
   font-size: 20px;
@@ -3006,26 +3007,26 @@ a.button:hover svg {
   text-align: left;
   color: #5B5B5B;
 }
-/* line 149, ../scss/modules/_timeline.scss */
+/* line 150, ../scss/modules/_timeline.scss */
 .timeline .timeline_nav button.active {
   color: #0627CA;
 }
-/* line 153, ../scss/modules/_timeline.scss */
+/* line 154, ../scss/modules/_timeline.scss */
 .timeline .timeline_nav button span {
   display: inline-block;
   margin-right: 5px;
 }
-/* line 157, ../scss/modules/_timeline.scss */
+/* line 158, ../scss/modules/_timeline.scss */
 .timeline .timeline_nav button span:after {
   content: '/';
 }
 @media (min-width: 768px) {
-  /* line 164, ../scss/modules/_timeline.scss */
+  /* line 165, ../scss/modules/_timeline.scss */
   .timeline .timeline_data {
     padding-top: calc(100vw / 12);
   }
 }
-/* line 171, ../scss/modules/_timeline.scss */
+/* line 172, ../scss/modules/_timeline.scss */
 .timeline .timeline_data article:last-of-type:after {
   display: block;
   content: '';
@@ -3034,16 +3035,16 @@ a.button:hover svg {
   margin-left: 20px;
 }
 @media (min-width: 768px) {
-  /* line 170, ../scss/modules/_timeline.scss */
+  /* line 171, ../scss/modules/_timeline.scss */
   .timeline .timeline_data article:last-of-type {
     border-bottom: 2px solid black;
   }
-  /* line 182, ../scss/modules/_timeline.scss */
+  /* line 183, ../scss/modules/_timeline.scss */
   .timeline .timeline_data article:last-of-type:after {
     display: none;
   }
 }
-/* line 188, ../scss/modules/_timeline.scss */
+/* line 189, ../scss/modules/_timeline.scss */
 .timeline .timeline_data header {
   font-weight: normal;
   font-size: 30px;
@@ -3062,7 +3063,7 @@ a.button:hover svg {
   margin-right: 20px;
 }
 @media (min-width: 768px) {
-  /* line 188, ../scss/modules/_timeline.scss */
+  /* line 189, ../scss/modules/_timeline.scss */
   .timeline .timeline_data header {
     font-weight: normal;
     font-size: 30px;
@@ -3076,7 +3077,7 @@ a.button:hover svg {
   }
 }
 @media (min-width: 1024px) {
-  /* line 188, ../scss/modules/_timeline.scss */
+  /* line 189, ../scss/modules/_timeline.scss */
   .timeline .timeline_data header {
     font-weight: normal;
     font-size: 50px;
@@ -3086,18 +3087,18 @@ a.button:hover svg {
     font-family: "PPNeueMontreal-Book";
   }
 }
-/* line 212, ../scss/modules/_timeline.scss */
+/* line 213, ../scss/modules/_timeline.scss */
 .timeline .timeline_data header span {
   vertical-align: top;
   display: inline-block;
   line-height: 39px;
 }
-/* line 218, ../scss/modules/_timeline.scss */
+/* line 219, ../scss/modules/_timeline.scss */
 .timeline .timeline_data header span.number {
   margin-right: 20px;
   color: #5B5B5B;
 }
-/* line 223, ../scss/modules/_timeline.scss */
+/* line 224, ../scss/modules/_timeline.scss */
 .timeline .timeline_data header span.title {
   display: inline-block;
   font-weight: normal;
@@ -3112,7 +3113,7 @@ a.button:hover svg {
   color: #5B5B5B;
 }
 @media (min-width: 1280px) {
-  /* line 223, ../scss/modules/_timeline.scss */
+  /* line 224, ../scss/modules/_timeline.scss */
   .timeline .timeline_data header span.title {
     font-weight: normal;
     font-size: 30px;
@@ -3125,11 +3126,11 @@ a.button:hover svg {
     margin: 0;
   }
 }
-/* line 239, ../scss/modules/_timeline.scss */
+/* line 240, ../scss/modules/_timeline.scss */
 .timeline .timeline_data header:hover {
   color: #0627CA;
 }
-/* line 244, ../scss/modules/_timeline.scss */
+/* line 245, ../scss/modules/_timeline.scss */
 .timeline .timeline_data .content {
   font-size: 20px;
   line-height: 1.3em;
@@ -3142,19 +3143,19 @@ a.button:hover svg {
   transition: all 0.4s ease 0s;
 }
 @media (min-width: 768px) {
-  /* line 244, ../scss/modules/_timeline.scss */
+  /* line 245, ../scss/modules/_timeline.scss */
   .timeline .timeline_data .content {
     padding: 10px 0 0 0;
   }
 }
 @media (min-width: 1280px) {
-  /* line 244, ../scss/modules/_timeline.scss */
+  /* line 245, ../scss/modules/_timeline.scss */
   .timeline .timeline_data .content {
     display: grid;
     grid-template-columns: 6fr 3fr;
   }
 }
-/* line 262, ../scss/modules/_timeline.scss */
+/* line 263, ../scss/modules/_timeline.scss */
 .timeline .timeline_data .close {
   display: none;
   position: absolute;
@@ -3168,34 +3169,34 @@ a.button:hover svg {
   background-color: transparent;
 }
 @media (min-width: 768px) {
-  /* line 262, ../scss/modules/_timeline.scss */
+  /* line 263, ../scss/modules/_timeline.scss */
   .timeline .timeline_data .close {
     top: 33px;
     right: 0px;
   }
 }
-/* line 279, ../scss/modules/_timeline.scss */
+/* line 280, ../scss/modules/_timeline.scss */
 .timeline .timeline_data .close svg {
   pointer-events: none;
   transition: all 0.3s ease 0s;
 }
-/* line 283, ../scss/modules/_timeline.scss */
+/* line 284, ../scss/modules/_timeline.scss */
 .timeline .timeline_data .close svg path {
   stroke: #0627CA;
 }
-/* line 289, ../scss/modules/_timeline.scss */
+/* line 290, ../scss/modules/_timeline.scss */
 .timeline .timeline_data .close:hover svg {
   transform: rotate(90deg);
 }
-/* line 297, ../scss/modules/_timeline.scss */
+/* line 298, ../scss/modules/_timeline.scss */
 .timeline .timeline_data .active header {
   color: #0627CA;
 }
-/* line 300, ../scss/modules/_timeline.scss */
+/* line 301, ../scss/modules/_timeline.scss */
 .timeline .timeline_data .active header span.number {
   color: #0627CA;
 }
-/* line 304, ../scss/modules/_timeline.scss */
+/* line 305, ../scss/modules/_timeline.scss */
 .timeline .timeline_data .active header span.title {
   max-width: calc(100vw - 190px);
   color: #0627CA;
@@ -3207,13 +3208,13 @@ a.button:hover svg {
   font-family: "PPNeueMontreal-Medium";
 }
 @media (min-width: 768px) {
-  /* line 304, ../scss/modules/_timeline.scss */
+  /* line 305, ../scss/modules/_timeline.scss */
   .timeline .timeline_data .active header span.title {
     max-width: none;
   }
 }
 @media (min-width: 1280px) {
-  /* line 304, ../scss/modules/_timeline.scss */
+  /* line 305, ../scss/modules/_timeline.scss */
   .timeline .timeline_data .active header span.title {
     font-weight: normal;
     font-size: 50px;
@@ -3226,11 +3227,11 @@ a.button:hover svg {
     margin: 0;
   }
 }
-/* line 324, ../scss/modules/_timeline.scss */
+/* line 325, ../scss/modules/_timeline.scss */
 .timeline .timeline_data .active .close {
   display: block;
 }
-/* line 328, ../scss/modules/_timeline.scss */
+/* line 329, ../scss/modules/_timeline.scss */
 .timeline .timeline_data .active .content {
   max-height: 100vh;
 }
@@ -4014,21 +4015,22 @@ a.button:hover svg {
   /* line 33, ../scss/modules/_two_col_sticky.scss */
   .two-col-sticky .left .stick {
     position: sticky;
+    position: -webkit-sticky;
     top: 0;
     padding-top: calc(100vw / 12);
   }
 }
-/* line 43, ../scss/modules/_two_col_sticky.scss */
+/* line 44, ../scss/modules/_two_col_sticky.scss */
 .two-col-sticky .right {
   grid-area: right;
 }
 @media (min-width: 768px) {
-  /* line 43, ../scss/modules/_two_col_sticky.scss */
+  /* line 44, ../scss/modules/_two_col_sticky.scss */
   .two-col-sticky .right {
     padding-top: calc(100vw / 12);
   }
 }
-/* line 50, ../scss/modules/_two_col_sticky.scss */
+/* line 51, ../scss/modules/_two_col_sticky.scss */
 .two-col-sticky .right h3 {
   font-size: 20px;
   line-height: 1.3em;
@@ -4038,7 +4040,7 @@ a.button:hover svg {
   font-weight: bold;
   margin-top: 0;
 }
-/* line 56, ../scss/modules/_two_col_sticky.scss */
+/* line 57, ../scss/modules/_two_col_sticky.scss */
 .two-col-sticky .right p {
   font-size: 20px;
   line-height: 1.3em;
@@ -4046,21 +4048,21 @@ a.button:hover svg {
   padding-bottom: 0;
   font-family: "PPNeueMontreal-Book";
 }
-/* line 61, ../scss/modules/_two_col_sticky.scss */
+/* line 62, ../scss/modules/_two_col_sticky.scss */
 .two-col-sticky .right .button-container {
   text-align: right;
 }
-/* line 64, ../scss/modules/_two_col_sticky.scss */
+/* line 65, ../scss/modules/_two_col_sticky.scss */
 .two-col-sticky .right .button-container .button {
   margin-right: 20px;
 }
 @media (min-width: 768px) {
-  /* line 64, ../scss/modules/_two_col_sticky.scss */
+  /* line 65, ../scss/modules/_two_col_sticky.scss */
   .two-col-sticky .right .button-container .button {
     margin-right: 0;
   }
 }
-/* line 73, ../scss/modules/_two_col_sticky.scss */
+/* line 74, ../scss/modules/_two_col_sticky.scss */
 .two-col-sticky .right article {
   display: flex;
   justify-content: flex-start;
@@ -4069,11 +4071,11 @@ a.button:hover svg {
   padding-top: 40px;
   border-bottom: 2px solid white;
 }
-/* line 81, ../scss/modules/_two_col_sticky.scss */
+/* line 82, ../scss/modules/_two_col_sticky.scss */
 .two-col-sticky .right article:first-of-type {
   border-top: 2px solid white;
 }
-/* line 85, ../scss/modules/_two_col_sticky.scss */
+/* line 86, ../scss/modules/_two_col_sticky.scss */
 .two-col-sticky .right article .number {
   min-width: 80px;
   padding-right: 20px;
@@ -4087,7 +4089,7 @@ a.button:hover svg {
   line-height: 1em;
 }
 @media (min-width: 768px) {
-  /* line 85, ../scss/modules/_two_col_sticky.scss */
+  /* line 86, ../scss/modules/_two_col_sticky.scss */
   .two-col-sticky .right article .number {
     padding-right: 40px;
     min-width: 100px;
@@ -4100,7 +4102,7 @@ a.button:hover svg {
     line-height: 1em;
   }
 }
-/* line 101, ../scss/modules/_two_col_sticky.scss */
+/* line 102, ../scss/modules/_two_col_sticky.scss */
 .two-col-sticky .right .button-container {
   margin-top: 40px;
 }
