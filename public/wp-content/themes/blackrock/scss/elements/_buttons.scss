@@ -5,167 +5,167 @@ $button_FontSizeMob: 16px;
 $button_FontSizeDesk: 20px;
 
 a.button {
-    display: inline-block;
-    font-size: $button_FontSizeMob;
-    padding: $button_Padding;
-    border-radius: $button_Radius;
-    letter-spacing: calc($button_FontSizeMob * 0.05);
-    padding-right: $button_Padding_Arrow;
-    text-decoration: none;
-    font-family: $regularFont;
-    position: relative;
-    transition: all 0.3s ease 0s;
+	display: inline-block;
+	font-size: $button_FontSizeMob;
+	padding: $button_Padding;
+	border-radius: $button_Radius;
+	letter-spacing: calc($button_FontSizeMob * 0.05);
+	padding-right: $button_Padding_Arrow;
+	text-decoration: none;
+	font-family: $regularFont;
+	position: relative;
+	transition: all 0.3s ease 0s;
 
-    @media #{$mq-tablet-port} {
-        font-size: $button_FontSizeDesk;
-        letter-spacing: calc($button_FontSizeDesk * 0.05);
-    }
+	@media #{$mq-tablet-port} {
+		font-size: $button_FontSizeDesk;
+		letter-spacing: calc($button_FontSizeDesk * 0.05);
+	}
 
-    svg {
-        height: $button_FontSizeMob;
+	svg {
+		height: $button_FontSizeMob;
 
-        @media #{$mq-tablet-port} {
-            height: $button_FontSizeDesk;
-        }
+		@media #{$mq-tablet-port} {
+			height: $button_FontSizeDesk;
+		}
 
-        position: absolute;
-        top: 50%;
-        right: 20px;
-        transform: translate(0, -50%);
-        transition: all 0.3s ease 0s;
-    }
+		position: absolute;
+		top: 50%;
+		right: 20px;
+		transform: translate(0, -50%);
+		transition: all 0.3s ease 0s;
+	}
 
-    &:hover {
-        svg {
-            transform: translate(5px, -50%);
-        }
-    }
+	&:hover {
+		svg {
+			transform: translate(5px, -50%);
+		}
+	}
 }
 
 .page-cream,
 .page-white {
 
-    a.button {
-        border: 1px solid $br-blue;
-        color: $br-blue;
+	a.button {
+		border: 1px solid $br-blue;
+		color: $br-blue;
 
-        &:active,
-        &:visited {
-            color: $br-blue;
-        }
+		&:active,
+		&:visited {
+			color: $br-blue;
+		}
 
-        svg {
+		svg {
 
-            path {
-                stroke: $br-blue;
-            }
-        }
+			path {
+				stroke: $br-blue;
+			}
+		}
 
-        &:hover {
-            background-color: $br-blue  !important;
-            color: $br-white  !important;
+		&:hover {
+			background-color: $br-blue  !important;
+			color: $br-white  !important;
 
-            svg {
+			svg {
 
-                path {
-                    stroke: $br-white  !important;
-                }
-            }
-        }
-    }
+				path {
+					stroke: $br-white  !important;
+				}
+			}
+		}
+	}
 }
 
 .page-black {
-    a.button {
-        border: 1px solid $br-white;
-        color: $br-white;
+	a.button {
+		border: 1px solid $br-white;
+		color: $br-white;
 
-        &:active,
-        &:visited {
-            color: $br-white;
-        }
+		&:active,
+		&:visited {
+			color: $br-white;
+		}
 
-        svg {
+		svg {
 
-            path {
-                stroke: $br-white;
-            }
-        }
+			path {
+				stroke: $br-white;
+			}
+		}
 
-        &:hover {
-            background-color: $br-white;
-            color: $br-black;
+		&:hover {
+			background-color: $br-white;
+			color: $br-black;
 
-            svg {
+			svg {
 
-                path {
-                    stroke: $br-black;
-                }
-            }
-        }
-    }
+				path {
+					stroke: $br-black;
+				}
+			}
+		}
+	}
 }
 
 #floor-toggle,
 .map .map-container .toggle {
-    display: block;
-    appearance: none;
-    border: none;
-    background-color: none;
-    @include body-16;
-    padding-left: 60px;
-    position: relative;
-    cursor: pointer;
+	display: block;
+	appearance: none;
+	border: none;
+	background-color: none;
+	@include body-16;
+	padding-left: 60px;
+	position: relative;
+	cursor: pointer;
 
-    &:before {
-        position: absolute;
-        left: 0;
-        top: 0;
-        content: "";
-        display: block;
-        width: 50px;
-        height: 24px;
-        border: 2px solid $br-grey;
-        border-radius: 12px;
-        transition: all 0.3s ease 0s;
-    }
+	&:before {
+		position: absolute;
+		left: 0;
+		top: 0;
+		content: "";
+		display: block;
+		width: 50px;
+		height: 24px;
+		border: 2px solid $br-grey;
+		border-radius: 12px;
+		transition: all 0.3s ease 0s;
+	}
 
-    &:after {
-        position: absolute;
-        left: 4px;
-        top: 3px;
-        content: "";
-        display: block;
-        width: 18px;
-        height: 18px;
-        border-radius: 8px;
-        background: $br-grey;
-        transition: all 0.3s ease 0s;
-    }
+	&:after {
+		position: absolute;
+		left: 4px;
+		top: 3px;
+		content: "";
+		display: block;
+		width: 18px;
+		height: 18px;
+		border-radius: 8px;
+		background: $br-grey;
+		transition: all 0.3s ease 0s;
+	}
 
-    &:hover {
-        @media (hover: hover) {
+	&:hover {
+		@media (hover: hover) {
 
-            &:before {
-                border-color: $br-blue;
-                background-color: $br-blue;
-            }
+			&:before {
+				border-color: $br-blue;
+				background-color: $br-blue;
+			}
 
-            &:after {
-                background-color: $br-white;
-            }
-        }
-    }
+			&:after {
+				background-color: $br-white;
+			}
+		}
+	}
 
-    &.active {
-        &:before {
-            border-color: $br-blue;
-            background-color: $br-blue;
-        }
+	&.active {
+		&:before {
+			border-color: $br-blue;
+			background-color: $br-blue;
+		}
 
-        &:after {
-            background-color: $br-white;
-            transform: translateX(25px);
-        }
-    }
+		&:after {
+			background-color: $br-white;
+			transform: translateX(25px);
+		}
+	}
 }

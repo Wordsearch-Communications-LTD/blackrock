@@ -6,24 +6,24 @@ $boldFont: "PPNeueMontreal-Bold";
 $regularFont: $bookFont;
 
 @font-face {
-    font-family: "PPNeueMontreal-Medium";
-    src: url('../fonts/PPNeueMontreal-Medium.woff') format('woff'),
-        url('../fonts/PPNeueMontreal-Medium.otf') format('otf'),
-        url('../fonts/PPNeueMontreal-Medium.woff2') format('woff2');
+	font-family: "PPNeueMontreal-Medium";
+	src: url('../fonts/PPNeueMontreal-Medium.woff') format('woff'),
+		url('../fonts/PPNeueMontreal-Medium.otf') format('otf'),
+		url('../fonts/PPNeueMontreal-Medium.woff2') format('woff2');
 }
 
 @font-face {
-    font-family: "PPNeueMontreal-Bold";
-    src: url('../fonts/PPNeueMontreal-Bold.woff') format('woff'),
-        url('../fonts/PPNeueMontreal-Bold.otf') format('otf'),
-        url('../fonts/PPNeueMontreal-Bold.woff2') format('woff2');
+	font-family: "PPNeueMontreal-Bold";
+	src: url('../fonts/PPNeueMontreal-Bold.woff') format('woff'),
+		url('../fonts/PPNeueMontreal-Bold.otf') format('otf'),
+		url('../fonts/PPNeueMontreal-Bold.woff2') format('woff2');
 }
 
 @font-face {
-    font-family: "PPNeueMontreal-Book";
-    src: url('../fonts/PPNeueMontreal-Book.woff') format('woff'),
-        url('../fonts/PPNeueMontreal-Book.otf') format('otf'),
-        url('../fonts/PPNeueMontreal-Book.woff2') format('woff2');
+	font-family: "PPNeueMontreal-Book";
+	src: url('../fonts/PPNeueMontreal-Book.woff') format('woff'),
+		url('../fonts/PPNeueMontreal-Book.otf') format('otf'),
+		url('../fonts/PPNeueMontreal-Book.woff2') format('woff2');
 }
 
 // @font-face {
@@ -34,75 +34,75 @@ $regularFont: $bookFont;
 // }
 
 @mixin body-16 {
-    //Neue Montreal
-    font-size: 16px;
-    line-height: 1.3em;
-    margin-bottom: 15px;
-    padding-bottom: 0;
-    font-family: $regularFont;
+	//Neue Montreal
+	font-size: 16px;
+	line-height: 1.3em;
+	margin-bottom: 15px;
+	padding-bottom: 0;
+	font-family: $regularFont;
 
 }
 
 @mixin body-20 {
-    //Neue Montreal
-    font-size: 20px;
-    line-height: 1.3em;
-    margin-bottom: 20px;
-    padding-bottom: 0;
-    font-family: $regularFont;
+	//Neue Montreal
+	font-size: 20px;
+	line-height: 1.3em;
+	margin-bottom: 20px;
+	padding-bottom: 0;
+	font-family: $regularFont;
 
 }
 
 @mixin body-35 {
-    //Neue Montreal
-    font-size: 35px;
-    line-height: 1.3em;
-    margin-bottom: 20px;
-    padding-bottom: 0;
-    font-family: $regularFont;
+	//Neue Montreal
+	font-size: 35px;
+	line-height: 1.3em;
+	margin-bottom: 20px;
+	padding-bottom: 0;
+	font-family: $regularFont;
 
 }
 
 @mixin headline-20 {
-    //PP Neue Montreal
-    font-weight: normal;
-    font-size: 20px;
-    line-height: 1.4em;
-    margin-bottom: 0;
-    padding-bottom: 0;
-    font-family: $mediumFont;
+	//PP Neue Montreal
+	font-weight: normal;
+	font-size: 20px;
+	line-height: 1.4em;
+	margin-bottom: 0;
+	padding-bottom: 0;
+	font-family: $mediumFont;
 
 }
 
 @mixin headline-30 {
-    //PP Neue Montreal
-    font-weight: normal;
-    font-size: 30px;
-    line-height: 1.3em;
-    margin-bottom: 0;
-    padding-bottom: 0;
-    font-family: $mediumFont;
+	//PP Neue Montreal
+	font-weight: normal;
+	font-size: 30px;
+	line-height: 1.3em;
+	margin-bottom: 0;
+	padding-bottom: 0;
+	font-family: $mediumFont;
 
 }
 
 @mixin headline-50 {
-    //PP Neue Montreal
-    font-weight: normal;
-    font-size: 50px;
-    line-height: 1.2em;
-    margin-bottom: 0;
-    padding-bottom: 0;
-    font-family: $regularFont;
+	//PP Neue Montreal
+	font-weight: normal;
+	font-size: 50px;
+	line-height: 1.2em;
+	margin-bottom: 0;
+	padding-bottom: 0;
+	font-family: $regularFont;
 
 }
 
 @mixin headline-75 {
-    //PP Neue Montreal
-    font-weight: normal;
-    font-size: 75px;
-    line-height: 1.2em;
-    margin-bottom: 0;
-    padding-bottom: 0;
-    font-family: $regularFont;
+	//PP Neue Montreal
+	font-weight: normal;
+	font-size: 75px;
+	line-height: 1.2em;
+	margin-bottom: 0;
+	padding-bottom: 0;
+	font-family: $regularFont;
 
 }

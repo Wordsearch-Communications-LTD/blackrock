@@ -1,0 +1,99 @@
+#modal-popup {
+	display: block;
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+	left: 0;
+	z-index: 10000;
+	background-color: white;
+	padding: 40px;
+	transform: translateX(100vw);
+	transition: transform 0.3s ease 0s;
+
+	.image-container {
+		opacity: 0;
+		transform: translateX(40px);
+		transition: all 0.3s ease 0.3s;
+	}
+
+	.close {
+		opacity: 0;
+		transition: opacity 0.3s ease 0.3s;
+	}
+
+	&.visible {
+		display: block;
+		transform: translateX(0);
+
+		.image-container {
+			opacity: 1;
+			transform: translateX(0px);
+		}
+
+		.close {
+			opacity: 1;
+		}
+	}
+
+	.close {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		width: 32px;
+		height: 32px;
+		border: 0;
+		appearance: none;
+		padding: 0;
+		background-color: transparent;
+		z-index: 10;
+
+		@media #{$mq-desk-small} {
+			top: 20px;
+			right: 20px;
+		}
+
+		svg {
+			pointer-events: none;
+			transition: all 0.3s ease 0s;
+		}
+
+		&:hover {
+			svg {
+				transform: rotate(90deg);
+
+				path {
+					stroke: $br-blue;
+				}
+			}
+		}
+	}
+
+	.image-container {
+		width: 100%;
+		height: calc(100vh - 60px);
+		overflow: hidden;
+		position: relative;
+
+		img {
+			max-width: 100%;
+			max-height: calc(100% - 80px);
+			object-fit: contain;
+			position: relative;
+			top: 45%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+		.caption {
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			text-align: center;
+
+			p {
+				color: $br-black;
+			}
+		}
+	}
+}

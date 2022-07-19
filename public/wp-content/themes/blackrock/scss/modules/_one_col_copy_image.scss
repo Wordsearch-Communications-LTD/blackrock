@@ -1,106 +1,106 @@
 .one-col-copy-image {
 
 
-    margin-top: 40px;
+	margin-top: 40px;
 
-    @media #{$mq-tablet-port} {
-        margin-top: calc(100vw / 12);
-    }
+	@media #{$mq-tablet-port} {
+		margin-top: calc(100vw / 12);
+	}
 
-    .copy-container {
-        @include grid;
+	.copy-container {
+		@include grid;
 
-        grid-template-columns: 7fr 5fr;
-        grid-template-areas: "copy .";
+		grid-template-columns: 7fr 5fr;
+		grid-template-areas: "copy .";
 
-        @media #{$mq-desk-small} {
-            grid-template-columns: 5fr 7fr;
+		@media #{$mq-desk-small} {
+			grid-template-columns: 5fr 7fr;
 
-        }
+		}
 
-        .copy {
-            grid-area: copy;
+		.copy {
+			grid-area: copy;
 
-            span {
-                color: $br-blue;
-            }
-        }
+			span {
+				color: $br-blue;
+			}
+		}
 
-        h1 {
-            @include headline-30;
+		h1 {
+			@include headline-30;
 
-            @media #{$mq-tablet-desk} {
-                @include headline-50;
-            }
-        }
-    }
+			@media #{$mq-tablet-desk} {
+				@include headline-50;
+			}
+		}
+	}
 }
 
 .one-col-copy-image.page-hero {
-    margin-top: 120px;
+	margin-top: 120px;
 
-    .mobile-image-container {
-        width: 100vw;
-        max-height: 600px;
-        height: calc(100vw * 1.152);
-        overflow: hidden;
+	.mobile-image-container {
+		width: 100vw;
+		max-height: 600px;
+		height: calc(100vw * 1.152);
+		overflow: hidden;
 
-        @media #{$mq-tablet-port} {
-            width: auto;
-            height: auto;
-            max-height: none;
-        }
+		@media #{$mq-tablet-port} {
+			width: auto;
+			height: auto;
+			max-height: none;
+		}
 
-        img {
-            position: relative;
-            height: 100%;
-            width: auto;
-            left: 50%;
-            transform: translateX(-50%);
+		img {
+			position: relative;
+			height: 100%;
+			width: auto;
+			left: 50%;
+			transform: translateX(-50%);
 
-            @media #{$mq-tablet-port} {
-                height: auto;
-                width: 100%;
-            }
-        }
-    }
+			@media #{$mq-tablet-port} {
+				height: auto;
+				width: 100%;
+			}
+		}
+	}
 
-    .copy {
-        margin-top: 80px;
-        margin-bottom: 80px;
-        padding: 0 20px;
+	.copy {
+		margin-top: 80px;
+		margin-bottom: 80px;
+		padding: 0 20px;
 
-        @media #{$mq-tablet-port} {
-            padding: 0;
-        }
-    }
+		@media #{$mq-tablet-port} {
+			padding: 0;
+		}
+	}
 
-    @media #{$mq-tablet-port} {
-        margin-top: calc((100vw / 12));
+	@media #{$mq-tablet-port} {
+		margin-top: calc((100vw / 12));
 
-        .copy {
-            margin-bottom: calc(100vw / 12);
-        }
-    }
+		.copy {
+			margin-bottom: calc(100vw / 12);
+		}
+	}
 
-    .copy blockquote p {
-        @include headline-30;
+	.copy blockquote p {
+		@include headline-30;
 
-        @media #{$mq-tablet-desk} {
-            @include headline-50;
-        }
+		@media #{$mq-tablet-desk} {
+			@include headline-50;
+		}
 
-        &:first-of-type {
-            margin-top: 0;
-        }
+		&:first-of-type {
+			margin-top: 0;
+		}
 
-        &:last-of-type {
-            margin-top: 5px;
-            font-size: 20px;
-        }
+		&:last-of-type {
+			margin-top: 5px;
+			font-size: 20px;
+		}
 
-        span {
-            @include body-20;
-        }
-    }
+		span {
+			@include body-20;
+		}
+	}
 }

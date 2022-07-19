@@ -1,310 +1,331 @@
 .home .header-menu {
-	opacity: 0;
+  opacity: 0;
 
-	@media #{$mq-tablet-desk} {
-		transition: all 0.3s ease 0s;
-		transform: translateY(-100px);
-	}
+  @media #{$mq-tablet-desk} {
+    transition: all 0.3s ease 0s;
+    transform: translateY(-100px);
+  }
 
-	.logo,
-	.menu-main-menu-container {
-		opacity: 0;
+  .logo,
+  .menu-main-menu-container {
+    opacity: 0;
 
-		@media #{$mq-tablet-desk} {
-			transition: all 0.2s ease 0.1s;
-			transform: translateY(-30px);
-		}
-	}
+    @media #{$mq-tablet-desk} {
+      transition: all 0.2s ease 0.1s;
+      transform: translateY(-30px);
+    }
+  }
 }
 
 .home .header-menu.show-menu {
-	opacity: 1;
+  opacity: 1;
 
-	@media #{$mq-tablet-desk} {
-		transform: translateY(0px);
-	}
+  @media #{$mq-tablet-desk} {
+    transform: translateY(0px);
+  }
 
-	.logo,
-	.menu-main-menu-container {
-		opacity: 1;
+  .logo,
+  .menu-main-menu-container {
+    opacity: 1;
 
-		@media #{$mq-tablet-desk} {
-			transition: all 0.3s ease 0.1s;
-			transform: translateY(0px);
-		}
-	}
+    @media #{$mq-tablet-desk} {
+      transition: all 0.3s ease 0.1s;
+      transform: translateY(0px);
+    }
+  }
 }
 
 .header-menu {
-	position: fixed;
-	top: 0;
-	left: 0;
-	height: 60px;
-	width: 100vw;
-	z-index: 3;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 60px;
+  width: 100vw;
+  z-index: 3;
 
-	@media #{$mq-tablet-desk} {
-		height: 100px;
-	}
+  @media #{$mq-tablet-desk} {
+    height: 100px;
+  }
 
-	a {
-		@include body-20;
-	}
+  a {
+    @include body-20;
+  }
 
-	.logo {
-		display: block;
-		margin-top: 18px;
-		margin-left: 20px;
-		height: 16px;
-		float: left;
+  .logo {
+    display: block;
+    margin-top: 18px;
+    margin-left: 20px;
+    height: 16px;
+    float: left;
 
-		svg {
-			height: 16px;
-			width: auto;
-		}
+    svg {
+      height: 16px;
+      width: auto;
+    }
 
-		@media #{$mq-tablet-desk} {
-			margin-top: 38px;
-			margin-left: 40px;
-			height: 26px;
+    @media #{$mq-tablet-desk} {
+      margin-top: 38px;
+      margin-left: 40px;
+      height: 26px;
 
-			svg {
-				height: 26px;
-			}
-		}
-	}
+      svg {
+        height: 26px;
+      }
+    }
+  }
 
-	.burger-menu {
-		display: block;
-		position: absolute;
-		right: 20px;
-		top: 14px;
-		width: 32px;
-		height: 32px;
+  .burger-menu {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 14px;
+    width: 32px;
+    height: 32px;
 
-		.bar {
-			display: block;
-			position: absolute;
-			height: 2px;
-			width: 24px;
-			top: 12px;
-			left: 4px;
-			background-color: $br-black;
-			transform-origin: center;
-			transition: all 0.15s ease 0s;
+    .bar {
+      display: block;
+      position: absolute;
+      height: 2px;
+      width: 24px;
+      top: 12px;
+      left: 4px;
+      background-color: $br-black;
+      transform-origin: center;
+      transition: all 0.15s ease 0s;
 
-			&:last-child {
-				top: 20px;
-			}
-		}
-	}
+      &:last-child {
+        top: 20px;
+      }
+    }
+  }
 
-	.menu-main-menu-container {
-		position: fixed;
-		top: 60px;
-		left: 0;
-		transform: translateX(100vw);
-		width: 100vw;
-		height: calc(100vh - 60px);
-		transition: transform 0.2s ease 0s;
+  .menu-main-menu-container {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    transform: translateX(100vw);
+    width: 100vw;
+    height: calc(100vh - 60px);
+    transition: transform 0.2s ease 0s;
 
-		.menu {
-			list-style-type: none;
-			padding: 0;
-			margin: 0;
-			padding-left: 20px;
-			margin-top: 40px;
+    .menu {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      padding-left: 20px;
+      margin-top: 40px;
 
-			li {
-				padding-bottom: 20px;
-				opacity: 0;
-				transform: translateX(40px);
-				transition: all 0.2s ease 0.2s;
+      li {
+        padding-bottom: 20px;
+        opacity: 0;
+        transform: translateX(40px);
+        transition: all 0.2s ease 0.2s;
 
-				a {
-					@include body-35;
-					text-decoration: none;
-					color: $br-black;
-				}
+        a {
+          @include body-35;
+          text-decoration: none;
+          color: $br-black;
+        }
 
-				&.current_page_item a {
-					padding-bottom: 3px;
-					border-bottom: 1px solid white;
-				}
-			}
-		}
-	}
+        &.current_page_item a {
+          padding-bottom: 3px;
+          border-bottom: 2px solid $br-blue;
 
-	@media #{$mq-tablet-desk} {
-		.menu-main-menu-container {
-			position: absolute;
-			//float: right;
-			right: 40px;
-			top: 20px;
-			width: auto;
-			left: auto;
-			width: auto;
-			height: auto;
-			transform: translateX(0);
+          @media #{$mq-tablet-desk} {
+            border-bottom: 1px solid $br-blue;
+          }
+        }
+      }
+    }
+  }
 
-			.menu {
-				margin-top: 20px;
+  @media #{$mq-tablet-desk} {
+    .menu-main-menu-container {
+      position: absolute;
+      //float: right;
+      right: 40px;
+      top: 20px;
+      width: auto;
+      left: auto;
+      width: auto;
+      height: auto;
+      transform: translateX(0);
 
-				li {
-					display: inline-block;
-					font-size: 20px;
-					opacity: 1;
-					transform: none;
+      .menu {
+        margin-top: 20px;
 
-					&:after {
-						font-weight: bold;
-						content: '/';
-						padding-left: 10px;
-						padding-right: 5px;
-					}
+        li {
+          display: inline-block;
+          font-size: 20px;
+          opacity: 1;
+          transform: none;
 
-					&:last-child:after {
-						display: none;
-					}
+          &:after {
+            font-weight: bold;
+            content: '/';
+            padding-left: 10px;
+            padding-right: 5px;
+          }
 
-					a {
-						@include body-20;
-						text-decoration: none;
-						color: black;
-					}
+          &:last-child:after {
+            display: none;
+          }
 
-					&:hover,
-					&.current_page_item {
-						a {
-							color: $br-blue;
-							padding-bottom: 3px;
-							border-bottom: 1px solid $br-blue;
-						}
-					}
+          a {
+            @include body-20;
+            text-decoration: none;
+            color: black;
+          }
 
-					&.current_page_item a {
-						padding-bottom: 3px;
-						border-bottom: 1px solid $br-blue;
-					}
-				}
-			}
-		}
+          &:hover,
+          &.current_page_item {
+            a {
+              color: $br-blue;
+              padding-bottom: 3px;
+              border-bottom: 1px solid $br-blue;
+            }
+          }
 
-		.burger-menu {
-			display: none;
-		}
-	}
+          &.current_page_item a {
+            padding-bottom: 3px;
+            border-bottom: 1px solid $br-blue;
+          }
+        }
+      }
+    }
+
+    .burger-menu {
+      display: none;
+    }
+  }
 }
 
 .menu-open {
-	.menu-main-menu-container {
-		transform: translateX(0);
+  .menu-main-menu-container {
+    transform: translateX(0);
 
-		.menu li {
-			opacity: 1;
-			transform: translateX(0);
-		}
-	}
+    .menu li {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
 
-	.burger-menu {
-		.bar {
-			top: 16px;
-			transform: rotate(45deg);
+  .burger-menu {
+    .bar {
+      top: 16px;
+      transform: rotate(45deg);
 
-			&:last-child {
-				transform: rotate(-45deg);
-				top: 16px;
-			}
-		}
-	}
+      &:last-child {
+        transform: rotate(-45deg);
+        top: 16px;
+      }
+    }
+  }
 }
 
 .page-white {
-	.menu-main-menu-container {
-		background-color: rgba($br-white, 0.9);
+  .menu-main-menu-container {
+    background-color: rgba($br-white, 1);
 
-		@media #{$mq-tablet-desk} {
-			background-color: rgba($br-white, 0);
-		}
-	}
+    @media #{$mq-tablet-desk} {
+      background-color: rgba($br-white, 0);
+    }
+  }
 
-	.header-menu {
-		background-color: rgba($br-white, 0.9);
-	}
+  .header-menu {
+    background-color: rgba($br-white, 0.9);
+  }
+
+  .menu-open.header-menu {
+    background-color: rgba($br-white, 1);
+  }
 }
 
 .page-cream {
-	.menu-main-menu-container {
-		background-color: rgba($br-cream, 0.9);
+  .menu-main-menu-container {
+    background-color: rgba($br-cream, 1);
 
-		@media #{$mq-tablet-desk} {
-			background-color: rgba($br-cream, 0);
-		}
+    @media #{$mq-tablet-desk} {
+      background-color: rgba($br-cream, 0);
+    }
 
-		.menu li.current_page_item a {
-			color: $br-blue;
-			border-bottom: 2px solid $br-blue;
+    .menu li.current_page_item a {
+      color: $br-blue;
+      border-bottom: 2px solid $br-blue;
 
-			@media #{$mq-tablet-desk} {
-				border-bottom: 1px solid $br-blue;
-			}
-		}
-	}
+      @media #{$mq-tablet-desk} {
+        border-bottom: 1px solid $br-blue;
+      }
+    }
+  }
 
-	.header-menu {
-		background-color: rgba($br-cream, 0.9);
-	}
 
-	&.home {
-		.menu-main-menu-container {
-			background-color: rgba($br-white, 0.9);
+  .header-menu {
+    background-color: rgba($br-cream, 0.9);
+  }
 
-			@media #{$mq-tablet-desk} {
-				background-color: rgba($br-white, 0);
-			}
-		}
+  .menu-open.header-menu {
+    background-color: rgba($br-cream, 1);
+  }
 
-		.header-menu {
-			background-color: rgba($br-white, 0.9);
-		}
-	}
+  &.home {
+    .menu-main-menu-container {
+      background-color: rgba($br-white, 1);
+
+      @media #{$mq-tablet-desk} {
+        background-color: rgba($br-white, 0);
+      }
+    }
+
+    .header-menu {
+      background-color: rgba($br-white, 0.9);
+    }
+
+    .menu-open.header-menu {
+      background-color: rgba($br-white, 1);
+    }
+  }
 }
 
 .page-black {
 
-	.menu-main-menu-container {
-		background-color: rgba($br-black, 0.9);
+  .menu-main-menu-container {
+    background-color: rgba($br-black, 1);
 
-		@media #{$mq-tablet-desk} {
-			background-color: rgba($br-black, 0);
-		}
-	}
+    @media #{$mq-tablet-desk} {
+      background-color: rgba($br-black, 0);
+    }
+  }
 
-	.header-menu {
-		background-color: rgba($br-black, 0.9);
+  .header-menu {
+    background-color: rgba($br-black, 0.9);
 
-		svg path {
-			fill: white;
-		}
+    svg path {
+      fill: white;
+    }
 
-		.menu-main-menu-container .menu li a {
-			color: white;
-		}
+    .menu-main-menu-container .menu li a {
+      color: white;
+    }
 
-		.menu-main-menu-container .menu li:hover a,
-		.menu-main-menu-container .menu li a:hover {
+    .menu-main-menu-container .menu li:hover a,
+    .menu-main-menu-container .menu li a:hover {
 
-			@media #{$mq-tablet-desk} {
-				border-color: $br-white;
-			}
-		}
+      @media #{$mq-tablet-desk} {
+        border-color: $br-white;
+      }
+    }
 
-		.menu-main-menu-container .menu li.current_page_item a {
-			border-color: $br-white;
-		}
-	}
+    .menu-main-menu-container .menu li.current_page_item a {
+      border-color: $br-white;
+    }
+  }
 
-	.burger-menu .bar {
-		background-color: $br-white;
-	}
+  .menu-open.header-menu {
+    background-color: rgba($br-black, 1);
+  }
+
+  .burger-menu .bar {
+    background-color: $br-white;
+  }
 }

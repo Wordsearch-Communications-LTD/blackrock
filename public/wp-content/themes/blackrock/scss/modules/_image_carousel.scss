@@ -1,169 +1,169 @@
 .image-carousel {
-    position: relative;
-    margin-top: 100px;
+	position: relative;
+	margin-top: 100px;
 
-    @media #{$mq-tablet-port} {
-        margin-top: calc(100vw / 12);
-    }
+	@media #{$mq-tablet-port} {
+		margin-top: calc(100vw / 12);
+	}
 
-    .caption {
-        @media #{$mq-tablet-port} {
-            padding-left: 40px;
-        }
-    }
-
-
-    .mobile-swipe-prompt {
-        display: none;
-        position: absolute;
-        width: 200px;
-        height: 60px;
-        background-color: rgba($br-grey, 0.9);
-        border-radius: 60px;
-        pointer-events: none;
-        z-index: 1;
-        @include body-20;
-        line-height: 60px;
-        padding-left: 35px;
-        color: $br-white;
-        opacity: 1;
-        transition: opacity 0.3s ease 0s;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+	.caption {
+		@media #{$mq-tablet-port} {
+			padding-left: 40px;
+		}
+	}
 
 
-        @media (hover: none) {
-            display: block;
-        }
-
-        svg {
-            width: 30px;
-            height: auto;
-            position: absolute;
-            right: 50px;
-            top: 23px;
-
-            animation-name: pulseSlide;
-            animation-duration: 0.6s;
-            animation-delay: 0s;
-            animation-direction: alternate;
-            animation-iteration-count: infinite;
-        }
-    }
-
-    .mobile-touched .mobile-swipe-prompt {
-        opacity: 0;
-    }
-
-    .swiper-button-next,
-    .swiper-button-prev {
-        display: none;
-        padding: 0;
-        margin: 0;
-        top: 0;
-        left: 0;
-        width: 50vw;
-        height: calc(100% - 60px);
-
-        @media #{$mq-tablet-port} {
-            display: block;
-        }
-
-        @media #{$mq-tablet-desk} {
-            pointer-events: all !important;
-        }
-
-        @media (hover: none) {
-            //this is great especially for touch screen laptops
-            pointer-events: none;
-        }
-
-        &:after {
-            display: none;
-        }
-    }
-
-    .swiper-button-prev,
-    .swiper-button-prev:hover {
-        cursor: url(../img/icons/arrow-white-left.svg) 0 35, pointer;
-    }
-
-    .swiper-button-next,
-    .swiper-button-next:hover {
-        right: 0;
-        left: auto;
-        cursor: url(../img/icons/arrow-white-right.svg) 128 35, pointer;
-    }
-
-    .swiper-pagination-bullets {
-        height: 3px;
-        width: 46vw;
-        display: flex;
-        margin-left: 50vw;
-        margin-top: 0px;
-        background-color: $br-blue  !important;
-        position: relative;
-        top: auto;
-        left: auto;
-        bottom: auto;
-
-        .swiper-pagination-bullet {
-            flex: 1;
-            height: 3px;
-            border-radius: 0;
-            padding: 0;
-            margin: 0;
-            opacity: 0;
-
-            &.swiper-pagination-bullet-active {
-                background: $br-blue;
-            }
-        }
-
-        .swiper-pagination-bullet-active~.swiper-pagination-bullet {
-            background: lighten($br-grey, 25%);
-            opacity: 1;
-        }
-    }
-
-    .caption {
-        padding: 0px 20px 10px 20px;
-    }
-
-    .cursor-change {
-
-        .swiper-button-prev,
-        .swiper-button-prev:hover {
-            cursor: url(../img/icons/arrow-blue-left.svg) 0 35, pointer !important;
-        }
-
-        .swiper-button-next,
-        .swiper-button-next:hover {
-            right: 0;
-            left: auto;
-            cursor: url(../img/icons/arrow-blue-right.svg) 128 35, pointer !important;
-        }
-    }
+	.mobile-swipe-prompt {
+		display: none;
+		position: absolute;
+		width: 200px;
+		height: 60px;
+		background-color: rgba($br-grey, 0.9);
+		border-radius: 60px;
+		pointer-events: none;
+		z-index: 1;
+		@include body-20;
+		line-height: 60px;
+		padding-left: 35px;
+		color: $br-white;
+		opacity: 1;
+		transition: opacity 0.3s ease 0s;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
 
 
-    .disable-prev .swiper-button-prev {
-        pointer-events: none !important;
-    }
+		@media (hover: none) {
+			display: block;
+		}
 
-    .disable-next .swiper-button-next {
-        pointer-events: none !important;
-    }
+		svg {
+			width: 30px;
+			height: auto;
+			position: absolute;
+			right: 50px;
+			top: 23px;
+
+			animation-name: pulseSlide;
+			animation-duration: 0.6s;
+			animation-delay: 0s;
+			animation-direction: alternate;
+			animation-iteration-count: infinite;
+		}
+	}
+
+	.mobile-touched .mobile-swipe-prompt {
+		opacity: 0;
+	}
+
+	.swiper-button-next,
+	.swiper-button-prev {
+		display: none;
+		padding: 0;
+		margin: 0;
+		top: 0;
+		left: 0;
+		width: 50vw;
+		height: calc(100% - 60px);
+
+		@media #{$mq-tablet-port} {
+			display: block;
+		}
+
+		@media #{$mq-tablet-desk} {
+			pointer-events: all !important;
+		}
+
+		@media (hover: none) {
+			//this is great especially for touch screen laptops
+			pointer-events: none;
+		}
+
+		&:after {
+			display: none;
+		}
+	}
+
+	.swiper-button-prev,
+	.swiper-button-prev:hover {
+		cursor: url(../img/icons/arrow-white-left.svg) 0 35, pointer;
+	}
+
+	.swiper-button-next,
+	.swiper-button-next:hover {
+		right: 0;
+		left: auto;
+		cursor: url(../img/icons/arrow-white-right.svg) 128 35, pointer;
+	}
+
+	.swiper-pagination-bullets {
+		height: 3px;
+		width: 46vw;
+		display: flex;
+		margin-left: 50vw;
+		margin-top: 0px;
+		background-color: $br-blue  !important;
+		position: relative;
+		top: auto;
+		left: auto;
+		bottom: auto;
+
+		.swiper-pagination-bullet {
+			flex: 1;
+			height: 3px;
+			border-radius: 0;
+			padding: 0;
+			margin: 0;
+			opacity: 0;
+
+			&.swiper-pagination-bullet-active {
+				background: $br-blue;
+			}
+		}
+
+		.swiper-pagination-bullet-active~.swiper-pagination-bullet {
+			background: lighten($br-grey, 25%);
+			opacity: 1;
+		}
+	}
+
+	.caption {
+		padding: 0px 20px 10px 20px;
+	}
+
+	.cursor-change {
+
+		.swiper-button-prev,
+		.swiper-button-prev:hover {
+			cursor: url(../img/icons/arrow-blue-left.svg) 0 35, pointer !important;
+		}
+
+		.swiper-button-next,
+		.swiper-button-next:hover {
+			right: 0;
+			left: auto;
+			cursor: url(../img/icons/arrow-blue-right.svg) 128 35, pointer !important;
+		}
+	}
+
+
+	.disable-prev .swiper-button-prev {
+		pointer-events: none !important;
+	}
+
+	.disable-next .swiper-button-next {
+		pointer-events: none !important;
+	}
 
 
 }
 
 @keyframes pulseSlide {
-    0% {
-        transform: translateX(0);
-    }
+	0% {
+		transform: translateX(0);
+	}
 
-    100% {
-        transform: translateX(20px);
-    }
+	100% {
+		transform: translateX(20px);
+	}
 }

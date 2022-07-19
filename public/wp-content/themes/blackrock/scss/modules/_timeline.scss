@@ -22,15 +22,12 @@
 		margin: 0 40px 0 40px;
 	}
 
-
 	&.has-legal {
 		margin: 100px 0px 100px 0px;
 
 		@media #{$mq-tablet-port} {
 			margin: 100px 40px 100px 40px;
 			display: block;
-
-
 		}
 
 		@media #{$mq-tablet-desk} {
@@ -300,7 +297,6 @@
 		}
 
 		article:hover {
-
 
 			header {
 				color: $br-blue;
