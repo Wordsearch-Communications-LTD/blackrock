@@ -145,8 +145,9 @@
 			appearance: none;
 			text-align: left;
 			color: $br-grey;
+			cursor: pointer;
 
-
+			&:hover,
 			&.active {
 				color: $br-blue;
 			}
@@ -251,7 +252,7 @@
 			transition: all 0.4s ease 0s;
 
 			@media #{$mq-tablet-port} {
-				padding: 10px 0 0 0;
+				padding: 0px 0 0 0;
 			}
 
 			@media #{$mq-desk-small} {
@@ -261,7 +262,7 @@
 		}
 
 		.close {
-			display: none;
+			display: block;
 			position: absolute;
 			top: 35px;
 			right: 20px;
@@ -271,6 +272,9 @@
 			appearance: none;
 			padding: 0;
 			background-color: transparent;
+			transform: rotate(45deg);
+			cursor: pointer;
+			pointer-events: none;
 
 			@media #{$mq-tablet-port} {
 				top: 33px;
@@ -282,18 +286,35 @@
 				transition: all 0.3s ease 0s;
 
 				path {
-					stroke: $br-blue;
+					stroke: $br-grey;
 				}
 			}
 
 			&:hover {
 				svg {
-					transform: rotate(90deg);
+					path {
+						stroke: $br-blue;
+					}
+				}
+			}
+		}
+
+		article:hover {
+
+
+			header {
+				color: $br-blue;
+				cursor: pointer;
+
+				span.title,
+				span.number {
+					color: $br-blue;
 				}
 			}
 		}
 
 		.active {
+			cursor: default;
 
 			header {
 				color: $br-blue;
@@ -323,7 +344,18 @@
 			}
 
 			.close {
-				display: block;
+				transform: rotate(90deg);
+				pointer-events: all;
+
+				&:hover {
+					svg {
+						transform: rotate(90deg);
+
+						path {
+							stroke: $br-blue;
+						}
+					}
+				}
 			}
 
 			.content {

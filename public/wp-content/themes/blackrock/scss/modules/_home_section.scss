@@ -201,5 +201,15 @@
             }
 
         }
+
+        .copy .container {
+
+
+            @media #{$mq-tablet-port} {
+
+
+                margin-top: calc((100vw / 12));
+            }
+        }
     }
 }

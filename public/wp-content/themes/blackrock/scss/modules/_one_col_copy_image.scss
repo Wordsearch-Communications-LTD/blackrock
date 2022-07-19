@@ -69,6 +69,10 @@
         margin-top: 80px;
         margin-bottom: 80px;
         padding: 0 20px;
+
+        @media #{$mq-tablet-port} {
+            padding: 0;
+        }
     }
 
     @media #{$mq-tablet-port} {

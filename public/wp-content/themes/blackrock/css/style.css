@@ -2251,6 +2251,12 @@ a.button:hover svg {
     background-color: transparent;
   }
 }
+@media (min-width: 768px) {
+  /* line 205, ../scss/modules/_home_section.scss */
+  .column-reveal.last-item .copy .container {
+    margin-top: calc((100vw / 12));
+  }
+}
 
 /* line 1, ../scss/modules/_image_carousel.scss */
 .image-carousel {
@@ -3006,27 +3012,28 @@ a.button:hover svg {
   appearance: none;
   text-align: left;
   color: #5B5B5B;
+  cursor: pointer;
 }
 /* line 150, ../scss/modules/_timeline.scss */
-.timeline .timeline_nav button.active {
+.timeline .timeline_nav button:hover, .timeline .timeline_nav button.active {
   color: #0627CA;
 }
-/* line 154, ../scss/modules/_timeline.scss */
+/* line 155, ../scss/modules/_timeline.scss */
 .timeline .timeline_nav button span {
   display: inline-block;
   margin-right: 5px;
 }
-/* line 158, ../scss/modules/_timeline.scss */
+/* line 159, ../scss/modules/_timeline.scss */
 .timeline .timeline_nav button span:after {
   content: '/';
 }
 @media (min-width: 768px) {
-  /* line 165, ../scss/modules/_timeline.scss */
+  /* line 166, ../scss/modules/_timeline.scss */
   .timeline .timeline_data {
     padding-top: calc(100vw / 12);
   }
 }
-/* line 172, ../scss/modules/_timeline.scss */
+/* line 173, ../scss/modules/_timeline.scss */
 .timeline .timeline_data article:last-of-type:after {
   display: block;
   content: '';
@@ -3035,16 +3042,16 @@ a.button:hover svg {
   margin-left: 20px;
 }
 @media (min-width: 768px) {
-  /* line 171, ../scss/modules/_timeline.scss */
+  /* line 172, ../scss/modules/_timeline.scss */
   .timeline .timeline_data article:last-of-type {
     border-bottom: 2px solid black;
   }
-  /* line 183, ../scss/modules/_timeline.scss */
+  /* line 184, ../scss/modules/_timeline.scss */
   .timeline .timeline_data article:last-of-type:after {
     display: none;
   }
 }
-/* line 189, ../scss/modules/_timeline.scss */
+/* line 190, ../scss/modules/_timeline.scss */
 .timeline .timeline_data header {
   font-weight: normal;
   font-size: 30px;
@@ -3063,7 +3070,7 @@ a.button:hover svg {
   margin-right: 20px;
 }
 @media (min-width: 768px) {
-  /* line 189, ../scss/modules/_timeline.scss */
+  /* line 190, ../scss/modules/_timeline.scss */
   .timeline .timeline_data header {
     font-weight: normal;
     font-size: 30px;
@@ -3077,7 +3084,7 @@ a.button:hover svg {
   }
 }
 @media (min-width: 1024px) {
-  /* line 189, ../scss/modules/_timeline.scss */
+  /* line 190, ../scss/modules/_timeline.scss */
   .timeline .timeline_data header {
     font-weight: normal;
     font-size: 50px;
@@ -3087,18 +3094,18 @@ a.button:hover svg {
     font-family: "PPNeueMontreal-Book";
   }
 }
-/* line 213, ../scss/modules/_timeline.scss */
+/* line 214, ../scss/modules/_timeline.scss */
 .timeline .timeline_data header span {
   vertical-align: top;
   display: inline-block;
   line-height: 39px;
 }
-/* line 219, ../scss/modules/_timeline.scss */
+/* line 220, ../scss/modules/_timeline.scss */
 .timeline .timeline_data header span.number {
   margin-right: 20px;
   color: #5B5B5B;
 }
-/* line 224, ../scss/modules/_timeline.scss */
+/* line 225, ../scss/modules/_timeline.scss */
 .timeline .timeline_data header span.title {
   display: inline-block;
   font-weight: normal;
@@ -3113,7 +3120,7 @@ a.button:hover svg {
   color: #5B5B5B;
 }
 @media (min-width: 1280px) {
-  /* line 224, ../scss/modules/_timeline.scss */
+  /* line 225, ../scss/modules/_timeline.scss */
   .timeline .timeline_data header span.title {
     font-weight: normal;
     font-size: 30px;
@@ -3126,11 +3133,11 @@ a.button:hover svg {
     margin: 0;
   }
 }
-/* line 240, ../scss/modules/_timeline.scss */
+/* line 241, ../scss/modules/_timeline.scss */
 .timeline .timeline_data header:hover {
   color: #0627CA;
 }
-/* line 245, ../scss/modules/_timeline.scss */
+/* line 246, ../scss/modules/_timeline.scss */
 .timeline .timeline_data .content {
   font-size: 20px;
   line-height: 1.3em;
@@ -3143,21 +3150,21 @@ a.button:hover svg {
   transition: all 0.4s ease 0s;
 }
 @media (min-width: 768px) {
-  /* line 245, ../scss/modules/_timeline.scss */
+  /* line 246, ../scss/modules/_timeline.scss */
   .timeline .timeline_data .content {
-    padding: 10px 0 0 0;
+    padding: 0px 0 0 0;
   }
 }
 @media (min-width: 1280px) {
-  /* line 245, ../scss/modules/_timeline.scss */
+  /* line 246, ../scss/modules/_timeline.scss */
   .timeline .timeline_data .content {
     display: grid;
     grid-template-columns: 6fr 3fr;
   }
 }
-/* line 263, ../scss/modules/_timeline.scss */
+/* line 264, ../scss/modules/_timeline.scss */
 .timeline .timeline_data .close {
-  display: none;
+  display: block;
   position: absolute;
   top: 35px;
   right: 20px;
@@ -3167,36 +3174,53 @@ a.button:hover svg {
   appearance: none;
   padding: 0;
   background-color: transparent;
+  transform: rotate(45deg);
+  cursor: pointer;
+  pointer-events: none;
 }
 @media (min-width: 768px) {
-  /* line 263, ../scss/modules/_timeline.scss */
+  /* line 264, ../scss/modules/_timeline.scss */
   .timeline .timeline_data .close {
     top: 33px;
     right: 0px;
   }
 }
-/* line 280, ../scss/modules/_timeline.scss */
+/* line 284, ../scss/modules/_timeline.scss */
 .timeline .timeline_data .close svg {
   pointer-events: none;
   transition: all 0.3s ease 0s;
 }
-/* line 284, ../scss/modules/_timeline.scss */
+/* line 288, ../scss/modules/_timeline.scss */
 .timeline .timeline_data .close svg path {
+  stroke: #5B5B5B;
+}
+/* line 295, ../scss/modules/_timeline.scss */
+.timeline .timeline_data .close:hover svg path {
   stroke: #0627CA;
 }
-/* line 290, ../scss/modules/_timeline.scss */
-.timeline .timeline_data .close:hover svg {
-  transform: rotate(90deg);
+/* line 305, ../scss/modules/_timeline.scss */
+.timeline .timeline_data article:hover header {
+  color: #0627CA;
+  cursor: pointer;
 }
-/* line 298, ../scss/modules/_timeline.scss */
+/* line 309, ../scss/modules/_timeline.scss */
+.timeline .timeline_data article:hover header span.title,
+.timeline .timeline_data article:hover header span.number {
+  color: #0627CA;
+}
+/* line 316, ../scss/modules/_timeline.scss */
+.timeline .timeline_data .active {
+  cursor: default;
+}
+/* line 319, ../scss/modules/_timeline.scss */
 .timeline .timeline_data .active header {
   color: #0627CA;
 }
-/* line 301, ../scss/modules/_timeline.scss */
+/* line 322, ../scss/modules/_timeline.scss */
 .timeline .timeline_data .active header span.number {
   color: #0627CA;
 }
-/* line 305, ../scss/modules/_timeline.scss */
+/* line 326, ../scss/modules/_timeline.scss */
 .timeline .timeline_data .active header span.title {
   max-width: calc(100vw - 190px);
   color: #0627CA;
@@ -3208,13 +3232,13 @@ a.button:hover svg {
   font-family: "PPNeueMontreal-Medium";
 }
 @media (min-width: 768px) {
-  /* line 305, ../scss/modules/_timeline.scss */
+  /* line 326, ../scss/modules/_timeline.scss */
   .timeline .timeline_data .active header span.title {
     max-width: none;
   }
 }
 @media (min-width: 1280px) {
-  /* line 305, ../scss/modules/_timeline.scss */
+  /* line 326, ../scss/modules/_timeline.scss */
   .timeline .timeline_data .active header span.title {
     font-weight: normal;
     font-size: 50px;
@@ -3227,11 +3251,20 @@ a.button:hover svg {
     margin: 0;
   }
 }
-/* line 325, ../scss/modules/_timeline.scss */
+/* line 346, ../scss/modules/_timeline.scss */
 .timeline .timeline_data .active .close {
-  display: block;
+  transform: rotate(90deg);
+  pointer-events: all;
 }
-/* line 329, ../scss/modules/_timeline.scss */
+/* line 351, ../scss/modules/_timeline.scss */
+.timeline .timeline_data .active .close:hover svg {
+  transform: rotate(90deg);
+}
+/* line 354, ../scss/modules/_timeline.scss */
+.timeline .timeline_data .active .close:hover svg path {
+  stroke: #0627CA;
+}
+/* line 361, ../scss/modules/_timeline.scss */
 .timeline .timeline_data .active .content {
   max-height: 100vh;
 }
@@ -3436,16 +3469,22 @@ a.button:hover svg {
   padding: 0 20px;
 }
 @media (min-width: 768px) {
+  /* line 68, ../scss/modules/_one_col_copy_image.scss */
+  .one-col-copy-image.page-hero .copy {
+    padding: 0;
+  }
+}
+@media (min-width: 768px) {
   /* line 39, ../scss/modules/_one_col_copy_image.scss */
   .one-col-copy-image.page-hero {
     margin-top: calc((100vw / 12));
   }
-  /* line 77, ../scss/modules/_one_col_copy_image.scss */
+  /* line 81, ../scss/modules/_one_col_copy_image.scss */
   .one-col-copy-image.page-hero .copy {
     margin-bottom: calc(100vw / 12);
   }
 }
-/* line 82, ../scss/modules/_one_col_copy_image.scss */
+/* line 86, ../scss/modules/_one_col_copy_image.scss */
 .one-col-copy-image.page-hero .copy blockquote p {
   font-weight: normal;
   font-size: 30px;
@@ -3455,7 +3494,7 @@ a.button:hover svg {
   font-family: "PPNeueMontreal-Medium";
 }
 @media (min-width: 1024px) {
-  /* line 82, ../scss/modules/_one_col_copy_image.scss */
+  /* line 86, ../scss/modules/_one_col_copy_image.scss */
   .one-col-copy-image.page-hero .copy blockquote p {
     font-weight: normal;
     font-size: 50px;
@@ -3465,16 +3504,16 @@ a.button:hover svg {
     font-family: "PPNeueMontreal-Book";
   }
 }
-/* line 89, ../scss/modules/_one_col_copy_image.scss */
+/* line 93, ../scss/modules/_one_col_copy_image.scss */
 .one-col-copy-image.page-hero .copy blockquote p:first-of-type {
   margin-top: 0;
 }
-/* line 93, ../scss/modules/_one_col_copy_image.scss */
+/* line 97, ../scss/modules/_one_col_copy_image.scss */
 .one-col-copy-image.page-hero .copy blockquote p:last-of-type {
   margin-top: 5px;
   font-size: 20px;
 }
-/* line 98, ../scss/modules/_one_col_copy_image.scss */
+/* line 102, ../scss/modules/_one_col_copy_image.scss */
 .one-col-copy-image.page-hero .copy blockquote p span {
   font-size: 20px;
   line-height: 1.3em;
