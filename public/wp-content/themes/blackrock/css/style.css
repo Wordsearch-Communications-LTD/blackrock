@@ -290,7 +290,7 @@ blockquote {
   left: 0;
   height: 60px;
   width: 100vw;
-  z-index: 3;
+  z-index: 4;
 }
 @media (min-width: 1024px) {
   /* line 38, ../scss/layout/_header.scss */
