@@ -293,6 +293,12 @@
     min-height: 100vh;
     width: auto;
     left: 50%;
-    transform: translateX(-50%);
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  @media #{$mq-desk-medium} {
+    width: 100vw;
+    height: auto;
   }
 }

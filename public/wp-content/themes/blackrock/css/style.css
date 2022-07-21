@@ -2121,7 +2121,15 @@ a.button:hover svg {
     min-height: 100vh;
     width: auto;
     left: 50%;
-    transform: translateX(-50%);
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+@media (min-width: 1440px) {
+  /* line 288, ../scss/modules/_home_hero.scss */
+  .scrolled.column-reveal .column-reveal_container img {
+    width: 100vw;
+    height: auto;
   }
 }
 
