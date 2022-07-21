@@ -1,362 +1,365 @@
 .timeline {
-	max-width: 100%;
-
-	.timeline_nav {
-		grid-area: timeline-nav;
-	}
-
-	.timeline_data {
-		grid-area: timeline-data;
-	}
-
-	@media #{$mq-tablet-port} {
-		display: grid;
-		column-gap: 20px;
-		grid-template-columns: 1fr 2fr;
-		grid-template-areas: "timeline-nav timeline-data";
-		margin: 0 40px 0 40px;
-	}
-
-	@media #{$mq-tablet-desk} {
-		grid-template-columns: 3fr 9fr;
-		margin: 0 40px 0 40px;
-	}
-
-	&.has-legal {
-		margin: 100px 0px 100px 0px;
-
-		@media #{$mq-tablet-port} {
-			margin: 100px 40px 100px 40px;
-			display: block;
-		}
-
-		@media #{$mq-tablet-desk} {
-			display: grid;
-			grid-template-areas: "timeline-nav . timeline-data";
-			grid-template-columns: 5fr 1fr 6fr;
-
-			margin: 0 40px 100px 40px;
-		}
-
-		.timeline_data .content {
-			@media #{$mq-desk-small} {
-				display: block;
-			}
-		}
-
-		.number {
-			@media #{$mq-desk-small} {
-				line-height: 52px !important;
-			}
-		}
-
-		.timeline_nav {
-			ul {
-				display: none;
-
-				@media #{$mq-tablet-desk} {
-					display: block;
-				}
-			}
-		}
-
-		.timeline_data {
-			padding-top: 0;
-
-			@media #{$mq-tablet-desk} {
-				padding-top: calc(100vw / 12);
-			}
-		}
-
-		.title {
-			width: calc(100vw - 120px);
-
-			@media #{$mq-tablet-desk} {
-				width: calc(50vw - 210px);
-			}
-
-			@media #{$mq-desk-small} {
-
-				line-height: 52px !important;
-			}
-		}
-	}
-
-	#legal-intro-text {
-		p {
-			margin: 0;
-			padding: 20px 20px 20px 20px;
-			@include body-20;
-
-			@media #{$mq-tablet-port} {
-				padding: 40px 0px 40px 0px;
-			}
-		}
-	}
-
-	.timeline_nav {
-		position: relative;
-
-		h2 {
-			@include headline-30;
-			margin: 40px 0 10px 20px;
-			border-top: 2px solid transparent;
-
-			@media #{$mq-tablet-port} {
-
-				@include headline-50;
-				margin: 0 0 40px 0;
-			}
-		}
-
-		.stick {
-			@media #{$mq-tablet-port} {
-				padding-top: calc(100vw / 12);
-				position: sticky;
-				position: -webkit-sticky;
-				top: 0;
-			}
-		}
-
-		ul {
-			list-style-type: none;
-			padding: 0;
-			margin: 0;
-			@include headline-20;
-
-			display: none;
-
-			@media #{$mq-tablet-port} {
-				display: block;
-			}
-
-			li {
-				margin-bottom: 30px;
-			}
-		}
-
-		button {
-			@include headline-20;
-			border: 0;
-			background-color: transparent;
-			appearance: none;
-			text-align: left;
-			color: $br-grey;
-			cursor: pointer;
-
-			&:hover,
-			&.active {
-				color: $br-blue;
-			}
-
-			span {
-				display: inline-block;
-				margin-right: 5px;
-
-				&:after {
-					content: '/';
-				}
-			}
-		}
-	}
-
-	.timeline_data {
-
-		@media #{$mq-tablet-port} {
-			padding-top: calc(100vw / 12);
-		}
-
-		article:last-of-type {
-			&:after {
-				display: block;
-				content: '';
-				width: calc(100% - 40px);
-				border-bottom: 2px solid black;
-				margin-left: 20px;
-			}
-
-			@media #{$mq-tablet-port} {
-				border-bottom: 2px solid black;
-
-				&:after {
-					display: none;
-				}
-			}
-		}
-
-		header {
-			@include headline-30;
-			border-top: 2px solid black;
-			position: relative;
-			padding-top: 30px;
-			padding-bottom: 0px;
-			overflow: hidden;
-			padding-left: 0px;
-			line-height: 39px;
-			margin-left: 20px;
-			margin-right: 20px;
-
-
-			@media #{$mq-tablet-port} {
-				@include headline-30;
-				padding-left: 0;
-				margin-left: 0;
-				margin-right: 0;
-			}
-
-			@media #{$mq-tablet-desk} {
-				@include headline-50;
-			}
-
-			span {
-				vertical-align: top;
-				display: inline-block;
-				line-height: 39px;
-			}
-
-			span.number {
-				margin-right: 20px;
-				color: $br-grey;
-			}
-
-			span.title {
-				display: inline-block;
-				@include headline-30;
-				line-height: 39px;
-				padding: 0;
-				margin: 0;
-				color: $br-grey;
-
-				@media #{$mq-desk-small} {
-					@include headline-30;
-					line-height: 39px;
-					padding: 0;
-					margin: 0;
-				}
-			}
-
-			&:hover {
-				color: $br-blue;
-			}
-		}
-
-		.content {
-			@include body-20;
-			padding: 10px 20px 0 20px;
-			max-height: 0;
-			overflow: hidden;
-
-			transition: all 0.4s ease 0s;
-
-			@media #{$mq-tablet-port} {
-				padding: 0px 0 0 0;
-			}
-
-			@media #{$mq-desk-small} {
-				display: grid;
-				grid-template-columns: 6fr 3fr;
-			}
-		}
-
-		.close {
-			display: block;
-			position: absolute;
-			top: 35px;
-			right: 20px;
-			width: 32px;
-			height: 32px;
-			border: 0;
-			appearance: none;
-			padding: 0;
-			background-color: transparent;
-			transform: rotate(45deg);
-			cursor: pointer;
-			pointer-events: none;
-
-			@media #{$mq-tablet-port} {
-				top: 33px;
-				right: 0px;
-			}
-
-			svg {
-				pointer-events: none;
-				transition: all 0.3s ease 0s;
-
-				path {
-					stroke: $br-grey;
-				}
-			}
-
-			&:hover {
-				svg {
-					path {
-						stroke: $br-blue;
-					}
-				}
-			}
-		}
-
-		article:hover {
-
-			header {
-				color: $br-blue;
-				cursor: pointer;
-
-				span.title,
-				span.number {
-					color: $br-blue;
-				}
-			}
-		}
-
-		.active {
-			cursor: default;
-
-			header {
-				color: $br-blue;
-
-				span.number {
-					color: $br-blue;
-				}
-
-				span.title {
-					max-width: calc(100vw - 190px);
-					color: $br-blue;
-
-					@include headline-30;
-
-					@media #{$mq-tablet-port} {
-						max-width: none;
-					}
-
-					@media #{$mq-desk-small} {
-
-						@include headline-50;
-						line-height: 39px;
-						padding: 0;
-						margin: 0;
-					}
-				}
-			}
-
-			.close {
-				transform: rotate(90deg);
-				pointer-events: all;
-
-				&:hover {
-					svg {
-						transform: rotate(90deg);
-
-						path {
-							stroke: $br-blue;
-						}
-					}
-				}
-			}
-
-			.content {
-				max-height: 100vh;
-			}
-		}
-	}
+  max-width: 100%;
+
+  .timeline_nav {
+    grid-area: timeline-nav;
+  }
+
+  .timeline_data {
+    grid-area: timeline-data;
+  }
+
+  @media #{$mq-tablet-port} {
+    display: grid;
+    column-gap: 20px;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: "timeline-nav timeline-data";
+    margin: 0 40px 0 40px;
+  }
+
+  @media #{$mq-tablet-desk} {
+    grid-template-columns: 3fr 9fr;
+    margin: 0 40px 0 40px;
+  }
+
+
+  &.has-legal {
+    margin: 100px 0px 100px 0px;
+
+    @media #{$mq-tablet-port} {
+      margin: 100px 40px 100px 40px;
+      display: block;
+
+    }
+
+    @media #{$mq-tablet-desk} {
+      display: grid;
+      grid-template-areas: "timeline-nav . timeline-data";
+      grid-template-columns: 5fr 1fr 6fr;
+
+      margin: 0 40px 100px 40px;
+    }
+
+    .timeline_data .content {
+      @media #{$mq-desk-small} {
+        display: block;
+      }
+    }
+
+    .number {
+      @media #{$mq-desk-small} {
+        line-height: 52px !important;
+      }
+    }
+
+    .timeline_nav {
+      ul {
+        display: none;
+
+        @media #{$mq-tablet-desk} {
+          display: block;
+        }
+      }
+    }
+
+    .timeline_data {
+      padding-top: 0;
+
+      @media #{$mq-tablet-desk} {
+        padding-top: calc(100vw / 12);
+      }
+    }
+
+    .title {
+      width: calc(100vw - 120px);
+
+
+      @media #{$mq-tablet-desk} {
+        width: calc(50vw - 210px);
+      }
+
+      @media #{$mq-desk-small} {
+
+        line-height: 52px !important;
+      }
+    }
+  }
+
+  #legal-intro-text {
+    p {
+      margin: 0;
+      padding: 20px 20px 20px 20px;
+      @include body-20;
+
+      @media #{$mq-tablet-port} {
+        padding: 40px 0px 40px 0px;
+      }
+    }
+  }
+
+  .timeline_nav {
+    position: relative;
+
+    h2 {
+      @include headline-30;
+      margin: 40px 0 10px 20px;
+      border-top: 2px solid transparent;
+
+      @media #{$mq-tablet-port} {
+
+        @include headline-50;
+        margin: 0 0 40px 0;
+      }
+    }
+
+    .stick {
+      @media #{$mq-tablet-port} {
+        padding-top: calc(100vw / 12);
+        position: sticky;
+        position: -webkit-sticky;
+        top: 0;
+      }
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      @include headline-20;
+
+      display: none;
+
+      @media #{$mq-tablet-port} {
+        display: block;
+      }
+
+      li {
+        margin-bottom: 30px;
+      }
+    }
+
+    button {
+      @include headline-20;
+      border: 0;
+      background-color: transparent;
+      appearance: none;
+      text-align: left;
+      color: $br-grey;
+      cursor: pointer;
+
+      &:hover,
+      &.active {
+        color: $br-blue;
+      }
+
+      span {
+        display: inline-block;
+        margin-right: 5px;
+
+        &:after {
+          content: '/';
+        }
+      }
+    }
+  }
+
+  .timeline_data {
+
+    @media #{$mq-tablet-port} {
+      padding-top: calc(100vw / 12);
+    }
+
+    article:last-of-type {
+      &:after {
+        display: block;
+        content: '';
+        width: calc(100% - 40px);
+        border-bottom: 2px solid black;
+        margin-left: 20px;
+      }
+
+      @media #{$mq-tablet-port} {
+        border-bottom: 2px solid black;
+
+        &:after {
+          display: none;
+        }
+      }
+    }
+
+    header {
+      @include headline-30;
+      border-top: 2px solid black;
+      position: relative;
+      padding-top: 30px;
+      padding-bottom: 0px;
+      overflow: hidden;
+      padding-left: 0px;
+      line-height: 39px;
+      margin-left: 20px;
+      margin-right: 20px;
+
+
+      @media #{$mq-tablet-port} {
+        @include headline-30;
+        padding-left: 0;
+        margin-left: 0;
+        margin-right: 0;
+      }
+
+      @media #{$mq-tablet-desk} {
+        @include headline-50;
+      }
+
+      span {
+        vertical-align: top;
+        display: inline-block;
+        line-height: 39px;
+      }
+
+      span.number {
+        margin-right: 20px;
+        color: $br-grey;
+      }
+
+      span.title {
+        display: inline-block;
+        @include headline-30;
+        line-height: 39px;
+        padding: 0;
+        margin: 0;
+        color: $br-grey;
+
+        @media #{$mq-desk-small} {
+          @include headline-30;
+          line-height: 39px;
+          padding: 0;
+          margin: 0;
+        }
+      }
+
+      &:hover {
+        color: $br-blue;
+      }
+    }
+
+    .content {
+      @include body-20;
+      padding: 10px 20px 0 20px;
+      max-height: 0;
+      overflow: hidden;
+
+      transition: all 0.4s ease 0s;
+
+      @media #{$mq-tablet-port} {
+        padding: 0px 0 0 0;
+      }
+
+      @media #{$mq-desk-small} {
+        display: grid;
+        grid-template-columns: 6fr 3fr;
+      }
+    }
+
+    .close {
+      display: block;
+      position: absolute;
+      top: 35px;
+      right: 20px;
+      width: 32px;
+      height: 32px;
+      border: 0;
+      appearance: none;
+      padding: 0;
+      background-color: transparent;
+      transform: rotate(45deg);
+      cursor: pointer;
+      pointer-events: none;
+
+      @media #{$mq-tablet-port} {
+        top: 33px;
+        right: 0px;
+      }
+
+      svg {
+        pointer-events: none;
+        transition: all 0.3s ease 0s;
+
+        path {
+          stroke: $br-grey;
+        }
+      }
+
+      &:hover {
+        svg {
+          path {
+            stroke: $br-blue;
+          }
+        }
+      }
+    }
+
+    article:hover {
+
+      header {
+        color: $br-blue;
+        cursor: pointer;
+
+        span.title,
+        span.number {
+          color: $br-blue;
+        }
+      }
+    }
+
+    .active {
+      cursor: default;
+
+      header {
+        color: $br-blue;
+
+        span.number {
+          color: $br-blue;
+        }
+
+        span.title {
+          max-width: calc(100vw - 190px);
+          color: $br-blue;
+
+          @include headline-30;
+
+          @media #{$mq-tablet-port} {
+            max-width: none;
+          }
+
+          @media #{$mq-desk-small} {
+
+            @include headline-50;
+            line-height: 39px;
+            padding: 0;
+            margin: 0;
+          }
+        }
+      }
+
+      .close {
+        transform: rotate(90deg);
+        pointer-events: all;
+
+        &:hover {
+          svg {
+            transform: rotate(90deg);
+
+            path {
+              stroke: $br-blue;
+            }
+          }
+        }
+      }
+
+      .content {
+        max-height: 100vh;
+      }
+    }
+  }
 }

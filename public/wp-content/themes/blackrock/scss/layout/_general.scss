@@ -47,13 +47,13 @@ blockquote {
 
   p {
     padding: 10px 10px 10px 0px;
+    margin: 0;
+    @include body-16;
+    color: $br-black;
 
     @media #{$mq-tablet-port} {
       padding: 10px 20px 10px 20px;
     }
-
-    margin: 0;
-    @include body-16;
 
     span {
       font-weight: lighter;
@@ -64,4 +64,8 @@ blockquote {
       @include body-20;
     }
   }
+}
+
+.page-black .caption p {
+  color: $br-white;
 }

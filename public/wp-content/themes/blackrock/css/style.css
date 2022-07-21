@@ -17,6 +17,16 @@
 .page-white section li {
   color: #5B5B5B;
 }
+/* line 23, ../scss/variables/_colours.scss */
+.page-cream .caption p,
+.page-white .caption p {
+  color: #000000;
+}
+
+/* line 30, ../scss/variables/_colours.scss */
+.page-black .caption p {
+  color: #FFFFFF;
+}
 
 @font-face {
   font-family: "PPNeueMontreal-Medium";
@@ -86,6 +96,7 @@ blockquote {
   margin-bottom: 15px;
   padding-bottom: 0;
   font-family: "PPNeueMontreal-Book";
+  color: #000000;
 }
 @media (min-width: 768px) {
   /* line 48, ../scss/layout/_general.scss */
@@ -107,6 +118,11 @@ blockquote {
     padding-bottom: 0;
     font-family: "PPNeueMontreal-Book";
   }
+}
+
+/* line 69, ../scss/layout/_general.scss */
+.page-black .caption p {
+  color: #FFFFFF;
 }
 
 /* line 1, ../scss/layout/_footer.scss */
@@ -683,8 +699,9 @@ a.button:hover svg {
   padding-left: 60px;
   position: relative;
   cursor: pointer;
+  margin-bottom: 24px;
 }
-/* line 120, ../scss/elements/_buttons.scss */
+/* line 121, ../scss/elements/_buttons.scss */
 #floor-toggle:before,
 .map .map-container .toggle:before {
   position: absolute;
@@ -698,7 +715,7 @@ a.button:hover svg {
   border-radius: 12px;
   transition: all 0.3s ease 0s;
 }
-/* line 133, ../scss/elements/_buttons.scss */
+/* line 134, ../scss/elements/_buttons.scss */
 #floor-toggle:after,
 .map .map-container .toggle:after {
   position: absolute;
@@ -713,25 +730,25 @@ a.button:hover svg {
   transition: all 0.3s ease 0s;
 }
 @media (hover: hover) {
-  /* line 149, ../scss/elements/_buttons.scss */
+  /* line 150, ../scss/elements/_buttons.scss */
   #floor-toggle:hover:before,
   .map .map-container .toggle:hover:before {
     border-color: #0627CA;
     background-color: #0627CA;
   }
-  /* line 154, ../scss/elements/_buttons.scss */
+  /* line 155, ../scss/elements/_buttons.scss */
   #floor-toggle:hover:after,
   .map .map-container .toggle:hover:after {
     background-color: #FFFFFF;
   }
 }
-/* line 161, ../scss/elements/_buttons.scss */
+/* line 162, ../scss/elements/_buttons.scss */
 #floor-toggle.active:before,
 .map .map-container .toggle.active:before {
   border-color: #0627CA;
   background-color: #0627CA;
 }
-/* line 166, ../scss/elements/_buttons.scss */
+/* line 167, ../scss/elements/_buttons.scss */
 #floor-toggle.active:after,
 .map .map-container .toggle.active:after {
   background-color: #FFFFFF;
@@ -959,10 +976,11 @@ a.button:hover svg {
   .contact-module-container {
     padding-top: calc(100vw / 12);
     padding-bottom: calc(100vw / 12);
+    min-height: calc(100vh - 80px);
   }
 }
 @media (min-width: 768px) {
-  /* line 14, ../scss/modules/_contact.scss */
+  /* line 15, ../scss/modules/_contact.scss */
   .contact-module-container .contacts-container {
     display: grid;
     margin: 0 40px;
@@ -970,20 +988,20 @@ a.button:hover svg {
   }
 }
 @media (min-width: 768px) {
-  /* line 14, ../scss/modules/_contact.scss */
+  /* line 15, ../scss/modules/_contact.scss */
   .contact-module-container .contacts-container {
     grid-template-columns: 1fr;
     grid-template-areas: "contacts" "img";
   }
 }
 @media (min-width: 1024px) {
-  /* line 14, ../scss/modules/_contact.scss */
+  /* line 15, ../scss/modules/_contact.scss */
   .contact-module-container .contacts-container {
     grid-template-columns: 6fr 1fr 5fr;
     grid-template-areas: "contacts . img ";
   }
 }
-/* line 27, ../scss/modules/_contact.scss */
+/* line 28, ../scss/modules/_contact.scss */
 .contact-module-container .contacts-container .left {
   align-content: space-evenly;
   grid-area: contacts;
@@ -991,21 +1009,21 @@ a.button:hover svg {
   padding-top: calc(100vw / 12);
 }
 @media (min-width: 768px) {
-  /* line 27, ../scss/modules/_contact.scss */
+  /* line 28, ../scss/modules/_contact.scss */
   .contact-module-container .contacts-container .left {
     display: grid;
     margin: 0 40px;
     column-gap: 20px;
   }
 }
-/* line 34, ../scss/modules/_contact.scss */
+/* line 35, ../scss/modules/_contact.scss */
 .contact-module-container .contacts-container .left .copy {
   display: block;
   height: auto;
   padding: 0;
   margin: 0;
 }
-/* line 41, ../scss/modules/_contact.scss */
+/* line 42, ../scss/modules/_contact.scss */
 .contact-module-container .contacts-container .left .copy h2 {
   font-weight: normal;
   font-size: 30px;
@@ -1016,11 +1034,11 @@ a.button:hover svg {
   padding-bottom: calc(100vw / 24);
   color: white;
   margin-left: 20px;
-  margin-bottom: 40px;
+  margin-bottom: 70px;
   margin-top: 0;
 }
 @media (min-width: 768px) {
-  /* line 41, ../scss/modules/_contact.scss */
+  /* line 42, ../scss/modules/_contact.scss */
   .contact-module-container .contacts-container .left .copy h2 {
     font-weight: normal;
     font-size: 50px;
@@ -1031,14 +1049,14 @@ a.button:hover svg {
     margin-left: 0;
   }
 }
-/* line 55, ../scss/modules/_contact.scss */
+/* line 56, ../scss/modules/_contact.scss */
 .contact-module-container .contacts-container .left .copy img {
   width: 100px;
   margin-left: 20px;
   margin-bottom: 20px;
 }
 @media (min-width: 768px) {
-  /* line 55, ../scss/modules/_contact.scss */
+  /* line 56, ../scss/modules/_contact.scss */
   .contact-module-container .contacts-container .left .copy img {
     width: auto;
     margin-left: 0;
@@ -1047,7 +1065,7 @@ a.button:hover svg {
   }
 }
 @media (min-width: 768px) {
-  /* line 70, ../scss/modules/_contact.scss */
+  /* line 71, ../scss/modules/_contact.scss */
   .contact-module-container .contacts-container .contacts {
     display: grid;
     margin: 0 40px;
@@ -1055,14 +1073,14 @@ a.button:hover svg {
   }
 }
 @media (min-width: 768px) {
-  /* line 70, ../scss/modules/_contact.scss */
+  /* line 71, ../scss/modules/_contact.scss */
   .contact-module-container .contacts-container .contacts {
     padding: 0 !important;
     margin: 0 !important;
     grid-template-columns: repeat(3, 1fr);
   }
 }
-/* line 80, ../scss/modules/_contact.scss */
+/* line 81, ../scss/modules/_contact.scss */
 .contact-module-container .contacts-container .contacts .contact {
   margin: 20px;
   border-top: 2px solid white;
@@ -1074,12 +1092,12 @@ a.button:hover svg {
   color: #FFFFFF;
 }
 @media (min-width: 768px) {
-  /* line 80, ../scss/modules/_contact.scss */
+  /* line 81, ../scss/modules/_contact.scss */
   .contact-module-container .contacts-container .contacts .contact {
     margin: 0;
   }
 }
-/* line 90, ../scss/modules/_contact.scss */
+/* line 91, ../scss/modules/_contact.scss */
 .contact-module-container .contacts-container .contacts .contact h3,
 .contact-module-container .contacts-container .contacts .contact h4 {
   font-size: 20px;
@@ -1088,63 +1106,63 @@ a.button:hover svg {
   padding-bottom: 0;
   font-family: "PPNeueMontreal-Book";
 }
-/* line 95, ../scss/modules/_contact.scss */
+/* line 96, ../scss/modules/_contact.scss */
 .contact-module-container .contacts-container .contacts .contact h3 {
   margin-bottom: 0;
   padding-bottom: 0;
 }
-/* line 100, ../scss/modules/_contact.scss */
+/* line 101, ../scss/modules/_contact.scss */
 .contact-module-container .contacts-container .contacts .contact h4 {
   margin-top: 0;
 }
-/* line 104, ../scss/modules/_contact.scss */
+/* line 105, ../scss/modules/_contact.scss */
 .contact-module-container .contacts-container .contacts .contact a {
   color: #FFFFFF;
   text-decoration: none;
 }
-/* line 108, ../scss/modules/_contact.scss */
+/* line 109, ../scss/modules/_contact.scss */
 .contact-module-container .contacts-container .contacts .contact a:hover {
   text-decoration: underline;
 }
-/* line 113, ../scss/modules/_contact.scss */
+/* line 114, ../scss/modules/_contact.scss */
 .contact-module-container .contacts-container .contacts .contact:last-child {
   padding-bottom: 40px;
 }
 @media (min-width: 768px) {
-  /* line 113, ../scss/modules/_contact.scss */
+  /* line 114, ../scss/modules/_contact.scss */
   .contact-module-container .contacts-container .contacts .contact:last-child {
     padding-bottom: 0;
   }
 }
-/* line 123, ../scss/modules/_contact.scss */
+/* line 124, ../scss/modules/_contact.scss */
 .contact-module-container .contacts-container .image-container {
   grid-area: img;
   line-height: 0;
 }
 @media (min-width: 1024px) {
-  /* line 123, ../scss/modules/_contact.scss */
+  /* line 124, ../scss/modules/_contact.scss */
   .contact-module-container .contacts-container .image-container {
     position: sticky;
     top: 0;
     align-self: end;
   }
 }
-/* line 135, ../scss/modules/_contact.scss */
+/* line 136, ../scss/modules/_contact.scss */
 .contact-module-container .contact-logo {
   width: calc((100vw - 80px) / 12);
 }
 
-/* line 140, ../scss/modules/_contact.scss */
+/* line 141, ../scss/modules/_contact.scss */
 .contact-open .contact-module-container {
   transform: translateX(0);
 }
 
-/* line 144, ../scss/modules/_contact.scss */
+/* line 145, ../scss/modules/_contact.scss */
 .home .contact-module-container {
   margin-top: 0;
 }
 @media (min-width: 768px) {
-  /* line 144, ../scss/modules/_contact.scss */
+  /* line 145, ../scss/modules/_contact.scss */
   .home .contact-module-container {
     margin-top: calc((100vh - 80px) *-1);
   }
@@ -1176,34 +1194,53 @@ a.button:hover svg {
   /* line 1, ../scss/modules/_copy_two_images.scss */
   .copy-two-images {
     margin: calc(100vw / 12) 40px 0 40px;
+    grid-template-columns: 5fr 1fr 1fr 5fr;
+    grid-template-areas: "copy . . image-container-left" "image-container-right image-container-right  . .";
+  }
+}
+@media (min-width: 1280px) {
+  /* line 1, ../scss/modules/_copy_two_images.scss */
+  .copy-two-images {
+    margin: calc(100vw / 12) 40px 0 40px;
     grid-template-columns: 5fr 1fr 2fr 4fr;
     grid-template-areas: "copy . . image-container-left" "image-container-right image-container-right  . .";
   }
 }
-/* line 22, ../scss/modules/_copy_two_images.scss */
+/* line 26, ../scss/modules/_copy_two_images.scss */
 .copy-two-images .copy {
-  padding: 100px 20px;
+  padding: 100px 0px;
   grid-area: copy;
 }
-@media (min-width: 768px) {
-  /* line 22, ../scss/modules/_copy_two_images.scss */
+@media (min-width: 1024px) {
+  /* line 26, ../scss/modules/_copy_two_images.scss */
   .copy-two-images .copy {
     padding: 0 0 calc(100vw / 12) 0;
   }
 }
-/* line 31, ../scss/modules/_copy_two_images.scss */
+/* line 34, ../scss/modules/_copy_two_images.scss */
 .copy-two-images .copy p {
   font-size: 35px;
   line-height: 1.3em;
   margin-bottom: 20px;
   padding-bottom: 0;
   font-family: "PPNeueMontreal-Book";
+  font-size: 20px;
 }
-/* line 34, ../scss/modules/_copy_two_images.scss */
+@media (min-width: 768px) {
+  /* line 34, ../scss/modules/_copy_two_images.scss */
+  .copy-two-images .copy p {
+    font-size: 35px;
+    line-height: 1.3em;
+    margin-bottom: 20px;
+    padding-bottom: 0;
+    font-family: "PPNeueMontreal-Book";
+  }
+}
+/* line 42, ../scss/modules/_copy_two_images.scss */
 .copy-two-images .copy p:last-of-type {
   margin-top: 0;
 }
-/* line 38, ../scss/modules/_copy_two_images.scss */
+/* line 46, ../scss/modules/_copy_two_images.scss */
 .copy-two-images .copy p span {
   color: #0627CA;
   font-size: 20px;
@@ -1212,35 +1249,74 @@ a.button:hover svg {
   padding-bottom: 0;
   font-family: "PPNeueMontreal-Book";
 }
-/* line 44, ../scss/modules/_copy_two_images.scss */
+/* line 52, ../scss/modules/_copy_two_images.scss */
 .copy-two-images .copy blockquote p {
   margin-bottom: 0;
 }
-/* line 47, ../scss/modules/_copy_two_images.scss */
+/* line 55, ../scss/modules/_copy_two_images.scss */
+.copy-two-images .copy blockquote p:first-of-type {
+  font-size: 20px;
+  padding-top: 0;
+  margin-top: 0;
+}
+@media (min-width: 768px) {
+  /* line 55, ../scss/modules/_copy_two_images.scss */
+  .copy-two-images .copy blockquote p:first-of-type {
+    font-size: 35px;
+    line-height: 1.3em;
+    margin-bottom: 20px;
+    padding-bottom: 0;
+    font-family: "PPNeueMontreal-Book";
+  }
+}
+/* line 66, ../scss/modules/_copy_two_images.scss */
 .copy-two-images .copy blockquote p:last-of-type {
   font-size: 20px;
+  margin-bottom: 0;
+  line-height: 20px;
 }
-/* line 53, ../scss/modules/_copy_two_images.scss */
+@media (min-width: 1024px) {
+  /* line 66, ../scss/modules/_copy_two_images.scss */
+  .copy-two-images .copy blockquote p:last-of-type {
+    font-size: 35px;
+    line-height: 1.3em;
+    margin-bottom: 20px;
+    padding-bottom: 0;
+    font-family: "PPNeueMontreal-Book";
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-top: 0;
+    line-height: 1em;
+  }
+}
+/* line 82, ../scss/modules/_copy_two_images.scss */
 .copy-two-images .image-container.first {
   grid-area: image-container-left;
 }
 @media (min-width: 1024px) {
-  /* line 53, ../scss/modules/_copy_two_images.scss */
+  /* line 82, ../scss/modules/_copy_two_images.scss */
   .copy-two-images .image-container.first {
     padding-top: calc(100vw / 12);
   }
 }
-/* line 61, ../scss/modules/_copy_two_images.scss */
+/* line 90, ../scss/modules/_copy_two_images.scss */
 .copy-two-images .image-container.second {
   grid-area: image-container-right;
+  margin-top: 0;
 }
 @media (min-width: 1024px) {
-  /* line 61, ../scss/modules/_copy_two_images.scss */
+  /* line 90, ../scss/modules/_copy_two_images.scss */
   .copy-two-images .image-container.second {
     margin-top: calc((100vw / 12) * -1);
   }
 }
-/* line 69, ../scss/modules/_copy_two_images.scss */
+@media (min-width: 1280px) {
+  /* line 90, ../scss/modules/_copy_two_images.scss */
+  .copy-two-images .image-container.second {
+    margin-top: calc((100vw / 12) * -2);
+  }
+}
+/* line 104, ../scss/modules/_copy_two_images.scss */
 .copy-two-images.mirrored {
   display: grid;
   margin: 0 20px 0 20px;
@@ -1249,32 +1325,32 @@ a.button:hover svg {
   grid-template-areas: "copy copy" "image-container-right image-container-left";
 }
 @media (min-width: 768px) {
-  /* line 69, ../scss/modules/_copy_two_images.scss */
+  /* line 104, ../scss/modules/_copy_two_images.scss */
   .copy-two-images.mirrored {
     margin: 0 40px 0 40px;
     margin-top: calc(100vw / 12);
   }
 }
 @media (min-width: 1024px) {
-  /* line 69, ../scss/modules/_copy_two_images.scss */
+  /* line 104, ../scss/modules/_copy_two_images.scss */
   .copy-two-images.mirrored {
     grid-template-columns: 5fr 1fr 1fr 1fr 4fr;
     grid-template-areas: "image-container-left . . copy copy" ". . . . image-container-right";
   }
 }
-/* line 86, ../scss/modules/_copy_two_images.scss */
+/* line 121, ../scss/modules/_copy_two_images.scss */
 .copy-two-images.mirrored .image-container {
   padding-top: 0;
 }
-/* line 90, ../scss/modules/_copy_two_images.scss */
+/* line 125, ../scss/modules/_copy_two_images.scss */
 .copy-two-images.mirrored .copy {
   padding-top: 8.33333vw;
 }
-/* line 96, ../scss/modules/_copy_two_images.scss */
+/* line 131, ../scss/modules/_copy_two_images.scss */
 .copy-two-images.mirrored .image-container .image {
   grid-area: img;
 }
-/* line 100, ../scss/modules/_copy_two_images.scss */
+/* line 135, ../scss/modules/_copy_two_images.scss */
 .copy-two-images.mirrored .image-container .caption {
   grid-area: cap;
 }
@@ -2030,6 +2106,23 @@ a.button:hover svg {
     height: 100vh !important;
     background-color: black;
   }
+  /* line 281, ../scss/modules/_home_hero.scss */
+  .column-reveal.last-item .column-reveal_slices {
+    padding-top: calc(100vw / 12);
+  }
+}
+
+@media (min-width: 768px) {
+  /* line 288, ../scss/modules/_home_hero.scss */
+  .scrolled.column-reveal .column-reveal_container img {
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    min-height: 100vh;
+    width: auto;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 /* line 2, ../scss/modules/_home_section.scss */
@@ -2037,11 +2130,21 @@ a.button:hover svg {
   background-size: calc(100vw / 12) 100vh;
 }
 /* line 6, ../scss/modules/_home_section.scss */
+.column-reveal div.column-reveal_container h3 {
+  color: #000000;
+}
+@media (min-width: 768px) {
+  /* line 6, ../scss/modules/_home_section.scss */
+  .column-reveal div.column-reveal_container h3 {
+    color: #FFFFFF;
+  }
+}
+/* line 14, ../scss/modules/_home_section.scss */
 .column-reveal .copy.split {
   z-index: 100;
 }
 @media (min-width: 768px) {
-  /* line 10, ../scss/modules/_home_section.scss */
+  /* line 18, ../scss/modules/_home_section.scss */
   .column-reveal .sticky-expander {
     display: block;
     width: 10px;
@@ -2049,7 +2152,7 @@ a.button:hover svg {
   }
 }
 @media (min-width: 768px) {
-  /* line 18, ../scss/modules/_home_section.scss */
+  /* line 26, ../scss/modules/_home_section.scss */
   .column-reveal .slice-grid {
     display: grid;
     position: absolute;
@@ -2060,13 +2163,13 @@ a.button:hover svg {
     grid-template-columns: repeat(12, 1fr);
   }
 }
-/* line 30, ../scss/modules/_home_section.scss */
+/* line 38, ../scss/modules/_home_section.scss */
 .column-reveal .original {
   z-index: 101 !important;
   background-color: transparent;
 }
 @media (min-width: 768px) {
-  /* line 35, ../scss/modules/_home_section.scss */
+  /* line 43, ../scss/modules/_home_section.scss */
   .column-reveal .copy {
     overflow: hidden;
     display: block;
@@ -2078,12 +2181,12 @@ a.button:hover svg {
     left: 0;
   }
 }
-/* line 48, ../scss/modules/_home_section.scss */
+/* line 56, ../scss/modules/_home_section.scss */
 .column-reveal .copy .container {
   padding-bottom: 100px;
 }
 @media (min-width: 768px) {
-  /* line 48, ../scss/modules/_home_section.scss */
+  /* line 56, ../scss/modules/_home_section.scss */
   .column-reveal .copy .container {
     display: block;
     width: calc((100vw / 12) * 6);
@@ -2094,7 +2197,7 @@ a.button:hover svg {
     padding-bottom: 0;
   }
 }
-/* line 61, ../scss/modules/_home_section.scss */
+/* line 69, ../scss/modules/_home_section.scss */
 .column-reveal .copy .container p {
   font-weight: normal;
   font-size: 20px;
@@ -2105,7 +2208,7 @@ a.button:hover svg {
   margin: 20px;
 }
 @media (min-width: 768px) {
-  /* line 61, ../scss/modules/_home_section.scss */
+  /* line 69, ../scss/modules/_home_section.scss */
   .column-reveal .copy .container p {
     font-weight: normal;
     font-size: 50px;
@@ -2116,44 +2219,48 @@ a.button:hover svg {
     margin: 0 0 30px 0;
   }
 }
-/* line 71, ../scss/modules/_home_section.scss */
+/* line 79, ../scss/modules/_home_section.scss */
+.column-reveal .copy .container p {
+  color: #000000;
+}
+/* line 83, ../scss/modules/_home_section.scss */
 .column-reveal .copy .container .button {
   border-color: #0627CA;
   color: #0627CA;
   margin-left: 20px;
 }
 @media (min-width: 768px) {
-  /* line 71, ../scss/modules/_home_section.scss */
+  /* line 83, ../scss/modules/_home_section.scss */
   .column-reveal .copy .container .button {
     margin-left: 0;
   }
 }
-/* line 82, ../scss/modules/_home_section.scss */
+/* line 94, ../scss/modules/_home_section.scss */
 .column-reveal .copy .container .button svg path {
   stroke: #0627CA;
 }
-/* line 89, ../scss/modules/_home_section.scss */
+/* line 101, ../scss/modules/_home_section.scss */
 .column-reveal.revealed .copy.split, .column-reveal.revealed .copy.split h1, .column-reveal.revealed .copy.split h2 {
   opacity: 1;
 }
 @media (min-width: 768px) {
-  /* line 97, ../scss/modules/_home_section.scss */
+  /* line 109, ../scss/modules/_home_section.scss */
   .column-reveal.revealed .original p,
   .column-reveal.revealed .original a {
     opacity: 0;
   }
 }
-/* line 105, ../scss/modules/_home_section.scss */
+/* line 117, ../scss/modules/_home_section.scss */
 .column-reveal .appended {
   display: none;
 }
 @media (min-width: 768px) {
-  /* line 105, ../scss/modules/_home_section.scss */
+  /* line 117, ../scss/modules/_home_section.scss */
   .column-reveal .appended {
     display: block;
   }
 }
-/* line 114, ../scss/modules/_home_section.scss */
+/* line 126, ../scss/modules/_home_section.scss */
 .column-reveal .js-col-0,
 .column-reveal .js-col-1,
 .column-reveal .js-col-2,
@@ -2164,7 +2271,7 @@ a.button:hover svg {
   width: calc(100vw / 12);
   overflow: hidden;
 }
-/* line 124, ../scss/modules/_home_section.scss */
+/* line 136, ../scss/modules/_home_section.scss */
 .column-reveal .js-col-0 .container,
 .column-reveal .js-col-1 .container,
 .column-reveal .js-col-2 .container,
@@ -2177,72 +2284,72 @@ a.button:hover svg {
   overflow: hidden;
   width: calc((100vw / 12) * 6);
 }
-/* line 133, ../scss/modules/_home_section.scss */
+/* line 145, ../scss/modules/_home_section.scss */
 .column-reveal .js-col-1 {
   margin-left: calc(((100vw / 12) * 1));
 }
-/* line 136, ../scss/modules/_home_section.scss */
+/* line 148, ../scss/modules/_home_section.scss */
 .column-reveal .js-col-1 .container {
   margin-left: calc((100vw /12 * -1));
 }
-/* line 141, ../scss/modules/_home_section.scss */
+/* line 153, ../scss/modules/_home_section.scss */
 .column-reveal .js-col-2 {
   margin-left: calc((100vw / 12) * 2);
 }
-/* line 144, ../scss/modules/_home_section.scss */
+/* line 156, ../scss/modules/_home_section.scss */
 .column-reveal .js-col-2 .container {
   margin-left: calc(((100vw /12 * -2)));
 }
-/* line 149, ../scss/modules/_home_section.scss */
+/* line 161, ../scss/modules/_home_section.scss */
 .column-reveal .js-col-3 {
   margin-left: calc((100vw / 12) * 3);
 }
-/* line 152, ../scss/modules/_home_section.scss */
+/* line 164, ../scss/modules/_home_section.scss */
 .column-reveal .js-col-3 .container {
   margin-left: calc(((100vw /12 * -3)));
 }
-/* line 157, ../scss/modules/_home_section.scss */
+/* line 169, ../scss/modules/_home_section.scss */
 .column-reveal .js-col-4 {
   margin-left: calc((100vw / 12) * 4);
 }
-/* line 160, ../scss/modules/_home_section.scss */
+/* line 172, ../scss/modules/_home_section.scss */
 .column-reveal .js-col-4 .container {
   margin-left: calc(((100vw /12 * -4)));
 }
-/* line 165, ../scss/modules/_home_section.scss */
+/* line 177, ../scss/modules/_home_section.scss */
 .column-reveal .js-col-5 {
   margin-left: calc((100vw / 12) * 5);
 }
-/* line 168, ../scss/modules/_home_section.scss */
+/* line 180, ../scss/modules/_home_section.scss */
 .column-reveal .js-col-5 .container {
   margin-left: calc(((100vw /12 * -5)));
 }
 @media (min-width: 768px) {
-  /* line 175, ../scss/modules/_home_section.scss */
+  /* line 187, ../scss/modules/_home_section.scss */
   .column-reveal.solid-bg.revealed .original a {
     opacity: 0;
   }
 }
 @media (min-width: 768px) {
-  /* line 184, ../scss/modules/_home_section.scss */
+  /* line 196, ../scss/modules/_home_section.scss */
   .column-reveal.solid-bg.scrolled .original p,
   .column-reveal.solid-bg.scrolled .original a {
     opacity: 0;
   }
 }
 @media (min-width: 768px) {
-  /* line 192, ../scss/modules/_home_section.scss */
+  /* line 204, ../scss/modules/_home_section.scss */
   .column-reveal.last-item {
     position: static;
     background-color: transparent;
   }
-  /* line 197, ../scss/modules/_home_section.scss */
+  /* line 209, ../scss/modules/_home_section.scss */
   .column-reveal.last-item .columm-reveal-container {
     background-color: transparent;
   }
 }
 @media (min-width: 768px) {
-  /* line 202, ../scss/modules/_home_section.scss */
+  /* line 214, ../scss/modules/_home_section.scss */
   .column-reveal.last-item .copy .container {
     margin-top: calc((100vw / 12));
   }
@@ -2322,6 +2429,7 @@ a.button:hover svg {
   left: 0;
   width: 50vw;
   height: calc(100% - 60px);
+  pointer-events: none;
 }
 @media (min-width: 768px) {
   /* line 59, ../scss/modules/_image_carousel.scss */
@@ -2330,38 +2438,24 @@ a.button:hover svg {
     display: block;
   }
 }
-@media (min-width: 1024px) {
-  /* line 59, ../scss/modules/_image_carousel.scss */
-  .image-carousel .swiper-button-next,
-  .image-carousel .swiper-button-prev {
-    pointer-events: all !important;
-  }
-}
-@media (hover: none) {
-  /* line 59, ../scss/modules/_image_carousel.scss */
-  .image-carousel .swiper-button-next,
-  .image-carousel .swiper-button-prev {
-    pointer-events: none;
-  }
-}
-/* line 82, ../scss/modules/_image_carousel.scss */
+/* line 74, ../scss/modules/_image_carousel.scss */
 .image-carousel .swiper-button-next:after,
 .image-carousel .swiper-button-prev:after {
   display: none;
 }
-/* line 87, ../scss/modules/_image_carousel.scss */
+/* line 79, ../scss/modules/_image_carousel.scss */
 .image-carousel .swiper-button-prev,
 .image-carousel .swiper-button-prev:hover {
   cursor: url(../img/icons/arrow-white-left.svg) 0 35, pointer;
 }
-/* line 92, ../scss/modules/_image_carousel.scss */
+/* line 84, ../scss/modules/_image_carousel.scss */
 .image-carousel .swiper-button-next,
 .image-carousel .swiper-button-next:hover {
   right: 0;
   left: auto;
   cursor: url(../img/icons/arrow-white-right.svg) 128 35, pointer;
 }
-/* line 99, ../scss/modules/_image_carousel.scss */
+/* line 91, ../scss/modules/_image_carousel.scss */
 .image-carousel .swiper-pagination-bullets {
   height: 3px;
   width: 46vw;
@@ -2374,7 +2468,7 @@ a.button:hover svg {
   left: auto;
   bottom: auto;
 }
-/* line 111, ../scss/modules/_image_carousel.scss */
+/* line 103, ../scss/modules/_image_carousel.scss */
 .image-carousel .swiper-pagination-bullets .swiper-pagination-bullet {
   flex: 1;
   height: 3px;
@@ -2383,38 +2477,44 @@ a.button:hover svg {
   margin: 0;
   opacity: 0;
 }
-/* line 119, ../scss/modules/_image_carousel.scss */
+/* line 111, ../scss/modules/_image_carousel.scss */
 .image-carousel .swiper-pagination-bullets .swiper-pagination-bullet.swiper-pagination-bullet-active {
   background: #0627CA;
 }
-/* line 124, ../scss/modules/_image_carousel.scss */
+/* line 116, ../scss/modules/_image_carousel.scss */
 .image-carousel .swiper-pagination-bullets .swiper-pagination-bullet-active ~ .swiper-pagination-bullet {
   background: #9b9b9b;
   opacity: 1;
 }
-/* line 130, ../scss/modules/_image_carousel.scss */
+/* line 122, ../scss/modules/_image_carousel.scss */
 .image-carousel .caption {
   padding: 0px 20px 10px 20px;
 }
-/* line 136, ../scss/modules/_image_carousel.scss */
+/* line 128, ../scss/modules/_image_carousel.scss */
 .image-carousel .cursor-change .swiper-button-prev,
 .image-carousel .cursor-change .swiper-button-prev:hover {
   cursor: url(../img/icons/arrow-blue-left.svg) 0 35, pointer !important;
 }
-/* line 141, ../scss/modules/_image_carousel.scss */
+/* line 133, ../scss/modules/_image_carousel.scss */
 .image-carousel .cursor-change .swiper-button-next,
 .image-carousel .cursor-change .swiper-button-next:hover {
   right: 0;
   left: auto;
   cursor: url(../img/icons/arrow-blue-right.svg) 128 35, pointer !important;
 }
-/* line 150, ../scss/modules/_image_carousel.scss */
+/* line 142, ../scss/modules/_image_carousel.scss */
 .image-carousel .disable-prev .swiper-button-prev {
   pointer-events: none !important;
 }
-/* line 154, ../scss/modules/_image_carousel.scss */
+/* line 146, ../scss/modules/_image_carousel.scss */
 .image-carousel .disable-next .swiper-button-next {
   pointer-events: none !important;
+}
+
+/* line 155, ../scss/modules/_image_carousel.scss */
+.has-hover .image-carousel .swiper-button-next,
+.has-hover .image-carousel .swiper-button-prev {
+  pointer-events: all;
 }
 
 @keyframes pulseSlide {
@@ -3131,19 +3231,19 @@ a.button:hover svg {
     margin: 0 40px 0 40px;
   }
 }
-/* line 25, ../scss/modules/_timeline.scss */
+/* line 26, ../scss/modules/_timeline.scss */
 .timeline.has-legal {
   margin: 100px 0px 100px 0px;
 }
 @media (min-width: 768px) {
-  /* line 25, ../scss/modules/_timeline.scss */
+  /* line 26, ../scss/modules/_timeline.scss */
   .timeline.has-legal {
     margin: 100px 40px 100px 40px;
     display: block;
   }
 }
 @media (min-width: 1024px) {
-  /* line 25, ../scss/modules/_timeline.scss */
+  /* line 26, ../scss/modules/_timeline.scss */
   .timeline.has-legal {
     display: grid;
     grid-template-areas: "timeline-nav . timeline-data";
@@ -3152,54 +3252,54 @@ a.button:hover svg {
   }
 }
 @media (min-width: 1280px) {
-  /* line 41, ../scss/modules/_timeline.scss */
+  /* line 43, ../scss/modules/_timeline.scss */
   .timeline.has-legal .timeline_data .content {
     display: block;
   }
 }
 @media (min-width: 1280px) {
-  /* line 47, ../scss/modules/_timeline.scss */
+  /* line 49, ../scss/modules/_timeline.scss */
   .timeline.has-legal .number {
     line-height: 52px !important;
   }
 }
-/* line 54, ../scss/modules/_timeline.scss */
+/* line 56, ../scss/modules/_timeline.scss */
 .timeline.has-legal .timeline_nav ul {
   display: none;
 }
 @media (min-width: 1024px) {
-  /* line 54, ../scss/modules/_timeline.scss */
+  /* line 56, ../scss/modules/_timeline.scss */
   .timeline.has-legal .timeline_nav ul {
     display: block;
   }
 }
-/* line 63, ../scss/modules/_timeline.scss */
+/* line 65, ../scss/modules/_timeline.scss */
 .timeline.has-legal .timeline_data {
   padding-top: 0;
 }
 @media (min-width: 1024px) {
-  /* line 63, ../scss/modules/_timeline.scss */
+  /* line 65, ../scss/modules/_timeline.scss */
   .timeline.has-legal .timeline_data {
     padding-top: calc(100vw / 12);
   }
 }
-/* line 71, ../scss/modules/_timeline.scss */
+/* line 73, ../scss/modules/_timeline.scss */
 .timeline.has-legal .title {
   width: calc(100vw - 120px);
 }
 @media (min-width: 1024px) {
-  /* line 71, ../scss/modules/_timeline.scss */
+  /* line 73, ../scss/modules/_timeline.scss */
   .timeline.has-legal .title {
     width: calc(50vw - 210px);
   }
 }
 @media (min-width: 1280px) {
-  /* line 71, ../scss/modules/_timeline.scss */
+  /* line 73, ../scss/modules/_timeline.scss */
   .timeline.has-legal .title {
     line-height: 52px !important;
   }
 }
-/* line 86, ../scss/modules/_timeline.scss */
+/* line 89, ../scss/modules/_timeline.scss */
 .timeline #legal-intro-text p {
   margin: 0;
   padding: 20px 20px 20px 20px;
@@ -3210,16 +3310,16 @@ a.button:hover svg {
   font-family: "PPNeueMontreal-Book";
 }
 @media (min-width: 768px) {
-  /* line 86, ../scss/modules/_timeline.scss */
+  /* line 89, ../scss/modules/_timeline.scss */
   .timeline #legal-intro-text p {
     padding: 40px 0px 40px 0px;
   }
 }
-/* line 97, ../scss/modules/_timeline.scss */
+/* line 100, ../scss/modules/_timeline.scss */
 .timeline .timeline_nav {
   position: relative;
 }
-/* line 100, ../scss/modules/_timeline.scss */
+/* line 103, ../scss/modules/_timeline.scss */
 .timeline .timeline_nav h2 {
   font-weight: normal;
   font-size: 30px;
@@ -3231,7 +3331,7 @@ a.button:hover svg {
   border-top: 2px solid transparent;
 }
 @media (min-width: 768px) {
-  /* line 100, ../scss/modules/_timeline.scss */
+  /* line 103, ../scss/modules/_timeline.scss */
   .timeline .timeline_nav h2 {
     font-weight: normal;
     font-size: 50px;
@@ -3243,7 +3343,7 @@ a.button:hover svg {
   }
 }
 @media (min-width: 768px) {
-  /* line 112, ../scss/modules/_timeline.scss */
+  /* line 115, ../scss/modules/_timeline.scss */
   .timeline .timeline_nav .stick {
     padding-top: calc(100vw / 12);
     position: sticky;
@@ -3251,7 +3351,7 @@ a.button:hover svg {
     top: 0;
   }
 }
-/* line 121, ../scss/modules/_timeline.scss */
+/* line 124, ../scss/modules/_timeline.scss */
 .timeline .timeline_nav ul {
   list-style-type: none;
   padding: 0;
@@ -3265,16 +3365,16 @@ a.button:hover svg {
   display: none;
 }
 @media (min-width: 768px) {
-  /* line 121, ../scss/modules/_timeline.scss */
+  /* line 124, ../scss/modules/_timeline.scss */
   .timeline .timeline_nav ul {
     display: block;
   }
 }
-/* line 133, ../scss/modules/_timeline.scss */
+/* line 136, ../scss/modules/_timeline.scss */
 .timeline .timeline_nav ul li {
   margin-bottom: 30px;
 }
-/* line 138, ../scss/modules/_timeline.scss */
+/* line 141, ../scss/modules/_timeline.scss */
 .timeline .timeline_nav button {
   font-weight: normal;
   font-size: 20px;
@@ -3289,26 +3389,26 @@ a.button:hover svg {
   color: #5B5B5B;
   cursor: pointer;
 }
-/* line 147, ../scss/modules/_timeline.scss */
+/* line 150, ../scss/modules/_timeline.scss */
 .timeline .timeline_nav button:hover, .timeline .timeline_nav button.active {
   color: #0627CA;
 }
-/* line 152, ../scss/modules/_timeline.scss */
+/* line 155, ../scss/modules/_timeline.scss */
 .timeline .timeline_nav button span {
   display: inline-block;
   margin-right: 5px;
 }
-/* line 156, ../scss/modules/_timeline.scss */
+/* line 159, ../scss/modules/_timeline.scss */
 .timeline .timeline_nav button span:after {
   content: '/';
 }
 @media (min-width: 768px) {
-  /* line 163, ../scss/modules/_timeline.scss */
+  /* line 166, ../scss/modules/_timeline.scss */
   .timeline .timeline_data {
     padding-top: calc(100vw / 12);
   }
 }
-/* line 170, ../scss/modules/_timeline.scss */
+/* line 173, ../scss/modules/_timeline.scss */
 .timeline .timeline_data article:last-of-type:after {
   display: block;
   content: '';
@@ -3317,16 +3417,16 @@ a.button:hover svg {
   margin-left: 20px;
 }
 @media (min-width: 768px) {
-  /* line 169, ../scss/modules/_timeline.scss */
+  /* line 172, ../scss/modules/_timeline.scss */
   .timeline .timeline_data article:last-of-type {
     border-bottom: 2px solid black;
   }
-  /* line 181, ../scss/modules/_timeline.scss */
+  /* line 184, ../scss/modules/_timeline.scss */
   .timeline .timeline_data article:last-of-type:after {
     display: none;
   }
 }
-/* line 187, ../scss/modules/_timeline.scss */
+/* line 190, ../scss/modules/_timeline.scss */
 .timeline .timeline_data header {
   font-weight: normal;
   font-size: 30px;
@@ -3345,7 +3445,7 @@ a.button:hover svg {
   margin-right: 20px;
 }
 @media (min-width: 768px) {
-  /* line 187, ../scss/modules/_timeline.scss */
+  /* line 190, ../scss/modules/_timeline.scss */
   .timeline .timeline_data header {
     font-weight: normal;
     font-size: 30px;
@@ -3359,7 +3459,7 @@ a.button:hover svg {
   }
 }
 @media (min-width: 1024px) {
-  /* line 187, ../scss/modules/_timeline.scss */
+  /* line 190, ../scss/modules/_timeline.scss */
   .timeline .timeline_data header {
     font-weight: normal;
     font-size: 50px;
@@ -3369,18 +3469,18 @@ a.button:hover svg {
     font-family: "PPNeueMontreal-Book";
   }
 }
-/* line 211, ../scss/modules/_timeline.scss */
+/* line 214, ../scss/modules/_timeline.scss */
 .timeline .timeline_data header span {
   vertical-align: top;
   display: inline-block;
   line-height: 39px;
 }
-/* line 217, ../scss/modules/_timeline.scss */
+/* line 220, ../scss/modules/_timeline.scss */
 .timeline .timeline_data header span.number {
   margin-right: 20px;
   color: #5B5B5B;
 }
-/* line 222, ../scss/modules/_timeline.scss */
+/* line 225, ../scss/modules/_timeline.scss */
 .timeline .timeline_data header span.title {
   display: inline-block;
   font-weight: normal;
@@ -3395,7 +3495,7 @@ a.button:hover svg {
   color: #5B5B5B;
 }
 @media (min-width: 1280px) {
-  /* line 222, ../scss/modules/_timeline.scss */
+  /* line 225, ../scss/modules/_timeline.scss */
   .timeline .timeline_data header span.title {
     font-weight: normal;
     font-size: 30px;
@@ -3408,11 +3508,11 @@ a.button:hover svg {
     margin: 0;
   }
 }
-/* line 238, ../scss/modules/_timeline.scss */
+/* line 241, ../scss/modules/_timeline.scss */
 .timeline .timeline_data header:hover {
   color: #0627CA;
 }
-/* line 243, ../scss/modules/_timeline.scss */
+/* line 246, ../scss/modules/_timeline.scss */
 .timeline .timeline_data .content {
   font-size: 20px;
   line-height: 1.3em;
@@ -3425,19 +3525,19 @@ a.button:hover svg {
   transition: all 0.4s ease 0s;
 }
 @media (min-width: 768px) {
-  /* line 243, ../scss/modules/_timeline.scss */
+  /* line 246, ../scss/modules/_timeline.scss */
   .timeline .timeline_data .content {
     padding: 0px 0 0 0;
   }
 }
 @media (min-width: 1280px) {
-  /* line 243, ../scss/modules/_timeline.scss */
+  /* line 246, ../scss/modules/_timeline.scss */
   .timeline .timeline_data .content {
     display: grid;
     grid-template-columns: 6fr 3fr;
   }
 }
-/* line 261, ../scss/modules/_timeline.scss */
+/* line 264, ../scss/modules/_timeline.scss */
 .timeline .timeline_data .close {
   display: block;
   position: absolute;
@@ -3454,48 +3554,48 @@ a.button:hover svg {
   pointer-events: none;
 }
 @media (min-width: 768px) {
-  /* line 261, ../scss/modules/_timeline.scss */
+  /* line 264, ../scss/modules/_timeline.scss */
   .timeline .timeline_data .close {
     top: 33px;
     right: 0px;
   }
 }
-/* line 281, ../scss/modules/_timeline.scss */
+/* line 284, ../scss/modules/_timeline.scss */
 .timeline .timeline_data .close svg {
   pointer-events: none;
   transition: all 0.3s ease 0s;
 }
-/* line 285, ../scss/modules/_timeline.scss */
+/* line 288, ../scss/modules/_timeline.scss */
 .timeline .timeline_data .close svg path {
   stroke: #5B5B5B;
 }
-/* line 292, ../scss/modules/_timeline.scss */
+/* line 295, ../scss/modules/_timeline.scss */
 .timeline .timeline_data .close:hover svg path {
   stroke: #0627CA;
 }
-/* line 301, ../scss/modules/_timeline.scss */
+/* line 304, ../scss/modules/_timeline.scss */
 .timeline .timeline_data article:hover header {
   color: #0627CA;
   cursor: pointer;
 }
-/* line 305, ../scss/modules/_timeline.scss */
+/* line 308, ../scss/modules/_timeline.scss */
 .timeline .timeline_data article:hover header span.title,
 .timeline .timeline_data article:hover header span.number {
   color: #0627CA;
 }
-/* line 312, ../scss/modules/_timeline.scss */
+/* line 315, ../scss/modules/_timeline.scss */
 .timeline .timeline_data .active {
   cursor: default;
 }
-/* line 315, ../scss/modules/_timeline.scss */
+/* line 318, ../scss/modules/_timeline.scss */
 .timeline .timeline_data .active header {
   color: #0627CA;
 }
-/* line 318, ../scss/modules/_timeline.scss */
+/* line 321, ../scss/modules/_timeline.scss */
 .timeline .timeline_data .active header span.number {
   color: #0627CA;
 }
-/* line 322, ../scss/modules/_timeline.scss */
+/* line 325, ../scss/modules/_timeline.scss */
 .timeline .timeline_data .active header span.title {
   max-width: calc(100vw - 190px);
   color: #0627CA;
@@ -3507,13 +3607,13 @@ a.button:hover svg {
   font-family: "PPNeueMontreal-Medium";
 }
 @media (min-width: 768px) {
-  /* line 322, ../scss/modules/_timeline.scss */
+  /* line 325, ../scss/modules/_timeline.scss */
   .timeline .timeline_data .active header span.title {
     max-width: none;
   }
 }
 @media (min-width: 1280px) {
-  /* line 322, ../scss/modules/_timeline.scss */
+  /* line 325, ../scss/modules/_timeline.scss */
   .timeline .timeline_data .active header span.title {
     font-weight: normal;
     font-size: 50px;
@@ -3526,20 +3626,20 @@ a.button:hover svg {
     margin: 0;
   }
 }
-/* line 342, ../scss/modules/_timeline.scss */
+/* line 345, ../scss/modules/_timeline.scss */
 .timeline .timeline_data .active .close {
   transform: rotate(90deg);
   pointer-events: all;
 }
-/* line 347, ../scss/modules/_timeline.scss */
+/* line 350, ../scss/modules/_timeline.scss */
 .timeline .timeline_data .active .close:hover svg {
   transform: rotate(90deg);
 }
-/* line 350, ../scss/modules/_timeline.scss */
+/* line 353, ../scss/modules/_timeline.scss */
 .timeline .timeline_data .active .close:hover svg path {
   stroke: #0627CA;
 }
-/* line 357, ../scss/modules/_timeline.scss */
+/* line 360, ../scss/modules/_timeline.scss */
 .timeline .timeline_data .active .content {
   max-height: 100vh;
 }
@@ -3907,7 +4007,7 @@ a.button:hover svg {
 /* line 14, ../scss/modules/_two_col_image.scss */
 .two-col-image.small-big {
   display: grid;
-  margin: 100px 20px 0 20px;
+  margin: 20px 20px 0 20px;
   grid-gap: 10px;
   grid-template-columns: 1fr 1fr;
   grid-template-areas: "left right";
@@ -4100,30 +4200,52 @@ a.button:hover svg {
   font-family: "PPNeueMontreal-Book";
   font-weight: bold;
   margin-top: 0;
+  font-size: 16px;
 }
-/* line 57, ../scss/modules/_two_col_sticky.scss */
+@media (min-width: 768px) {
+  /* line 51, ../scss/modules/_two_col_sticky.scss */
+  .two-col-sticky .right h3 {
+    font-size: 20px;
+    line-height: 1.3em;
+    margin-bottom: 20px;
+    padding-bottom: 0;
+    font-family: "PPNeueMontreal-Book";
+  }
+}
+/* line 62, ../scss/modules/_two_col_sticky.scss */
 .two-col-sticky .right p {
   font-size: 20px;
   line-height: 1.3em;
   margin-bottom: 20px;
   padding-bottom: 0;
   font-family: "PPNeueMontreal-Book";
+  font-size: 16px;
 }
-/* line 62, ../scss/modules/_two_col_sticky.scss */
+@media (min-width: 768px) {
+  /* line 62, ../scss/modules/_two_col_sticky.scss */
+  .two-col-sticky .right p {
+    font-size: 20px;
+    line-height: 1.3em;
+    margin-bottom: 20px;
+    padding-bottom: 0;
+    font-family: "PPNeueMontreal-Book";
+  }
+}
+/* line 72, ../scss/modules/_two_col_sticky.scss */
 .two-col-sticky .right .button-container {
   text-align: right;
 }
-/* line 65, ../scss/modules/_two_col_sticky.scss */
+/* line 75, ../scss/modules/_two_col_sticky.scss */
 .two-col-sticky .right .button-container .button {
   margin-right: 20px;
 }
 @media (min-width: 768px) {
-  /* line 65, ../scss/modules/_two_col_sticky.scss */
+  /* line 75, ../scss/modules/_two_col_sticky.scss */
   .two-col-sticky .right .button-container .button {
     margin-right: 0;
   }
 }
-/* line 74, ../scss/modules/_two_col_sticky.scss */
+/* line 84, ../scss/modules/_two_col_sticky.scss */
 .two-col-sticky .right article {
   display: flex;
   justify-content: flex-start;
@@ -4132,11 +4254,11 @@ a.button:hover svg {
   padding-top: 40px;
   border-bottom: 2px solid white;
 }
-/* line 82, ../scss/modules/_two_col_sticky.scss */
+/* line 92, ../scss/modules/_two_col_sticky.scss */
 .two-col-sticky .right article:first-of-type {
   border-top: 2px solid white;
 }
-/* line 86, ../scss/modules/_two_col_sticky.scss */
+/* line 96, ../scss/modules/_two_col_sticky.scss */
 .two-col-sticky .right article .number {
   min-width: 80px;
   padding-right: 20px;
@@ -4150,7 +4272,7 @@ a.button:hover svg {
   line-height: 1em;
 }
 @media (min-width: 768px) {
-  /* line 86, ../scss/modules/_two_col_sticky.scss */
+  /* line 96, ../scss/modules/_two_col_sticky.scss */
   .two-col-sticky .right article .number {
     padding-right: 40px;
     min-width: 100px;
@@ -4163,7 +4285,7 @@ a.button:hover svg {
     line-height: 1em;
   }
 }
-/* line 102, ../scss/modules/_two_col_sticky.scss */
+/* line 112, ../scss/modules/_two_col_sticky.scss */
 .two-col-sticky .right .button-container {
   margin-top: 40px;
 }

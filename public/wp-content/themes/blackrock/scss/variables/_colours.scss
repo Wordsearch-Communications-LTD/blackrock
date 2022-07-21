@@ -17,6 +17,17 @@ $br-white: #FFFFFF;
     ul,
     li {
       color: $br-grey;
-    }
+    }  
+  }
+  
+  .caption p {
+    color: $br-black;
+  }
+}
+
+.page-black {
+  
+  .caption p {
+    color: $br-white;
   }
 }

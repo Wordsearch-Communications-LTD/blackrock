@@ -1,208 +1,220 @@
 .column-reveal {
-	&.solid-bg {
-		background-size: calc(100vw / 12) 100vh;
-	}
+  &.solid-bg {
+    background-size: calc(100vw / 12) 100vh;
+  }
 
-	.copy.split {
-		z-index: 100;
-	}
+  div.column-reveal_container h3 {
+    color: $br-black;
 
-	.sticky-expander {
-		@media #{$mq-tablet-port} {
-			display: block;
-			width: 10px;
-			height: 150vh;
-		}
-	}
+    @media #{$mq-tablet-port} {
+      color: $br-white;
+    }
+  }
 
-	.slice-grid {
-		@media #{$mq-tablet-port} {
-			display: grid;
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100vw;
-			height: 100vh;
-			grid-template-columns: repeat(12, 1fr);
-		}
-	}
+  .copy.split {
+    z-index: 100;
+  }
 
-	.original {
-		z-index: 101 !important;
-		background-color: transparent;
-	}
+  .sticky-expander {
+    @media #{$mq-tablet-port} {
+      display: block;
+      width: 10px;
+      height: 150vh;
+    }
+  }
 
-	.copy {
-		@media #{$mq-tablet-port} {
-			overflow: hidden;
-			display: block;
-			height: auto;
-			width: calc((100vw / 12) * 6);
-			height: 100vh;
-			position: absolute;
-			z-index: 10;
-			left: 0;
-		}
-	}
+  .slice-grid {
+    @media #{$mq-tablet-port} {
+      display: grid;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      grid-template-columns: repeat(12, 1fr);
+    }
+  }
 
-	.copy .container {
-		padding-bottom: 100px;
+  .original {
+    z-index: 101 !important;
+    background-color: transparent;
+  }
 
-		@media #{$mq-tablet-port} {
-			display: block;
-			width: calc((100vw / 12) * 6);
-			margin-left: 0;
-			margin-top: calc((100vw / 12) + 100px);
-			overflow: hidden;
-			padding-left: 40px;
-			padding-bottom: 0;
-		}
+  .copy {
+    @media #{$mq-tablet-port} {
+      overflow: hidden;
+      display: block;
+      height: auto;
+      width: calc((100vw / 12) * 6);
+      height: 100vh;
+      position: absolute;
+      z-index: 10;
+      left: 0;
+    }
+  }
 
-		p {
-			@include headline-20;
-			margin: 20px;
+  .copy .container {
+    padding-bottom: 100px;
 
-			@media #{$mq-tablet-port} {
-				@include headline-50;
-				margin: 0 0 30px 0;
-			}
-		}
+    @media #{$mq-tablet-port} {
+      display: block;
+      width: calc((100vw / 12) * 6);
+      margin-left: 0;
+      margin-top: calc((100vw / 12) + 100px);
+      overflow: hidden;
+      padding-left: 40px;
+      padding-bottom: 0;
+    }
 
-		.button {
-			border-color: $br-blue;
-			color: $br-blue;
-			margin-left: 20px;
+    p {
+      @include headline-20;
+      margin: 20px;
 
-			@media #{$mq-tablet-port} {
-				margin-left: 0;
-			}
+      @media #{$mq-tablet-port} {
+        @include headline-50;
+        margin: 0 0 30px 0;
+      }
+    }
 
-			svg {
+    p {
+      color: $br-black;
+    }
 
-				path {
-					stroke: $br-blue;
-				}
-			}
-		}
-	}
+    .button {
+      border-color: $br-blue;
+      color: $br-blue;
+      margin-left: 20px;
 
-	&.revealed .copy.split,
-	&.revealed .copy.split h1,
-	&.revealed .copy.split h2 {
-		opacity: 1;
-	}
+      @media #{$mq-tablet-port} {
+        margin-left: 0;
+      }
 
-	&.revealed {
+      svg {
 
-		.original p,
-		.original a {
-			@media #{$mq-tablet-port} {
-				opacity: 0;
-			}
-		}
-	}
+        path {
+          stroke: $br-blue;
+        }
+      }
+    }
+  }
 
-	.appended {
-		display: none;
+  &.revealed .copy.split,
+  &.revealed .copy.split h1,
+  &.revealed .copy.split h2 {
+    opacity: 1;
+  }
 
-		@media #{$mq-tablet-port} {
-			display: block;
-		}
-	}
+  &.revealed {
 
-	//col uses index of element so 0=1
-	.js-col-0,
-	.js-col-1,
-	.js-col-2,
-	.js-col-3,
-	.js-col-4,
-	.js-col-5 {
-		z-index: 100;
-		width: calc(100vw / 12);
-		overflow: hidden;
+    .original p,
+    .original a {
+      @media #{$mq-tablet-port} {
+        opacity: 0;
+      }
+    }
+  }
 
-		.container {
-			display: block;
-			margin-left: 0;
-			margin-top: calc((100vw / 12) + 100px);
-			overflow: hidden;
-			width: calc((100vw / 12) * 6);
-		}
-	}
+  .appended {
+    display: none;
 
-	.js-col-1 {
-		margin-left: calc(((100vw / 12) * 1));
+    @media #{$mq-tablet-port} {
+      display: block;
+    }
+  }
 
-		.container {
-			margin-left: calc((100vw /12 * -1));
-		}
-	}
+  //col uses index of element so 0=1
+  .js-col-0,
+  .js-col-1,
+  .js-col-2,
+  .js-col-3,
+  .js-col-4,
+  .js-col-5 {
+    z-index: 100;
+    width: calc(100vw / 12);
+    overflow: hidden;
 
-	.js-col-2 {
-		margin-left: calc((100vw / 12) * 2);
+    .container {
+      display: block;
+      margin-left: 0;
+      margin-top: calc((100vw / 12) + 100px);
+      overflow: hidden;
+      width: calc((100vw / 12) * 6);
+    }
+  }
 
-		.container {
-			margin-left: calc(((100vw /12 * -2)));
-		}
-	}
+  .js-col-1 {
+    margin-left: calc(((100vw / 12) * 1));
 
-	.js-col-3 {
-		margin-left: calc((100vw / 12) * 3);
+    .container {
+      margin-left: calc((100vw /12 * -1));
+    }
+  }
 
-		.container {
-			margin-left: calc(((100vw /12 * -3)));
-		}
-	}
+  .js-col-2 {
+    margin-left: calc((100vw / 12) * 2);
 
-	.js-col-4 {
-		margin-left: calc((100vw / 12) * 4);
+    .container {
+      margin-left: calc(((100vw /12 * -2)));
+    }
+  }
 
-		.container {
-			margin-left: calc(((100vw /12 * -4)));
-		}
-	}
+  .js-col-3 {
+    margin-left: calc((100vw / 12) * 3);
 
-	.js-col-5 {
-		margin-left: calc((100vw / 12) * 5);
+    .container {
+      margin-left: calc(((100vw /12 * -3)));
+    }
+  }
 
-		.container {
-			margin-left: calc(((100vw /12 * -5)));
-		}
-	}
+  .js-col-4 {
+    margin-left: calc((100vw / 12) * 4);
+
+    .container {
+      margin-left: calc(((100vw /12 * -4)));
+    }
+  }
+
+  .js-col-5 {
+    margin-left: calc((100vw / 12) * 5);
+
+    .container {
+      margin-left: calc(((100vw /12 * -5)));
+    }
+  }
 
 
-	&.solid-bg {
-		&.revealed .original a {
-			@media #{$mq-tablet-port} {
-				opacity: 0;
-			}
-		}
-	}
+  &.solid-bg {
+    &.revealed .original a {
+      @media #{$mq-tablet-port} {
+        opacity: 0;
+      }
+    }
+  }
 
-	&.solid-bg.scrolled {
+  &.solid-bg.scrolled {
 
-		.original p,
-		.original a {
-			@media #{$mq-tablet-port} {
-				opacity: 0;
-			}
-		}
-	}
+    .original p,
+    .original a {
+      @media #{$mq-tablet-port} {
+        opacity: 0;
+      }
+    }
+  }
 
-	&.last-item {
-		@media #{$mq-tablet-port} {
-			position: static;
-			background-color: transparent;
+  &.last-item {
+    @media #{$mq-tablet-port} {
+      position: static;
+      background-color: transparent;
 
-			.columm-reveal-container {
-				background-color: transparent;
-			}
-		}
+      .columm-reveal-container {
+        background-color: transparent;
+      }
+    }
 
-		.copy .container {
-			@media #{$mq-tablet-port} {
-				margin-top: calc((100vw / 12));
-			}
-		}
-	}
+    .copy .container {
+      @media #{$mq-tablet-port} {
+        margin-top: calc((100vw / 12));
+      }
+    }
+  }
 }

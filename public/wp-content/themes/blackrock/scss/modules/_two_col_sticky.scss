@@ -1,106 +1,116 @@
 .two-col-sticky {
 
 
-	margin: 100px 20px 0 20px;
+  margin: 100px 20px 0 20px;
 
-	@media #{$mq-tablet-port} {
-		margin: 100px 40px 0 40px;
-	}
+  @media #{$mq-tablet-port} {
+    margin: 100px 40px 0 40px;
+  }
 
-	@media #{$mq-tablet-desk} {
-		display: grid;
-		padding-top: calc(100vw / 12);
-		grid-template-columns: 5fr 1fr 6fr;
-		grid-template-areas: "left . right";
-	}
+  @media #{$mq-tablet-desk} {
+    display: grid;
+    padding-top: calc(100vw / 12);
+    grid-template-columns: 5fr 1fr 6fr;
+    grid-template-areas: "left . right";
+  }
 
-	.left {
-		position: relative;
-		grid-area: left;
-
-
-		h2 {
-			@include headline-30;
-			margin-bottom: 40px;
-
-			@media #{$mq-tablet-port} {
-				@include headline-50;
-			}
-
-			margin-top: 0;
-		}
-
-		.stick {
-
-			@media #{$mq-tablet-desk} {
-				position: sticky;
-				position: -webkit-sticky;
-				top: 0;
-				padding-top: calc(100vw / 12);
-			}
-		}
-	}
-
-	.right {
-		grid-area: right;
-
-		@media #{$mq-tablet-port} {
-			padding-top: calc(100vw / 12);
-		}
-
-		h3 {
-			@include body-20;
-			font-weight: bold;
-			margin-top: 0;
-		}
-
-		p {
-			@include body-20;
-		}
+  .left {
+    position: relative;
+    grid-area: left;
 
 
-		.button-container {
-			text-align: right;
+    h2 {
+      @include headline-30;
+      margin-bottom: 40px;
 
-			.button {
-				margin-right: 20px;
+      @media #{$mq-tablet-port} {
+        @include headline-50;
+      }
 
-				@media #{$mq-tablet-port} {
-					margin-right: 0;
-				}
-			}
-		}
+      margin-top: 0;
+    }
 
-		article {
-			display: flex;
-			justify-content: flex-start;
-			align-items: flex-start;
-			padding-bottom: 20px;
-			padding-top: 40px;
-			border-bottom: 2px solid white;
+    .stick {
 
-			&:first-of-type {
-				border-top: 2px solid white;
-			}
+      @media #{$mq-tablet-desk} {
+        position: sticky;
+        position: -webkit-sticky;
+        top: 0;
+        padding-top: calc(100vw / 12);
+      }
+    }
+  }
 
-			.number {
-				min-width: 80px;
-				padding-right: 20px;
-				@include headline-30;
-				font-weight: normal;
-				line-height: 1em;
+  .right {
+    grid-area: right;
 
-				@media #{$mq-tablet-port} {
-					padding-right: 40px;
-					min-width: 100px;
-					@include headline-50;
-					line-height: 1em;
-				}
-			}
-		}
+    @media #{$mq-tablet-port} {
+      padding-top: calc(100vw / 12);
+    }
 
-		.button-container {
-			margin-top: 40px;
-		}
-	}
+    h3 {
+      @include body-20;
+      font-weight: bold;
+      margin-top: 0;
+      font-size: 16px;
+
+      @media #{$mq-tablet-port} {
+        @include body-20;
+      }
+    }
+
+    p {
+      @include body-20;
+      font-size: 16px;
+
+      @media #{$mq-tablet-port} {
+        @include body-20;
+      }
+    }
+
+
+    .button-container {
+      text-align: right;
+
+      .button {
+        margin-right: 20px;
+
+        @media #{$mq-tablet-port} {
+          margin-right: 0;
+        }
+      }
+    }
+
+    article {
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding-bottom: 20px;
+      padding-top: 40px;
+      border-bottom: 2px solid white;
+
+      &:first-of-type {
+        border-top: 2px solid white;
+      }
+
+      .number {
+        min-width: 80px;
+        padding-right: 20px;
+        @include headline-30;
+        font-weight: normal;
+        line-height: 1em;
+
+        @media #{$mq-tablet-port} {
+          padding-right: 40px;
+          min-width: 100px;
+          @include headline-50;
+          line-height: 1em;
+        }
+      }
+    }
+
+    .button-container {
+      margin-top: 40px;
+    }
+  }
 }

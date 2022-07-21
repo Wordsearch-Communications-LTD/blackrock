@@ -1,122 +1,122 @@
 .two-col-image {
-	@include grid;
+  @include grid;
 
-	@media #{$mq-tablet-desk} {
-		margin: calc(100vw /12) 40px 0 40px;
-	}
+  @media #{$mq-tablet-desk} {
+    margin: calc(100vw /12) 40px 0 40px;
+  }
 
-	&.equal {
-		@media #{$mq-tablet-port} {
-			grid-template-columns: 1fr 1fr;
-		}
-	}
+  &.equal {
+    @media #{$mq-tablet-port} {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
 
-	&.small-big {
-		display: grid;
-		margin: 100px 20px 0 20px;
-		grid-gap: 10px;
-		grid-template-columns: 1fr 1fr;
-		grid-template-areas: "left right";
+  &.small-big {
+    display: grid;
+    margin: 20px 20px 0 20px;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "left right";
 
-		@media #{$mq-tablet-port} {
-			margin: calc(100vw /12) 40px 0 40px;
-			grid-template-columns: 1fr 1fr;
-			grid-template-areas: "left right";
-		}
+    @media #{$mq-tablet-port} {
+      margin: calc(100vw /12) 40px 0 40px;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: "left right";
+    }
 
-		@media #{$mq-tablet-desk} {
-			grid-template-columns: 3fr 3fr 6fr;
-			grid-template-areas: "left . right";
-		}
+    @media #{$mq-tablet-desk} {
+      grid-template-columns: 3fr 3fr 6fr;
+      grid-template-areas: "left . right";
+    }
 
-		div {
-			&:first-of-type {
-				grid-area: left;
+    div {
+      &:first-of-type {
+        grid-area: left;
 
-				@media #{$mq-tablet-port} {
-					align-self: center;
-				}
-			}
+        @media #{$mq-tablet-port} {
+          align-self: center;
+        }
+      }
 
-			grid-area: right;
-		}
-	}
+      grid-area: right;
+    }
+  }
 
-	&.big-small {
-		display: grid;
-		margin: 100px 20px 0 20px;
-		grid-gap: 10px;
-		grid-template-columns: 1fr 1fr;
-		grid-template-areas: "left right";
-		align-items: end;
+  &.big-small {
+    display: grid;
+    margin: 100px 20px 0 20px;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "left right";
+    align-items: end;
 
-		@media #{$mq-tablet-desk} {
-			grid-template-columns: 6fr 3fr 3fr;
-			grid-template-areas: "left . right";
-			align-items: normal;
-		}
+    @media #{$mq-tablet-desk} {
+      grid-template-columns: 6fr 3fr 3fr;
+      grid-template-areas: "left . right";
+      align-items: normal;
+    }
 
-		div {
-			grid-area: left;
+    div {
+      grid-area: left;
 
-			&:last-of-type {
-				grid-area: right;
+      &:last-of-type {
+        grid-area: right;
 
-				@media #{$mq-tablet-port} {
-					align-self: center;
-				}
-			}
-		}
-	}
+        @media #{$mq-tablet-port} {
+          align-self: center;
+        }
+      }
+    }
+  }
 
-	&.small-land {
-		display: grid;
-		margin: 100px 20px 0 20px;
-		grid-gap: 10px;
-		grid-template-columns: 1fr 1fr;
-		grid-template-areas: "left right";
-		align-items: end;
+  &.small-land {
+    display: grid;
+    margin: 100px 20px 0 20px;
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "left right";
+    align-items: end;
 
-		@media #{$mq-tablet-port} {
-			display: grid;
-			grid-gap: 10px;
-			margin: calc(100vw /12) 40px 0 40px;
-			grid-template-columns: 1fr 1fr;
-			grid-template-areas: "left right";
-			align-items: normal;
-		}
+    @media #{$mq-tablet-port} {
+      display: grid;
+      grid-gap: 10px;
+      margin: calc(100vw /12) 40px 0 40px;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: "left right";
+      align-items: normal;
+    }
 
-		@media #{$mq-tablet-desk} {
-			grid-template-columns: 3fr 1fr 8fr;
-			grid-template-areas: "left . right";
-		}
+    @media #{$mq-tablet-desk} {
+      grid-template-columns: 3fr 1fr 8fr;
+      grid-template-areas: "left . right";
+    }
 
-		div {
-			&:first-of-type {
-				grid-area: left;
+    div {
+      &:first-of-type {
+        grid-area: left;
 
-				@media #{$mq-tablet-port} {
-					align-self: center;
-				}
-			}
+        @media #{$mq-tablet-port} {
+          align-self: center;
+        }
+      }
 
-			grid-area: right;
-		}
-	}
+      grid-area: right;
+    }
+  }
 
-	&.offset-top {
-		div {
-			.image {
-				margin-top: calc(100vw / 12);
-			}
-		}
+  &.offset-top {
+    div {
+      .image {
+        margin-top: calc(100vw / 12);
+      }
+    }
 
-		div:first-of-type {
-			align-self: start;
+    div:first-of-type {
+      align-self: start;
 
-			.image {
-				margin-top: 0;
-			}
-		}
-	}
+      .image {
+        margin-top: 0;
+      }
+    }
+  }
 }

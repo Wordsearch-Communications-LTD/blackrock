@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html <?php language_attributes(); ?>>
+<html <?php language_attributes(); ?><?= (is_front_page()) ? 'class="home"' : '';?>>
 <head>
 <?php 
 	$pageColor = get_field('page_color') ? get_field('page_color') : 'cream';
