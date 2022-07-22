@@ -66,6 +66,10 @@
       padding-bottom: 0;
     }
 
+    @media (min-width: 1024px) and (max-height: 800px) {
+      margin-top: 140px;
+    }
+
     p {
       @include headline-20;
       margin: 20px;
@@ -73,6 +77,11 @@
       @media #{$mq-tablet-port} {
         @include headline-50;
         margin: 0 0 30px 0;
+      }
+
+      @media (min-width: 1024px) and (max-height: 800px) {
+        @include headline-30;
+        margin: 0 0 20px 0;
       }
     }
 
@@ -139,6 +148,10 @@
       margin-top: calc((100vw / 12) + 100px);
       overflow: hidden;
       width: calc((100vw / 12) * 6);
+
+      @media (min-width: 1024px) and (max-height: 800px) {
+        margin-top: 140px;
+      }
     }
   }
 

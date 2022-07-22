@@ -58,11 +58,11 @@
                                 </li>
                                 <li>
                                     <span><?= $unit['download_plans_label']; ?></span>
-                                    <span class="has-icon"><a href="<?= $unit['download_plans_link']['url']; ?>" target="blank"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M4 28L28 28" stroke="black" stroke-width="2"/> <path d="M15.5146 3L15.5146 21" stroke="black" stroke-width="2"/> <path d="M7.02937 13.7861L15.5146 22.2713L23.9999 13.7861" stroke="black" stroke-width="2"/> </svg></a></span>
+                                    <span class="has-icon"><a href="<?= $unit['download_plans_link']['url']; ?>" target="blank"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M4 28L28 28" stroke="black" stroke-width="2"/> <path d="M15.5146 3L15.5146 21" stroke="black" stroke-width="2" class="anim"/> <path d="M7.02937 13.7861L15.5146 22.2713L23.9999 13.7861" stroke="black" stroke-width="2" class="anim"/> </svg></a></span>
                                 </li>
                                 <li>
                                     <span><?= $unit['test_fits_label']; ?></span>
-                                    <span class="has-icon"><a href="<?= $unit['test_fits_link']['url']; ?>" target="blank"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M4 28L28 28" stroke="black" stroke-width="2"/> <path d="M15.5146 3L15.5146 21" stroke="black" stroke-width="2"/> <path d="M7.02937 13.7861L15.5146 22.2713L23.9999 13.7861" stroke="black" stroke-width="2"/> </svg></a></span>
+                                    <span class="has-icon"><a href="<?= $unit['test_fits_link']['url']; ?>" target="blank"><svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M4 28L28 28" stroke="black" stroke-width="2"/> <path d="M15.5146 3L15.5146 21" stroke="black" stroke-width="2" class="anim"/> <path d="M7.02937 13.7861L15.5146 22.2713L23.9999 13.7861" stroke="black" stroke-width="2" class="anim"/> </svg></a></span>
                                 </li>
                             </ul>
                             <div class="image">
